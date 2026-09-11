@@ -950,44 +950,6 @@ section{
 /* ETIQUETA OFERTA */
 
 
-.product-card::before{
-
-
-    content:"🔥 SOLO POR HOY";
-
-
-    position:absolute;
-
-
-    top:12px;
-
-
-    right:12px;
-
-
-    color:var(--primary);
-
-
-    font-size:10px;
-
-
-    font-weight:900;
-
-
-    letter-spacing:1px;
-
-
-    animation:
-
-
-    saleBlink 1.4s infinite;
-
-
-}
-
-
-
-
 
 @keyframes saleBlink{
 
