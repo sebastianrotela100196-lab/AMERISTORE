@@ -4,10 +4,6 @@
 ===================================== */
 
 
-// =========================
-// WHATSAPP
-// =========================
-
 
 // =========================
 // WHATSAPP AMERISSTORE
@@ -18,7 +14,10 @@ const whatsapp = "595981841136";
 
 
 
+
+
 function comprar(producto, precio){
+
 
 
     let mensaje =
@@ -39,6 +38,7 @@ Gracias por la atención. 🚀`;
 
 
 
+
     let url =
 
     `https://wa.me/${whatsapp}?text=${encodeURIComponent(mensaje)}`;
@@ -47,10 +47,7 @@ Gracias por la atención. 🚀`;
 
     window.open(url,"_blank");
 
-
 }
-
-
 
 
 
@@ -66,10 +63,54 @@ document.addEventListener(
 ()=>{
 
 
-
 console.log(
 "AMERISSTORE cargado correctamente 🚀"
 );
+
+
+
+
+
+// =========================
+// BOTONES DE COMPRA
+// WHATSAPP AUTOMÁTICO
+// =========================
+
+
+
+const botonesCompra = 
+document.querySelectorAll(".buy-button");
+
+
+
+botonesCompra.forEach((boton)=>{
+
+
+    boton.addEventListener(
+    "click",
+    ()=>{
+
+
+        let producto =
+        boton.dataset.producto;
+
+
+
+        let precio =
+        boton.dataset.precio;
+
+
+
+        comprar(producto,precio);
+
+
+
+    });
+
+
+});
+
+
 
 
 
@@ -83,6 +124,7 @@ console.log(
 
 const counter = 
 document.getElementById("diamondCounter");
+
 
 
 
@@ -106,6 +148,7 @@ number += 200;
 
 
 
+
 if(number >= target){
 
 
@@ -117,11 +160,13 @@ clearInterval(animation);
 
 
 
-// activar brillo
 
 
-let box = 
-document.querySelector(".diamond-counter");
+let box =
+document.querySelector(
+".diamond-counter"
+);
+
 
 
 
@@ -133,8 +178,10 @@ box.classList.add("finished");
 
 
 
-// lanzar diamantes una sola vez
 
+
+
+// EXPLOSIÓN SOLO UNA VEZ POR VISITA
 
 
 if(
@@ -146,6 +193,7 @@ if(
 
 
 crearDiamantes();
+
 
 
 sessionStorage.setItem(
@@ -162,8 +210,12 @@ sessionStorage.setItem(
 
 
 
+
+
 counter.innerHTML =
+
 "+" + number.toLocaleString();
+
 
 
 
@@ -172,10 +224,8 @@ counter.innerHTML =
 
 
 
+
 }
-
-
-
 
 
 
@@ -194,16 +244,19 @@ counter.innerHTML =
 // =========================
 
 
+
 function crearDiamantes(){
 
 
 
-const container = 
+const container =
+
 document.createElement("div");
 
 
 
 container.className =
+
 "diamond-effect";
 
 
@@ -214,16 +267,20 @@ document.body.appendChild(container);
 
 
 
-for(let i=0;i<80;i++){
+
+
+for(let i=0;i<100;i++){
 
 
 
 let diamond =
+
 document.createElement("div");
 
 
 
 diamond.className =
+
 "falling-diamond";
 
 
@@ -232,18 +289,25 @@ diamond.innerHTML="💎";
 
 
 
+
 diamond.style.left =
+
 Math.random()*100+"%";
 
 
 
+
 diamond.style.animationDelay =
-Math.random()*1.5+"s";
+
+Math.random()*2+"s";
+
 
 
 
 diamond.style.fontSize =
-(25 + Math.random()*35)+"px";
+
+(25 + Math.random()*45)+"px";
+
 
 
 
@@ -256,13 +320,16 @@ container.appendChild(diamond);
 
 
 
+
+
+
 setTimeout(()=>{
 
 
 container.remove();
 
 
-},4000);
+},4500);
 
 
 
