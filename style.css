@@ -1849,3 +1849,190 @@ section{
     object-fit:contain !important;
 
 }
+
+/* =====================================
+   NOTICIAS FREE FIRE
+===================================== */
+
+
+.news-feature{
+
+
+    display:grid;
+
+
+    grid-template-columns:1.2fr 1fr;
+
+
+    gap:40px;
+
+
+    align-items:center;
+
+
+    background:
+
+
+    linear-gradient(
+
+    145deg,
+
+    #102F4A,
+
+    #071B2A
+
+    );
+
+
+    padding:30px;
+
+
+    border-radius:30px;
+
+
+    border:
+
+
+    1px solid rgba(0,212,255,.2);
+
+
+}
+
+
+
+.news-image img{
+
+
+    width:100%;
+
+
+    border-radius:20px;
+
+
+    display:block;
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.news-image img:hover{
+
+
+    transform:scale(1.03);
+
+
+}
+
+
+
+.news-content span{
+
+
+    color:#FF6A00;
+
+
+    font-weight:900;
+
+
+    letter-spacing:2px;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+.news-content h3{
+
+
+    font-size:32px;
+
+
+    margin:20px 0;
+
+
+}
+
+
+
+.news-content p{
+
+
+    color:#94A3B8;
+
+
+    line-height:1.6;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+.news-content a{
+
+
+    display:inline-block;
+
+
+    margin-top:25px;
+
+
+    padding:14px 30px;
+
+
+    border-radius:30px;
+
+
+    background:
+
+
+    linear-gradient(
+
+    135deg,
+
+    #84D175,
+
+    #00D4FF
+
+    );
+
+
+    color:#071B2A;
+
+
+    text-decoration:none;
+
+
+    font-weight:900;
+
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+
+.news-feature{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+}
