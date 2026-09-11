@@ -2036,3 +2036,139 @@ section{
 
 
 }
+
+/* =========================
+   DIAMOND STOCK COUNTER
+========================= */
+
+
+.diamond-stock{
+
+
+    margin-top:35px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:18px;
+
+
+    width:max-content;
+
+
+    padding:15px 25px;
+
+
+    border-radius:20px;
+
+
+    background:
+
+    rgba(16,47,74,.8);
+
+
+    border:
+
+    1px solid rgba(0,212,255,.35);
+
+
+    backdrop-filter:blur(10px);
+
+
+}
+
+
+
+.stock-icon{
+
+
+    font-size:40px;
+
+
+    animation:
+
+    floatDiamond 3s infinite ease-in-out;
+
+
+}
+
+
+
+.diamond-stock span{
+
+
+    color:#94A3B8;
+
+
+    font-size:12px;
+
+
+    letter-spacing:2px;
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+.diamond-stock h3{
+
+
+    margin-top:5px;
+
+
+    font-size:32px;
+
+
+    color:#00D4FF;
+
+
+    transition:.4s;
+
+
+}
+
+
+
+
+.diamond-stock.active h3{
+
+
+    color:#84D175;
+
+
+    transform:scale(1.15);
+
+
+    text-shadow:
+
+    0 0 25px #00D4FF;
+
+
+}
+
+
+
+@keyframes floatDiamond{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
