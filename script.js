@@ -21,7 +21,7 @@ console.log(
 
 
 /* =====================================
-   VARIABLES COMPRA
+ VARIABLES COMPRA
 ===================================== */
 
 
@@ -43,8 +43,9 @@ cantidad:1
 
 
 
+
 /* =====================================
-   SELECCIONAR DIAMANTES
+ SELECCIONAR DIAMANTES
 ===================================== */
 
 
@@ -63,8 +64,6 @@ card.addEventListener(
 ()=>{
 
 
-// QUITAR SELECCIÓN ANTERIOR
-
 tarjetas.forEach(c=>{
 
 c.classList.remove(
@@ -75,18 +74,11 @@ c.classList.remove(
 
 
 
-
-// ACTIVAR NUEVO PRODUCTO
-
 card.classList.add(
 "active"
 );
 
 
-
-
-
-// GUARDAR DATOS
 
 
 compra.producto =
@@ -101,11 +93,7 @@ card.dataset.precio;
 
 
 
-
-// ===============================
-// REINICIAR CANTIDAD AL CAMBIAR
-// ===============================
-
+// Reiniciar cantidad
 
 compra.cantidad = 1;
 
@@ -126,7 +114,6 @@ quantity.value = 1;
 
 
 
-
 actualizarResumen();
 
 
@@ -144,9 +131,8 @@ actualizarResumen();
 
 
 
-
 /* =====================================
-   PASO 1 → PASO 2
+ PASO 1 → PASO 2
 ===================================== */
 
 
@@ -160,9 +146,7 @@ document.getElementById(
 if(continuar1){
 
 
-continuar1.addEventListener(
-"click",
-()=>{
+continuar1.onclick = ()=>{
 
 
 const step2 =
@@ -191,7 +175,7 @@ behavior:"smooth"
 }
 
 
-});
+};
 
 
 }
@@ -205,7 +189,7 @@ behavior:"smooth"
 
 
 /* =====================================
-   ID JUGADOR
+ ID JUGADOR
 ===================================== */
 
 
@@ -225,7 +209,7 @@ inputID.addEventListener(
 
 
 compra.id =
-inputID.value;
+inputID.value.trim();
 
 
 
@@ -246,9 +230,8 @@ actualizarResumen();
 
 
 
-
 /* =====================================
-   GUIA ID
+ GUIA ID
 ===================================== */
 
 
@@ -269,9 +252,7 @@ document.getElementById(
 if(guideButton){
 
 
-guideButton.addEventListener(
-"click",
-()=>{
+guideButton.onclick = ()=>{
 
 
 guideContent.classList.toggle(
@@ -279,7 +260,7 @@ guideContent.classList.toggle(
 );
 
 
-});
+};
 
 
 }
@@ -292,10 +273,8 @@ guideContent.classList.toggle(
 
 
 
-
-
 /* =====================================
-   PASO 2 → PASO 3
+ PASO 2 → PASO 3
 ===================================== */
 
 
@@ -309,15 +288,11 @@ document.getElementById(
 if(continuar2){
 
 
-continuar2.addEventListener(
-"click",
-()=>{
+continuar2.onclick = ()=>{
 
 
 
-if(
-compra.id.length < 6
-){
+if(compra.id.length < 6){
 
 
 alert(
@@ -365,7 +340,7 @@ actualizarResumen();
 
 
 
-});
+};
 
 
 }
@@ -379,7 +354,7 @@ actualizarResumen();
 
 
 /* =====================================
-   CONTROL CANTIDAD
+ CONTROL CANTIDAD
 ===================================== */
 
 
@@ -409,9 +384,7 @@ document.getElementById(
 if(plus){
 
 
-plus.addEventListener(
-"click",
-()=>{
+plus.onclick = ()=>{
 
 
 compra.cantidad++;
@@ -430,8 +403,7 @@ compra.cantidad;
 actualizarResumen();
 
 
-
-});
+};
 
 
 }
@@ -441,13 +413,10 @@ actualizarResumen();
 
 
 
-
 if(minus){
 
 
-minus.addEventListener(
-"click",
-()=>{
+minus.onclick = ()=>{
 
 
 if(compra.cantidad > 1){
@@ -469,17 +438,13 @@ compra.cantidad;
 actualizarResumen();
 
 
-
 }
 
 
-
-});
+};
 
 
 }
-
-
 
 
 
@@ -490,12 +455,11 @@ actualizarResumen();
 
 
 /* =====================================
-   ACTUALIZAR RESUMEN
+ ACTUALIZAR RESUMEN
 ===================================== */
 
 
 function actualizarResumen(){
-
 
 
 const producto =
@@ -504,19 +468,16 @@ document.getElementById(
 );
 
 
-
 const precio =
 document.getElementById(
 "summaryPrice"
 );
 
 
-
 const id =
 document.getElementById(
 "summaryID"
 );
-
 
 
 const total =
@@ -528,36 +489,21 @@ document.getElementById(
 
 
 
-
-if(producto){
-
+if(producto)
 producto.innerHTML =
 compra.producto;
 
-}
 
 
-
-
-
-if(precio){
-
+if(precio)
 precio.innerHTML =
 compra.precio;
 
-}
 
 
-
-
-
-if(id){
-
+if(id)
 id.innerHTML =
 compra.id || "-";
-
-}
-
 
 
 
@@ -568,23 +514,14 @@ if(total){
 
 
 let precioNumero =
-
 parseInt(
-
-compra.precio.replace(
-/\D/g,
-""
-)
-
+compra.precio.replace(/\D/g,"")
 );
 
 
 
 let totalFinal =
-
-precioNumero *
-compra.cantidad;
-
+precioNumero * compra.cantidad;
 
 
 
@@ -600,24 +537,9 @@ totalFinal.toLocaleString();
 }
 
 
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* =====================================
-   WHATSAPP
+ WHATSAPP FINAL
 ===================================== */
 
 
@@ -631,10 +553,7 @@ document.getElementById(
 if(botonWhatsapp){
 
 
-
-botonWhatsapp.addEventListener(
-"click",
-()=>{
+botonWhatsapp.onclick = ()=>{
 
 
 
@@ -709,8 +628,6 @@ let url =
 
 
 
-
-
 window.open(
 url,
 "_blank"
@@ -718,7 +635,7 @@ url,
 
 
 
-});
+};
 
 
 }
@@ -732,32 +649,36 @@ url,
 
 
 /* =====================================
-   MEMBRESIAS
+ EXTRAS
 ===================================== */
 
 
-const botonesCompra =
+const botonesExtras =
+
 document.querySelectorAll(
 ".buy-button"
 );
 
 
 
-botonesCompra.forEach(
+
+
+botonesExtras.forEach(
 boton=>{
 
 
-boton.addEventListener(
-"click",
-()=>{
+boton.onclick = ()=>{
+
 
 
 let producto =
+
 boton.dataset.producto;
 
 
 
 let precio =
+
 boton.dataset.precio;
 
 
@@ -781,22 +702,30 @@ ${producto}
 ${precio}
 
 
-Gracias.`;
+Quiero recibir información para completar mi compra.
 
+
+Gracias 🚀`;
+
+
+
+
+
+
+let url =
+
+`https://wa.me/${whatsapp}?text=${encodeURIComponent(mensaje)}`;
 
 
 
 window.open(
-
-`https://wa.me/${whatsapp}?text=${encodeURIComponent(mensaje)}`,
-
+url,
 "_blank"
-
 );
 
 
 
-});
+};
 
 
 });
@@ -810,18 +739,21 @@ window.open(
 
 
 /* =====================================
-   CONTADOR DIAMANTES
+ CONTADOR DIAMANTES
 ===================================== */
 
 
 const counter =
+
 document.getElementById(
 "diamondCounter"
 );
 
 
 
+
 if(counter){
+
 
 
 let number = 0;
@@ -831,10 +763,13 @@ let target = 10000;
 
 
 
+
+
 let animation =
 
 setInterval(
 ()=>{
+
 
 
 number += 200;
@@ -845,7 +780,9 @@ number += 200;
 if(number >= target){
 
 
+
 number = target;
+
 
 
 clearInterval(animation);
@@ -853,11 +790,12 @@ clearInterval(animation);
 
 
 
-
 let box =
+
 document.querySelector(
 ".diamond-counter"
 );
+
 
 
 
@@ -874,6 +812,7 @@ box.classList.add(
 
 
 if(
+
 !sessionStorage.getItem(
 "diamondExplosion"
 )
@@ -891,11 +830,13 @@ sessionStorage.setItem(
 );
 
 
-}
-
-
 
 }
+
+
+
+}
+
 
 
 
@@ -912,12 +853,15 @@ number.toLocaleString();
 
 
 
+
 },
 50);
 
 
 
 }
+
+
 
 
 
@@ -931,8 +875,10 @@ number.toLocaleString();
 
 
 
+
+
 /* =====================================
-   LLUVIA DIAMANTES
+ LLUVIA DE DIAMANTES
 ===================================== */
 
 
@@ -948,7 +894,9 @@ document.createElement(
 
 
 
+
 container.className =
+
 "diamond-effect";
 
 
@@ -956,7 +904,6 @@ container.className =
 document.body.appendChild(
 container
 );
-
 
 
 
@@ -978,13 +925,19 @@ document.createElement(
 
 
 
+
 diamond.className =
+
 "falling-diamond";
 
 
 
+
 diamond.innerHTML =
+
 "💎";
+
+
 
 
 
@@ -994,15 +947,21 @@ Math.random()*100+"%";
 
 
 
+
+
 diamond.style.animationDelay =
 
 Math.random()*2+"s";
 
 
 
+
+
 diamond.style.fontSize =
 
 (25 + Math.random()*45)+"px";
+
+
 
 
 
@@ -1013,8 +972,6 @@ diamond
 
 
 }
-
-
 
 
 
