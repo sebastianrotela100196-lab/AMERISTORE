@@ -1,12 +1,12 @@
 /* =====================================
    AMERISSTORE FUTURE STORE
-   Gaming | Streaming | IA | Diseño
+   Gaming | Free Fire | IA | Streaming
 ===================================== */
 
 
-/* =====================================
+/* =========================
    RESET GENERAL
-===================================== */
+========================= */
 
 
 *{
@@ -17,7 +17,7 @@
 
     box-sizing:border-box;
 
-    font-family:'Inter', Arial, sans-serif;
+    font-family:'Inter',Arial,sans-serif;
 
 }
 
@@ -45,9 +45,10 @@ body{
 
 
 
-/* =====================================
-   VARIABLES DE MARCA
-===================================== */
+
+/* =========================
+   VARIABLES
+========================= */
 
 
 :root{
@@ -55,23 +56,17 @@ body{
 
     --primary:#84D175;
 
-
     --cyan:#00D4FF;
-
-
-    --purple:#8B5CF6;
-
 
     --background:#071B2A;
 
-
     --card:#102F4A;
-
 
     --white:#F5F7FA;
 
-
     --gray:#94A3B8;
+
+    --fire:#FF6A00;
 
 
 }
@@ -80,9 +75,12 @@ body{
 
 
 
-/* =====================================
-   EFECTO FONDO GAMING
-===================================== */
+
+
+
+/* =========================
+   FONDO GAMING
+========================= */
 
 
 body::before{
@@ -116,7 +114,7 @@ body::before{
 
     circle,
 
-    rgba(132,209,117,.18),
+    rgba(132,209,117,.20),
 
     transparent 65%
 
@@ -130,7 +128,6 @@ body::before{
 
 
 }
-
 
 
 
@@ -183,9 +180,10 @@ body::after{
 
 
 
-/* =====================================
-   HEADER / NAVBAR
-===================================== */
+
+/* =========================
+   NAVBAR
+========================= */
 
 
 header{
@@ -204,6 +202,7 @@ header{
 
 
 }
+
 
 
 
@@ -242,7 +241,6 @@ header{
 
     border:
 
-
     1px solid rgba(0,212,255,.15);
 
 
@@ -271,6 +269,7 @@ header{
 
 
 
+
 .logo span{
 
 
@@ -278,6 +277,9 @@ header{
 
 
 }
+
+
+
 
 
 
@@ -295,6 +297,7 @@ header{
 
 
 }
+
 
 
 
@@ -321,6 +324,8 @@ header{
 
 
 
+
+
 .navbar ul a:hover{
 
 
@@ -335,9 +340,12 @@ header{
 
 
 
-/* =====================================
+
+
+
+/* =========================
    BOTONES
-===================================== */
+========================= */
 
 
 .btn-whatsapp,
@@ -400,11 +408,11 @@ header{
 
     box-shadow:
 
-
     0 0 35px rgba(132,209,117,.5);
 
 
 }
+
 
 
 
@@ -432,33 +440,49 @@ header{
 
 
 
-/* =====================================
+
+
+/* =========================
    HERO
-===================================== */
+========================= */
 
 
 .hero{
 
 
-    min-height:100vh;
+    min-height:90vh;
 
 
-    padding:160px 8% 80px;
+    padding:130px 7% 60px;
 
 
     display:flex;
 
 
-    justify-content:space-between;
+    justify-content:center;
 
 
     align-items:center;
 
 
-    gap:80px;
+    gap:40px;
 
 
 }
+
+
+
+
+
+
+.hero-text{
+
+
+    width:45%;
+
+
+}
+
 
 
 
@@ -475,7 +499,7 @@ header{
     letter-spacing:3px;
 
 
-    font-weight:800;
+    font-weight:900;
 
 
 }
@@ -487,7 +511,7 @@ header{
 .hero-text h2{
 
 
-    font-size:65px;
+    font-size:60px;
 
 
     line-height:1.1;
@@ -505,30 +529,6 @@ header{
 
 
 
-.hero-text p{
-
-
-    max-width:600px;
-
-
-    color:var(--gray);
-
-
-    font-size:20px;
-
-
-    line-height:1.6;
-
-
-    margin-bottom:35px;
-
-
-}
-
-
-
-
-
 .hero-buttons{
 
 
@@ -538,28 +538,7 @@ header{
     gap:20px;
 
 
-}
-
-
-
-
-
-
-/* =====================================
-   ICONOS HERO
-===================================== */
-
-
-.hero-display{
-
-
-    display:grid;
-
-
-    grid-template-columns:repeat(2,150px);
-
-
-    gap:25px;
+    margin-top:30px;
 
 
 }
@@ -567,13 +546,92 @@ header{
 
 
 
-.floating-card{
 
 
-    width:150px;
 
 
-    height:150px;
+
+/* =========================
+   IMAGEN FREE FIRE
+========================= */
+
+
+.hero-image{
+
+
+    width:50%;
+
+
+    max-width:650px;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+}
+
+
+
+
+
+.hero-image img{
+
+
+    width:100%;
+
+
+    height:430px;
+
+
+    object-fit:contain;
+
+
+    filter:
+
+
+    drop-shadow(
+
+    0 0 35px rgba(0,212,255,.35)
+
+    );
+
+
+    transition:.4s;
+
+
+}
+
+
+
+
+.hero-image img:hover{
+
+
+    transform:scale(1.05);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   CONTADOR DIAMANTES
+========================= */
+
+
+.diamond-counter{
+
+
+    margin-top:25px;
 
 
     display:flex;
@@ -582,27 +640,22 @@ header{
     align-items:center;
 
 
-    justify-content:center;
+    gap:15px;
 
 
-    font-size:60px;
+    width:max-content;
 
 
-    border-radius:30px;
+    padding:15px 22px;
 
 
     background:
 
 
-    linear-gradient(
+    rgba(16,47,74,.8);
 
-    145deg,
 
-    #102F4A,
-
-    #071B2A
-
-    );
+    border-radius:20px;
 
 
     border:
@@ -611,27 +664,7 @@ header{
     1px solid rgba(0,212,255,.25);
 
 
-    transition:.35s;
-
-
-}
-
-
-
-
-.floating-card:hover{
-
-
-    transform:translateY(-12px);
-
-
-    border-color:var(--primary);
-
-
-    box-shadow:
-
-
-    0 0 35px rgba(132,209,117,.3);
+    backdrop-filter:blur(10px);
 
 
 }
@@ -640,10 +673,35 @@ header{
 
 
 
-.card-icon{
+.diamond-icon{
 
 
-    font-size:55px;
+    font-size:42px;
+
+
+    animation:
+
+    diamondFloat 2s infinite ease-in-out;
+
+
+}
+
+
+
+
+.diamond-counter span{
+
+
+    font-size:12px;
+
+
+    letter-spacing:2px;
+
+
+    color:var(--gray);
+
+
+    font-weight:900;
 
 
 }
@@ -652,16 +710,65 @@ header{
 
 
 
-/* =====================================
+.diamond-counter h3{
+
+
+    font-size:34px;
+
+
+    color:var(--cyan);
+
+
+    margin-top:5px;
+
+
+}
+
+
+
+
+
+.diamond-counter p{
+
+
+    color:var(--gray);
+
+
+    font-size:13px;
+
+
+}
+
+
+
+
+
+
+@keyframes diamondFloat{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+/* =========================
    SECCIONES GENERALES
-===================================== */
+========================= */
 
 
 section{
 
-
-    padding:90px 8%;
-
+    padding:90px 7%;
 
 }
 
@@ -675,7 +782,7 @@ section{
     text-align:center;
 
 
-    margin-bottom:50px;
+    margin-bottom:45px;
 
 
 }
@@ -692,14 +799,13 @@ section{
     font-size:13px;
 
 
-    font-weight:800;
+    font-weight:900;
 
 
     letter-spacing:3px;
 
 
 }
-
 
 
 
@@ -728,288 +834,21 @@ section{
 
 
 }
-/* =====================================
-   SERVICIOS
-===================================== */
 
 
-.service-grid{
 
 
-    display:grid;
 
 
-    grid-template-columns:repeat(4,1fr);
 
 
-    gap:20px;
 
+/* =========================
+   PRODUCTOS
+========================= */
 
-}
 
-
-
-
-.service-card{
-
-
-    background:
-
-
-    linear-gradient(
-
-    145deg,
-
-    #102F4A,
-
-    #071B2A
-
-    );
-
-
-    border-radius:22px;
-
-
-    overflow:hidden;
-
-
-    border:
-
-
-    1px solid rgba(0,212,255,.18);
-
-
-    transition:.35s;
-
-
-}
-
-
-
-.service-card:hover{
-
-
-    transform:translateY(-8px);
-
-
-    border-color:var(--primary);
-
-
-    box-shadow:
-
-
-    0 15px 40px rgba(0,0,0,.3);
-
-
-}
-
-
-
-
-.service-image{
-
-
-    height:140px;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-    font-size:65px;
-
-
-}
-
-
-
-
-.gaming{
-
-
-    background:
-
-    linear-gradient(
-
-    135deg,
-
-    #162F45,
-
-    #071B2A
-
-    );
-
-}
-
-
-
-
-.streaming{
-
-
-    background:
-
-    linear-gradient(
-
-    135deg,
-
-    #1B2850,
-
-    #071B2A
-
-    );
-
-}
-
-
-
-
-
-.ia{
-
-
-    background:
-
-    linear-gradient(
-
-    135deg,
-
-    #35205A,
-
-    #071B2A
-
-    );
-
-}
-
-
-
-
-
-.design{
-
-
-    background:
-
-    linear-gradient(
-
-    135deg,
-
-    #214A50,
-
-    #071B2A
-
-    );
-
-}
-
-
-
-
-
-.service-content{
-
-
-    padding:22px;
-
-
-}
-
-
-
-
-.service-content span{
-
-
-    color:var(--primary);
-
-
-    font-size:12px;
-
-
-    font-weight:800;
-
-
-    letter-spacing:2px;
-
-
-}
-
-
-
-.service-content h3{
-
-
-    margin:12px 0;
-
-
-    font-size:22px;
-
-
-}
-
-
-
-.service-content p{
-
-
-    color:var(--gray);
-
-
-    line-height:1.5;
-
-
-}
-
-
-
-
-
-.service-content a{
-
-
-    display:inline-block;
-
-
-    margin-top:20px;
-
-
-    color:var(--cyan);
-
-
-    text-decoration:none;
-
-
-    font-weight:bold;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =====================================
-   PRODUCTOS ESTILO BANKAI
-===================================== */
-
-
-.product-grid,
-.game-grid,
-.ai-grid,
-.stream-grid,
-.payment-grid,
-.partner-benefits,
-.benefit-grid{
+.product-grid{
 
 
     display:grid;
@@ -1029,12 +868,10 @@ section{
 
 
 
-.product-card,
-.game-card,
-.ai-card,
-.partner-benefits div,
-.benefit-grid div,
-.payment-grid div{
+.product-card{
+
+
+    position:relative;
 
 
     background:
@@ -1051,16 +888,13 @@ section{
     );
 
 
-    padding:22px;
+    padding:18px;
 
 
-    min-height:310px;
+    min-height:190px;
 
 
-    border-radius:22px;
-
-
-    text-align:left;
+    border-radius:20px;
 
 
     border:
@@ -1069,13 +903,19 @@ section{
     1px solid rgba(0,212,255,.18);
 
 
+    overflow:hidden;
+
+
     transition:.35s;
 
 
-    position:relative;
+    display:flex;
 
 
-    overflow:hidden;
+    flex-direction:column;
+
+
+    justify-content:center;
 
 
 }
@@ -1084,11 +924,7 @@ section{
 
 
 
-
-
-.product-card:hover,
-.game-card:hover,
-.ai-card:hover{
+.product-card:hover{
 
 
     transform:translateY(-8px);
@@ -1100,7 +936,7 @@ section{
     box-shadow:
 
 
-    0 20px 45px rgba(0,0,0,.35);
+    0 15px 35px rgba(0,0,0,.35);
 
 
 }
@@ -1111,81 +947,25 @@ section{
 
 
 
-/* LOGOS PRODUCTOS */
-
-
-.product-card img{
-
-
-    width:65px;
-
-
-    height:65px;
-
-
-    object-fit:contain;
-
-
-    margin-bottom:20px;
-
-
-    border-radius:15px;
-
-
-    transition:.6s;
-
-
-}
-
-
-
-
-.product-card:hover img{
-
-
-    transform:rotate(360deg);
-
-
-}
-
-
-
-
-
-
-
-.product-icon{
-
-
-    font-size:55px;
-
-
-    margin-bottom:20px;
-
-
-}
-
-
-
-
+/* ETIQUETA OFERTA */
 
 
 .product-card::before{
 
 
-    content:"DIGITAL";
+    content:"🔥 SOLO POR HOY";
 
 
     position:absolute;
 
 
-    top:18px;
+    top:12px;
 
 
-    right:18px;
+    right:12px;
 
 
-    color:#94A3B8;
+    color:var(--primary);
 
 
     font-size:10px;
@@ -1194,7 +974,46 @@ section{
     font-weight:900;
 
 
-    letter-spacing:2px;
+    letter-spacing:1px;
+
+
+    animation:
+
+
+    saleBlink 1.4s infinite;
+
+
+}
+
+
+
+
+
+@keyframes saleBlink{
+
+
+    0%,100%{
+
+
+        opacity:1;
+
+
+        text-shadow:
+
+        0 0 10px var(--primary);
+
+
+    }
+
+
+
+    50%{
+
+
+        opacity:.35;
+
+
+    }
 
 
 }
@@ -1204,12 +1023,11 @@ section{
 
 
 
-.product-card h3,
-.game-card h3,
-.ai-card h3{
+
+.product-card h3{
 
 
-    font-size:21px;
+    font-size:22px;
 
 
     margin-bottom:10px;
@@ -1217,22 +1035,6 @@ section{
 
 }
 
-
-
-
-
-.product-card p,
-.game-card p,
-.ai-card p{
-
-
-    color:var(--gray);
-
-
-    line-height:1.5;
-
-
-}
 
 
 
@@ -1245,13 +1047,13 @@ section{
     display:block;
 
 
-    margin-top:20px;
-
-
     color:var(--primary);
 
 
-    font-size:20px;
+    font-size:22px;
+
+
+    margin-bottom:15px;
 
 
 }
@@ -1261,8 +1063,8 @@ section{
 
 
 
-.product-card a,
-.game-card a{
+
+.product-card a{
 
 
     display:block;
@@ -1271,13 +1073,10 @@ section{
     text-align:center;
 
 
-    margin-top:20px;
+    padding:10px;
 
 
-    padding:12px;
-
-
-    border-radius:14px;
+    border-radius:12px;
 
 
     background:
@@ -1298,7 +1097,7 @@ section{
     text-decoration:none;
 
 
-    font-weight:800;
+    font-weight:900;
 
 
     transition:.3s;
@@ -1310,8 +1109,7 @@ section{
 
 
 
-.product-card a:hover,
-.game-card a:hover{
+.product-card a:hover{
 
 
     background:var(--primary);
@@ -1330,56 +1128,15 @@ section{
 
 
 
-/* =====================================
-   OFERTAS
-===================================== */
+/* =========================
+   MEMBRESIAS
+========================= */
 
 
-.offer-banner{
+#membresias .product-card{
 
 
-    margin:40px 8%;
-
-
-    padding:55px;
-
-
-    border-radius:30px;
-
-
-    display:flex;
-
-
-    justify-content:space-between;
-
-
-    align-items:center;
-
-
-    background:
-
-
-    linear-gradient(
-
-    135deg,
-
-    #102F4A,
-
-    #8B5CF6
-
-    );
-
-
-}
-
-
-
-
-
-.offer-icon{
-
-
-    font-size:120px;
+    min-height:210px;
 
 
 }
@@ -1392,470 +1149,13 @@ section{
 
 
 
-/* =====================================
-   REVENDEDORES
-===================================== */
-
-
-.revendedores{
-
-
-    text-align:center;
-
-
-    border-radius:30px;
-
-
-    background:
-
-
-    linear-gradient(
-
-    135deg,
-
-    #102F4A,
-
-    #35205A
-
-    );
-
-
-}
-
-
-
-
-
-.reseller-content p{
-
-
-    max-width:750px;
-
-
-    margin:25px auto;
-
-
-    color:white;
-
-
-    font-size:20px;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =====================================
-   FAQ
-===================================== */
-
-
-.faq{
-
-
-    max-width:850px;
-
-
-    margin:auto;
-
-
-}
-
-
-
-.faq-item{
-
-
-    background:#102F4A;
-
-
-    padding:25px;
-
-
-    margin-bottom:20px;
-
-
-    border-radius:20px;
-
-
-    border:
-
-
-    1px solid rgba(0,212,255,.15);
-
-
-}
-
-
-
-.faq-item h3{
-
-
-    color:var(--cyan);
-
-
-}
-
-
-
-
-.faq-item p{
-
-
-    color:var(--gray);
-
-
-    margin-top:10px;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =====================================
-   CONTACTO
-===================================== */
-
-
-.contact-section{
-
-
-    text-align:center;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =====================================
-   WHATSAPP FLOTANTE
-===================================== */
-
-
-.floating-whatsapp{
-
-
-    position:fixed;
-
-
-    right:30px;
-
-
-    bottom:30px;
-
-
-    width:65px;
-
-
-    height:65px;
-
-
-    border-radius:50%;
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-    font-size:32px;
-
-
-    background:var(--primary);
-
-
-    color:#071B2A;
-
-
-    text-decoration:none;
-
-
-    box-shadow:
-
-
-    0 0 30px rgba(132,209,117,.5);
-
-
-    z-index:999;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =====================================
-   FOOTER
-===================================== */
-
-
-footer{
-
-
-    background:#050F18;
-
-
-    padding:50px;
-
-
-    text-align:center;
-
-
-}
-
-
-
-footer h3{
-
-
-    color:var(--primary);
-
-
-    font-size:30px;
-
-
-}
-
-
-
-footer p{
-
-
-    color:var(--gray);
-
-
-    margin-top:15px;
-
-
-}
-
-
-
-.socials a{
-
-
-    color:var(--cyan);
-
-
-    margin:15px;
-
-
-    text-decoration:none;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =====================================
-   RESPONSIVE
-===================================== */
-
-
-@media(max-width:1000px){
-
-
-
-.navbar ul{
-
-
-    display:none;
-
-
-}
-
-
-
-
-
-.hero{
-
-
-    flex-direction:column;
-
-
-    text-align:center;
-
-
-}
-
-
-
-
-
-.hero-text h2{
-
-
-    font-size:45px;
-
-
-}
-
-
-
-
-
-.service-grid,
-.product-grid,
-.game-grid,
-.ai-grid,
-.stream-grid{
-
-
-    grid-template-columns:repeat(2,1fr);
-
-
-}
-
-
-
-
-.offer-banner{
-
-
-    flex-direction:column;
-
-
-    text-align:center;
-
-
-}
-
-
-}
-
-
-
-
-
-
-
-
-@media(max-width:600px){
-
-
-
-.hero-text h2{
-
-
-    font-size:35px;
-
-
-}
-
-
-
-
-.hero-display{
-
-
-    grid-template-columns:repeat(2,120px);
-
-
-}
-
-
-
-
-
-.floating-card{
-
-
-    width:120px;
-
-
-    height:120px;
-
-
-    font-size:45px;
-
-
-}
-
-
-
-
-.service-grid,
-.product-grid,
-.game-grid,
-.ai-grid,
-.stream-grid{
-
-
-    grid-template-columns:1fr;
-
-
-}
-
-
-
-
-
-section{
-
-
-    padding:60px 20px;
-
-
-}
-
-
-
-}
-
-.product-card img{
-
-    width:70px !important;
-
-    height:70px !important;
-
-    max-width:70px !important;
-
-    max-height:70px !important;
-
-    object-fit:contain !important;
-
-}
-
-/* =====================================
+/* =========================
    NOTICIAS FREE FIRE
-===================================== */
+========================= */
 
 
-.news-feature{
+
+.news-card{
 
 
     display:grid;
@@ -1864,10 +1164,10 @@ section{
     grid-template-columns:1fr 1fr;
 
 
-    gap:0;
+    max-width:1200px;
 
 
-    align-items:stretch;
+    margin:auto;
 
 
     background:
@@ -1893,39 +1193,24 @@ section{
     border:
 
 
-    1px solid rgba(0,212,255,.25);
-
-
-    max-width:1200px;
-
-
-    margin:auto;
+    1px solid rgba(0,212,255,.2);
 
 
 }
 
 
 
-/* IMAGEN IZQUIERDA */
-
-
-.news-image{
-
-
-    height:380px;
-
-
-}
 
 
 
-.news-image img{
+
+.news-card img{
 
 
     width:100%;
 
 
-    height:100%;
+    height:360px;
 
 
     object-fit:cover;
@@ -1940,7 +1225,6 @@ section{
 
 
 
-/* TEXTO DERECHA */
 
 
 .news-content{
@@ -1962,10 +1246,14 @@ section{
 
 
 
+
+
+
+
 .news-content span{
 
 
-    color:#00D4FF;
+    color:var(--fire);
 
 
     font-size:13px;
@@ -1978,6 +1266,10 @@ section{
 
 
 }
+
+
+
+
 
 
 
@@ -1997,13 +1289,121 @@ section{
 
 
 
+
+
+
+
 .news-content p{
 
 
-    color:#94A3B8;
+    color:var(--gray);
+
+
+    line-height:1.6;
 
 
     font-size:17px;
+
+
+}
+
+
+
+
+
+
+
+.news-content .button{
+
+
+    width:max-content;
+
+
+    margin-top:25px;
+
+
+}
+/* =========================
+   FAQ
+========================= */
+
+
+.faq-item{
+
+
+    max-width:850px;
+
+
+    margin:20px auto;
+
+
+    background:
+
+
+    linear-gradient(
+
+    145deg,
+
+    #102F4A,
+
+    #071B2A
+
+    );
+
+
+    padding:25px;
+
+
+    border-radius:20px;
+
+
+    border:
+
+
+    1px solid rgba(0,212,255,.2);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.faq-item:hover{
+
+
+    border-color:var(--primary);
+
+
+}
+
+
+
+
+
+.faq-item h3{
+
+
+    color:var(--cyan);
+
+
+    font-size:20px;
+
+
+    margin-bottom:12px;
+
+
+}
+
+
+
+
+
+.faq-item p{
+
+
+    color:var(--gray);
 
 
     line-height:1.6;
@@ -2013,13 +1413,66 @@ section{
 
 
 
-.news-content a{
 
 
-    margin-top:30px;
 
 
-    width:max-content;
+
+
+/* =========================
+   WHATSAPP FLOTANTE
+========================= */
+
+
+.floating-whatsapp{
+
+
+    position:fixed;
+
+
+    right:25px;
+
+
+    bottom:25px;
+
+
+    width:65px;
+
+
+    height:65px;
+
+
+    border-radius:50%;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    font-size:30px;
+
+
+    background:#25D366;
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    box-shadow:
+
+
+    0 0 30px rgba(37,211,102,.5);
+
+
+    z-index:999;
 
 
 }
@@ -2028,10 +1481,439 @@ section{
 
 
 
-@media(max-width:900px){
+.floating-whatsapp:hover{
 
 
-.news-feature{
+    transform:scale(1.1);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+footer{
+
+
+    background:#050F18;
+
+
+    padding:50px 20px;
+
+
+    text-align:center;
+
+
+    border-top:
+
+
+    1px solid rgba(0,212,255,.15);
+
+
+}
+
+
+
+
+
+footer h3{
+
+
+    color:var(--primary);
+
+
+    font-size:30px;
+
+
+    letter-spacing:2px;
+
+
+}
+
+
+
+
+
+footer p{
+
+
+    color:var(--gray);
+
+
+    margin-top:12px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   EFECTO DIAMANTES
+   (SCRIPT.JS)
+========================= */
+
+
+.diamond-effect{
+
+
+    position:fixed;
+
+
+    top:0;
+
+
+    left:0;
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    pointer-events:none;
+
+
+    overflow:hidden;
+
+
+    z-index:9999;
+
+
+}
+
+
+
+
+
+
+.falling-diamond{
+
+
+    position:absolute;
+
+
+    top:-50px;
+
+
+    font-size:35px;
+
+
+    animation:
+
+
+    diamondFall 3s linear forwards;
+
+
+}
+
+
+
+
+
+
+
+@keyframes diamondFall{
+
+
+    0%{
+
+
+        transform:
+
+        translateY(-100px)
+
+        rotate(0deg);
+
+
+        opacity:1;
+
+
+    }
+
+
+
+    100%{
+
+
+        transform:
+
+        translateY(110vh)
+
+        rotate(360deg);
+
+
+        opacity:0;
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   ANIMACION CONTADOR FINAL
+========================= */
+
+
+.diamond-counter.finished{
+
+
+    animation:
+
+
+    counterGlow .8s infinite alternate;
+
+
+}
+
+
+
+
+
+
+
+@keyframes counterGlow{
+
+
+    from{
+
+
+        transform:scale(1);
+
+
+        box-shadow:
+
+        0 0 10px var(--cyan);
+
+
+    }
+
+
+
+    to{
+
+
+        transform:scale(1.08);
+
+
+        box-shadow:
+
+        0 0 40px var(--primary);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+
+
+@media(max-width:1100px){
+
+
+
+.product-grid{
+
+
+    grid-template-columns:repeat(3,1fr);
+
+
+}
+
+
+
+.hero{
+
+
+    flex-direction:column;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.hero-text{
+
+
+    width:100%;
+
+
+}
+
+
+
+.hero-image{
+
+
+    width:80%;
+
+
+}
+
+
+
+.hero-buttons{
+
+
+    justify-content:center;
+
+
+}
+
+
+
+.diamond-counter{
+
+
+    margin-left:auto;
+
+
+    margin-right:auto;
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+@media(max-width:750px){
+
+
+
+.navbar{
+
+
+    margin:10px;
+
+
+    padding:15px;
+
+
+}
+
+
+
+.navbar ul{
+
+
+    display:none;
+
+
+}
+
+
+
+.logo{
+
+
+    font-size:24px;
+
+
+}
+
+
+
+
+.hero-text h2{
+
+
+    font-size:40px;
+
+
+}
+
+
+
+.hero-image{
+
+
+    width:100%;
+
+
+}
+
+
+
+.hero-image img{
+
+
+    height:300px;
+
+
+}
+
+
+
+.product-grid{
+
+
+    grid-template-columns:repeat(2,1fr);
+
+
+}
+
+
+
+.product-card{
+
+
+    min-height:170px;
+
+
+}
+
+
+
+.news-card{
 
 
     grid-template-columns:1fr;
@@ -2041,13 +1923,14 @@ section{
 
 
 
-.news-image{
+.news-card img{
 
 
-    height:280px;
+    height:250px;
 
 
 }
+
 
 
 .news-content{
@@ -2060,81 +1943,24 @@ section{
 
 
 
-}
-
-
-
-.news-image img{
-
-
-    width:100%;
-
-
-    border-radius:20px;
-
-
-    display:block;
-
-
-    transition:.4s;
-
-
-}
-
-
-
-.news-image img:hover{
-
-
-    transform:scale(1.03);
-
-
-}
-
-
-
-.news-content span{
-
-
-    color:#FF6A00;
-
-
-    font-weight:900;
-
-
-    letter-spacing:2px;
-
-
-    font-size:13px;
-
-
-}
-
-
-
 .news-content h3{
+
+
+    font-size:25px;
+
+
+}
+
+
+
+.section-title h2{
 
 
     font-size:32px;
 
 
-    margin:20px 0;
-
-
 }
 
-
-
-.news-content p{
-
-
-    color:#94A3B8;
-
-
-    line-height:1.6;
-
-
-    font-size:18px;
 
 
 }
@@ -2142,54 +1968,11 @@ section{
 
 
 
-.news-content a{
-
-
-    display:inline-block;
-
-
-    margin-top:25px;
-
-
-    padding:14px 30px;
-
-
-    border-radius:30px;
-
-
-    background:
-
-
-    linear-gradient(
-
-    135deg,
-
-    #84D175,
-
-    #00D4FF
-
-    );
-
-
-    color:#071B2A;
-
-
-    text-decoration:none;
-
-
-    font-weight:900;
-
-
-}
+@media(max-width:450px){
 
 
 
-
-
-@media(max-width:900px){
-
-
-.news-feature{
+.product-grid{
 
 
     grid-template-columns:1fr;
@@ -2199,140 +1982,25 @@ section{
 
 
 
-}
-
-/* =========================
-   DIAMOND STOCK COUNTER
-========================= */
+.hero-buttons{
 
 
-.diamond-stock{
-
-
-    margin-top:35px;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    gap:18px;
-
-
-    width:max-content;
-
-
-    padding:15px 25px;
-
-
-    border-radius:20px;
-
-
-    background:
-
-    rgba(16,47,74,.8);
-
-
-    border:
-
-    1px solid rgba(0,212,255,.35);
-
-
-    backdrop-filter:blur(10px);
+    flex-direction:column;
 
 
 }
 
 
 
-.stock-icon{
+.button,
+.btn-whatsapp{
 
 
-    font-size:40px;
-
-
-    animation:
-
-    floatDiamond 3s infinite ease-in-out;
+    width:100%;
 
 
 }
 
 
-
-.diamond-stock span{
-
-
-    color:#94A3B8;
-
-
-    font-size:12px;
-
-
-    letter-spacing:2px;
-
-
-    font-weight:bold;
-
-
-}
-
-
-
-.diamond-stock h3{
-
-
-    margin-top:5px;
-
-
-    font-size:32px;
-
-
-    color:#00D4FF;
-
-
-    transition:.4s;
-
-
-}
-
-
-
-
-.diamond-stock.active h3{
-
-
-    color:#84D175;
-
-
-    transform:scale(1.15);
-
-
-    text-shadow:
-
-    0 0 25px #00D4FF;
-
-
-}
-
-
-
-@keyframes floatDiamond{
-
-
-    0%,100%{
-
-        transform:translateY(0);
-
-    }
-
-
-    50%{
-
-        transform:translateY(-8px);
-
-    }
 
 }
