@@ -1,52 +1,179 @@
 /* =====================================
-   AMERISSTORE FUTURE GAMING
-   Gaming | IA | Streaming | Digital
+   AMERISSTORE FUTURE STORE
+   Gaming | Streaming | IA | Diseño
+===================================== */
+
+
+/* =====================================
+   RESET GENERAL
 ===================================== */
 
 
 *{
+
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
-    font-family:'Inter',Arial,sans-serif;
+
+    font-family:'Inter', Arial, sans-serif;
+
 }
+
 
 
 html{
+
     scroll-behavior:smooth;
+
 }
+
 
 
 body{
 
     background:#071B2A;
+
     color:#F5F7FA;
+
     overflow-x:hidden;
 
 }
 
 
 
-/* =========================
- TOP BANNER
-========================= */
 
 
-.top-banner{
+/* =====================================
+   VARIABLES DE MARCA
+===================================== */
 
-    background:#84D175;
 
-    color:#071B2A;
+:root{
 
-    text-align:center;
 
-    padding:10px;
+    --primary:#84D175;
 
-    font-size:14px;
 
-    font-weight:900;
+    --cyan:#00D4FF;
 
-    letter-spacing:1px;
+
+    --purple:#8B5CF6;
+
+
+    --background:#071B2A;
+
+
+    --card:#102F4A;
+
+
+    --white:#F5F7FA;
+
+
+    --gray:#94A3B8;
+
+
+}
+
+
+
+
+
+/* =====================================
+   EFECTO FONDO GAMING
+===================================== */
+
+
+body::before{
+
+
+    content:"";
+
+
+    position:fixed;
+
+
+    width:700px;
+
+
+    height:700px;
+
+
+    top:-250px;
+
+
+    left:50%;
+
+
+    transform:translateX(-50%);
+
+
+    background:
+
+
+    radial-gradient(
+
+    circle,
+
+    rgba(132,209,117,.18),
+
+    transparent 65%
+
+    );
+
+
+    filter:blur(90px);
+
+
+    z-index:-1;
+
+
+}
+
+
+
+
+body::after{
+
+
+    content:"";
+
+
+    position:fixed;
+
+
+    width:500px;
+
+
+    height:500px;
+
+
+    right:-150px;
+
+
+    bottom:0;
+
+
+    background:
+
+
+    radial-gradient(
+
+    circle,
+
+    rgba(0,212,255,.15),
+
+    transparent 70%
+
+    );
+
+
+    filter:blur(90px);
+
+
+    z-index:-1;
+
 
 }
 
@@ -55,20 +182,26 @@ body{
 
 
 
-/* =========================
- NAVBAR
-========================= */
+
+/* =====================================
+   HEADER / NAVBAR
+===================================== */
 
 
 header{
 
+
     position:fixed;
 
-    top:38px;
+
+    top:0;
+
 
     width:100%;
 
+
     z-index:1000;
+
 
 }
 
@@ -77,25 +210,45 @@ header{
 .navbar{
 
 
+    max-width:1250px;
+
+
+    margin:15px auto;
+
+
+    padding:18px 30px;
+
+
     display:flex;
+
 
     justify-content:space-between;
 
+
     align-items:center;
 
-    padding:20px 8%;
+
+    background:
 
 
-    background:rgba(7,27,42,.85);
+    rgba(7,27,42,.85);
 
 
-    backdrop-filter:blur(15px);
+    backdrop-filter:blur(20px);
 
 
-    border-bottom:1px solid rgba(0,212,255,.2);
+    border-radius:20px;
+
+
+    border:
+
+
+    1px solid rgba(0,212,255,.15);
 
 
 }
+
+
 
 
 
@@ -104,9 +257,11 @@ header{
 
     font-size:30px;
 
+
     font-weight:900;
 
-    letter-spacing:2px;
+
+    letter-spacing:3px;
 
 
     color:white;
@@ -118,7 +273,9 @@ header{
 
 .logo span{
 
-    color:#84D175;
+
+    color:var(--primary);
+
 
 }
 
@@ -127,25 +284,38 @@ header{
 
 .navbar ul{
 
+
     display:flex;
 
-    gap:30px;
+
+    gap:35px;
+
 
     list-style:none;
+
 
 }
 
 
 
+
 .navbar ul a{
+
 
     color:white;
 
+
     text-decoration:none;
+
+
+    font-size:15px;
+
 
     font-weight:600;
 
+
     transition:.3s;
+
 
 }
 
@@ -153,7 +323,9 @@ header{
 
 .navbar ul a:hover{
 
-    color:#00D4FF;
+
+    color:var(--primary);
+
 
 }
 
@@ -163,26 +335,45 @@ header{
 
 
 
+/* =====================================
+   BOTONES
+===================================== */
+
+
 .btn-whatsapp,
 .button{
 
 
+    display:inline-flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    padding:14px 30px;
+
+
+    border-radius:50px;
+
+
     background:
 
+
     linear-gradient(
+
     135deg,
-    #84D175,
-    #00D4FF
+
+    var(--primary),
+
+    var(--cyan)
+
     );
 
 
     color:#071B2A;
-
-
-    padding:14px 28px;
-
-
-    border-radius:30px;
 
 
     font-weight:900;
@@ -191,13 +382,12 @@ header{
     text-decoration:none;
 
 
-    display:inline-block;
-
-
     transition:.3s;
 
 
 }
+
+
 
 
 
@@ -208,11 +398,13 @@ header{
     transform:translateY(-5px);
 
 
-    box-shadow:0 0 35px #84D175;
+    box-shadow:
+
+
+    0 0 35px rgba(132,209,117,.5);
 
 
 }
-
 
 
 
@@ -226,7 +418,10 @@ header{
     color:white;
 
 
-    border:1px solid #00D4FF;
+    border:
+
+
+    1px solid var(--cyan);
 
 
 }
@@ -237,15 +432,16 @@ header{
 
 
 
-/* =========================
- HERO
-========================= */
+/* =====================================
+   HERO
+===================================== */
 
 
 .hero{
 
 
     min-height:100vh;
+
 
     padding:160px 8% 80px;
 
@@ -259,23 +455,32 @@ header{
     align-items:center;
 
 
+    gap:80px;
+
+
 }
+
 
 
 
 .hero-text span{
 
 
-    color:#00D4FF;
+    color:var(--cyan);
 
 
-    font-weight:bold;
+    font-size:14px;
 
 
     letter-spacing:3px;
 
 
+    font-weight:800;
+
+
 }
+
+
 
 
 
@@ -288,7 +493,10 @@ header{
     line-height:1.1;
 
 
-    margin:20px 0;
+    margin:25px 0;
+
+
+    font-weight:900;
 
 
 }
@@ -296,16 +504,20 @@ header{
 
 
 
+
 .hero-text p{
 
 
-    color:#cbd5e1;
+    max-width:600px;
+
+
+    color:var(--gray);
 
 
     font-size:20px;
 
 
-    max-width:600px;
+    line-height:1.6;
 
 
     margin-bottom:35px;
@@ -315,52 +527,16 @@ header{
 
 
 
+
+
 .hero-buttons{
 
+
     display:flex;
+
 
     gap:20px;
 
-}
-
-
-
-
-.stats{
-
-
-    display:flex;
-
-
-    gap:40px;
-
-
-    margin-top:50px;
-
-
-}
-
-
-
-.stats strong{
-
-
-    display:block;
-
-
-    font-size:32px;
-
-
-    color:#84D175;
-
-
-}
-
-
-
-.stats p{
-
-    color:#94A3B8;
 
 }
 
@@ -369,7 +545,9 @@ header{
 
 
 
-/* TARJETAS HERO */
+/* =====================================
+   ICONOS HERO
+===================================== */
 
 
 .hero-display{
@@ -378,7 +556,7 @@ header{
     display:grid;
 
 
-    grid-template-columns:repeat(2,160px);
+    grid-template-columns:repeat(2,150px);
 
 
     gap:25px;
@@ -388,10 +566,33 @@ header{
 
 
 
+
 .floating-card{
 
 
+    width:150px;
+
+
+    height:150px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    font-size:60px;
+
+
+    border-radius:30px;
+
+
     background:
+
 
     linear-gradient(
 
@@ -404,19 +605,13 @@ header{
     );
 
 
-    padding:25px;
+    border:
 
 
-    border-radius:25px;
+    1px solid rgba(0,212,255,.25);
 
 
-    text-align:center;
-
-
-    border:1px solid rgba(0,212,255,.3);
-
-
-    transition:.3s;
+    transition:.35s;
 
 
 }
@@ -427,23 +622,29 @@ header{
 .floating-card:hover{
 
 
-    transform:translateY(-10px);
+    transform:translateY(-12px);
 
 
-    border-color:#84D175;
+    border-color:var(--primary);
 
 
-    box-shadow:0 0 30px rgba(132,209,117,.3);
+    box-shadow:
+
+
+    0 0 35px rgba(132,209,117,.3);
 
 
 }
+
+
 
 
 
 .card-icon{
 
 
-    font-size:45px;
+    font-size:55px;
+
 
 }
 
@@ -451,66 +652,85 @@ header{
 
 
 
-/* =========================
- GENERAL
-========================= */
+/* =====================================
+   SECCIONES GENERALES
+===================================== */
 
 
 section{
 
+
     padding:90px 8%;
 
+
 }
+
+
 
 
 
 .section-title{
 
+
     text-align:center;
+
 
     margin-bottom:50px;
 
+
 }
+
 
 
 
 .section-title span{
 
-    color:#00D4FF;
 
-    font-weight:bold;
+    color:var(--cyan);
+
+
+    font-size:13px;
+
+
+    font-weight:800;
+
 
     letter-spacing:3px;
 
+
 }
+
+
 
 
 
 .section-title h2{
 
+
     font-size:42px;
 
-    margin:15px 0;
+
+    margin-top:15px;
+
 
 }
+
 
 
 
 .section-title p{
 
-    color:#94A3B8;
+
+    color:var(--gray);
+
+
+    margin-top:15px;
+
 
 }
-
-
-
-
-
-
-
-/* =========================
- SERVICIOS
-========================= */
+/* =====================================
+   SERVICIOS
+===================================== */
 
 
 .service-grid{
@@ -519,32 +739,47 @@ section{
     display:grid;
 
 
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns:repeat(4,1fr);
 
 
-    gap:25px;
+    gap:20px;
 
 
 }
 
 
 
+
 .service-card{
 
 
-    background:#102F4A;
+    background:
 
 
-    border-radius:25px;
+    linear-gradient(
+
+    145deg,
+
+    #102F4A,
+
+    #071B2A
+
+    );
+
+
+    border-radius:22px;
 
 
     overflow:hidden;
 
 
-    border:1px solid rgba(0,212,255,.2);
+    border:
 
 
-    transition:.3s;
+    1px solid rgba(0,212,255,.18);
+
+
+    transition:.35s;
 
 
 }
@@ -554,62 +789,122 @@ section{
 .service-card:hover{
 
 
-    transform:translateY(-10px);
+    transform:translateY(-8px);
 
 
-    border-color:#84D175;
+    border-color:var(--primary);
+
+
+    box-shadow:
+
+
+    0 15px 40px rgba(0,0,0,.3);
 
 
 }
+
 
 
 
 .service-image{
 
 
-    height:160px;
+    height:140px;
 
 
     display:flex;
 
 
-    justify-content:center;
-
-
     align-items:center;
 
 
-    font-size:70px;
+    justify-content:center;
+
+
+    font-size:65px;
 
 
 }
+
 
 
 
 .gaming{
 
-    background:#162F45;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #162F45,
+
+    #071B2A
+
+    );
 
 }
+
+
 
 
 .streaming{
 
-    background:#1B2850;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #1B2850,
+
+    #071B2A
+
+    );
 
 }
+
+
+
 
 
 .ia{
 
-    background:#35205A;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #35205A,
+
+    #071B2A
+
+    );
 
 }
 
 
+
+
+
 .design{
 
-    background:#214A50;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #214A50,
+
+    #071B2A
+
+    );
 
 }
 
@@ -620,20 +915,28 @@ section{
 .service-content{
 
 
-    padding:25px;
+    padding:22px;
 
 
 }
 
 
 
+
 .service-content span{
 
-    color:#84D175;
 
-    font-size:13px;
+    color:var(--primary);
 
-    font-weight:bold;
+
+    font-size:12px;
+
+
+    font-weight:800;
+
+
+    letter-spacing:2px;
+
 
 }
 
@@ -642,10 +945,10 @@ section{
 .service-content h3{
 
 
-    margin:15px 0;
+    margin:12px 0;
 
 
-    font-size:24px;
+    font-size:22px;
 
 
 }
@@ -654,9 +957,16 @@ section{
 
 .service-content p{
 
-    color:#cbd5e1;
+
+    color:var(--gray);
+
+
+    line-height:1.5;
+
 
 }
+
+
 
 
 
@@ -669,10 +979,13 @@ section{
     margin-top:20px;
 
 
-    color:#00D4FF;
+    color:var(--cyan);
 
 
     text-decoration:none;
+
+
+    font-weight:bold;
 
 
 }
@@ -683,9 +996,11 @@ section{
 
 
 
-/* =========================
- PRODUCTOS
-========================= */
+
+
+/* =====================================
+   PRODUCTOS ESTILO BANKAI
+===================================== */
 
 
 .product-grid,
@@ -700,13 +1015,17 @@ section{
     display:grid;
 
 
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(4,1fr);
 
 
-    gap:25px;
+    gap:18px;
 
 
 }
+
+
+
+
 
 
 
@@ -718,19 +1037,268 @@ section{
 .payment-grid div{
 
 
-    background:#102F4A;
+    background:
 
 
-    padding:30px;
+    linear-gradient(
+
+    145deg,
+
+    #102F4A,
+
+    #071B2A
+
+    );
 
 
-    border-radius:25px;
+    padding:22px;
+
+
+    min-height:310px;
+
+
+    border-radius:22px;
+
+
+    text-align:left;
+
+
+    border:
+
+
+    1px solid rgba(0,212,255,.18);
+
+
+    transition:.35s;
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+
+
+.product-card:hover,
+.game-card:hover,
+.ai-card:hover{
+
+
+    transform:translateY(-8px);
+
+
+    border-color:var(--primary);
+
+
+    box-shadow:
+
+
+    0 20px 45px rgba(0,0,0,.35);
+
+
+}
+
+
+
+
+
+
+
+/* LOGOS PRODUCTOS */
+
+
+.product-card img{
+
+
+    width:65px;
+
+
+    height:65px;
+
+
+    object-fit:contain;
+
+
+    margin-bottom:20px;
+
+
+    border-radius:15px;
+
+
+    transition:.6s;
+
+
+}
+
+
+
+
+.product-card:hover img{
+
+
+    transform:rotate(360deg);
+
+
+}
+
+
+
+
+
+
+
+.product-icon{
+
+
+    font-size:55px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+
+.product-card::before{
+
+
+    content:"DIGITAL";
+
+
+    position:absolute;
+
+
+    top:18px;
+
+
+    right:18px;
+
+
+    color:#94A3B8;
+
+
+    font-size:10px;
+
+
+    font-weight:900;
+
+
+    letter-spacing:2px;
+
+
+}
+
+
+
+
+
+
+.product-card h3,
+.game-card h3,
+.ai-card h3{
+
+
+    font-size:21px;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+
+
+.product-card p,
+.game-card p,
+.ai-card p{
+
+
+    color:var(--gray);
+
+
+    line-height:1.5;
+
+
+}
+
+
+
+
+
+
+.product-card strong{
+
+
+    display:block;
+
+
+    margin-top:20px;
+
+
+    color:var(--primary);
+
+
+    font-size:20px;
+
+
+}
+
+
+
+
+
+
+.product-card a,
+.game-card a{
+
+
+    display:block;
 
 
     text-align:center;
 
 
-    border:1px solid rgba(0,212,255,.2);
+    margin-top:20px;
+
+
+    padding:12px;
+
+
+    border-radius:14px;
+
+
+    background:
+
+
+    rgba(255,255,255,.08);
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.1);
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    font-weight:800;
 
 
     transition:.3s;
@@ -741,63 +1309,16 @@ section{
 
 
 
-.product-card:hover,
-.game-card:hover,
-.ai-card:hover{
+
+.product-card a:hover,
+.game-card a:hover{
 
 
-    transform:translateY(-10px);
-
-
-    border-color:#84D175;
-
-
-}
-
-
-
-
-
-.product-icon{
-
-    font-size:50px;
-
-    margin-bottom:20px;
-
-}
-
-
-
-.product-card strong{
-
-    display:block;
-
-    margin:20px;
-
-    color:#84D175;
-
-    font-size:22px;
-
-}
-
-
-
-.product-card a,
-.game-card a{
+    background:var(--primary);
 
 
     color:#071B2A;
 
-    background:#84D175;
-
-    padding:10px 25px;
-
-    border-radius:25px;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
 
 }
 
@@ -807,9 +1328,11 @@ section{
 
 
 
-/* =========================
- OFERTAS
-========================= */
+
+
+/* =====================================
+   OFERTAS
+===================================== */
 
 
 .offer-banner{
@@ -818,10 +1341,10 @@ section{
     margin:40px 8%;
 
 
+    padding:55px;
+
+
     border-radius:30px;
-
-
-    padding:60px;
 
 
     display:flex;
@@ -834,6 +1357,7 @@ section{
 
 
     background:
+
 
     linear-gradient(
 
@@ -850,10 +1374,13 @@ section{
 
 
 
+
+
 .offer-icon{
 
 
     font-size:120px;
+
 
 }
 
@@ -862,9 +1389,12 @@ section{
 
 
 
-/* =========================
- REVENDEDORES
-========================= */
+
+
+
+/* =====================================
+   REVENDEDORES
+===================================== */
 
 
 .revendedores{
@@ -873,7 +1403,11 @@ section{
     text-align:center;
 
 
+    border-radius:30px;
+
+
     background:
+
 
     linear-gradient(
 
@@ -890,6 +1424,8 @@ section{
 
 
 
+
+
 .reseller-content p{
 
 
@@ -899,7 +1435,7 @@ section{
     margin:25px auto;
 
 
-    color:#fff;
+    color:white;
 
 
     font-size:20px;
@@ -911,15 +1447,19 @@ section{
 
 
 
-/* =========================
- FAQ
-========================= */
+
+
+
+
+/* =====================================
+   FAQ
+===================================== */
 
 
 .faq{
 
 
-    max-width:800px;
+    max-width:850px;
 
 
     margin:auto;
@@ -944,6 +1484,12 @@ section{
     border-radius:20px;
 
 
+    border:
+
+
+    1px solid rgba(0,212,255,.15);
+
+
 }
 
 
@@ -951,19 +1497,22 @@ section{
 .faq-item h3{
 
 
-    color:#00D4FF;
+    color:var(--cyan);
 
 
 }
+
 
 
 
 .faq-item p{
 
 
-    color:#cbd5e1;
+    color:var(--gray);
+
 
     margin-top:10px;
+
 
 }
 
@@ -973,9 +1522,11 @@ section{
 
 
 
-/* =========================
- CONTACTO
-========================= */
+
+
+/* =====================================
+   CONTACTO
+===================================== */
 
 
 .contact-section{
@@ -993,9 +1544,10 @@ section{
 
 
 
-/* =========================
- WHATSAPP FLOAT
-========================= */
+
+/* =====================================
+   WHATSAPP FLOTANTE
+===================================== */
 
 
 .floating-whatsapp{
@@ -1019,28 +1571,31 @@ section{
     border-radius:50%;
 
 
-    background:#84D175;
-
-
-    color:#071B2A;
-
-
     display:flex;
-
-
-    align-items:center;
 
 
     justify-content:center;
 
 
+    align-items:center;
+
+
     font-size:32px;
+
+
+    background:var(--primary);
+
+
+    color:#071B2A;
 
 
     text-decoration:none;
 
 
-    box-shadow:0 0 25px #84D175;
+    box-shadow:
+
+
+    0 0 30px rgba(132,209,117,.5);
 
 
     z-index:999;
@@ -1053,9 +1608,12 @@ section{
 
 
 
-/* =========================
- FOOTER
-========================= */
+
+
+
+/* =====================================
+   FOOTER
+===================================== */
 
 
 footer{
@@ -1077,7 +1635,7 @@ footer{
 footer h3{
 
 
-    color:#84D175;
+    color:var(--primary);
 
 
     font-size:30px;
@@ -1090,7 +1648,7 @@ footer h3{
 footer p{
 
 
-    color:#94A3B8;
+    color:var(--gray);
 
 
     margin-top:15px;
@@ -1099,13 +1657,18 @@ footer p{
 }
 
 
+
 .socials a{
 
-    color:#00D4FF;
+
+    color:var(--cyan);
+
 
     margin:15px;
 
+
     text-decoration:none;
+
 
 }
 
@@ -1115,73 +1678,157 @@ footer p{
 
 
 
-/* =========================
- MOBILE
-========================= */
 
 
-@media(max-width:900px){
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+
+@media(max-width:1000px){
+
 
 
 .navbar ul{
 
+
     display:none;
 
+
 }
+
+
+
 
 
 .hero{
 
+
     flex-direction:column;
+
 
     text-align:center;
 
+
 }
+
+
 
 
 
 .hero-text h2{
 
-    font-size:42px;
+
+    font-size:45px;
+
 
 }
 
 
 
-.hero-buttons,
-.stats{
 
-    justify-content:center;
 
-    flex-wrap:wrap;
+.service-grid,
+.product-grid,
+.game-grid,
+.ai-grid,
+.stream-grid{
+
+
+    grid-template-columns:repeat(2,1fr);
+
 
 }
 
-
-
-.hero-display{
-
-    margin-top:50px;
-
-    grid-template-columns:repeat(2,120px);
-
-}
-
-
-
-.floating-card{
-
-    padding:20px;
-
-}
 
 
 
 .offer-banner{
 
+
     flex-direction:column;
 
+
     text-align:center;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+@media(max-width:600px){
+
+
+
+.hero-text h2{
+
+
+    font-size:35px;
+
+
+}
+
+
+
+
+.hero-display{
+
+
+    grid-template-columns:repeat(2,120px);
+
+
+}
+
+
+
+
+
+.floating-card{
+
+
+    width:120px;
+
+
+    height:120px;
+
+
+    font-size:45px;
+
+
+}
+
+
+
+
+.service-grid,
+.product-grid,
+.game-grid,
+.ai-grid,
+.stream-grid{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+
+
+section{
+
+
+    padding:60px 20px;
+
 
 }
 
