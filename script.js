@@ -40,5 +40,54 @@ document.addEventListener("DOMContentLoaded",()=>{
         "AMERISSTORE cargado correctamente 🚀"
     );
 
+   const counter = document.getElementById("diamondCounter");
+
+
+if(counter){
+
+
+let number = 0;
+
+
+let target = 10000;
+
+
+
+let animation = setInterval(()=>{
+
+
+number += 250;
+
+
+
+if(number >= target){
+
+
+number = target;
+
+
+clearInterval(animation);
+
+
+
+document
+.querySelector(".diamond-stock")
+.classList.add("active");
+
+
+}
+
+
+
+counter.innerHTML = number.toLocaleString();
+
+
+
+},40);
+
+
+
+}
+
 
 });
