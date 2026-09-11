@@ -1,13 +1,14 @@
-/* ==========================
-   AMERISSTORE GAMING TECH
-========================== */
+/* =====================================
+   AMERISSTORE FUTURE GAMING
+   Gaming | IA | Streaming | Digital
+===================================== */
 
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Arial', sans-serif;
+    font-family:'Inter', Arial, sans-serif;
 }
 
 
@@ -18,9 +19,9 @@ html{
 
 body{
 
-    background:#0C2D45;
+    background:#071B2A;
 
-    color:#FFFFFF;
+    color:#F5F7FA;
 
     overflow-x:hidden;
 
@@ -28,20 +29,21 @@ body{
 
 
 
-/* ==========================
- NAVBAR
-========================== */
+
+/* ==============================
+   NAVBAR
+============================== */
 
 
 header{
 
     position:fixed;
 
-    width:100%;
-
     top:0;
 
-    z-index:999;
+    width:100%;
+
+    z-index:1000;
 
 }
 
@@ -49,19 +51,28 @@ header{
 
 .navbar{
 
-    display:flex;
 
-    align-items:center;
+    display:flex;
 
     justify-content:space-between;
 
+    align-items:center;
+
     padding:20px 8%;
 
-    background:rgba(12,45,69,.85);
 
-    backdrop-filter:blur(12px);
+    background:
 
-    border-bottom:1px solid rgba(132,209,117,.2);
+    rgba(7,27,42,.85);
+
+
+    backdrop-filter:blur(15px);
+
+
+    border-bottom:
+
+    1px solid rgba(0,212,255,.15);
+
 
 }
 
@@ -69,17 +80,21 @@ header{
 
 .logo{
 
-    font-size:28px;
+
+    font-size:30px;
 
     font-weight:900;
 
     letter-spacing:2px;
 
+
     color:#84D175;
+
 
     text-shadow:
 
-    0 0 15px #84D175;
+    0 0 20px #84D175;
+
 
 }
 
@@ -87,11 +102,13 @@ header{
 
 .navbar ul{
 
+
     display:flex;
 
-    gap:30px;
+    gap:35px;
 
     list-style:none;
+
 
 }
 
@@ -99,13 +116,15 @@ header{
 
 .navbar ul a{
 
-    color:white;
 
     text-decoration:none;
 
-    font-weight:bold;
+    color:white;
+
+    font-weight:600;
 
     transition:.3s;
+
 
 }
 
@@ -113,9 +132,13 @@ header{
 
 .navbar ul a:hover{
 
-    color:#84D175;
+
+    color:#00D4FF;
+
 
 }
+
+
 
 
 
@@ -124,25 +147,39 @@ header{
 .button{
 
 
-    display:inline-block;
+    background:
 
-    background:#84D175;
+    linear-gradient(
 
-    color:#0C2D45;
+    135deg,
 
-    padding:14px 28px;
+    #84D175,
+
+    #00D4FF
+
+    );
+
+
+    color:#071B2A;
+
+
+    padding:14px 30px;
+
 
     border-radius:30px;
 
+
     text-decoration:none;
+
 
     font-weight:900;
 
+
+    display:inline-block;
+
+
     transition:.3s;
 
-    box-shadow:
-
-    0 0 20px rgba(132,209,117,.5);
 
 }
 
@@ -154,9 +191,11 @@ header{
 
     transform:translateY(-5px);
 
+
     box-shadow:
 
     0 0 35px #84D175;
+
 
 }
 
@@ -164,9 +203,12 @@ header{
 
 
 
-/* ==========================
+
+
+/* ==============================
  HERO
-========================== */
+============================== */
+
 
 
 .hero{
@@ -174,13 +216,18 @@ header{
 
     min-height:100vh;
 
+
+    padding:130px 8% 80px;
+
+
     display:flex;
+
 
     align-items:center;
 
+
     justify-content:space-between;
 
-    padding:120px 8% 60px;
 
     position:relative;
 
@@ -189,28 +236,33 @@ header{
 
 
 
-/* luces */
-
 .hero::before{
 
 
 content:"";
 
+
 position:absolute;
 
-width:500px;
 
-height:500px;
+width:600px;
 
-background:#84D175;
+height:600px;
 
-filter:blur(150px);
+
+right:0;
+
+
+top:100px;
+
+
+background:#8B5CF6;
+
+
+filter:blur(180px);
+
 
 opacity:.18;
-
-right:10%;
-
-top:20%;
 
 
 }
@@ -222,11 +274,17 @@ top:20%;
 .hero-text span{
 
 
-color:#FFF8D2;
+color:#00D4FF;
+
+
+font-weight:bold;
+
+
+letter-spacing:3px;
+
 
 font-size:14px;
 
-letter-spacing:3px;
 
 }
 
@@ -237,7 +295,9 @@ letter-spacing:3px;
 
 font-size:65px;
 
+
 line-height:1.1;
+
 
 margin:20px 0;
 
@@ -251,9 +311,12 @@ margin:20px 0;
 
 font-size:20px;
 
+
 color:#cbd5e1;
 
+
 max-width:550px;
+
 
 margin-bottom:35px;
 
@@ -264,12 +327,16 @@ margin-bottom:35px;
 
 
 
+
+
 .hero-icons{
 
 
 display:grid;
 
+
 grid-template-columns:repeat(2,150px);
+
 
 gap:25px;
 
@@ -278,12 +345,30 @@ gap:25px;
 
 
 
+
 .hero-icons div{
 
 
 height:150px;
 
+
 width:150px;
+
+
+border-radius:30px;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+font-size:60px;
+
 
 
 background:
@@ -294,29 +379,19 @@ linear-gradient(
 
 #102F4A,
 
-#3E5BA3
+#071B2A
 
 );
 
 
-border-radius:30px;
 
+border:
 
-display:flex;
+1px solid rgba(0,212,255,.3);
 
-justify-content:center;
-
-align-items:center;
-
-
-font-size:60px;
-
-
-border:1px solid rgba(132,209,117,.3);
 
 
 transition:.4s;
-
 
 
 }
@@ -329,14 +404,16 @@ transition:.4s;
 
 transform:
 
-translateY(-15px)
+translateY(-15px);
 
-scale(1.05);
+
+
+border-color:#84D175;
 
 
 box-shadow:
 
-0 0 40px #84D175;
+0 0 40px rgba(132,209,117,.5);
 
 
 }
@@ -348,15 +425,18 @@ box-shadow:
 
 
 
-/* ==========================
+
+/* ==============================
  SECCIONES
-========================== */
+============================== */
+
 
 
 section{
 
 
 padding:90px 8%;
+
 
 }
 
@@ -367,7 +447,9 @@ section h2{
 
 text-align:center;
 
+
 font-size:42px;
+
 
 margin-bottom:50px;
 
@@ -378,15 +460,20 @@ margin-bottom:50px;
 
 
 
-/* ==========================
- CARDS SERVICIOS
-========================== */
+
+
+
+
+/* ==============================
+ SERVICIOS
+============================== */
 
 
 .cards{
 
 
 display:grid;
+
 
 grid-template-columns:
 
@@ -397,7 +484,6 @@ gap:25px;
 
 
 }
-
 
 
 
@@ -413,14 +499,15 @@ padding:35px;
 border-radius:25px;
 
 
-border:1px solid rgba(132,209,117,.2);
+border:
+
+1px solid rgba(0,212,255,.2);
 
 
 transition:.3s;
 
 
 }
-
 
 
 
@@ -435,19 +522,17 @@ border-color:#84D175;
 
 box-shadow:
 
-0 0 30px rgba(132,209,117,.2);
-
+0 0 30px rgba(0,212,255,.25);
 
 
 }
 
 
 
-
 .icon{
 
 
-font-size:40px;
+font-size:45px;
 
 margin-bottom:20px;
 
@@ -461,6 +546,7 @@ margin-bottom:20px;
 
 color:#84D175;
 
+
 margin-bottom:15px;
 
 
@@ -472,6 +558,7 @@ margin-bottom:15px;
 
 
 color:#cbd5e1;
+
 
 line-height:1.6;
 
@@ -485,15 +572,18 @@ line-height:1.6;
 
 
 
-/* ==========================
+
+
+/* ==============================
  PRODUCTOS
-========================== */
+============================== */
 
 
 .grid-productos{
 
 
 display:grid;
+
 
 grid-template-columns:
 
@@ -504,7 +594,6 @@ gap:25px;
 
 
 }
-
 
 
 
@@ -519,9 +608,10 @@ linear-gradient(
 
 #102F4A,
 
-#0C2D45
+#071B2A
 
 );
+
 
 
 padding:30px;
@@ -533,7 +623,11 @@ border-radius:25px;
 text-align:center;
 
 
-border:1px solid rgba(62,91,163,.5);
+
+border:
+
+1px solid rgba(139,92,246,.4);
+
 
 
 transition:.3s;
@@ -543,20 +637,16 @@ transition:.3s;
 
 
 
-
-
 .producto:hover{
 
 
 transform:scale(1.05);
 
 
-border-color:#84D175;
+border-color:#00D4FF;
 
 
 }
-
-
 
 
 
@@ -564,8 +654,6 @@ border-color:#84D175;
 
 
 font-size:22px;
-
-margin-bottom:15px;
 
 
 }
@@ -577,11 +665,14 @@ margin-bottom:15px;
 
 display:block;
 
+
 margin-top:20px;
 
-color:#84D175;
 
 font-size:22px;
+
+
+color:#84D175;
 
 
 }
@@ -592,9 +683,11 @@ font-size:22px;
 
 
 
-/* ==========================
+
+
+/* ==============================
  REVENDEDORES
-========================== */
+============================== */
 
 
 .revendedores{
@@ -611,20 +704,9 @@ linear-gradient(
 
 #102F4A,
 
-#3E5BA3
+#8B5CF6
 
 );
-
-
-border-top:
-
-1px solid rgba(132,209,117,.3);
-
-
-border-bottom:
-
-1px solid rgba(132,209,117,.3);
-
 
 
 }
@@ -634,14 +716,13 @@ border-bottom:
 .revendedores p{
 
 
-max-width:700px;
+max-width:750px;
 
-margin:20px auto 40px;
+
+margin:25px auto 40px;
 
 
 font-size:20px;
-
-color:#fff;
 
 
 }
@@ -650,11 +731,9 @@ color:#fff;
 
 
 
-
-
-/* ==========================
+/* ==============================
  BENEFICIOS
-========================== */
+============================== */
 
 
 .benefit-grid{
@@ -690,10 +769,9 @@ border-radius:20px;
 text-align:center;
 
 
-border:1px solid rgba(132,209,117,.2);
+border:
 
-
-font-weight:bold;
+1px solid rgba(132,209,117,.25);
 
 
 }
@@ -704,15 +782,17 @@ font-weight:bold;
 
 
 
-/* ==========================
+/* ==============================
  FAQ
-========================== */
+============================== */
+
 
 
 .faq{
 
 
 max-width:800px;
+
 
 margin:auto;
 
@@ -724,7 +804,8 @@ margin:auto;
 .faq h3{
 
 
-color:#84D175;
+color:#00D4FF;
+
 
 margin-top:30px;
 
@@ -738,6 +819,7 @@ margin-top:30px;
 
 color:#cbd5e1;
 
+
 margin-top:10px;
 
 
@@ -748,19 +830,19 @@ margin-top:10px;
 
 
 
-
-/* ==========================
+/* ==============================
  FOOTER
-========================== */
+============================== */
 
 
 footer{
 
 
-background:#071B2A;
+background:#050F18;
 
 
 padding:40px;
+
 
 text-align:center;
 
@@ -774,7 +856,8 @@ footer h3{
 
 color:#84D175;
 
-font-size:25px;
+
+font-size:28px;
 
 
 }
@@ -786,6 +869,7 @@ footer p{
 
 color:#94A3B8;
 
+
 margin-top:10px;
 
 
@@ -796,10 +880,10 @@ margin-top:10px;
 
 
 
-
-/* ==========================
+/* ==============================
  MOBILE
-========================== */
+============================== */
+
 
 
 @media(max-width:900px){
@@ -841,11 +925,6 @@ font-size:42px;
 margin-top:50px;
 
 
-grid-template-columns:
-
-repeat(2,120px);
-
-
 }
 
 
@@ -855,11 +934,14 @@ repeat(2,120px);
 
 width:120px;
 
+
 height:120px;
 
 
-}
+font-size:45px;
 
+
+}
 
 
 }
