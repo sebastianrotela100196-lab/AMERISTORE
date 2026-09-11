@@ -13,11 +13,9 @@ document.addEventListener(
 ()=>{
 
 
-
 console.log(
 "AMERISSTORE Free Fire cargado 🚀"
 );
-
 
 
 
@@ -44,12 +42,14 @@ cantidad:1
 
 
 
+
 /* =====================================
    SELECCIONAR DIAMANTES
 ===================================== */
 
 
-const tarjetas = document.querySelectorAll(
+const tarjetas =
+document.querySelectorAll(
 ".diamond-card"
 );
 
@@ -63,14 +63,30 @@ card.addEventListener(
 ()=>{
 
 
-tarjetas.forEach(
-c=>c.classList.remove("active")
+// QUITAR SELECCIÓN ANTERIOR
+
+tarjetas.forEach(c=>{
+
+c.classList.remove(
+"active"
+);
+
+});
+
+
+
+
+// ACTIVAR NUEVO PRODUCTO
+
+card.classList.add(
+"active"
 );
 
 
 
-card.classList.add("active");
 
+
+// GUARDAR DATOS
 
 
 compra.producto =
@@ -80,6 +96,34 @@ card.dataset.producto;
 
 compra.precio =
 card.dataset.precio;
+
+
+
+
+
+
+// ===============================
+// REINICIAR CANTIDAD AL CAMBIAR
+// ===============================
+
+
+compra.cantidad = 1;
+
+
+
+const quantity =
+document.getElementById(
+"quantity"
+);
+
+
+
+if(quantity){
+
+quantity.value = 1;
+
+}
+
 
 
 
@@ -98,8 +142,11 @@ actualizarResumen();
 
 
 
+
+
+
 /* =====================================
-   PASO 1 A PASO 2
+   PASO 1 → PASO 2
 ===================================== */
 
 
@@ -118,23 +165,37 @@ continuar1.addEventListener(
 ()=>{
 
 
+const step2 =
 document.getElementById(
 "step2"
-).classList.remove("hidden");
+);
 
 
 
-document.getElementById(
-"step2"
-).scrollIntoView({
+if(step2){
+
+
+step2.classList.remove(
+"hidden"
+);
+
+
+
+step2.scrollIntoView({
+
 behavior:"smooth"
-});
-
-
 
 });
+
 
 }
+
+
+});
+
+
+}
+
 
 
 
@@ -174,6 +235,7 @@ actualizarResumen();
 
 });
 
+
 }
 
 
@@ -182,8 +244,11 @@ actualizarResumen();
 
 
 
+
+
+
 /* =====================================
-   GUIA USER ID
+   GUIA ID
 ===================================== */
 
 
@@ -226,8 +291,11 @@ guideContent.classList.toggle(
 
 
 
+
+
+
 /* =====================================
-   PASO 2 A PASO 3
+   PASO 2 → PASO 3
 ===================================== */
 
 
@@ -244,6 +312,7 @@ if(continuar2){
 continuar2.addEventListener(
 "click",
 ()=>{
+
 
 
 if(
@@ -264,17 +333,31 @@ return;
 
 
 
+
+const step3 =
 document.getElementById(
 "step3"
-).classList.remove("hidden");
+);
 
 
 
-document.getElementById(
-"step3"
-).scrollIntoView({
+if(step3){
+
+
+step3.classList.remove(
+"hidden"
+);
+
+
+
+step3.scrollIntoView({
+
 behavior:"smooth"
+
 });
+
+
+}
 
 
 
@@ -296,7 +379,7 @@ actualizarResumen();
 
 
 /* =====================================
-   CANTIDAD
+   CONTROL CANTIDAD
 ===================================== */
 
 
@@ -314,6 +397,15 @@ document.getElementById(
 
 
 
+const quantity =
+document.getElementById(
+"quantity"
+);
+
+
+
+
+
 if(plus){
 
 
@@ -325,13 +417,27 @@ plus.addEventListener(
 compra.cantidad++;
 
 
+
+if(quantity){
+
+quantity.value =
+compra.cantidad;
+
+}
+
+
+
 actualizarResumen();
+
 
 
 });
 
 
 }
+
+
+
 
 
 
@@ -350,7 +456,18 @@ if(compra.cantidad > 1){
 compra.cantidad--;
 
 
+
+if(quantity){
+
+quantity.value =
+compra.cantidad;
+
+}
+
+
+
 actualizarResumen();
+
 
 
 }
@@ -370,8 +487,10 @@ actualizarResumen();
 
 
 
+
+
 /* =====================================
-   RESUMEN
+   ACTUALIZAR RESUMEN
 ===================================== */
 
 
@@ -407,27 +526,79 @@ document.getElementById(
 
 
 
-if(producto)
+
+
+
+if(producto){
+
 producto.innerHTML =
 compra.producto;
 
+}
 
 
-if(precio)
+
+
+
+if(precio){
+
 precio.innerHTML =
 compra.precio;
 
+}
 
 
-if(id)
+
+
+
+if(id){
+
 id.innerHTML =
 compra.id || "-";
 
+}
 
 
-if(total)
+
+
+
+
+if(total){
+
+
+
+let precioNumero =
+
+parseInt(
+
+compra.precio.replace(
+/\D/g,
+""
+)
+
+);
+
+
+
+let totalFinal =
+
+precioNumero *
+compra.cantidad;
+
+
+
+
+
 total.innerHTML =
-compra.precio;
+
+"Gs. " +
+
+totalFinal.toLocaleString();
+
+
+
+}
+
 
 
 
@@ -440,8 +611,13 @@ compra.precio;
 
 
 
+
+
+
+
+
 /* =====================================
-   WHATSAPP FINAL
+   WHATSAPP
 ===================================== */
 
 
@@ -462,6 +638,29 @@ botonWhatsapp.addEventListener(
 
 
 
+let precioNumero =
+
+parseInt(
+
+compra.precio.replace(
+/\D/g,
+""
+)
+
+);
+
+
+
+let totalFinal =
+
+precioNumero *
+compra.cantidad;
+
+
+
+
+
+
 let mensaje =
 
 
@@ -479,12 +678,16 @@ Free Fire
 ${compra.producto}
 
 
-💰 Precio:
+🔢 Cantidad:
+${compra.cantidad}
+
+
+💰 Precio unitario:
 ${compra.precio}
 
 
-🔢 Cantidad:
-${compra.cantidad}
+🧾 Total:
+Gs. ${totalFinal.toLocaleString()}
 
 
 🆔 ID Jugador:
@@ -497,9 +700,14 @@ Espero confirmación de mi pedido.
 Gracias.`;
 
 
+
+
+
 let url =
 
 `https://wa.me/${whatsapp}?text=${encodeURIComponent(mensaje)}`;
+
+
 
 
 
@@ -513,7 +721,6 @@ url,
 });
 
 
-
 }
 
 
@@ -525,7 +732,7 @@ url,
 
 
 /* =====================================
-   BOTONES DE MEMBRESIAS
+   MEMBRESIAS
 ===================================== */
 
 
@@ -549,8 +756,11 @@ let producto =
 boton.dataset.producto;
 
 
+
 let precio =
 boton.dataset.precio;
+
+
 
 
 
@@ -563,12 +773,17 @@ let mensaje =
 Estoy interesado en:
 
 
-📦 ${producto}
+📦 Producto:
+${producto}
 
-💰 ${precio}
+
+💰 Precio:
+${precio}
 
 
 Gracias.`;
+
+
 
 
 window.open(
@@ -585,6 +800,7 @@ window.open(
 
 
 });
+
 
 
 
@@ -610,16 +826,19 @@ if(counter){
 
 let number = 0;
 
+
 let target = 10000;
 
 
 
 let animation =
+
 setInterval(
 ()=>{
 
 
 number += 200;
+
 
 
 
@@ -630,6 +849,8 @@ number = target;
 
 
 clearInterval(animation);
+
+
 
 
 
@@ -647,6 +868,7 @@ box.classList.add(
 );
 
 }
+
 
 
 
@@ -672,27 +894,30 @@ sessionStorage.setItem(
 }
 
 
+
 }
+
+
 
 
 
 
 counter.innerHTML =
 
-"+" + number.toLocaleString();
+"+" +
+
+number.toLocaleString();
 
 
 
 
-},50);
+
+},
+50);
 
 
 
 }
-
-
-
-
 
 
 
@@ -704,15 +929,19 @@ counter.innerHTML =
 
 
 
+
+
 /* =====================================
-   LLUVIA DE DIAMANTES
+   LLUVIA DIAMANTES
 ===================================== */
 
 
 function crearDiamantes(){
 
 
+
 const container =
+
 document.createElement(
 "div"
 );
@@ -730,6 +959,9 @@ container
 
 
 
+
+
+
 for(
 let i=0;
 i<100;
@@ -739,6 +971,7 @@ i++
 
 
 let diamond =
+
 document.createElement(
 "div"
 );
@@ -756,17 +989,20 @@ diamond.innerHTML =
 
 
 diamond.style.left =
+
 Math.random()*100+"%";
 
 
 
 diamond.style.animationDelay =
+
 Math.random()*2+"s";
 
 
 
 diamond.style.fontSize =
-(25+Math.random()*45)+"px";
+
+(25 + Math.random()*45)+"px";
 
 
 
@@ -777,6 +1013,10 @@ diamond
 
 
 }
+
+
+
+
 
 
 
