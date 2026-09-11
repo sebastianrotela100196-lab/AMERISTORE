@@ -9,28 +9,39 @@
 // =========================
 
 
+// =========================
+// WHATSAPP AMERISSTORE
+// =========================
+
+
 const whatsapp = "595981841136";
 
 
 
-function comprar(producto){
+function comprar(producto, precio){
 
 
     let mensaje =
 
-    `Hola AMERISSTORE 👋%0A%0A` +
+`Hola AMERISSTORE 👋
 
-    `Estoy interesado en comprar:%0A` +
+Estoy interesado en realizar una compra.
 
-    `🎮 ${producto}%0A%0A` +
+📦 Producto:
+${producto}
 
-    `Quiero más información.`;
+💰 Precio:
+${precio}
+
+✅ Me gustaría recibir información para completar mi pedido.
+
+Gracias por la atención. 🚀`;
 
 
 
     let url =
 
-    `https://wa.me/${whatsapp}?text=${mensaje}`;
+    `https://wa.me/${whatsapp}?text=${encodeURIComponent(mensaje)}`;
 
 
 
