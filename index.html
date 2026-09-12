@@ -2,1220 +2,949 @@
 
 <html lang="es">
 
-
 <head>
 
+    <meta charset="UTF-8">
 
-<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta
+        name="description"
+        content="AMERISSTORE - Productos digitales, gaming, streaming, música, inteligencia artificial y diseño."
+    >
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        AMERISSTORE | Digital & Gaming Store
+    </title>
 
-
-<title>
-AMERISSTORE | Gaming & Digital Store
-</title>
-
-
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 
 </head>
-
-
 
 
 <body>
 
 
-
-<!-- =================================
+<!-- =========================================
 TOP BAR
-================================= -->
-
+========================================= -->
 
 <div class="top-bar">
 
-
-<span>
-⚡ ACTIVACIÓN RÁPIDA
-</span>
-
-
-<span>
-🛡 COMPRA SEGURA
-</span>
-
-
-<span>
-💬 SOPORTE POR WHATSAPP
-</span>
-
+    <span>
+        👻 AMERISSTORE • DIGITAL & GAMING STORE
+    </span>
 
 </div>
 
 
 
-
-
-
-
-
-
-<!-- =================================
+<!-- =========================================
 HEADER
-================================= -->
-
+========================================= -->
 
 <header class="header">
 
-
-<div class="logo">
-
-
-AMERIS<span>STORE</span>
+    <div class="header-container">
 
 
-</div>
+        <!-- LOGO -->
 
+        <a href="index.html" class="logo">
 
+            AMERIS<span>STORE</span>
 
-
-
-
-<div class="search">
-
-
-<input 
-type="text"
-placeholder="🔍 Buscar productos..."
->
-
-
-</div>
+        </a>
 
 
 
+        <!-- CARRITO -->
+
+        <div class="user-area">
+
+            <a
+                href="#"
+                class="cart-button"
+                id="cart-button"
+                aria-label="Abrir carrito"
+            >
+
+                <span class="cart-icon">
+                    🛒
+                </span>
 
 
+                <div class="cart-info">
+
+                    <span>
+                        Carrito
+                    </span>
+
+                    <strong id="cart-total">
+                        Gs. 0
+                    </strong>
+
+                </div>
 
 
-<div class="user-area">
+                <span
+                    class="cart-count"
+                    id="cart-count"
+                >
+                    0
+                </span>
+
+            </a>
+
+        </div>
 
 
-<a href="#">
-Iniciar sesión
-</a>
+        <!-- BOTÓN MÓVIL -->
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
 
 
-<span>
-Gs. 0
-</span>
-
-
-🛒
-
-
-</div>
-
-
+    </div>
 
 </header>
 
 
 
+<!-- =========================================
+NAVEGACIÓN
+========================================= -->
+
+<nav
+    class="menu"
+    id="main-menu"
+>
+
+    <a
+        href="index.html"
+        class="active"
+    >
+        INICIO
+    </a>
 
 
+    <a href="streaming.html">
+        STREAMING
+    </a>
 
 
+    <a href="musica.html">
+        MÚSICA
+    </a>
 
 
-<!-- =================================
-MENU
-================================= -->
+    <a href="gaming.html">
+        GAMING
+    </a>
 
 
-<nav class="menu">
+    <a href="ia.html">
+        IA TOOLS
+    </a>
 
 
-<a href="index.html">
-INICIO
-</a>
+    <a href="diseno.html">
+        DISEÑO
+    </a>
 
 
-<a href="streaming.html">
-STREAMING
-</a>
+    <a href="seguridad.html">
+        SEGURIDAD
+    </a>
 
 
-<a href="musica.html">
-MÚSICA
-</a>
-
-
-<a href="gaming.html">
-GAMING
-</a>
-
-
-<a href="ia.html">
-IA TOOLS
-</a>
-
-
-<a href="diseno.html">
-DISEÑO
-</a>
-
-
-<a href="seguridad.html">
-SEGURIDAD
-</a>
-
-
-<a href="revendedores.html">
-REVENDEDORES
-</a>
-
-
+    <a href="revendedores.html">
+        REVENDEDORES
+    </a>
 
 </nav>
 
 
 
+<!-- =========================================
+CONTENIDO PRINCIPAL
+========================================= -->
 
+<main>
 
 
 
+<!-- =========================================
+DESTACADOS
+========================================= -->
 
+<section
+    id="productos"
+    class="featured"
+>
 
-<!-- =================================
-HERO
-================================= -->
 
+    <!-- TITULO -->
 
-<section class="hero">
+    <div class="section-title">
 
+        <span class="section-label">
+            DESTACADOS
+        </span>
 
 
-<div class="hero-content">
+        <h1>
+            Productos destacados
+        </h1>
 
 
+        <p>
+            Descubre algunos de nuestros productos digitales más populares.
+        </p>
 
-<span class="hero-tag">
+    </div>
 
-🔥 SERVICIOS DIGITALES
 
-</span>
 
+    <!-- GRID PRODUCTOS -->
 
+    <div class="products-grid">
 
 
-<h1>
 
+        <!-- =================================
+        FREE FIRE
+        ================================= -->
 
-Todo lo digital
+        <article class="product-card">
 
-<br>
 
-en un solo lugar
+            <a href="freefire.html">
 
 
-</h1>
+                <div class="product-image">
 
 
+                    <img
+                        src="assets/productos/freefire.png"
+                        alt="Recargas Free Fire"
+                    >
 
 
+                    <span class="product-badge">
+                        OFERTA
+                    </span>
 
 
-<p>
+                </div>
 
 
-Streaming, música, inteligencia artificial,
-recargas gamer y herramientas digitales
-para todos.
 
+                <div class="product-info">
 
-</p>
 
+                    <span class="product-category">
+                        GAMING
+                    </span>
 
 
+                    <h2>
+                        Recargas Free Fire
+                    </h2>
 
 
-<div class="hero-buttons">
+                    <p>
+                        Recarga diamantes Free Fire de manera rápida utilizando tu ID.
+                    </p>
 
 
-<a href="#productos" class="btn-primary">
 
-Explorar productos →
+                    <div class="product-bottom">
 
-</a>
 
+                        <div class="price">
 
+                            <small>
+                                Desde
+                            </small>
 
-<a href="https://wa.me/595981841136"
-class="btn-secondary">
+                            <strong>
+                                Gs. 5.000
+                            </strong>
 
-💬 Contactar
+                        </div>
 
-</a>
 
+                        <span class="product-arrow">
+                            →
+                        </span>
 
 
-</div>
+                    </div>
 
 
+                </div>
 
 
+            </a>
 
-</div>
 
+        </article>
 
 
 
+        <!-- =================================
+        CANVA PRO
+        ================================= -->
 
+        <article class="product-card">
 
-<div class="hero-card">
 
+            <a href="producto.html?id=canva">
 
 
-<h3>
-AMERISSTORE
-</h3>
+                <div class="product-image">
 
 
+                    <img
+                        src="assets/productos/canva.png"
+                        alt="Canva Pro"
+                        loading="lazy"
+                    >
 
-<p>
-Catálogo Digital
-</p>
 
+                    <span class="product-badge">
+                        PRO
+                    </span>
 
 
+                </div>
 
-<div class="categories-mini">
 
 
-<div>
-🎬
-Streaming
-</div>
+                <div class="product-info">
 
 
-<div>
-🎵
-Música
-</div>
+                    <span class="product-category">
+                        DISEÑO
+                    </span>
 
 
-<div>
-🎮
-Gaming
-</div>
+                    <h2>
+                        Canva Pro
+                    </h2>
 
 
-<div>
-🤖
-IA Tools
-</div>
+                    <p>
+                        Diseña contenido profesional con herramientas y funciones Premium.
+                    </p>
 
 
-</div>
 
+                    <div class="product-bottom">
 
 
+                        <div class="price">
 
+                            <small>
+                                Desde
+                            </small>
 
-</div>
+                            <strong>
+                                Gs. 5.000
+                            </strong>
 
+                        </div>
+
+
+                        <span class="product-arrow">
+                            →
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </a>
+
+
+        </article>
+
+
+
+        <!-- =================================
+        SPOTIFY PREMIUM
+        ================================= -->
+
+        <article class="product-card">
+
+
+            <a href="producto.html?id=spotify">
+
+
+                <div class="product-image">
+
+
+                    <img
+                        src="assets/productos/spotify.png"
+                        alt="Spotify Premium"
+                        loading="lazy"
+                    >
+
+
+                    <span class="product-badge popular">
+                        POPULAR
+                    </span>
+
+
+                </div>
+
+
+
+                <div class="product-info">
+
+
+                    <span class="product-category">
+                        MÚSICA
+                    </span>
+
+
+                    <h2>
+                        Spotify Premium
+                    </h2>
+
+
+                    <p>
+                        Escucha tu música favorita sin anuncios y sin límites.
+                    </p>
+
+
+
+                    <div class="product-bottom">
+
+
+                        <div class="price">
+
+                            <small>
+                                Desde
+                            </small>
+
+                            <strong>
+                                Gs. 25.000
+                            </strong>
+
+                        </div>
+
+
+                        <span class="product-arrow">
+                            →
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </a>
+
+
+        </article>
+
+
+
+        <!-- =================================
+        FLUJO TV
+        ================================= -->
+
+        <article class="product-card">
+
+
+            <a href="producto.html?id=flujotv">
+
+
+                <div class="product-image">
+
+
+                    <img
+                        src="assets/productos/flujotv.png"
+                        alt="Flujo TV"
+                        loading="lazy"
+                    >
+
+
+                    <span class="product-badge">
+                        OFERTA
+                    </span>
+
+
+                </div>
+
+
+
+                <div class="product-info">
+
+
+                    <span class="product-category">
+                        STREAMING
+                    </span>
+
+
+                    <h2>
+                        Flujo TV
+                    </h2>
+
+
+                    <p>
+                        Canales en vivo, deportes, películas y entretenimiento.
+                    </p>
+
+
+
+                    <div class="product-bottom">
+
+
+                        <div class="price">
+
+
+                            <small>
+                                Ahora
+                            </small>
+
+
+                            <div class="price-values">
+
+                                <strong>
+                                    Gs. 30.000
+                                </strong>
+
+                                <del>
+                                    Gs. 45.000
+                                </del>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <span class="product-arrow">
+                            →
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </a>
+
+
+        </article>
+
+
+
+    </div>
 
 
 </section>
-<!-- =================================
-MÁS VENDIDOS
-================================= -->
-
-
-<section id="productos" class="featured">
-
-
-<div class="section-title">
-
-
-<span>
-MÁS VENDIDOS
-</span>
-
-
-
-<h2>
-Productos destacados
-</h2>
-
-
-
-<p>
-Los servicios digitales favoritos de nuestros clientes.
-</p>
-
-
-
-</div>
-
-
-
-
-
-
-<div class="products-grid">
-
-
-
-
-
-<!-- FREE FIRE -->
-
-
-<div class="product-card">
-
-
-<a href="freefire.html">
-
-
-<div class="product-image">
-
-
-<img src="assets/productos/freefire.png"
-alt="Free Fire Diamantes">
-
-
-<div class="badge">
-OFERTA
-</div>
-
-
-</div>
-
-
-
-
-
-<div class="product-info">
-
-
-<span>
-GAMING
-</span>
-
-
-
-<h3>
-Recargas Free Fire
-</h3>
-
-
-
-<p>
-Diamantes Free Fire vía ID.
-</p>
-
-
-
-
-<div class="price">
-
-
-<strong>
-Desde Gs. 5.000
-</strong>
-
-
-</div>
-
-
-
-</div>
-
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- CANVA -->
-
-
-<div class="product-card">
-
-
-<a href="producto.html?id=canva">
-
-
-
-<div class="product-image">
-
-
-<img src="assets/productos/canva.png"
-alt="Canva Pro">
-
-
-<div class="badge">
-PRO
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="product-info">
-
-
-<span>
-DISEÑO
-</span>
-
-
-
-<h3>
-Canva Pro
-</h3>
-
-
-
-<p>
-Diseños profesionales con herramientas Premium.
-</p>
-
-
-
-
-<div class="price">
-
-
-<strong>
-Desde Gs. 5.000
-</strong>
-
-
-</div>
-
-
-
-</div>
-
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- SPOTIFY -->
-
-
-<div class="product-card">
-
-
-<a href="producto.html?id=spotify">
-
-
-
-<div class="product-image">
-
-
-<img src="assets/productos/spotify.png"
-alt="Spotify Premium">
-
-
-
-<div class="badge">
-POPULAR
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div class="product-info">
-
-
-<span>
-MÚSICA
-</span>
-
-
-
-<h3>
-Spotify Premium
-</h3>
-
-
-
-<p>
-Música sin anuncios y sin límites.
-</p>
-
-
-
-
-
-<div class="price">
-
-
-<strong>
-Desde Gs. 25.000
-</strong>
-
-
-</div>
-
-
-
-</div>
-
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- FLUJO TV -->
-
-
-<div class="product-card">
-
-
-<a href="producto.html?id=flujotv">
-
-
-
-<div class="product-image">
-
-
-<img src="assets/productos/flujotv.png"
-alt="Flujo TV">
-
-
-
-<div class="badge">
-OFERTA
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="product-info">
-
-
-<span>
-STREAMING
-</span>
-
-
-
-<h3>
-Flujo TV
-</h3>
-
-
-
-<p>
-Canales en vivo, deportes y entretenimiento.
-</p>
-
-
-
-
-
-<div class="price">
-
-
-<strong>
-Gs. 30.000
-</strong>
-
-
-<del>
-Gs.45.000
-</del>
-
-
-</div>
-
-
-
-</div>
-
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-</div>
-
-
-</section>
-<!-- =================================
-BENEFICIOS
-================================= -->
-
-
-<section class="benefits">
-
-
-<div class="benefit-card">
-
-
-
-<div class="benefit-icon">
-
-⚡
-
-</div>
-
-
-
-
-<div>
-
-
-<h3>
-Entrega rápida
-</h3>
-
-
-<p>
-Recibe tus productos digitales
-sin largas esperas.
-</p>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="benefit-card">
-
-
-
-<div class="benefit-icon">
-
-🛡️
-
-</div>
-
-
-
-
-<div>
-
-
-<h3>
-Compra segura
-</h3>
-
-
-<p>
-Pagos seguros y atención
-personalizada.
-</p>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="benefit-card">
-
-
-
-<div class="benefit-icon">
-
-💬
-
-</div>
-
-
-
-
-<div>
-
-
-<h3>
-Soporte personalizado
-</h3>
-
-
-<p>
-Estamos para ayudarte
-cuando lo necesites.
-</p>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-</section>
-<!-- =================================
+<!-- =========================================
 REVENDEDORES
-================================= -->
-
+========================================= -->
 
 <section class="reseller-section">
 
 
+    <div class="section-title">
 
 
+        <span class="section-label">
+            REVENDEDORES
+        </span>
 
-<div class="section-title">
 
+        <h2>
+            Genera ingresos con AMERISSTORE
+        </h2>
 
-<span>
-BUSINESS PROGRAM
-</span>
 
+        <p>
+            Accede a precios especiales y vende productos digitales a tus propios clientes.
+        </p>
 
 
+    </div>
 
-<h2>
-Conviértete en revendedor
-</h2>
 
 
+    <div class="reseller-grid">
 
 
-<p>
-Genera ingresos vendiendo productos digitales.
-</p>
+        <!-- PRECIO ESPECIAL -->
 
+        <div class="reseller-card">
 
 
-</div>
+            <div class="reseller-icon">
+                💰
+            </div>
 
 
+            <h3>
+                Precios especiales
+            </h3>
 
 
+            <p>
+                Accede a precios pensados para revendedores y mejora tu margen de ganancia.
+            </p>
 
 
+        </div>
 
 
 
-<div class="reseller-grid">
+        <!-- ACTIVACIÓN -->
 
+        <div class="reseller-card">
 
 
+            <div class="reseller-icon">
+                ⚡
+            </div>
 
 
-<div class="reseller-card">
+            <h3>
+                Activación rápida
+            </h3>
 
 
-<div class="reseller-icon">
+            <p>
+                Entrega productos y servicios digitales rápidamente a tus clientes.
+            </p>
 
-💰
 
-</div>
+        </div>
 
 
 
-<h3>
-Mejores precios
-</h3>
+        <!-- CATÁLOGO -->
 
+        <div class="reseller-card">
 
 
-<p>
-Accede a precios especiales
-para aumentar tus ganancias.
-</p>
+            <div class="reseller-icon">
+                🎮
+            </div>
 
 
+            <h3>
+                Catálogo digital
+            </h3>
 
-</div>
 
+            <p>
+                Gaming, streaming, música, IA, diseño y más productos digitales.
+            </p>
 
 
+        </div>
 
 
 
+        <!-- SOPORTE -->
 
+        <div class="reseller-card">
 
-<div class="reseller-card">
 
+            <div class="reseller-icon">
+                👻
+            </div>
 
-<div class="reseller-icon">
 
-⚡
+            <h3>
+                Atención directa
+            </h3>
 
-</div>
 
+            <p>
+                Recibe asistencia para gestionar tus pedidos y resolver tus consultas.
+            </p>
 
 
-<h3>
-Activación rápida
-</h3>
+        </div>
 
 
+    </div>
 
-<p>
-Entrega servicios rápidamente
-a tus clientes.
-</p>
 
 
+    <a
+        href="https://wa.me/595981841136?text=Hola%20AMERISSTORE,%20quiero%20informaci%C3%B3n%20sobre%20el%20programa%20de%20revendedores."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary"
+    >
 
-</div>
+        Quiero ser revendedor →
 
-
-
-
-
-
-
-
-<div class="reseller-card">
-
-
-<div class="reseller-icon">
-
-📦
-
-</div>
-
-
-
-<h3>
-Gran catálogo
-</h3>
-
-
-
-<p>
-Gaming, Streaming,
-IA y Diseño.
-</p>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="reseller-card">
-
-
-<div class="reseller-icon">
-
-💬
-
-</div>
-
-
-
-<h3>
-Soporte
-</h3>
-
-
-
-<p>
-Ayuda comercial
-para tus ventas.
-</p>
-
-
-
-</div>
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<a 
-
-href="https://wa.me/595981841136"
-
-class="btn-primary">
-
-
-Quiero ser revendedor
-
-
-</a>
-
-
-
-
-
+    </a>
 
 
 </section>
-<!-- =================================
-CTA FINAL
-================================= -->
 
+
+
+<!-- =========================================
+CTA FINAL
+========================================= -->
 
 <section class="final-contact">
 
 
-
-<h2>
-
-¿Listo para comenzar?
-
-</h2>
+    <span class="section-label">
+        AMERISSTORE
+    </span>
 
 
+    <h2>
+        ¿Encontraste lo que buscabas?
+    </h2>
 
 
-<p>
-
-Disfruta servicios digitales,
-gaming, streaming y herramientas premium.
-
-</p>
+    <p>
+        Consulta disponibilidad, precios o productos directamente por WhatsApp.
+    </p>
 
 
+    <a
+        href="https://wa.me/595981841136?text=Hola%20AMERISSTORE,%20quiero%20consultar%20por%20un%20producto."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary"
+    >
 
+        💬 Comprar por WhatsApp
 
-
-
-<a
-
-href="https://wa.me/595981841136"
-
-class="btn-primary">
-
-
-💬 Comprar por WhatsApp
-
-
-</a>
-
-
-
+    </a>
 
 
 </section>
 
 
 
+</main>
 
 
 
-
-
-
-<!-- =================================
+<!-- =========================================
 WHATSAPP FLOTANTE
-================================= -->
-
+========================================= -->
 
 <a
+    href="https://wa.me/595981841136?text=Hola%20AMERISSTORE,%20quiero%20consultar%20por%20un%20producto."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="floating-whatsapp"
+    aria-label="Contactar por WhatsApp"
+>
 
-href="https://wa.me/595981841136"
-
-target="_blank"
-
-class="floating-whatsapp">
-
-
-💬
-
+    💬
 
 </a>
 
 
 
-
-
-
-
-
-
-<!-- =================================
+<!-- =========================================
 FOOTER
-================================= -->
+========================================= -->
+
+<footer class="footer">
 
 
-<footer>
-
-
-
-<h2>
-
-AMERIS<span>STORE</span>
-
-</h2>
+    <div class="footer-container">
 
 
 
+        <!-- MARCA -->
+
+        <div class="footer-brand">
 
 
-<p>
+            <a
+                href="index.html"
+                class="footer-logo"
+            >
 
-Gaming • Streaming • Música • IA • Diseño
+                AMERIS<span>STORE</span>
 
-</p>
-
-
-
-
-
+            </a>
 
 
-<div class="footer-links">
+            <p>
+                Tu tienda de productos digitales, gaming, streaming y herramientas premium.
+            </p>
 
 
-
-<a href="#">
-
-Instagram
-
-</a>
-
-
-
-<a href="#">
-
-TikTok
-
-</a>
+        </div>
 
 
 
-<a href="#">
+        <!-- PRODUCTOS -->
 
-Facebook
-
-</a>
+        <div class="footer-column">
 
 
-
-</div>
-
-
-
+            <h3>
+                Productos
+            </h3>
 
 
+            <a href="streaming.html">
+                Streaming
+            </a>
+
+
+            <a href="musica.html">
+                Música
+            </a>
+
+
+            <a href="gaming.html">
+                Gaming
+            </a>
+
+
+            <a href="ia.html">
+                IA Tools
+            </a>
+
+
+            <a href="diseno.html">
+                Diseño
+            </a>
+
+
+            <a href="seguridad.html">
+                Seguridad
+            </a>
+
+
+        </div>
 
 
 
-<p>
+        <!-- INFORMACIÓN -->
 
-© 2026 AMERISSTORE.
-Todos los derechos reservados.
-
-</p>
+        <div class="footer-column">
 
 
+            <h3>
+                Información
+            </h3>
 
 
+            <a href="revendedores.html">
+                Revendedores
+            </a>
+
+
+            <a
+                href="https://wa.me/595981841136"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                WhatsApp
+            </a>
+
+
+            <a href="#">
+                Preguntas frecuentes
+            </a>
+
+
+        </div>
+
+
+
+        <!-- REDES -->
+
+        <div class="footer-column">
+
+
+            <h3>
+                Síguenos
+            </h3>
+
+
+            <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Instagram
+            </a>
+
+
+            <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                TikTok
+            </a>
+
+
+            <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Facebook
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+
+        <p>
+            © 2026 AMERISSTORE. Todos los derechos reservados.
+        </p>
+
+
+    </div>
 
 
 </footer>
 
 
 
-
-
-
-
-
+<!-- =========================================
+JAVASCRIPT
+========================================= -->
 
 <script src="script.js"></script>
 
 
-
 </body>
-
 
 </html>
