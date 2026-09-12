@@ -502,18 +502,13 @@ margin:auto;
 
 .checkout-box{
 
+background:#0D0D0D;
 
-background:
+border:
 
-linear-gradient(
+1px solid rgba(255,255,255,.08);
 
-145deg,
-
-#102F4A,
-
-#071B2A
-
-);
+}
 
 
 border-radius:25px;
