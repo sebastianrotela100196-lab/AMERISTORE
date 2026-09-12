@@ -1,1677 +1,614 @@
-/* =====================================
-   AMERISSTORE FREE FIRE
-   Gaming | Digital Store
-===================================== */
+/* =========================================================
+   AMERISSTORE
+   SCRIPT GENERAL DE LA TIENDA
+========================================================= */
 
+"use strict";
 
-const whatsapp = "595981841136";
 
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+========================================================= */
 
+const WHATSAPP_STORE = "595981841136";
 
 
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
 
-
-
-console.log(
-"AMERISSTORE cargado correctamente 🚀"
-);
-
-
-
-
-
-
-/* =====================================
-   DATOS DE COMPRA
-===================================== */
-
-
-let compra = {
-
-
-producto:"110 Diamantes 💎",
-
-
-precio:"Gs. 6.000",
-
-
-id:"",
-
-
-cantidad:1
-
-
-
-};
-
-
-
-
-
-
-
-
-
-/* =====================================
-   SELECCIONAR DIAMANTES
-===================================== */
-
-
-const tarjetas =
-
-document.querySelectorAll(
-".diamond-card"
-);
-
-
-
-
-
-
-tarjetas.forEach(card=>{
-
-
-
-card.addEventListener(
-"click",
-()=>{
-
-
-
-
-
-tarjetas.forEach(c=>{
-
-
-c.classList.remove(
-"active"
-);
-
-
-
-});
-
-
-
-
-
-card.classList.add(
-"active"
-);
-
-
-
-
-
-
-
-compra.producto =
-
-card.dataset.producto;
-
-
-
-
-
-compra.precio =
-
-card.dataset.precio;
-
-
-
-
-
-
-
-
-// Reiniciar cantidad
-
-
-compra.cantidad = 1;
-
-
-
-
-
-const cantidad =
-
-document.getElementById(
-"quantity"
-);
-
-
-
-
-
-if(cantidad){
-
-
-cantidad.value = 1;
-
-
-}
-
-
-
-
-
-
-
-actualizarResumen();
-
-
-
-
-
-
-});
-
-
-
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================
-   PASO 1 → PASO 2
-===================================== */
-
-
-
-const continuar1 =
-
-document.getElementById(
-"continueStep1"
-);
-
-
-
-
-
-
-if(continuar1){
-
-
-
-continuar1.addEventListener(
-"click",
-()=>{
-
-
-
-
-
-const step2 =
-
-document.getElementById(
-"step2"
-);
-
-
-
-
-
-
-if(step2){
-
-
-
-step2.classList.remove(
-"hidden"
-);
-
-
-
-
-
-step2.scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-
-
-}
-
-
-
-
-});
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================
-   INPUT ID JUGADOR
-===================================== */
-
-
-
-const inputID =
-
-document.getElementById(
-"playerID"
-);
-
-
-
-
-
-
-if(inputID){
-
-
-
-inputID.addEventListener(
-"input",
-()=>{
-
-
-
-
-
-compra.id =
-
-inputID.value.trim();
-
-
-
-
-
-
-actualizarResumen();
-
-
-
-
-});
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================
-   GUIA USER ID
-===================================== */
-
-
-const guideButton =
-
-document.getElementById(
-"openGuide"
-);
-
-
-
-
-const guideContent =
-
-document.getElementById(
-"guideContent"
-);
-
-
-
-
-
-
-if(guideButton){
-
-
-
-guideButton.addEventListener(
-"click",
-()=>{
-
-
-
-guideContent.classList.toggle(
-"show"
-);
-
-
-
-});
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================
-   PASO 2 → PASO 3
-===================================== */
-
-
-const continuar2 =
-
-document.getElementById(
-"continueStep2"
-);
-
-
-
-
-
-
-if(continuar2){
-
-
-
-continuar2.addEventListener(
-"click",
-()=>{
-
-
-
-
-
-if(compra.id.length < 6){
-
-
-
-alert(
-"Ingresa correctamente tu ID Free Fire"
-);
-
-
-
-return;
-
-
-
-}
-
-
-
-
-
-
-
-
-const step3 =
-
-document.getElementById(
-"step3"
-);
-
-
-
-
-
-
-
-if(step3){
-
-
-
-step3.classList.remove(
-"hidden"
-);
-
-
-
-
-
-step3.scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-
-
-}
-
-
-
-
-
-actualizarResumen();
-
-
-
-
-
-
-});
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================
-   CANTIDAD + -
-===================================== */
-
-
-
-const plus =
-
-document.getElementById(
-"plus"
-);
-
-
-
-
-const minus =
-
-document.getElementById(
-"minus"
-);
-
-
-
-
-const quantity =
-
-document.getElementById(
-"quantity"
-);
-
-
-
-
-
-
-
-
-if(plus){
-
-
-
-plus.addEventListener(
-"click",
-()=>{
-
-
-
-
-
-compra.cantidad++;
-
-
-
-
-
-if(quantity){
-
-
-quantity.value =
-
-compra.cantidad;
-
-
-}
-
-
-
-
-
-actualizarResumen();
-
-
-
-
-
-});
-
-
-
-}
-
-
-
-
-
-
-
-if(minus){
-
-
-
-minus.addEventListener(
-"click",
-()=>{
-
-
-
-
-
-if(compra.cantidad > 1){
-
-
-
-compra.cantidad--;
-
-
-
-
-
-if(quantity){
-
-
-quantity.value =
-
-compra.cantidad;
-
-
-}
-
-
-
-
-actualizarResumen();
-
-
-
-}
-
-
-
-});
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================
-   ACTUALIZAR RESUMEN
-===================================== */
-
-
-function actualizarResumen(){
-
-
-
-
-
-const producto =
-
-document.getElementById(
-"summaryProduct"
-);
-
-
-
-
-
-const precio =
-
-document.getElementById(
-"summaryPrice"
-);
-
-
-
-
-
-const id =
-
-document.getElementById(
-"summaryID"
-);
-
-
-
-
-
-const total =
-
-document.getElementById(
-"totalPrice"
-);
-
-
-
-
-
-
-
-
-if(producto){
-
-
-producto.innerHTML =
-
-compra.producto;
-
-
-
-}
-
-
-
-
-
-
-
-if(precio){
-
-
-precio.innerHTML =
-
-compra.precio;
-
-
-
-}
-
-
-
-
-
-
-
-if(id){
-
-
-id.innerHTML =
-
-compra.id || "-";
-
-
-
-}
-
-
-
-
-
-
-
-
-if(total){
-
-
-
-
-
-let precioNumero =
-
-parseInt(
-
-compra.precio.replace(
-/\D/g,
-""
-)
-
-);
-
-
-
-
-
-let totalFinal =
-
-precioNumero *
-compra.cantidad;
-
-
-
-
-
-
-
-total.innerHTML =
-
-"Gs. " +
-
-totalFinal.toLocaleString();
-
-
-
-}
-
-
-
-
-
-
-}
-/* =====================================
-   COMPRAR POR WHATSAPP
-===================================== */
-
-
-const botonWhatsapp =
-
-document.getElementById(
-"buyWhatsapp"
-);
-
-
-
-
-
-
-if(botonWhatsapp){
-
-
-
-botonWhatsapp.addEventListener(
-"click",
-()=>{
-
-
-
-
-
-let precioNumero =
-
-parseInt(
-
-compra.precio.replace(
-/\D/g,
-""
-)
-
-);
-
-
-
-
-
-
-let totalFinal =
-
-precioNumero *
-compra.cantidad;
-
-
-
-
-
-
-
-let mensaje =
-
-
-
-`Hola AMERISSTORE 👋🚀
-
-
-Quiero realizar una compra:
-
-
-🎮 Juego:
-Free Fire
-
-
-💎 Producto:
-${compra.producto}
-
-
-🔢 Cantidad:
-${compra.cantidad}
-
-
-💰 Precio unitario:
-${compra.precio}
-
-
-🧾 Total:
-Gs. ${totalFinal.toLocaleString()}
-
-
-🆔 ID Jugador:
-${compra.id}
-
-
-Espero confirmación de mi pedido.
-
-Gracias.`;
-
-
-
-
-
-
-
-let url =
-
-`https://wa.me/${whatsapp}?text=${encodeURIComponent(mensaje)}`;
-
-
-
-
-
-
-
-window.open(
-
-url,
-
-"_blank"
-
-);
-
-
-
-
-
-});
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================
-   EXTRAS WHATSAPP
-===================================== */
-
-
-const botonesExtras =
-
-document.querySelectorAll(
-".buy-button"
-);
-
-
-
-
-
-
-botonesExtras.forEach(
-boton=>{
-
-
-
-
-
-boton.addEventListener(
-"click",
-()=>{
-
-
-
-
-
-let producto =
-
-boton.dataset.producto;
-
-
-
-
-
-
-let precio =
-
-boton.dataset.precio;
-
-
-
-
-
-
-
-let mensaje =
-
-
-
-`Hola AMERISSTORE 👋
-
-
-Estoy interesado en:
-
-
-📦 Producto:
-${producto}
-
-
-💰 Precio:
-${precio}
-
-
-Quiero información para completar mi compra.
-
-
-Gracias 🚀`;
-
-
-
-
-
-
-
-let url =
-
-`https://wa.me/${whatsapp}?text=${encodeURIComponent(mensaje)}`;
-
-
-
-
-
-
-
-window.open(
-
-url,
-
-"_blank"
-
-);
-
-
-
-
-
-});
-
-
-
-
-
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================
-   CONTADOR DIAMANTES
-===================================== */
-
-
-const counter =
-
-document.getElementById(
-"diamondCounter"
-);
-
-
-
-
-
-
-if(counter){
-
-
-
-
-
-let number = 0;
-
-
-
-let target = 10000;
-
-
-
-
-
-
-
-let animation =
-
-setInterval(
-()=>{
-
-
-
-
-
-number += 200;
-
-
-
-
-
-
-
-
-if(number >= target){
-
-
-
-
-
-number = target;
-
-
-
-
-
-clearInterval(animation);
-
-
-
-
-
-
-
-
-let box =
-
-document.querySelector(
-".diamond-counter"
-);
-
-
-
-
-
-
-if(box){
-
-
-
-box.classList.add(
-"finished"
-);
-
-
-
-}
-
-
-
-
-
-
-
-
-
-// LLUVIA UNA SOLA VEZ
-
-
-
-if(
-
-!sessionStorage.getItem(
-"diamondExplosion"
-)
-
-){
-
-
-
-crearDiamantes();
-
-
-
-
-
-sessionStorage.setItem(
-"diamondExplosion",
-"true"
-
-);
-
-
-
-}
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-counter.innerHTML =
-
-"+" +
-
-number.toLocaleString();
-
-
-
-
-
-
-
-},
-
-50
-
-);
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-});
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================
-   LLUVIA DE DIAMANTES
-===================================== */
-
-
-function crearDiamantes(){
-
-
-
-
-
-const container =
-
-document.createElement(
-"div"
-);
-
-
-
-
-
-
-
-container.className =
-
-"diamond-effect";
-
-
-
-
-
-
-
-document.body.appendChild(
-container
-);
-
-
-
-
-
-
-
-
-for(
-let i=0;
-
-i<100;
-
-i++
-
-){
-
-
-
-
-
-
-let diamond =
-
-document.createElement(
-"div"
-);
-
-
-
-
-
-
-
-diamond.className =
-
-"falling-diamond";
-
-
-
-
-
-
-
-diamond.innerHTML =
-
-"💎";
-
-
-
-
-
-
-
-diamond.style.left =
-
-Math.random()*100+"%";
-
-
-
-
-
-
-
-diamond.style.animationDelay =
-
-Math.random()*2+"s";
-
-
-
-
-
-
-
-diamond.style.fontSize =
-
-(25 + Math.random()*45)+"px";
-
-
-
-
-
-
-
-container.appendChild(
-diamond
-);
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-setTimeout(
-()=>{
-
-
-
-container.remove();
-
-
-
-},
-
-4500
-
-);
-
-
-
-
-
-
-}
-/* =====================================
-   CATALOGO AMERISSTORE
-===================================== */
-
-const whatsappStore = "595981841136";
+/* =========================================================
+   CATÁLOGO AMERISSTORE
+========================================================= */
 
 const productos = [
-  {
-    categoria: "Streaming",
-    nombre: "Netflix",
-    descripcion: "Series y películas ilimitadas en calidad Premium.",
-    precio: "Gs. 30.000",
-    precioSecundario: "",
-    imagen: "assets/logos/netflix.jpg",
-    badge: "OFERTA"
-  },
-  {
-    categoria: "Streaming",
-    nombre: "Disney+ + ESPN",
-    descripcion: "Disney, Marvel, Star Wars y deportes en vivo.",
-    precio: "Gs. 25.000",
-    precioSecundario: "",
-    imagen: "assets/logos/disney-espn.jpg",
-    badge: "OFERTA"
-  },
-  {
-    categoria: "Streaming",
-    nombre: "Prime Video",
-    descripcion: "Películas, series exclusivas y contenido original.",
-    precio: "Gs. 20.000",
-    precioSecundario: "",
-    imagen: "assets/logos/prime-video.jpg",
-    badge: "OFERTA"
-  },
-  {
-    categoria: "Streaming",
-    nombre: "Max",
-    descripcion: "HBO, Warner Bros., DC y mucho más.",
-    precio: "Gs. 15.000",
-    precioSecundario: "",
-    imagen: "assets/logos/max.jpg",
-    badge: "OFERTA"
-  },
-  {
-    categoria: "Streaming",
-    nombre: "Crunchyroll",
-    descripcion: "El mejor catálogo de anime en streaming.",
-    precio: "Gs. 12.000",
-    precioSecundario: "",
-    imagen: "assets/logos/crunchyroll.jpg",
-    badge: "OFERTA"
-  },
-  {
-    categoria: "Streaming",
-    nombre: "Flujo TV",
-    descripcion: "Canales en vivo, deportes y entretenimiento.",
-    precio: "Gs. 30.000",
-    precioSecundario: "",
-    imagen: "assets/logos/flujo-tv.jpg",
-    badge: "OFERTA"
-  },
-  {
-    categoria: "Streaming",
-    nombre: "Paramount+",
-    descripcion: "Series, películas y eventos deportivos.",
-    precio: "Gs. 15.000",
-    precioSecundario: "",
-    imagen: "assets/logos/paramount.jpg",
-    badge: "OFERTA"
-  },
-  {
-    categoria: "Streaming",
-    nombre: "ViX+",
-    descripcion: "Contenido latino, novelas, películas y deportes.",
-    precio: "Gs. 12.000",
-    precioSecundario: "",
-    imagen: "assets/logos/vix.jpg",
-    badge: "OFERTA"
-  },
-  {
-    categoria: "Streaming",
-    nombre: "Spotify Premium",
-    descripcion: "Escucha música sin anuncios y sin límites.",
-    precio: "Desde Gs. 25.000",
-    precioSecundario: "1 mes 25.000 · 3 meses 60.000 · 6 meses 100.000 · 1 año 200.000",
-    imagen: "assets/logos/spotify.jpg",
-    badge: "OFERTA"
-  },
-  {
-    categoria: "Streaming",
-    nombre: "YouTube Premium",
-    descripcion: "YouTube sin anuncios, en segundo plano y YouTube Music incluido.",
-    precio: "Desde Gs. 25.000",
-    precioSecundario: "1 mes 25.000 · 3 meses 60.000",
-    imagen: "assets/logos/youtube-premium.jpg",
-    badge: "OFERTA"
-  },
-  {
-    categoria: "Streaming",
-    nombre: "Apple TV+",
-    descripcion: "Series y películas originales de Apple.",
-    precio: "Gs. 20.000",
-    precioSecundario: "",
-    imagen: "assets/logos/apple-tv.jpg",
-    badge: "OFERTA"
-  },
-  {
-    categoria: "Streaming",
-    nombre: "Universal+",
-    descripcion: "Series exclusivas, películas y contenido Premium.",
-    precio: "Gs. 20.000",
-    precioSecundario: "",
-    imagen: "assets/logos/universal-plus.jpg",
-    badge: "OFERTA"
-  },
-  {
-    categoria: "Streaming",
-    nombre: "MUBI",
-    descripcion: "Cine independiente y películas premiadas.",
-    precio: "Gs. 20.000",
-    precioSecundario: "",
-    imagen: "assets/logos/mubi.jpg",
-    badge: "OFERTA"
-  },
-  {
-    categoria: "Streaming",
-    nombre: "Rakuten Viki",
-    descripcion: "Dramas coreanos y series asiáticas con subtítulos.",
-    precio: "Gs. 20.000",
-    precioSecundario: "",
-    imagen: "assets/logos/rakuten-viki.jpg",
-    badge: "OFERTA"
-  },
-  {
-    categoria: "Inteligencia Artificial",
-    nombre: "ChatGPT Plus",
-    descripcion: "Accede a GPT-5, crea imágenes y obtén respuestas más rápidas.",
-    precio: "Gs. 25.000",
-    precioSecundario: "",
-    imagen: "assets/logos/chatgpt.jpg",
-    badge: "IA"
-  },
-  {
-    categoria: "Inteligencia Artificial",
-    nombre: "Google Gemini Pro",
-    descripcion: "IA avanzada de Google con almacenamiento en la nube y funciones Premium.",
-    precio: "Desde Gs. 89.000",
-    precioSecundario: "",
-    imagen: "assets/logos/gemini.jpg",
-    badge: "IA"
-  },
-  {
-    categoria: "Diseño",
-    nombre: "Canva Pro",
-    descripcion: "Todas las funciones Premium para diseño profesional.",
-    precio: "Desde Gs. 5.000",
-    precioSecundario: "",
-    imagen: "assets/logos/canva.jpg",
-    badge: "PRO"
-  },
-  {
-    categoria: "Diseño",
-    nombre: "CapCut Pro",
-    descripcion: "Edición de video profesional con herramientas Premium.",
-    precio: "Gs. 30.000 /mes",
-    precioSecundario: "",
-    imagen: "assets/logos/capcut.jpg",
-    badge: "PRO"
-  },
-  {
-    categoria: "Educación",
-    nombre: "Duolingo Super (30 días)",
-    descripcion: "Aprende idiomas sin anuncios y con funciones avanzadas.",
-    precio: "Gs. 25.000",
-    precioSecundario: "",
-    imagen: "assets/logos/duolingo-30.jpg",
-    badge: "TOP"
-  },
-  {
-    categoria: "Educación",
-    nombre: "Duolingo Super (1 año)",
-    descripcion: "Aprende idiomas sin anuncios y con funciones avanzadas.",
-    precio: "Gs. 150.000",
-    precioSecundario: "",
-    imagen: "assets/logos/duolingo-1ano.jpg",
-    badge: "TOP"
-  },
-  {
-    categoria: "Seguridad",
-    nombre: "NordVPN",
-    descripcion: "Protege tu conexión y navega de forma segura.",
-    precio: "Gs. 25.000",
-    precioSecundario: "",
-    imagen: "assets/logos/nordvpn.jpg",
-    badge: "VPN"
-  },
-  {
-    categoria: "Seguridad",
-    nombre: "Surfshark VPN",
-    descripcion: "Navegación privada y acceso a contenido internacional.",
-    precio: "Gs. 20.000",
-    precioSecundario: "",
-    imagen: "assets/logos/surfshark.jpg",
-    badge: "VPN"
-  }
+
+    /* =====================================================
+       STREAMING
+    ====================================================== */
+
+    {
+        categoria: "Streaming",
+        nombre: "Netflix",
+        descripcion:
+            "Series y películas ilimitadas en calidad Premium.",
+        precio: "Gs. 30.000",
+        precioSecundario: "",
+        imagen: "assets/logos/netflix.jpg",
+        badge: "OFERTA"
+    },
+
+    {
+        categoria: "Streaming",
+        nombre: "Disney+ + ESPN",
+        descripcion:
+            "Disney, Marvel, Star Wars y deportes en vivo.",
+        precio: "Gs. 25.000",
+        precioSecundario: "",
+        imagen: "assets/logos/disney-espn.jpg",
+        badge: "OFERTA"
+    },
+
+    {
+        categoria: "Streaming",
+        nombre: "Prime Video",
+        descripcion:
+            "Películas, series exclusivas y contenido original.",
+        precio: "Gs. 20.000",
+        precioSecundario: "",
+        imagen: "assets/logos/prime-video.jpg",
+        badge: "OFERTA"
+    },
+
+    {
+        categoria: "Streaming",
+        nombre: "Max",
+        descripcion:
+            "HBO, Warner Bros., DC y mucho más.",
+        precio: "Gs. 15.000",
+        precioSecundario: "",
+        imagen: "assets/logos/max.jpg",
+        badge: "OFERTA"
+    },
+
+    {
+        categoria: "Streaming",
+        nombre: "Crunchyroll",
+        descripcion:
+            "El mejor catálogo de anime en streaming.",
+        precio: "Gs. 12.000",
+        precioSecundario: "",
+        imagen: "assets/logos/crunchyroll.jpg",
+        badge: "OFERTA"
+    },
+
+    {
+        categoria: "Streaming",
+        nombre: "Flujo TV",
+        descripcion:
+            "Canales en vivo, deportes y entretenimiento.",
+        precio: "Gs. 30.000",
+        precioSecundario: "",
+        imagen: "assets/logos/flujo-tv.jpg",
+        badge: "OFERTA"
+    },
+
+    {
+        categoria: "Streaming",
+        nombre: "Paramount+",
+        descripcion:
+            "Series, películas y eventos deportivos.",
+        precio: "Gs. 15.000",
+        precioSecundario: "",
+        imagen: "assets/logos/paramount.jpg",
+        badge: "OFERTA"
+    },
+
+    {
+        categoria: "Streaming",
+        nombre: "ViX+",
+        descripcion:
+            "Contenido latino, novelas, películas y deportes.",
+        precio: "Gs. 12.000",
+        precioSecundario: "",
+        imagen: "assets/logos/vix.jpg",
+        badge: "OFERTA"
+    },
+
+
+
+    /* =====================================================
+       MÚSICA
+    ====================================================== */
+
+    {
+        categoria: "Música",
+        nombre: "Spotify Premium",
+        descripcion:
+            "Escucha música sin anuncios y sin límites.",
+        precio: "Desde Gs. 25.000",
+        precioSecundario:
+            "1 mes 25.000 · 3 meses 60.000 · 6 meses 100.000 · 1 año 200.000",
+        imagen: "assets/logos/spotify.jpg",
+        badge: "POPULAR"
+    },
+
+    {
+        categoria: "Música",
+        nombre: "YouTube Premium",
+        descripcion:
+            "YouTube sin anuncios, reproducción en segundo plano y YouTube Music.",
+        precio: "Desde Gs. 25.000",
+        precioSecundario:
+            "1 mes 25.000 · 3 meses 60.000",
+        imagen: "assets/logos/youtube-premium.jpg",
+        badge: "PREMIUM"
+    },
+
+
+
+    /* =====================================================
+       MÁS STREAMING
+    ====================================================== */
+
+    {
+        categoria: "Streaming",
+        nombre: "Apple TV+",
+        descripcion:
+            "Series y películas originales de Apple.",
+        precio: "Gs. 20.000",
+        precioSecundario: "",
+        imagen: "assets/logos/apple-tv.jpg",
+        badge: "OFERTA"
+    },
+
+    {
+        categoria: "Streaming",
+        nombre: "Universal+",
+        descripcion:
+            "Series exclusivas, películas y contenido Premium.",
+        precio: "Gs. 20.000",
+        precioSecundario: "",
+        imagen: "assets/logos/universal-plus.jpg",
+        badge: "OFERTA"
+    },
+
+    {
+        categoria: "Streaming",
+        nombre: "MUBI",
+        descripcion:
+            "Cine independiente y películas premiadas.",
+        precio: "Gs. 20.000",
+        precioSecundario: "",
+        imagen: "assets/logos/mubi.jpg",
+        badge: "CINE"
+    },
+
+    {
+        categoria: "Streaming",
+        nombre: "Rakuten Viki",
+        descripcion:
+            "Dramas coreanos y series asiáticas con subtítulos.",
+        precio: "Gs. 20.000",
+        precioSecundario: "",
+        imagen: "assets/logos/rakuten-viki.jpg",
+        badge: "ASIA"
+    },
+
+
+
+    /* =====================================================
+       INTELIGENCIA ARTIFICIAL
+    ====================================================== */
+
+    {
+        categoria: "Inteligencia Artificial",
+        nombre: "ChatGPT Plus",
+        descripcion:
+            "Herramientas avanzadas de inteligencia artificial.",
+        precio: "Gs. 25.000",
+        precioSecundario: "",
+        imagen: "assets/logos/chatgpt.jpg",
+        badge: "IA"
+    },
+
+    {
+        categoria: "Inteligencia Artificial",
+        nombre: "Google Gemini Pro",
+        descripcion:
+            "IA avanzada de Google con funciones Premium.",
+        precio: "Desde Gs. 89.000",
+        precioSecundario: "",
+        imagen: "assets/logos/gemini.jpg",
+        badge: "IA"
+    },
+
+
+
+    /* =====================================================
+       DISEÑO
+    ====================================================== */
+
+    {
+        categoria: "Diseño",
+        nombre: "Canva Pro",
+        descripcion:
+            "Todas las funciones Premium para diseño profesional.",
+        precio: "Desde Gs. 5.000",
+        precioSecundario: "",
+        imagen: "assets/logos/canva.jpg",
+        badge: "PRO"
+    },
+
+    {
+        categoria: "Diseño",
+        nombre: "CapCut Pro",
+        descripcion:
+            "Edición de video profesional con herramientas Premium.",
+        precio: "Gs. 30.000 /mes",
+        precioSecundario: "",
+        imagen: "assets/logos/capcut.jpg",
+        badge: "PRO"
+    },
+
+
+
+    /* =====================================================
+       EDUCACIÓN
+    ====================================================== */
+
+    {
+        categoria: "Educación",
+        nombre: "Duolingo Super (30 días)",
+        descripcion:
+            "Aprende idiomas sin anuncios y con funciones avanzadas.",
+        precio: "Gs. 25.000",
+        precioSecundario: "",
+        imagen: "assets/logos/duolingo-30.jpg",
+        badge: "TOP"
+    },
+
+    {
+        categoria: "Educación",
+        nombre: "Duolingo Super (1 año)",
+        descripcion:
+            "Aprende idiomas sin anuncios y con funciones avanzadas.",
+        precio: "Gs. 150.000",
+        precioSecundario: "",
+        imagen: "assets/logos/duolingo-1ano.jpg",
+        badge: "TOP"
+    },
+
+
+
+    /* =====================================================
+       SEGURIDAD
+    ====================================================== */
+
+    {
+        categoria: "Seguridad",
+        nombre: "NordVPN",
+        descripcion:
+            "Protege tu conexión y navega de forma segura.",
+        precio: "Gs. 25.000",
+        precioSecundario: "",
+        imagen: "assets/logos/nordvpn.jpg",
+        badge: "VPN"
+    },
+
+    {
+        categoria: "Seguridad",
+        nombre: "Surfshark VPN",
+        descripcion:
+            "Navegación privada y acceso a contenido internacional.",
+        precio: "Gs. 20.000",
+        precioSecundario: "",
+        imagen: "assets/logos/surfshark.jpg",
+        badge: "VPN"
+    }
+
 ];
 
-function renderCatalogo(filtro = "todos"){
-  const grid = document.getElementById("catalogGrid");
-  if(!grid) return;
 
-  let lista = productos;
 
-  if(filtro !== "todos"){
-    lista = productos.filter(item => item.categoria === filtro);
-  }
+/* =========================================================
+   ESCAPAR TEXTO PARA HTML
+========================================================= */
 
-  grid.innerHTML = lista.map(producto => {
-    return `
-      <article class="catalog-card">
-        <div class="catalog-image-wrap">
-          <span class="catalog-badge">${producto.badge}</span>
-          <img src="${producto.imagen}" alt="${producto.nombre}">
-          <div class="catalog-overlay"></div>
-        </div>
+function escaparHTML(texto) {
 
-        <div class="catalog-content">
-          <span class="catalog-category">${producto.categoria}</span>
-          <h3 class="catalog-title">${producto.nombre}</h3>
-          <p class="catalog-description">${producto.descripcion}</p>
+    return String(texto || "")
 
-          <div class="catalog-price">
-            <strong>${producto.precio}</strong>
-          </div>
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
 
-          ${
-            producto.precioSecundario
-              ? `<p style="color:#8f8f8f;font-size:13px;line-height:1.5;">${producto.precioSecundario}</p>`
-              : ``
-          }
-
-          <button 
-            class="catalog-btn"
-            onclick="comprarCatalogo('${producto.nombre}', '${producto.precio}')"
-          >
-            Ver más
-          </button>
-        </div>
-      </article>
-    `;
-  }).join("");
 }
 
-function comprarCatalogo(nombre, precio){
-  const mensaje = `Hola AMERISSTORE 👋
+
+
+/* =========================================================
+   RENDERIZAR CATÁLOGO
+========================================================= */
+
+function renderCatalogo(
+    filtro = "todos"
+) {
+
+    const grid =
+        document.getElementById(
+            "catalogGrid"
+        );
+
+
+    /*
+    Si estamos en una página que
+    no tiene catálogo, no hacemos nada.
+    */
+
+    if (!grid) {
+
+        return;
+
+    }
+
+
+    let lista = productos;
+
+
+    /* FILTRAR */
+
+    if (
+        filtro !== "todos"
+    ) {
+
+        lista =
+            productos.filter(
+                producto =>
+                    producto.categoria === filtro
+            );
+
+    }
+
+
+    /* CREAR TARJETAS */
+
+    grid.innerHTML =
+
+        lista
+
+            .map(producto => {
+
+                return `
+
+                    <article
+                        class="catalog-card"
+                    >
+
+
+                        <!-- IMAGEN -->
+
+                        <div
+                            class="catalog-image-wrap"
+                        >
+
+
+                            <span
+                                class="catalog-badge"
+                            >
+
+                                ${escaparHTML(
+                                    producto.badge
+                                )}
+
+                            </span>
+
+
+                            <img
+                                src="${escaparHTML(
+                                    producto.imagen
+                                )}"
+                                alt="${escaparHTML(
+                                    producto.nombre
+                                )}"
+                                loading="lazy"
+                            >
+
+
+                            <div
+                                class="catalog-overlay"
+                            >
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- INFORMACIÓN -->
+
+                        <div
+                            class="catalog-content"
+                        >
+
+
+                            <span
+                                class="catalog-category"
+                            >
+
+                                ${escaparHTML(
+                                    producto.categoria
+                                )}
+
+                            </span>
+
+
+                            <h3
+                                class="catalog-title"
+                            >
+
+                                ${escaparHTML(
+                                    producto.nombre
+                                )}
+
+                            </h3>
+
+
+                            <p
+                                class="catalog-description"
+                            >
+
+                                ${escaparHTML(
+                                    producto.descripcion
+                                )}
+
+                            </p>
+
+
+
+                            <div
+                                class="catalog-price"
+                            >
+
+                                <strong>
+
+                                    ${escaparHTML(
+                                        producto.precio
+                                    )}
+
+                                </strong>
+
+                            </div>
+
+
+
+                            ${
+                                producto.precioSecundario
+
+                                    ? `
+
+                                        <p
+                                            class="catalog-secondary-price"
+                                        >
+
+                                            ${escaparHTML(
+                                                producto.precioSecundario
+                                            )}
+
+                                        </p>
+
+                                    `
+
+                                    : ""
+                            }
+
+
+
+                            <button
+                                type="button"
+                                class="catalog-btn"
+                                data-producto="${escaparHTML(
+                                    producto.nombre
+                                )}"
+                                data-precio="${escaparHTML(
+                                    producto.precio
+                                )}"
+                            >
+
+                                Comprar
+
+                            </button>
+
+
+                        </div>
+
+
+                    </article>
+
+                `;
+
+            })
+
+            .join("");
+
+
+    /*
+    Después de crear las tarjetas,
+    conectamos los botones.
+    */
+
+    activarBotonesCatalogo();
+
+}
+
+
+
+/* =========================================================
+   BOTONES DEL CATÁLOGO
+========================================================= */
+
+function activarBotonesCatalogo() {
+
+
+    const botones =
+
+        document.querySelectorAll(
+            ".catalog-btn"
+        );
+
+
+    botones.forEach(boton => {
+
+
+        boton.addEventListener(
+            "click",
+            () => {
+
+
+                const nombre =
+
+                    boton.dataset.producto ||
+                    "";
+
+
+                const precio =
+
+                    boton.dataset.precio ||
+                    "";
+
+
+                comprarCatalogo(
+                    nombre,
+                    precio
+                );
+
+            }
+        );
+
+    });
+
+}
+
+
+
+/* =========================================================
+   COMPRAR PRODUCTO DEL CATÁLOGO
+========================================================= */
+
+function comprarCatalogo(
+    nombre,
+    precio
+) {
+
+
+    if (!nombre) {
+
+        return;
+
+    }
+
+
+    const mensaje =
+`Hola AMERISSTORE 👋
 
 Estoy interesado en este servicio:
 
@@ -1683,381 +620,507 @@ ${precio}
 
 Quiero más información para completar la compra.`;
 
-  const url = `https://wa.me/${whatsappStore}?text=${encodeURIComponent(mensaje)}`;
-  window.open(url, "_blank");
+
+    abrirWhatsAppStore(
+        mensaje
+    );
+
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderCatalogo();
 
-  const filtros = document.querySelectorAll(".filter-btn");
 
-  filtros.forEach(btn => {
-    btn.addEventListener("click", () => {
-      filtros.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      renderCatalogo(btn.dataset.filter);
+/* =========================================================
+   ABRIR WHATSAPP GENERAL
+========================================================= */
+
+function abrirWhatsAppStore(
+    mensaje
+) {
+
+
+    const url =
+
+        `https://wa.me/${WHATSAPP_STORE}?text=${encodeURIComponent(
+            mensaje
+        )}`;
+
+
+    window.open(
+        url,
+        "_blank",
+        "noopener,noreferrer"
+    );
+
+}
+
+
+
+/* =========================================================
+   FILTROS DEL CATÁLOGO
+========================================================= */
+
+function iniciarFiltrosCatalogo() {
+
+
+    const filtros =
+
+        document.querySelectorAll(
+            ".filter-btn"
+        );
+
+
+    if (
+        filtros.length === 0
+    ) {
+
+        return;
+
+    }
+
+
+    filtros.forEach(boton => {
+
+
+        boton.addEventListener(
+            "click",
+            () => {
+
+
+                /* QUITAR ACTIVE */
+
+                filtros.forEach(item => {
+
+                    item.classList.remove(
+                        "active"
+                    );
+
+                });
+
+
+                /* ACTIVAR NUEVO */
+
+                boton.classList.add(
+                    "active"
+                );
+
+
+                /* FILTRAR */
+
+                renderCatalogo(
+
+                    boton.dataset.filter ||
+                    "todos"
+
+                );
+
+            }
+        );
+
     });
-  });
-});
-/* =====================================
-   COMPRA PRODUCTOS WHATSAPP
-===================================== */
 
-
-const botonesProductos = document.querySelectorAll(
-".buy-product"
-);
+}
 
 
 
-botonesProductos.forEach(
-boton=>{
+/* =========================================================
+   BOTONES .buy-product
+========================================================= */
+
+function iniciarBotonesCompra() {
 
 
-boton.addEventListener(
-"click",
-(e)=>{
+    const botones =
+
+        document.querySelectorAll(
+            ".buy-product"
+        );
 
 
-e.preventDefault();
+    botones.forEach(boton => {
 
 
-
-let producto =
-boton.dataset.producto;
-
-
-
-let precio =
-boton.dataset.precio;
+        boton.addEventListener(
+            "click",
+            event => {
 
 
+                event.preventDefault();
 
 
-let mensaje =
+                const producto =
 
-`Hola AMERISSTORE 👋🔥
+                    boton.dataset.producto ||
+                    "Producto";
 
+
+                const precio =
+
+                    boton.dataset.precio ||
+                    "";
+
+
+                const mensaje =
+`Hola AMERISSTORE 👋
 
 Quiero adquirir este servicio:
-
 
 📦 Servicio:
 ${producto}
 
-
-💰 Costo:
+💰 Precio:
 ${precio}
 
-
-¿Me pueden ayudar con la activación?
-
-
-Gracias.`;
+¿Me pueden ayudar con la activación?`;
 
 
-let url =
-
-`https://wa.me/595981841136?text=${encodeURIComponent(mensaje)}`;
-
-
-
-window.open(
-url,
-"_blank"
-);
-
-
-
-});
-
-
-});
-/* =========================================
-   AMERISSTORE
-   FUNCIONES GENERALES DEL INDEX
-========================================= */
-
-
-/* =========================================
-   MENÚ MÓVIL
-========================================= */
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const menuToggle =
-        document.getElementById("menu-toggle");
-
-    const mainMenu =
-        document.getElementById("main-menu");
-
-
-    if (menuToggle && mainMenu) {
-
-        menuToggle.addEventListener("click", () => {
-
-            const abierto =
-                mainMenu.classList.toggle("open");
-
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                abierto
-            );
-
-
-            menuToggle.innerHTML =
-                abierto ? "✕" : "☰";
-
-        });
-
-
-        /* CERRAR MENÚ AL TOCAR UN ENLACE */
-
-        const enlaces =
-            mainMenu.querySelectorAll("a");
-
-
-        enlaces.forEach(enlace => {
-
-            enlace.addEventListener("click", () => {
-
-                mainMenu.classList.remove("open");
-
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
+                abrirWhatsAppStore(
+                    mensaje
                 );
 
-                menuToggle.innerHTML = "☰";
-
-            });
-
-        });
-
-    }
-
-});
-
-
-/* =========================================
-   CARRITO AMERISSTORE
-========================================= */
-
-let carritoAmeris = [];
-
-
-/* =========================================
-   CARGAR CARRITO GUARDADO
-========================================= */
-
-function cargarCarrito() {
-
-    const carritoGuardado =
-        localStorage.getItem(
-            "amerisstore_carrito"
+            }
         );
 
-
-    if (carritoGuardado) {
-
-        try {
-
-            carritoAmeris =
-                JSON.parse(
-                    carritoGuardado
-                );
-
-        }
-
-        catch (error) {
-
-            carritoAmeris = [];
-
-        }
-
-    }
-
-
-    actualizarCarritoHeader();
+    });
 
 }
 
 
-/* =========================================
-   GUARDAR CARRITO
-========================================= */
 
-function guardarCarrito() {
+/* =========================================================
+   MENÚ MÓVIL
+========================================================= */
+
+function iniciarMenuMovil() {
+
+
+    const menuToggle =
+
+        document.getElementById(
+            "menu-toggle"
+        );
+
+
+    const mainMenu =
+
+        document.getElementById(
+            "main-menu"
+        );
+
+
+    if (
+        !menuToggle ||
+        !mainMenu
+    ) {
+
+        return;
+
+    }
+
+
+    /* ABRIR / CERRAR */
+
+    menuToggle.addEventListener(
+        "click",
+        () => {
+
+
+            const abierto =
+
+                mainMenu.classList.toggle(
+                    "open"
+                );
+
+
+            menuToggle.setAttribute(
+
+                "aria-expanded",
+
+                String(
+                    abierto
+                )
+
+            );
+
+
+            menuToggle.textContent =
+
+                abierto
+                    ? "✕"
+                    : "☰";
+
+        }
+    );
+
+
+    /* CERRAR AL TOCAR ENLACE */
+
+    const enlaces =
+
+        mainMenu.querySelectorAll(
+            "a"
+        );
+
+
+    enlaces.forEach(enlace => {
+
+
+        enlace.addEventListener(
+            "click",
+            () => {
+
+
+                mainMenu.classList.remove(
+                    "open"
+                );
+
+
+                menuToggle.setAttribute(
+
+                    "aria-expanded",
+
+                    "false"
+
+                );
+
+
+                menuToggle.textContent =
+                    "☰";
+
+            }
+        );
+
+    });
+
+}
+/* =========================================================
+   CARRITO GENERAL AMERISSTORE
+========================================================= */
+
+const CART_KEY =
+    "amerisstore_carrito";
+
+
+let carritoAmeris =
+    cargarCarritoGeneral();
+
+
+
+/* =========================================================
+   CARGAR CARRITO
+========================================================= */
+
+function cargarCarritoGeneral() {
+
+    try {
+
+        const guardado =
+            localStorage.getItem(
+                CART_KEY
+            );
+
+
+        if (!guardado) {
+
+            return [];
+
+        }
+
+
+        const datos =
+            JSON.parse(
+                guardado
+            );
+
+
+        return Array.isArray(
+            datos
+        )
+            ? datos
+            : [];
+
+    }
+    catch (error) {
+
+        console.warn(
+            "No se pudo cargar el carrito:",
+            error
+        );
+
+
+        return [];
+
+    }
+
+}
+
+
+
+/* =========================================================
+   GUARDAR CARRITO
+========================================================= */
+
+function guardarCarritoGeneral() {
 
     localStorage.setItem(
-        "amerisstore_carrito",
-        JSON.stringify(carritoAmeris)
+
+        CART_KEY,
+
+        JSON.stringify(
+            carritoAmeris
+        )
+
     );
 
 
     actualizarCarritoHeader();
 
+
+    renderizarCarritoGeneral();
+
 }
 
 
-/* =========================================
+
+/* =========================================================
    CONVERTIR PRECIO
-========================================= */
+========================================================= */
 
-function convertirPrecio(precio) {
+function convertirPrecioGeneral(
+    precio
+) {
 
-    if (typeof precio === "number") {
+    if (
+        typeof precio === "number"
+    ) {
 
         return precio;
 
     }
 
 
-    const numero = parseInt(
-        String(precio).replace(/\D/g, "")
-    );
+    const numero =
+
+        parseInt(
+
+            String(
+                precio || ""
+            ).replace(
+                /\D/g,
+                ""
+            ),
+
+            10
+
+        );
 
 
-    return isNaN(numero)
+    return Number.isNaN(
+        numero
+    )
         ? 0
         : numero;
 
 }
 
 
-/* =========================================
-   FORMATEAR GUARANÍES
-========================================= */
 
-function formatearGs(numero) {
+/* =========================================================
+   FORMATEAR GUARANÍES
+========================================================= */
+
+function formatearGsGeneral(
+    numero
+) {
 
     return (
+
         "Gs. " +
-        Number(numero).toLocaleString(
+
+        Number(
+            numero || 0
+        ).toLocaleString(
             "es-PY"
         )
+
     );
 
 }
 
 
-/* =========================================
-   AGREGAR AL CARRITO
-========================================= */
 
-function agregarAlCarrito(
+/* =========================================================
+   AGREGAR AL CARRITO
+========================================================= */
+
+function agregarAlCarritoGeneral(
     nombre,
     precio,
-    imagen = ""
+    imagen = "",
+    cantidad = 1
 ) {
 
     const precioNumero =
-        convertirPrecio(precio);
 
-
-    const productoExistente =
-        carritoAmeris.find(
-            item => item.nombre === nombre
+        convertirPrecioGeneral(
+            precio
         );
 
 
-    if (productoExistente) {
+    const existente =
 
-        productoExistente.cantidad++;
+        carritoAmeris.find(
+            item =>
+                item.nombre === nombre
+        );
+
+
+    if (existente) {
+
+        existente.cantidad +=
+            cantidad;
 
     }
-
     else {
 
         carritoAmeris.push({
 
             nombre:
-            nombre,
+                nombre,
 
             precio:
-            precioNumero,
+                precioNumero,
 
             imagen:
-            imagen,
+                imagen,
 
             cantidad:
-            1
+                cantidad
 
         });
 
     }
 
 
-    guardarCarrito();
+    guardarCarritoGeneral();
 
 
-    mostrarNotificacion(
+    mostrarNotificacionGeneral(
+
         `${nombre} agregado al carrito`
+
     );
 
 }
 
 
-/* =========================================
-   ACTUALIZAR HEADER DEL CARRITO
-========================================= */
 
-function actualizarCarritoHeader() {
-
-    const contador =
-        document.getElementById(
-            "cart-count"
-        );
-
-    const totalElemento =
-        document.getElementById(
-            "cart-total"
-        );
-
-
-    let cantidadTotal = 0;
-
-    let total = 0;
-
-
-    carritoAmeris.forEach(item => {
-
-        cantidadTotal +=
-            item.cantidad;
-
-
-        total +=
-            item.precio *
-            item.cantidad;
-
-    });
-
-
-    if (contador) {
-
-        contador.textContent =
-            cantidadTotal;
-
-    }
-
-
-    if (totalElemento) {
-
-        totalElemento.textContent =
-            formatearGs(total);
-
-    }
-
-}
-
-
-/* =========================================
+/* =========================================================
    ELIMINAR PRODUCTO
-========================================= */
+========================================================= */
 
-function eliminarDelCarrito(index) {
+function eliminarDelCarritoGeneral(
+    index
+) {
 
     if (
         index < 0 ||
@@ -2075,75 +1138,189 @@ function eliminarDelCarrito(index) {
     );
 
 
-    guardarCarrito();
+    guardarCarritoGeneral();
 
 }
 
 
-/* =========================================
-   VACIAR CARRITO
-========================================= */
 
-function vaciarCarrito() {
+/* =========================================================
+   CAMBIAR CANTIDAD
+========================================================= */
+
+function cambiarCantidadCarritoGeneral(
+    index,
+    cambio
+) {
+
+    const item =
+        carritoAmeris[
+            index
+        ];
+
+
+    if (!item) {
+
+        return;
+
+    }
+
+
+    item.cantidad +=
+        cambio;
+
+
+    if (
+        item.cantidad <= 0
+    ) {
+
+        carritoAmeris.splice(
+            index,
+            1
+        );
+
+    }
+
+
+    guardarCarritoGeneral();
+
+}
+
+
+
+/* =========================================================
+   VACIAR CARRITO
+========================================================= */
+
+function vaciarCarritoGeneral() {
 
     carritoAmeris = [];
 
 
-    guardarCarrito();
+    guardarCarritoGeneral();
+
+
+    mostrarNotificacionGeneral(
+        "Carrito vaciado"
+    );
 
 }
 
 
-/* =========================================
+
+/* =========================================================
    CANTIDAD TOTAL
-========================================= */
+========================================================= */
 
-function obtenerCantidadCarrito() {
+function obtenerCantidadCarritoGeneral() {
 
     return carritoAmeris.reduce(
-        (total, item) => {
 
-            return (
-                total +
-                item.cantidad
-            );
+        (
+            total,
+            item
+        ) =>
 
-        },
+            total +
+
+            Number(
+                item.cantidad || 0
+            ),
+
         0
+
     );
 
 }
 
 
-/* =========================================
-   PRECIO TOTAL
-========================================= */
 
-function obtenerTotalCarrito() {
+/* =========================================================
+   TOTAL DEL CARRITO
+========================================================= */
+
+function obtenerTotalCarritoGeneral() {
 
     return carritoAmeris.reduce(
-        (total, item) => {
 
-            return (
-                total +
-                item.precio *
-                item.cantidad
-            );
+        (
+            total,
+            item
+        ) =>
 
-        },
+            total +
+
+            Number(
+                item.precio || 0
+            ) *
+
+            Number(
+                item.cantidad || 0
+            ),
+
         0
+
     );
 
 }
 
 
-/* =========================================
-   NOTIFICACIÓN
-========================================= */
 
-function mostrarNotificacion(mensaje) {
+/* =========================================================
+   ACTUALIZAR HEADER
+========================================================= */
+
+function actualizarCarritoHeader() {
+
+    const contador =
+
+        document.getElementById(
+            "cart-count"
+        );
+
+
+    const totalElemento =
+
+        document.getElementById(
+            "cart-total"
+        );
+
+
+    if (contador) {
+
+        contador.textContent =
+
+            obtenerCantidadCarritoGeneral();
+
+    }
+
+
+    if (totalElemento) {
+
+        totalElemento.textContent =
+
+            formatearGsGeneral(
+
+                obtenerTotalCarritoGeneral()
+
+            );
+
+    }
+
+}
+
+
+
+/* =========================================================
+   NOTIFICACIÓN GENERAL
+========================================================= */
+
+function mostrarNotificacionGeneral(
+    mensaje
+) {
 
     const anterior =
+
         document.querySelector(
             ".store-notification"
         );
@@ -2157,6 +1334,7 @@ function mostrarNotificacion(mensaje) {
 
 
     const notificacion =
+
         document.createElement(
             "div"
         );
@@ -2175,310 +1353,55 @@ function mostrarNotificacion(mensaje) {
     );
 
 
-    requestAnimationFrame(() => {
+    requestAnimationFrame(
+        () => {
 
-        notificacion.classList.add(
-            "show"
-        );
-
-    });
-
-
-    setTimeout(() => {
-
-        notificacion.classList.remove(
-            "show"
-        );
-
-
-        setTimeout(() => {
-
-            notificacion.remove();
-
-        }, 300);
-
-    }, 2200);
-
-}
-
-
-/* =========================================
-   CARRITO CLICK
-========================================= */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    () => {
-
-        cargarCarrito();
-
-
-        const botonCarrito =
-            document.getElementById(
-                "cart-button"
-            );
-
-
-        if (botonCarrito) {
-
-            botonCarrito.addEventListener(
-                "click",
-                event => {
-
-                    event.preventDefault();
-
-
-                    /*
-                    MÁS ADELANTE:
-
-                    window.location.href =
-                    "carrito.html";
-                    */
-
-
-                    if (
-                        carritoAmeris.length === 0
-                    ) {
-
-                        mostrarNotificacion(
-                            "Tu carrito está vacío"
-                        );
-
-                    }
-
-                    else {
-
-                        mostrarNotificacion(
-                            `${obtenerCantidadCarrito()} producto(s) · ${formatearGs(obtenerTotalCarrito())}`
-                        );
-
-                    }
-
-                }
+            notificacion.classList.add(
+                "show"
             );
 
         }
-
-    }
-);
-/* =========================================
-   CARRITO AMERISSTORE
-========================================= */
-
-let carritoAmeris = [];
-
-
-/* =========================================
-   CARGAR CARRITO
-========================================= */
-
-function cargarCarrito() {
-
-    const guardado =
-        localStorage.getItem(
-            "amerisstore_carrito"
-        );
-
-
-    if (guardado) {
-
-        try {
-
-            carritoAmeris =
-                JSON.parse(guardado);
-
-        }
-
-        catch (error) {
-
-            carritoAmeris = [];
-
-        }
-
-    }
-
-
-    actualizarCarritoHeader();
-
-}
-
-
-/* =========================================
-   GUARDAR CARRITO
-========================================= */
-
-function guardarCarrito() {
-
-    localStorage.setItem(
-        "amerisstore_carrito",
-        JSON.stringify(carritoAmeris)
     );
 
 
-    actualizarCarritoHeader();
+    setTimeout(
+        () => {
 
-}
-
-
-/* =========================================
-   CONVERTIR PRECIO
-========================================= */
-
-function convertirPrecio(precio) {
-
-    if (typeof precio === "number") {
-
-        return precio;
-
-    }
+            notificacion.classList.remove(
+                "show"
+            );
 
 
-    const numero =
-        parseInt(
-            String(precio)
-                .replace(/\D/g, "")
-        );
+            setTimeout(
+                () => {
 
+                    notificacion.remove();
 
-    return isNaN(numero)
-        ? 0
-        : numero;
+                },
 
-}
+                250
+            );
 
+        },
 
-/* =========================================
-   FORMATEAR GUARANÍES
-========================================= */
+        2200
 
-function formatearGs(numero) {
-
-    return (
-        "Gs. " +
-        Number(numero)
-            .toLocaleString("es-PY")
     );
 
 }
 
 
-/* =========================================
-   AGREGAR AL CARRITO
-========================================= */
 
-function agregarAlCarrito(
-    nombre,
-    precio,
-    imagen = ""
-) {
+/* =========================================================
+   CREAR PANEL DEL CARRITO
+========================================================= */
 
-    const precioNumero =
-        convertirPrecio(precio);
-
-
-    const existente =
-        carritoAmeris.find(
-            item =>
-                item.nombre === nombre
-        );
-
-
-    if (existente) {
-
-        existente.cantidad++;
-
-    }
-
-    else {
-
-        carritoAmeris.push({
-
-            nombre: nombre,
-
-            precio: precioNumero,
-
-            imagen: imagen,
-
-            cantidad: 1
-
-        });
-
-    }
-
-
-    guardarCarrito();
-
-
-    mostrarNotificacion(
-        `${nombre} agregado al carrito`
-    );
-
-}
-
-
-/* =========================================
-   ACTUALIZAR HEADER
-========================================= */
-
-function actualizarCarritoHeader() {
-
-    const contador =
-        document.getElementById(
-            "cart-count"
-        );
-
-
-    const totalElemento =
-        document.getElementById(
-            "cart-total"
-        );
-
-
-    let cantidad = 0;
-
-    let total = 0;
-
-
-    carritoAmeris.forEach(item => {
-
-        cantidad +=
-            item.cantidad;
-
-
-        total +=
-            item.precio *
-            item.cantidad;
-
-    });
-
-
-    if (contador) {
-
-        contador.textContent =
-            cantidad;
-
-    }
-
-
-    if (totalElemento) {
-
-        totalElemento.textContent =
-            formatearGs(total);
-
-    }
-
-}
-
-
-/* =========================================
-   ELIMINAR PRODUCTO
-========================================= */
-
-function eliminarDelCarrito(index) {
+function crearCarritoGeneral() {
 
     if (
-        index < 0 ||
-        index >= carritoAmeris.length
+        document.getElementById(
+            "storeCartDrawer"
+        )
     ) {
 
         return;
@@ -2486,174 +1409,814 @@ function eliminarDelCarrito(index) {
     }
 
 
-    carritoAmeris.splice(
-        index,
-        1
-    );
+    const overlay =
 
-
-    guardarCarrito();
-
-}
-
-
-/* =========================================
-   VACIAR CARRITO
-========================================= */
-
-function vaciarCarrito() {
-
-    carritoAmeris = [];
-
-
-    guardarCarrito();
-
-}
-
-
-/* =========================================
-   OBTENER CANTIDAD
-========================================= */
-
-function obtenerCantidadCarrito() {
-
-    return carritoAmeris.reduce(
-        (total, item) =>
-            total + item.cantidad,
-        0
-    );
-
-}
-
-
-/* =========================================
-   OBTENER TOTAL
-========================================= */
-
-function obtenerTotalCarrito() {
-
-    return carritoAmeris.reduce(
-        (total, item) =>
-            total +
-            item.precio *
-            item.cantidad,
-        0
-    );
-
-}
-
-
-/* =========================================
-   NOTIFICACIÓN
-========================================= */
-
-function mostrarNotificacion(mensaje) {
-
-    const anterior =
-        document.querySelector(
-            ".store-notification"
+        document.createElement(
+            "div"
         );
 
 
-    if (anterior) {
+    overlay.id =
+        "storeCartOverlay";
 
-        anterior.remove();
+
+    overlay.className =
+        "store-cart-overlay";
+
+
+
+    const drawer =
+
+        document.createElement(
+            "aside"
+        );
+
+
+    drawer.id =
+        "storeCartDrawer";
+
+
+    drawer.className =
+        "store-cart-drawer";
+
+
+    drawer.innerHTML = `
+
+        <div
+            class="store-cart-head"
+        >
+
+            <div>
+
+                <span>
+                    AMERISSTORE
+                </span>
+
+                <h2>
+                    Tu carrito
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="store-cart-close"
+                aria-label="Cerrar carrito"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <div
+            id="storeCartItems"
+            class="store-cart-items"
+        >
+        </div>
+
+
+        <div
+            class="store-cart-footer"
+        >
+
+
+            <div
+                class="store-cart-total"
+            >
+
+                <span>
+                    Total
+                </span>
+
+                <strong
+                    id="storeCartTotal"
+                >
+
+                    Gs. 0
+
+                </strong>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="storeCartWhatsapp"
+                class="store-cart-whatsapp"
+            >
+
+                💬 COMPRAR POR WHATSAPP
+
+            </button>
+
+
+            <button
+                type="button"
+                id="storeCartClear"
+                class="store-cart-clear"
+            >
+
+                Vaciar carrito
+
+            </button>
+
+        </div>
+
+    `;
+
+
+    document.body.appendChild(
+        overlay
+    );
+
+
+    document.body.appendChild(
+        drawer
+    );
+
+
+    /* CERRAR CON OVERLAY */
+
+    overlay.addEventListener(
+        "click",
+        cerrarCarritoGeneral
+    );
+
+
+    /* CERRAR CON X */
+
+    const cerrar =
+
+        drawer.querySelector(
+            ".store-cart-close"
+        );
+
+
+    if (cerrar) {
+
+        cerrar.addEventListener(
+
+            "click",
+
+            cerrarCarritoGeneral
+
+        );
 
     }
 
 
-    const notificacion =
-        document.createElement("div");
+    /* VACIAR */
 
+    const vaciar =
 
-    notificacion.className =
-        "store-notification";
-
-
-    notificacion.textContent =
-        mensaje;
-
-
-    document.body.appendChild(
-        notificacion
-    );
-
-
-    requestAnimationFrame(() => {
-
-        notificacion.classList.add(
-            "show"
-        );
-
-    });
-
-
-    setTimeout(() => {
-
-        notificacion.classList.remove(
-            "show"
+        document.getElementById(
+            "storeCartClear"
         );
 
 
-        setTimeout(() => {
+    if (vaciar) {
 
-            notificacion.remove();
+        vaciar.addEventListener(
 
-        }, 300);
+            "click",
 
-    }, 2200);
+            vaciarCarritoGeneral
+
+        );
+
+    }
+
+
+    /* WHATSAPP */
+
+    const whatsapp =
+
+        document.getElementById(
+            "storeCartWhatsapp"
+        );
+
+
+    if (whatsapp) {
+
+        whatsapp.addEventListener(
+
+            "click",
+
+            comprarCarritoGeneralWhatsApp
+
+        );
+
+    }
 
 }
 
 
-/* =========================================
-   INICIAR CARRITO
-========================================= */
+
+/* =========================================================
+   ABRIR CARRITO
+========================================================= */
+
+function abrirCarritoGeneral() {
+
+    crearCarritoGeneral();
+
+
+    renderizarCarritoGeneral();
+
+
+    const overlay =
+
+        document.getElementById(
+            "storeCartOverlay"
+        );
+
+
+    const drawer =
+
+        document.getElementById(
+            "storeCartDrawer"
+        );
+
+
+    if (overlay) {
+
+        overlay.classList.add(
+            "open"
+        );
+
+    }
+
+
+    if (drawer) {
+
+        drawer.classList.add(
+            "open"
+        );
+
+    }
+
+
+    document.body.classList.add(
+        "cart-open"
+    );
+
+}
+
+
+
+/* =========================================================
+   CERRAR CARRITO
+========================================================= */
+
+function cerrarCarritoGeneral() {
+
+    const overlay =
+
+        document.getElementById(
+            "storeCartOverlay"
+        );
+
+
+    const drawer =
+
+        document.getElementById(
+            "storeCartDrawer"
+        );
+
+
+    if (overlay) {
+
+        overlay.classList.remove(
+            "open"
+        );
+
+    }
+
+
+    if (drawer) {
+
+        drawer.classList.remove(
+            "open"
+        );
+
+    }
+
+
+    document.body.classList.remove(
+        "cart-open"
+    );
+
+}
+
+
+
+/* =========================================================
+   RENDERIZAR CARRITO
+========================================================= */
+
+function renderizarCarritoGeneral() {
+
+    const container =
+
+        document.getElementById(
+            "storeCartItems"
+        );
+
+
+    const totalElemento =
+
+        document.getElementById(
+            "storeCartTotal"
+        );
+
+
+    if (!container) {
+
+        actualizarCarritoHeader();
+
+
+        return;
+
+    }
+
+
+    /* CARRITO VACÍO */
+
+    if (
+        carritoAmeris.length === 0
+    ) {
+
+        container.innerHTML = `
+
+            <div
+                class="store-cart-empty"
+            >
+
+                <div>
+                    🛒
+                </div>
+
+                <h3>
+                    Tu carrito está vacío
+                </h3>
+
+                <p>
+                    Agrega productos para verlos aquí.
+                </p>
+
+            </div>
+
+        `;
+
+    }
+    else {
+
+        container.innerHTML =
+
+            carritoAmeris
+
+                .map(
+                    (
+                        item,
+                        index
+                    ) => `
+
+                        <article
+                            class="store-cart-item"
+                        >
+
+                            <div
+                                class="store-cart-item-info"
+                            >
+
+                                <h3>
+
+                                    ${escaparHTML(
+                                        item.nombre
+                                    )}
+
+                                </h3>
+
+
+                                <p>
+
+                                    ${formatearGsGeneral(
+                                        item.precio
+                                    )}
+
+                                </p>
+
+                            </div>
+
+
+                            <div
+                                class="store-cart-controls"
+                            >
+
+                                <button
+                                    type="button"
+                                    data-cart-minus="${index}"
+                                >
+                                    −
+                                </button>
+
+
+                                <strong>
+
+                                    ${item.cantidad}
+
+                                </strong>
+
+
+                                <button
+                                    type="button"
+                                    data-cart-plus="${index}"
+                                >
+                                    +
+                                </button>
+
+
+                                <button
+                                    type="button"
+                                    class="remove"
+                                    data-cart-remove="${index}"
+                                >
+                                    ✕
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                    `
+                )
+
+                .join("");
+
+
+        /* BOTÓN MENOS */
+
+        container
+
+            .querySelectorAll(
+                "[data-cart-minus]"
+            )
+
+            .forEach(boton => {
+
+                boton.addEventListener(
+                    "click",
+                    () => {
+
+                        cambiarCantidadCarritoGeneral(
+
+                            Number(
+                                boton.dataset.cartMinus
+                            ),
+
+                            -1
+
+                        );
+
+                    }
+                );
+
+            });
+
+
+        /* BOTÓN MÁS */
+
+        container
+
+            .querySelectorAll(
+                "[data-cart-plus]"
+            )
+
+            .forEach(boton => {
+
+                boton.addEventListener(
+                    "click",
+                    () => {
+
+                        cambiarCantidadCarritoGeneral(
+
+                            Number(
+                                boton.dataset.cartPlus
+                            ),
+
+                            1
+
+                        );
+
+                    }
+                );
+
+            });
+
+
+        /* ELIMINAR */
+
+        container
+
+            .querySelectorAll(
+                "[data-cart-remove]"
+            )
+
+            .forEach(boton => {
+
+                boton.addEventListener(
+                    "click",
+                    () => {
+
+                        eliminarDelCarritoGeneral(
+
+                            Number(
+                                boton.dataset.cartRemove
+                            )
+
+                        );
+
+                    }
+                );
+
+            });
+
+    }
+
+
+    if (totalElemento) {
+
+        totalElemento.textContent =
+
+            formatearGsGeneral(
+
+                obtenerTotalCarritoGeneral()
+
+            );
+
+    }
+
+
+    actualizarCarritoHeader();
+
+}
+
+
+
+/* =========================================================
+   COMPRAR CARRITO POR WHATSAPP
+========================================================= */
+
+function comprarCarritoGeneralWhatsApp() {
+
+    if (
+        carritoAmeris.length === 0
+    ) {
+
+        mostrarNotificacionGeneral(
+            "Tu carrito está vacío"
+        );
+
+
+        return;
+
+    }
+
+
+    const productosTexto =
+
+        carritoAmeris
+
+            .map(
+                item =>
+
+                    `${item.cantidad}x ${item.nombre}
+
+${formatearGsGeneral(
+    item.precio *
+    item.cantidad
+)}`
+
+            )
+
+            .join(
+                "\n\n"
+            );
+
+
+    const mensaje =
+`Hola AMERISSTORE 👋
+
+Quiero realizar este pedido:
+
+${productosTexto}
+
+-------------------------
+
+🧾 TOTAL:
+${formatearGsGeneral(
+    obtenerTotalCarritoGeneral()
+)}
+
+Quiero completar mi compra.`;
+
+
+    abrirWhatsAppStore(
+        mensaje
+    );
+
+}
+
+
+
+/* =========================================================
+   BOTÓN DEL CARRITO
+========================================================= */
+
+function iniciarBotonCarrito() {
+
+    const botonCarrito =
+
+        document.getElementById(
+            "cart-button"
+        );
+
+
+    if (!botonCarrito) {
+
+        return;
+
+    }
+
+
+    botonCarrito.addEventListener(
+        "click",
+        event => {
+
+
+            event.preventDefault();
+
+
+            abrirCarritoGeneral();
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
+   BOTONES PARA AGREGAR PRODUCTOS
+========================================================= */
+
+function iniciarBotonesAgregarCarrito() {
+
+    const botones =
+
+        document.querySelectorAll(
+            "[data-add-cart]"
+        );
+
+
+    botones.forEach(boton => {
+
+
+        boton.addEventListener(
+            "click",
+            () => {
+
+
+                const nombre =
+
+                    boton.dataset.producto ||
+                    boton.dataset.nombre ||
+                    "Producto";
+
+
+                const precio =
+
+                    boton.dataset.precio ||
+                    "0";
+
+
+                const imagen =
+
+                    boton.dataset.imagen ||
+                    "";
+
+
+                agregarAlCarritoGeneral(
+
+                    nombre,
+
+                    precio,
+
+                    imagen,
+
+                    1
+
+                );
+
+            }
+        );
+
+    });
+
+}
+
+
+
+/* =========================================================
+   WHATSAPP FLOTANTE Y BOTONES DIRECTOS
+========================================================= */
+
+function iniciarWhatsappGeneral() {
+
+    const enlaces =
+
+        document.querySelectorAll(
+
+            ".floating-whatsapp, .btn-whatsapp"
+
+        );
+
+
+    enlaces.forEach(enlace => {
+
+
+        if (
+            enlace.tagName.toLowerCase() ===
+            "a"
+        ) {
+
+            enlace.target =
+                "_blank";
+
+
+            enlace.rel =
+                "noopener noreferrer";
+
+        }
+
+    });
+
+}
+
+
+
+/* =========================================================
+   INICIALIZAR TODA LA WEB
+========================================================= */
 
 document.addEventListener(
     "DOMContentLoaded",
     () => {
 
-        cargarCarrito();
+
+        /* CATÁLOGO */
+
+        renderCatalogo();
 
 
-        const botonCarrito =
-            document.getElementById(
-                "cart-button"
-            );
+        iniciarFiltrosCatalogo();
 
 
-        if (botonCarrito) {
-
-            botonCarrito.addEventListener(
-                "click",
-                event => {
-
-                    event.preventDefault();
+        iniciarBotonesCompra();
 
 
-                    if (
-                        carritoAmeris.length === 0
-                    ) {
+        /* MENÚ */
 
-                        mostrarNotificacion(
-                            "Tu carrito está vacío"
-                        );
+        iniciarMenuMovil();
 
-                    }
 
-                    else {
+        /* CARRITO */
 
-                        mostrarNotificacion(
-                            `${obtenerCantidadCarrito()} producto(s) · ${formatearGs(obtenerTotalCarrito())}`
-                        );
+        crearCarritoGeneral();
 
-                    }
 
-                }
-            );
+        actualizarCarritoHeader();
 
-        }
+
+        renderizarCarritoGeneral();
+
+
+        iniciarBotonCarrito();
+
+
+        iniciarBotonesAgregarCarrito();
+
+
+        /* WHATSAPP */
+
+        iniciarWhatsappGeneral();
+
+
+        console.log(
+            "AMERISSTORE cargado correctamente ✅"
+        );
 
     }
 );
