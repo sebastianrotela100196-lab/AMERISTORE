@@ -75,80 +75,10 @@ FONDO GAMING
 ========================= */
 
 
-body::before{
-
-
-content:"";
-
-position:fixed;
-
-width:700px;
-
-height:700px;
-
-top:-250px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-
-background:
-
-radial-gradient(
-
-circle,
-
-rgba(132,209,117,.18),
-
-transparent 65%
-
-);
-
-
-filter:blur(90px);
-
-z-index:-1;
-
-
-}
-
-
-
-
+body::before,
 body::after{
 
-
-content:"";
-
-position:fixed;
-
-width:500px;
-
-height:500px;
-
-right:-150px;
-
-bottom:0;
-
-
-background:
-
-radial-gradient(
-
-circle,
-
-rgba(0,212,255,.15),
-
-transparent 70%
-
-);
-
-
-filter:blur(90px);
-
-z-index:-1;
-
+display:none;
 
 }
 
@@ -167,13 +97,11 @@ NAVBAR
 
 header{
 
-position:fixed;
-
-top:0;
+position:relative;
 
 width:100%;
 
-z-index:1000;
+z-index:10;
 
 }
 
@@ -182,97 +110,23 @@ z-index:1000;
 
 .navbar{
 
-
 max-width:1250px;
 
-margin:15px auto;
+margin:20px auto;
 
 padding:18px 30px;
 
 
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-
-background:
-
-rgba(7,27,42,.85);
-
-
-backdrop-filter:blur(20px);
-
-
-border-radius:20px;
+background:#090909;
 
 
 border:
 
-1px solid rgba(0,212,255,.15);
+1px solid rgba(255,255,255,.08);
 
 
-}
+border-radius:18px;
 
-
-
-.logo{
-
-
-font-size:30px;
-
-font-weight:900;
-
-letter-spacing:3px;
-
-color:white;
-
-
-}
-
-
-
-.logo span{
-
-color:var(--primary);
-
-}
-
-
-
-
-
-.navbar ul{
-
-display:flex;
-
-gap:35px;
-
-list-style:none;
-
-}
-
-
-
-
-.navbar a{
-
-color:white;
-
-text-decoration:none;
-
-font-weight:700;
-
-transition:.3s;
-
-}
-
-
-
-.navbar a:hover{
-
-color:var(--primary);
 
 }
 
