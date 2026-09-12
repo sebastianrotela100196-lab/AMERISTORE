@@ -1,102 +1,187 @@
 /* =====================================
-   CTA FINAL PRODUCTO
+   AMERISSTORE PRODUCT SYSTEM
+   BASE DE DATOS
 ===================================== */
 
 
-.product-final{
-
-
-width:90%;
-
-
-max-width:1200px;
-
-
-margin:
-
-120px auto;
+const whatsapp = "595981841136";
 
 
 
-padding:
-
-80px 40px;
-
-
-
-background:
-
-linear-gradient(
-
-145deg,
-
-#151515,
-
-#080808
-
-);
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
 
 
 
-border:
-
-1px solid var(--border);
 
 
-
-border-radius:35px;
+const productos = {
 
 
 
-text-align:center;
 
 
 
+/* =========================
+STREAMING
+========================= */
+
+
+
+netflix:{
+
+
+categoria:"STREAMING",
+
+
+nombre:"Netflix",
+
+
+imagen:"assets/productos/netflix.png",
+
+
+badge:"OFERTA",
+
+
+descripcion:
+"Series y películas ilimitadas en calidad Premium.",
+
+
+
+precio:"Gs. 30.000",
+
+
+precioAnterior:"Gs.45.000",
+
+
+
+planes:[
+
+
+{
+nombre:"1 Mes",
+precio:"Gs.30.000"
+},
+
+
+{
+nombre:"3 Meses",
+precio:"Gs.80.000"
+},
+
+
+{
+nombre:"6 Meses",
+precio:"Gs.150.000"
+},
+
+
+{
+nombre:"1 Año",
+precio:"Gs.280.000"
 }
 
 
+]
+
+},
 
 
 
-.product-final h2{
-
-
-font-size:45px;
 
 
 
-font-weight:1000;
+
+disney:{
+
+
+categoria:"STREAMING",
+
+
+nombre:"Disney+ Premium",
+
+
+imagen:"assets/productos/disney.png",
+
+
+badge:"OFERTA",
+
+
+descripcion:
+"Disney, Marvel, Star Wars y contenido exclusivo.",
 
 
 
-margin-bottom:20px;
+precio:"Gs.25.000",
+
+
+precioAnterior:"Gs.40.000",
 
 
 
+planes:[
+
+
+{
+nombre:"1 Mes",
+precio:"Gs.25.000"
 }
 
 
+]
+
+
+},
 
 
 
-.product-final p{
-
-
-color:#999;
 
 
 
-font-size:18px;
 
 
 
-margin-bottom:35px;
+HBOMAX:{
+
+
+categoria:"STREAMING",
+
+
+nombre:"HBO Max",
+
+
+imagen:"assets/productos/HBOMAX.png",
+
+
+badge:"PREMIUM",
+
+
+descripcion:
+"Películas, series y contenido exclusivo de HBO.",
 
 
 
+precio:"Gs.15.000",
+
+
+precioAnterior:"Gs.35.000",
+
+
+
+planes:[
+
+
+{
+nombre:"1 Mes",
+precio:"Gs.15.000"
 }
 
 
+]
+
+
+},
 
 
 
@@ -104,88 +189,95 @@ margin-bottom:35px;
 
 
 
-/* =====================================
-   WHATSAPP FLOTANTE
-===================================== */
 
 
-.floating-whatsapp{
+paramount:{
 
 
-position:fixed;
+categoria:"STREAMING",
 
 
-
-right:25px;
-
+nombre:"Paramount+",
 
 
-bottom:25px;
+imagen:"assets/productos/paramount.png",
 
 
-
-width:65px;
-
+badge:"OFERTA",
 
 
-height:65px;
+descripcion:
+"Series, películas y contenido Premium.",
 
 
 
-background:#25D366;
+precio:"Gs.15.000",
+
+
+precioAnterior:"Gs.30.000",
 
 
 
-border-radius:50%;
+planes:[
 
 
-
-display:flex;
-
-
-
-align-items:center;
-
-
-
-justify-content:center;
-
-
-
-font-size:32px;
-
-
-
-z-index:999;
-
-
-
-box-shadow:
-
-0 0 30px rgba(37,211,102,.5);
-
-
-
-transition:.3s;
-
-
-
+{
+nombre:"1 Mes",
+precio:"Gs.15.000"
 }
 
 
+]
 
-.floating-whatsapp:hover{
 
-
-transform:
-
-scale(1.1);
+},
 
 
 
+
+
+
+
+crunchyroll:{
+
+
+categoria:"STREAMING",
+
+
+nombre:"Crunchyroll Premium",
+
+
+imagen:"assets/productos/crunchyroll.png",
+
+
+badge:"POPULAR",
+
+
+descripcion:
+"El mejor catálogo de anime en streaming.",
+
+
+
+precio:"Gs.12.000",
+
+
+precioAnterior:"Gs.25.000",
+
+
+
+planes:[
+
+
+{
+nombre:"1 Mes",
+precio:"Gs.12.000"
 }
 
 
+]
+
+
+},
 
 
 
@@ -193,155 +285,384 @@ scale(1.1);
 
 
 
-/* =====================================
-   FOOTER PRODUCTO
-===================================== */
 
 
-.product-footer{
+flujotv:{
 
 
-margin-top:100px;
+categoria:"STREAMING",
 
 
-
-padding:
-
-60px 20px;
+nombre:"Flujo TV",
 
 
-
-background:
-
-#080808;
+imagen:"assets/productos/flujotv.png",
 
 
+badge:"TOP VENTA",
 
-border-top:
 
-1px solid var(--border);
+descripcion:
+"Canales en vivo, deportes y entretenimiento.",
 
 
 
-text-align:center;
+precio:"Gs.30.000",
+
+
+precioAnterior:"Gs.45.000",
 
 
 
+planes:[
+
+
+{
+nombre:"1 Mes",
+precio:"Gs.30.000"
+},
+
+
+{
+nombre:"3 Meses",
+precio:"Gs.80.000"
 }
 
 
+]
+
+
+},
 
 
 
-.product-footer h2{
-
-
-font-size:38px;
 
 
 
-font-weight:1000;
 
 
 
+
+/* =========================
+MÚSICA
+========================= */
+
+
+
+spotify:{
+
+
+categoria:"MÚSICA",
+
+
+nombre:"Spotify Premium",
+
+
+imagen:"assets/productos/spotify.png",
+
+
+badge:"POPULAR",
+
+
+descripcion:
+"Música sin anuncios y sin límites.",
+
+
+
+precio:"Desde Gs.25.000",
+
+
+precioAnterior:"Gs.45.000",
+
+
+
+planes:[
+
+
+{
+nombre:"1 Mes",
+precio:"Gs.25.000"
+},
+
+
+{
+nombre:"3 Meses",
+precio:"Gs.60.000"
+},
+
+
+{
+nombre:"6 Meses",
+precio:"Gs.100.000"
+},
+
+
+{
+nombre:"1 Año",
+precio:"Gs.200.000"
 }
 
 
+]
+
+
+},
+   /* =========================
+YOUTUBE
+========================= */
+
+
+youtube:{
+
+
+categoria:"MÚSICA",
+
+
+nombre:"YouTube Premium",
+
+
+imagen:"assets/productos/youtube.png",
+
+
+badge:"OFERTA",
+
+
+descripcion:
+"YouTube sin anuncios, reproducción en segundo plano y YouTube Music.",
 
 
 
-.product-footer h2 span{
+precio:"Desde Gs.25.000",
 
 
-color:
-
-var(--green);
+precioAnterior:"Gs.40.000",
 
 
 
+planes:[
+
+
+{
+nombre:"1 Mes",
+precio:"Gs.25.000"
+},
+
+
+{
+nombre:"3 Meses",
+precio:"Gs.60.000"
 }
 
 
+]
+
+
+},
 
 
 
-.product-footer p{
-
-
-color:#888;
 
 
 
-margin:
-
-20px 0;
 
 
 
+/* =========================
+DISEÑO
+========================= */
+
+
+
+canva:{
+
+
+categoria:"DISEÑO",
+
+
+nombre:"Canva Pro",
+
+
+imagen:"assets/productos/canva.png",
+
+
+badge:"POPULAR",
+
+
+descripcion:
+"Diseños profesionales con todas las funciones Premium.",
+
+
+
+precio:"Desde Gs.5.000",
+
+
+precioAnterior:"Gs.15.000",
+
+
+
+planes:[
+
+
+{
+nombre:"Cuenta Premium",
+precio:"Gs.5.000"
 }
 
 
+]
+
+
+},
 
 
 
-.product-footer .footer-links{
-
-
-display:flex;
 
 
 
-justify-content:center;
+
+capcut:{
+
+
+categoria:"DISEÑO",
+
+
+nombre:"CapCut Pro",
+
+
+imagen:"assets/productos/capcut.png",
+
+
+badge:"OFERTA",
+
+
+descripcion:
+"Edición de video profesional con herramientas Premium.",
 
 
 
-gap:35px;
+precio:"Gs.30.000",
+
+
+precioAnterior:"Gs.50.000",
 
 
 
-margin:
-
-30px 0;
+planes:[
 
 
-
+{
+nombre:"1 Mes",
+precio:"Gs.30.000"
 }
 
 
+]
+
+
+},
 
 
 
-.product-footer a{
-
-
-color:#ccc;
 
 
 
-font-weight:800;
+
+autodesk:{
+
+
+categoria:"DISEÑO",
+
+
+nombre:"Autodesk",
+
+
+imagen:"assets/productos/autodesk.png",
+
+
+badge:"PRO",
+
+
+descripcion:
+"Herramientas profesionales para arquitectura y diseño.",
 
 
 
-transition:.3s;
+precio:"Consultar",
+
+
+precioAnterior:"",
 
 
 
+planes:[
+
+
+{
+nombre:"Licencia",
+precio:"Consultar"
 }
 
 
+]
 
-.product-footer a:hover{
 
-
-color:
-
-var(--green);
+},
 
 
 
+
+
+
+
+
+
+
+/* =========================
+INTELIGENCIA ARTIFICIAL
+========================= */
+
+
+
+chatgpt:{
+
+
+categoria:"INTELIGENCIA ARTIFICIAL",
+
+
+nombre:"ChatGPT Plus",
+
+
+imagen:"assets/productos/chatgpt.png",
+
+
+badge:"POPULAR",
+
+
+descripcion:
+"IA avanzada para crear contenido, imágenes y trabajar.",
+
+
+
+precio:"Gs.25.000",
+
+
+precioAnterior:"Gs.50.000",
+
+
+
+planes:[
+
+
+{
+nombre:"Cuenta Premium",
+precio:"Gs.25.000"
 }
 
 
+]
+
+
+},
 
 
 
@@ -349,382 +670,258 @@ var(--green);
 
 
 
-/* =====================================
-   RESPONSIVE PRODUCTO
-===================================== */
+gemini:{
+
+
+categoria:"INTELIGENCIA ARTIFICIAL",
+
+
+nombre:"Google Gemini Pro",
+
+
+imagen:"assets/productos/gemini.png",
+
+
+badge:"PREMIUM",
+
+
+descripcion:
+"IA avanzada de Google con funciones Premium.",
 
 
 
-@media(max-width:1100px){
+precio:"Desde Gs.89.000",
+
+
+precioAnterior:"Gs.120.000",
 
 
 
-.product-detail{
+planes:[
 
 
-grid-template-columns:
-
-1fr;
-
-
-
-gap:50px;
-
-
-
+{
+nombre:"Plan Premium",
+precio:"Desde Gs.89.000"
 }
 
 
-
-.main-product-image{
-
-
-height:450px;
+]
 
 
+},
 
+
+
+
+
+
+
+
+
+
+
+/* =========================
+GAMING
+========================= */
+
+
+
+freefire:{
+
+
+categoria:"GAMING",
+
+
+nombre:"Recargas Free Fire",
+
+
+imagen:"assets/productos/freefire.png",
+
+
+badge:"TOP VENTA",
+
+
+descripcion:
+"Diamantes Free Fire mediante ID de jugador.",
+
+
+
+precio:"Desde Gs.5.000",
+
+
+precioAnterior:"",
+
+
+
+planes:[
+
+
+{
+nombre:"100 Diamantes",
+precio:"Gs.5.000"
+},
+
+
+{
+nombre:"310 Diamantes",
+precio:"Gs.15.000"
+},
+
+
+{
+nombre:"520 Diamantes",
+precio:"Gs.25.000"
 }
 
 
-
-.product-information h1{
-
-
-font-size:45px;
+]
 
 
+},
 
+
+
+
+
+
+
+pubg:{
+
+
+categoria:"GAMING",
+
+
+nombre:"PUBG Mobile",
+
+
+imagen:"assets/productos/pubg.png",
+
+
+badge:"OFERTA",
+
+
+descripcion:
+"Recargas UC para PUBG Mobile.",
+
+
+
+precio:"Desde Gs.10.000",
+
+
+precioAnterior:"",
+
+
+
+planes:[
+
+
+{
+nombre:"UC Premium",
+precio:"Desde Gs.10.000"
 }
 
 
+]
 
-.plans-list{
 
-
-grid-template-columns:
-
-1fr;
+},
 
 
 
+
+
+
+
+bloodstrike:{
+
+
+categoria:"GAMING",
+
+
+nombre:"Blood Strike",
+
+
+imagen:"assets/productos/bloodstrike.png",
+
+
+badge:"NUEVO",
+
+
+descripcion:
+"Créditos y recargas para Blood Strike.",
+
+
+
+precio:"Desde Gs.10.000",
+
+
+precioAnterior:"",
+
+
+
+planes:[
+
+
+{
+nombre:"Créditos",
+precio:"Desde Gs.10.000"
 }
 
 
+]
 
-.product-benefits{
 
-
-grid-template-columns:
-
-1fr;
+},
 
 
 
+
+
+
+
+mobilelegends:{
+
+
+categoria:"GAMING",
+
+
+nombre:"Mobile Legends",
+
+
+imagen:"assets/productos/mobilelegends.png",
+
+
+badge:"POPULAR",
+
+
+descripcion:
+"Diamantes para tus héroes favoritos.",
+
+
+
+precio:"Desde Gs.10.000",
+
+
+precioAnterior:"",
+
+
+
+planes:[
+
+
+{
+nombre:"Diamantes",
+precio:"Desde Gs.10.000"
 }
 
 
+]
 
-.steps{
 
-
-grid-template-columns:
-
-1fr;
-
-
-
-}
-
-
-
-.devices{
-
-
-grid-template-columns:
-
-repeat(2,1fr);
-
-
-
-}
-
-
-
-.trust-section{
-
-
-grid-template-columns:
-
-1fr;
-
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-@media(max-width:600px){
-
-
-
-.product-header{
-
-
-width:92%;
-
-
-
-height:auto;
-
-
-
-padding:
-
-25px 0;
-
-
-
-flex-direction:column;
-
-
-
-gap:20px;
-
-
-
-}
-
-
-
-.product-logo{
-
-
-font-size:28px;
-
-
-
-}
-
-
-
-.product-actions{
-
-
-width:100%;
-
-
-
-justify-content:center;
-
-
-
-}
-
-
-
-
-
-.breadcrumb{
-
-
-width:92%;
-
-
-
-font-size:12px;
-
-
-
-}
-
-
-
-.product-detail{
-
-
-width:92%;
-
-
-
-margin-top:20px;
-
-
-
-}
-
-
-
-.main-product-image{
-
-
-height:330px;
-
-
-
-padding:30px;
-
-
-
-border-radius:25px;
-
-
-
-}
-
-
-
-.product-information h1{
-
-
-font-size:35px;
-
-
-
-}
-
-
-
-.product-information p{
-
-
-font-size:15px;
-
-
-
-}
-
-
-
-.product-price-box strong{
-
-
-font-size:28px;
-
-
-
-}
-
-
-
-.product-price-box del{
-
-
-font-size:14px;
-
-
-
-}
-
-
-
-
-
-.product-plans h2{
-
-
-font-size:24px;
-
-
-
-}
-
-
-
-.plan-card{
-
-
-padding:20px;
-
-
-
-}
-
-
-
-.purchase-box{
-
-
-padding:20px;
-
-
-
-}
-
-
-
-.product-final{
-
-
-width:92%;
-
-
-
-padding:
-
-50px 20px;
-
-
-
-}
-
-
-
-.product-final h2{
-
-
-font-size:30px;
-
-
-
-}
-
-
-
-.devices{
-
-
-grid-template-columns:
-
-1fr;
-
-
-
-}
-
-
-
-.floating-whatsapp{
-
-
-width:55px;
-
-
-
-height:55px;
-
-
-
-font-size:25px;
-
-
-
-}
-
-
-
-}
-/* =====================================
-   OBTENER PRODUCTO DE LA URL
+},
+   /* =====================================
+   CARGAR PRODUCTO SEGÚN URL
 ===================================== */
 
 
@@ -744,7 +941,7 @@ let productoActual = productos[productoID];
 
 
 
-// Producto por defecto
+// Si no existe carga Netflix por defecto
 
 if(!productoActual){
 
@@ -763,7 +960,7 @@ productoActual = productos.netflix;
 
 
 /* =====================================
-   MOSTRAR INFORMACIÓN PRODUCTO
+   CAMBIAR DATOS EN HTML
 ===================================== */
 
 
@@ -780,52 +977,45 @@ productoActual.nombre;
 
 
 
-const imagen = document.getElementById(
+
+const productImage = document.getElementById(
 "productImage"
 );
 
 
 
-const categoria = document.getElementById(
-"productCategory"
-);
-
-
-
-const nombre = document.getElementById(
+const productName = document.getElementById(
 "productName"
 );
 
 
 
-const descripcion = document.getElementById(
+const productCategory = document.getElementById(
+"productCategory"
+);
+
+
+
+const productDescription = document.getElementById(
 "productDescription"
 );
 
 
 
-const precio = document.getElementById(
+const productPrice = document.getElementById(
 "productPrice"
 );
 
 
 
-const precioAnterior = document.getElementById(
+const oldPrice = document.getElementById(
 "oldPrice"
 );
 
 
 
-
-
-const breadcrumbCategoria = document.getElementById(
-"breadcrumbCategory"
-);
-
-
-
-const breadcrumbNombre = document.getElementById(
-"breadcrumbName"
+const productBadge = document.getElementById(
+"productBadge"
 );
 
 
@@ -835,13 +1025,13 @@ const breadcrumbNombre = document.getElementById(
 
 
 
-if(imagen){
+if(productImage){
 
 
-imagen.src = productoActual.imagen;
+productImage.src = productoActual.imagen;
 
 
-imagen.alt = productoActual.nombre;
+productImage.alt = productoActual.nombre;
 
 
 }
@@ -852,27 +1042,10 @@ imagen.alt = productoActual.nombre;
 
 
 
-if(categoria){
+if(productName){
 
 
-categoria.innerHTML =
-
-productoActual.categoria;
-
-
-}
-
-
-
-
-
-
-
-if(nombre){
-
-
-nombre.innerHTML =
-
+productName.innerHTML =
 productoActual.nombre;
 
 
@@ -884,11 +1057,25 @@ productoActual.nombre;
 
 
 
-if(descripcion){
+if(productCategory){
 
 
-descripcion.innerHTML =
+productCategory.innerHTML =
+productoActual.categoria;
 
+
+}
+
+
+
+
+
+
+
+if(productDescription){
+
+
+productDescription.innerHTML =
 productoActual.descripcion;
 
 
@@ -900,11 +1087,10 @@ productoActual.descripcion;
 
 
 
-if(precio){
+if(productPrice){
 
 
-precio.innerHTML =
-
+productPrice.innerHTML =
 productoActual.precio;
 
 
@@ -916,11 +1102,10 @@ productoActual.precio;
 
 
 
-if(precioAnterior){
+if(oldPrice){
 
 
-precioAnterior.innerHTML =
-
+oldPrice.innerHTML =
 productoActual.precioAnterior;
 
 
@@ -932,11 +1117,48 @@ productoActual.precioAnterior;
 
 
 
-if(breadcrumbCategoria){
+if(productBadge){
 
 
-breadcrumbCategoria.innerHTML =
+productBadge.innerHTML =
+productoActual.badge;
 
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   BREADCRUMB
+===================================== */
+
+
+const breadcrumbCategory =
+document.getElementById(
+"breadcrumbCategory"
+);
+
+
+
+const breadcrumbName =
+document.getElementById(
+"breadcrumbName"
+);
+
+
+
+
+
+
+if(breadcrumbCategory){
+
+
+breadcrumbCategory.innerHTML =
 productoActual.categoria;
 
 
@@ -947,39 +1169,30 @@ productoActual.categoria;
 
 
 
+if(breadcrumbName){
 
-if(breadcrumbNombre){
 
-
-breadcrumbNombre.innerHTML =
-
+breadcrumbName.innerHTML =
 productoActual.nombre;
 
 
 }
-
-
-
-
-
-
-
-
-
-/* =====================================
-   CREAR PLANES
+   /* =====================================
+   PLANES DINÁMICOS
 ===================================== */
 
 
-const plansContainer = document.getElementById(
+const plansContainer =
+document.getElementById(
 "plansContainer"
 );
 
 
 
 let planSeleccionado =
-
 productoActual.planes[0];
+
+
 
 
 
@@ -998,7 +1211,7 @@ return;
 
 
 
-plansContainer.innerHTML = "";
+plansContainer.innerHTML="";
 
 
 
@@ -1006,13 +1219,15 @@ plansContainer.innerHTML = "";
 
 
 productoActual.planes.forEach(
+
 (plan,index)=>{
 
 
 
 
 
-const card = document.createElement(
+let card =
+document.createElement(
 "div"
 );
 
@@ -1027,7 +1242,7 @@ card.className =
 
 
 
-if(index === 0){
+if(index===0){
 
 
 card.classList.add(
@@ -1036,6 +1251,7 @@ card.classList.add(
 
 
 }
+
 
 
 
@@ -1069,12 +1285,9 @@ ${plan.precio}
 
 
 
-
 card.addEventListener(
 "click",
 ()=>{
-
-
 
 
 
@@ -1097,10 +1310,10 @@ item.classList.remove(
 
 
 
-
 card.classList.add(
 "active"
 );
+
 
 
 
@@ -1114,9 +1327,8 @@ planSeleccionado = plan;
 
 
 
+
 actualizarResumen();
-
-
 
 
 
@@ -1136,9 +1348,12 @@ card
 
 
 
+}
 
 
-});
+
+);
+
 
 
 
@@ -1153,27 +1368,31 @@ card
 
 
 /* =====================================
-   RESUMEN COMPRA
+   RESUMEN
 ===================================== */
+
 
 
 function actualizarResumen(){
 
 
 
-const summaryProduct = document.getElementById(
+const summaryProduct =
+document.getElementById(
 "summaryProduct"
 );
 
 
 
-const summaryPlan = document.getElementById(
+const summaryPlan =
+document.getElementById(
 "summaryPlan"
 );
 
 
 
-const summaryPrice = document.getElementById(
+const summaryPrice =
+document.getElementById(
 "summaryPrice"
 );
 
@@ -1186,7 +1405,6 @@ if(summaryProduct){
 
 
 summaryProduct.innerHTML =
-
 productoActual.nombre;
 
 
@@ -1202,7 +1420,6 @@ if(summaryPlan){
 
 
 summaryPlan.innerHTML =
-
 planSeleccionado.nombre;
 
 
@@ -1218,7 +1435,6 @@ if(summaryPrice){
 
 
 summaryPrice.innerHTML =
-
 planSeleccionado.precio;
 
 
@@ -1234,34 +1450,29 @@ planSeleccionado.precio;
 
 
 
+
+
 cargarPlanes();
 
 
 
 actualizarResumen();
+
+
+
+
+
+
+
+
+
 /* =====================================
-   BOTONES WHATSAPP
+   WHATSAPP
 ===================================== */
 
 
-const botonWhatsapp = document.getElementById(
-"buyWhatsapp"
-);
 
-
-
-const botonWhatsappFinal = document.getElementById(
-"buyWhatsappBottom"
-);
-
-
-
-
-
-
-
-
-function comprarWhatsapp(){
+function enviarWhatsapp(){
 
 
 
@@ -1269,10 +1480,10 @@ function comprarWhatsapp(){
 
 let mensaje =
 
-`Hola AMERISSTORE 👋🚀
+`Hola AMERISSTORE 👋
 
 
-Quiero adquirir un servicio digital.
+Quiero adquirir un servicio digital:
 
 
 📦 Producto:
@@ -1283,7 +1494,7 @@ ${productoActual.nombre}
 ${productoActual.categoria}
 
 
-📌 Plan seleccionado:
+📌 Plan:
 ${planSeleccionado.nombre}
 
 
@@ -1291,11 +1502,8 @@ ${planSeleccionado.nombre}
 ${planSeleccionado.precio}
 
 
-
 Quiero realizar la activación.
-
-
-Gracias 🙌`;
+`;
 
 
 
@@ -1311,8 +1519,9 @@ whatsapp +
 
 "?text=" +
 
-encodeURIComponent(mensaje);
-
+encodeURIComponent(
+mensaje
+);
 
 
 
@@ -1320,11 +1529,8 @@ encodeURIComponent(mensaje);
 
 
 window.open(
-
 url,
-
 "_blank"
-
 );
 
 
@@ -1339,18 +1545,33 @@ url,
 
 
 
-if(botonWhatsapp){
+const botonCompra =
+document.getElementById(
+"buyWhatsapp"
+);
 
 
 
-botonWhatsapp.addEventListener(
 
+const botonCompra2 =
+document.getElementById(
+"buyWhatsappBottom"
+);
+
+
+
+
+
+
+
+
+if(botonCompra){
+
+
+botonCompra.addEventListener(
 "click",
-
-comprarWhatsapp
-
+enviarWhatsapp
 );
-
 
 
 }
@@ -1361,19 +1582,13 @@ comprarWhatsapp
 
 
 
-
-if(botonWhatsappFinal){
-
+if(botonCompra2){
 
 
-botonWhatsappFinal.addEventListener(
-
+botonCompra2.addEventListener(
 "click",
-
-comprarWhatsapp
-
+enviarWhatsapp
 );
-
 
 
 }
@@ -1382,96 +1597,6 @@ comprarWhatsapp
 
 
 
-
-
-
-
-/* =====================================
-   ERROR IMAGEN
-===================================== */
-
-
-const productImg = document.getElementById(
-"productImage"
-);
-
-
-
-
-
-if(productImg){
-
-
-productImg.onerror = function(){
-
-
-this.src =
-"assets/productos/default.png";
-
-
-};
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =====================================
-   ANIMACIÓN CARGA PRODUCTO
-===================================== */
-
-
-const detalle = document.querySelector(
-".product-detail"
-);
-
-
-
-if(detalle){
-
-
-detalle.style.opacity="0";
-
-
-
-setTimeout(()=>{
-
-
-detalle.style.transition=".5s";
-
-
-
-detalle.style.opacity="1";
-
-
-
-},100);
-
-
-
-}
-
-
-
-
-
-
-
-
-
-console.log(
-
-"Producto cargado correctamente:",
-
-productoActual.nombre
-
-);
 
 
 
