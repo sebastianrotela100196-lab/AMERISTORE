@@ -927,54 +927,59 @@ Quiero completar mi compra.`;
         );
 
     }
-    /* =====================================================
-       EXTRAS
-       COMPRA DIRECTA POR WHATSAPP
-    ====================================================== */
+   /* =====================================================
+   EXTRAS
+   AGREGAR AL CARRITO
+===================================================== */
 
-    extraButtons.forEach(button => {
-
-
-        button.addEventListener(
-            "click",
-            () => {
+extraButtons.forEach(button => {
 
 
-                const producto =
-
-                    button.dataset.producto ||
-                    "Producto Free Fire";
-
-
-                const precio =
-
-                    button.dataset.precio ||
-                    "";
+    button.addEventListener(
+        "click",
+        () => {
 
 
-                const mensaje =
-`Hola AMERISSTORE 👋
+            const producto =
 
-Quiero comprar este producto de Free Fire:
-
-🎮 Producto:
-${producto}
-
-💰 Precio:
-${precio}
-
-Quiero completar mi compra.`;
+                button.dataset.producto ||
+                "Producto Free Fire";
 
 
-                abrirWhatsApp(
-                    mensaje
-                );
+            const precio =
 
-            }
-        );
+                button.dataset.precio ||
+                "0";
 
-    });
 
+            agregarAlCarrito(
+
+                producto,
+
+                precio,
+
+                "",
+
+                1
+
+            );
+
+
+            mostrarNotificacion(
+
+                `${producto} agregado al carrito 🛒`
+
+            );
+
+
+            abrirCarrito();
+
+
+        }
+    );
+
+
+});
 
     /* =====================================================
        CARRITO
