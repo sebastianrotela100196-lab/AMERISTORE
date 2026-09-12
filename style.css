@@ -2687,3 +2687,87 @@ main {
     }
 
 }
+/* =========================================
+   NOTIFICACIÓN CARRITO
+========================================= */
+
+.store-notification {
+
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 30px;
+
+    z-index: 9999;
+
+    padding: 13px 20px;
+
+    transform:
+        translate(-50%, 30px);
+
+    opacity: 0;
+
+    background:
+        rgba(18, 11, 27, 0.96);
+
+    border:
+        1px solid var(--purple-light);
+
+    border-radius:
+        12px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+
+    box-shadow:
+        0 10px 35px
+        rgba(124, 53, 255, 0.30);
+
+    transition:
+        0.3s ease;
+
+    pointer-events:
+        none;
+
+    white-space:
+        nowrap;
+
+}
+
+
+.store-notification.show {
+
+    opacity: 1;
+
+    transform:
+        translate(-50%, 0);
+
+}
+
+
+@media (max-width: 600px) {
+
+    .store-notification {
+
+        width:
+            calc(100% - 40px);
+
+        bottom:
+            85px;
+
+        text-align:
+            center;
+
+        white-space:
+            normal;
+
+    }
+
+}
