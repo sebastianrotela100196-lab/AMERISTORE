@@ -22,8 +22,10 @@ const CART_KEY =
 
 
 
+
+
 /* =========================================================
-   BASE DE DATOS PRODUCTOS
+   BASE PRODUCTOS
 ========================================================= */
 
 
@@ -68,6 +70,7 @@ precio:100000
 
 
 
+
 disney:{
 
 categoria:"STREAMING",
@@ -93,6 +96,7 @@ precio:25000
 ]
 
 },
+
 
 
 
@@ -124,6 +128,7 @@ precio:15000
 
 
 
+
 paramount:{
 
 categoria:"STREAMING",
@@ -152,6 +157,7 @@ precio:15000
 
 
 
+
 crunchyroll:{
 
 categoria:"STREAMING",
@@ -177,6 +183,7 @@ precio:12000
 ]
 
 },
+
 
 
 
@@ -210,6 +217,7 @@ precio:80000
 ]
 
 },
+
 
 
 
@@ -256,6 +264,7 @@ precio:200000
 
 
 
+
 canva:{
 
 categoria:"DISEÑO",
@@ -281,6 +290,7 @@ precio:5000
 ]
 
 },
+
 
 
 
@@ -318,8 +328,10 @@ precio:25000
 
 
 
+
+
 /* =========================================================
-   OBTENER PRODUCTO URL
+   OBTENER ID PRODUCTO
 ========================================================= */
 
 
@@ -349,8 +361,10 @@ productos.netflix;
 
 
 
+
+
 /* =========================================================
-   ELEMENTOS
+   ELEMENTOS HTML
 ========================================================= */
 
 
@@ -360,10 +374,12 @@ document.getElementById(
 );
 
 
+
 const name =
 document.getElementById(
 "productName"
 );
+
 
 
 const category =
@@ -372,10 +388,12 @@ document.getElementById(
 );
 
 
+
 const description =
 document.getElementById(
 "productDescription"
 );
+
 
 
 const badge =
@@ -384,10 +402,19 @@ document.getElementById(
 );
 
 
-const plans =
+
+const productPrice =
+document.getElementById(
+"productPrice"
+);
+
+
+
+const plansContainer =
 document.getElementById(
 "plansContainer"
 );
+
 
 
 const summaryProduct =
@@ -396,10 +423,12 @@ document.getElementById(
 );
 
 
+
 const summaryPlan =
 document.getElementById(
 "summaryPlan"
 );
+
 
 
 const summaryPrice =
@@ -408,10 +437,12 @@ document.getElementById(
 );
 
 
+
 const addButton =
 document.getElementById(
 "buyWhatsapp"
 );
+
 
 
 const addButtonBottom =
@@ -423,14 +454,20 @@ document.getElementById(
 
 
 
+
+
+
 /* =========================================================
-   CARGAR DATOS
+   CARGAR INFORMACIÓN
 ========================================================= */
 
 
 document.title =
+
 "AMERISSTORE | "
+
 +
+
 producto.nombre;
 
 
@@ -485,13 +522,17 @@ producto.badge;
 
 
 
+
+
 /* =========================================================
-   PLAN SELECCIONADO
+   PLAN ACTUAL
 ========================================================= */
 
 
 let planActual =
 producto.planes[0];
+
+
 
 
 
@@ -505,12 +546,12 @@ producto.planes[0];
 function cargarPlanes(){
 
 
-if(!plans)
+if(!plansContainer)
 return;
 
 
 
-plans.innerHTML="";
+plansContainer.innerHTML="";
 
 
 
@@ -541,14 +582,18 @@ card.classList.add(
 
 
 
-card.innerHTML=`
+card.innerHTML = `
 
 <h4>
 ${plan.nombre}
 </h4>
 
+
 <strong>
-Gs. ${plan.precio.toLocaleString("es-PY")}
+
+Gs.
+${plan.precio.toLocaleString("es-PY")}
+
 </strong>
 
 `;
@@ -564,15 +609,14 @@ document
 .querySelectorAll(
 ".plan-card"
 )
-.forEach(
-(item)=>{
+
+.forEach(item=>{
 
 item.classList.remove(
 "active"
 );
 
-}
-);
+});
 
 
 
@@ -591,24 +635,21 @@ actualizarResumen();
 
 
 
-}
-
-);
+});
 
 
 
-plans.appendChild(
+plansContainer.appendChild(
 card
 );
 
 
-}
-
-
-);
+});
 
 
 }
+
+
 
 
 
@@ -616,7 +657,7 @@ card
 
 
 /* =========================================================
-   RESUMEN
+   ACTUALIZAR RESUMEN Y PRECIO
 ========================================================= */
 
 
@@ -658,7 +699,48 @@ planActual.precio.toLocaleString(
 
 
 
+
+/* PRECIO GRANDE */
+
+if(productPrice){
+
+
+productPrice.textContent =
+
+"Gs. "
+
++
+
+planActual.precio.toLocaleString(
+"es-PY"
+);
+
+
+
+productPrice.classList.add(
+"price-update"
+);
+
+
+
+setTimeout(()=>{
+
+
+productPrice.classList.remove(
+"price-update"
+);
+
+
+
+},400);
+
+
+
 }
+
+
+}
+
 
 
 
@@ -690,6 +772,7 @@ CART_KEY
 
 
 
+
 function guardarCarrito(carrito){
 
 
@@ -710,12 +793,14 @@ carrito
 
 
 
-function agregarCarrito(){
 
+
+function agregarCarrito(){
 
 
 let carrito =
 obtenerCarrito();
+
 
 
 
@@ -724,16 +809,24 @@ carrito.push({
 nombre:
 producto.nombre,
 
-plan:
+
+detalle:
 planActual.nombre,
+
 
 precio:
 planActual.precio,
+
+
+imagen:
+producto.imagen,
+
 
 cantidad:
 1
 
 });
+
 
 
 
@@ -744,12 +837,18 @@ carrito
 
 
 mostrarMensaje(
-"Producto agregado al carrito 🛒"
+
+`${producto.nombre} agregado al carrito 🛒`
+
 );
 
 
 
 }
+
+
+
+
 
 
 
@@ -764,6 +863,7 @@ if(addButton){
 
 
 addButton.textContent =
+
 "🛒 Agregar al carrito";
 
 
@@ -775,10 +875,12 @@ agregarCarrito;
 
 
 
+
 if(addButtonBottom){
 
 
 addButtonBottom.textContent =
+
 "🛒 Agregar al carrito";
 
 
@@ -792,6 +894,10 @@ agregarCarrito;
 
 
 
+
+
+
+
 /* =========================================================
    MENSAJE
 ========================================================= */
@@ -800,14 +906,17 @@ agregarCarrito;
 function mostrarMensaje(texto){
 
 
+
 const div =
 document.createElement(
 "div"
 );
 
 
+
 div.className =
 "store-notification";
+
 
 
 div.textContent =
@@ -823,7 +932,9 @@ div
 
 setTimeout(()=>{
 
+
 div.remove();
+
 
 },2500);
 
@@ -835,12 +946,17 @@ div.remove();
 
 
 
+
+
+
+
 /* =========================================================
-   INICIAR
+   INICIO
 ========================================================= */
 
 
 cargarPlanes();
+
 
 actualizarResumen();
 
