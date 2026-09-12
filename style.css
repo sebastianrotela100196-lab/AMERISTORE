@@ -1,46 +1,43 @@
 /* =====================================
    AMERISSTORE
-   DIGITAL STORE
-   DEXSTORE STYLE
+   DIGITAL STORE STYLE
+   DEXSTORE INSPIRED
 ===================================== */
 
 
-/* =====================================
+/* ===============================
    VARIABLES
-===================================== */
+=============================== */
 
 
 :root{
 
+--bg:
+#050505;
 
---bg:#050505;
+--card:
+#101010;
 
+--card-hover:
+#151515;
 
---bg-card:#101010;
+--green:
+#39ff14;
 
+--green-soft:
+rgba(57,255,20,.15);
 
---bg-soft:#151515;
+--white:
+#ffffff;
 
-
---green:#84ff72;
-
-
---green-dark:#35b84a;
-
-
---white:#ffffff;
-
-
---gray:#999999;
-
+--gray:
+#8c8c8c;
 
 --border:
-rgba(132,255,114,.15);
-
+rgba(57,255,20,.18);
 
 --shadow:
-0 0 35px rgba(132,255,114,.15);
-
+0 0 35px rgba(57,255,20,.15);
 
 }
 
@@ -49,29 +46,23 @@ rgba(132,255,114,.15);
 
 
 
-/* =====================================
+/* ===============================
    RESET
-===================================== */
+=============================== */
 
 
 *{
 
-
 margin:0;
-
 
 padding:0;
 
-
 box-sizing:border-box;
 
-
 font-family:
-
-'Inter',
+"Inter",
 Arial,
 sans-serif;
-
 
 }
 
@@ -79,9 +70,7 @@ sans-serif;
 
 html{
 
-
 scroll-behavior:smooth;
-
 
 }
 
@@ -89,19 +78,13 @@ scroll-behavior:smooth;
 
 body{
 
-
 background:
-
 var(--bg);
 
-
 color:
-
 var(--white);
 
-
 overflow-x:hidden;
-
 
 }
 
@@ -109,12 +92,9 @@ overflow-x:hidden;
 
 a{
 
-
 text-decoration:none;
 
-
-color:white;
-
+color:inherit;
 
 }
 
@@ -122,12 +102,9 @@ color:white;
 
 img{
 
-
 width:100%;
 
-
 display:block;
-
 
 }
 
@@ -137,15 +114,17 @@ display:block;
 
 
 
-/* =====================================
+
+
+/* ===============================
    TOP BAR
-===================================== */
+=============================== */
 
 
 .top-bar{
 
 
-height:38px;
+height:40px;
 
 
 background:
@@ -158,6 +137,7 @@ border-bottom:
 1px solid var(--border);
 
 
+
 display:flex;
 
 
@@ -167,23 +147,13 @@ align-items:center;
 justify-content:center;
 
 
-}
-
-
-
-.top-bar-content{
-
-
-display:flex;
-
-
-gap:35px;
-
 
 font-size:12px;
 
 
+
 font-weight:800;
+
 
 
 color:
@@ -191,7 +161,9 @@ color:
 var(--green);
 
 
+
 letter-spacing:1px;
+
 
 
 }
@@ -204,12 +176,12 @@ letter-spacing:1px;
 
 
 
-/* =====================================
+/* ===============================
    HEADER
-===================================== */
+=============================== */
 
 
-.main-header{
+header{
 
 
 position:sticky;
@@ -218,7 +190,8 @@ position:sticky;
 top:0;
 
 
-z-index:1000;
+z-index:999;
+
 
 
 background:
@@ -254,10 +227,11 @@ width:90%;
 max-width:1400px;
 
 
+height:85px;
+
+
 margin:auto;
 
-
-height:85px;
 
 
 display:flex;
@@ -279,10 +253,11 @@ justify-content:space-between;
 
 
 
+
 /* LOGO */
 
 
-.store-logo{
+.logo{
 
 
 font-size:32px;
@@ -294,16 +269,18 @@ font-weight:1000;
 letter-spacing:-1px;
 
 
+
 }
 
 
 
-.store-logo span{
+.logo span{
 
 
 color:
 
 var(--green);
+
 
 
 }
@@ -319,28 +296,27 @@ var(--green);
 /* BUSCADOR */
 
 
-.header-search{
+.search{
 
 
-width:450px;
+width:420px;
 
-
-position:relative;
 
 
 }
 
 
 
-.header-search input{
+.search input{
 
 
 width:100%;
 
 
+
 padding:
 
-16px 20px;
+15px 20px;
 
 
 
@@ -349,28 +325,34 @@ background:
 #111;
 
 
+
 border:
 
-1px solid #252525;
+1px solid #222;
+
 
 
 border-radius:14px;
 
 
+
 color:white;
+
+
+
+outline:none;
+
 
 
 font-size:15px;
 
-
-outline:none;
 
 
 }
 
 
 
-.header-search input:focus{
+.search input:focus{
 
 
 border-color:
@@ -378,6 +360,7 @@ border-color:
 var(--green);
 
 
+
 }
 
 
@@ -388,10 +371,10 @@ var(--green);
 
 
 
-/* WHATSAPP HEADER */
+/* CONTACTO */
 
 
-.header-support{
+.contact{
 
 
 display:flex;
@@ -400,14 +383,15 @@ display:flex;
 align-items:center;
 
 
-gap:12px;
+gap:15px;
+
 
 
 }
 
 
 
-.header-support span{
+.contact:first-letter{
 
 
 font-size:30px;
@@ -417,13 +401,10 @@ font-size:30px;
 
 
 
-.header-support small{
+.contact span{
 
 
-display:block;
-
-
-color:#888;
+color:#999;
 
 
 font-size:12px;
@@ -433,12 +414,17 @@ font-size:12px;
 
 
 
-.header-support strong{
+.contact a{
 
 
 color:
 
 var(--green);
+
+
+
+font-weight:900;
+
 
 
 }
@@ -451,15 +437,32 @@ var(--green);
 
 
 
-/* =====================================
-   CATEGORIAS
-===================================== */
+/* ===============================
+   MENU CATEGORIAS
+=============================== */
 
 
-.category-nav{
+nav{
 
 
 height:55px;
+
+
+
+display:flex;
+
+
+
+justify-content:center;
+
+
+
+align-items:center;
+
+
+
+gap:35px;
+
 
 
 background:
@@ -467,39 +470,12 @@ background:
 #080808;
 
 
+
 border-top:
 
 1px solid var(--border);
 
 
-border-bottom:
-
-1px solid var(--border);
-
-
-
-}
-
-
-
-
-.category-nav-inner{
-
-
-height:100%;
-
-
-display:flex;
-
-
-justify-content:center;
-
-
-align-items:center;
-
-
-gap:35px;
-
 
 }
 
@@ -507,27 +483,33 @@ gap:35px;
 
 
 
-.category-nav a{
+nav a{
 
 
 font-size:14px;
 
 
+
 font-weight:900;
 
 
-color:#aaa;
+
+color:#999;
+
 
 
 transition:.3s;
+
 
 
 }
 
 
 
-.category-nav a:hover,
-.category-nav .active{
+
+
+nav a:hover,
+nav .active{
 
 
 color:
@@ -535,9 +517,10 @@ color:
 var(--green);
 
 
+
 }
 /* =====================================
-   HERO PRINCIPAL
+   HERO SECTION
 ===================================== */
 
 
@@ -554,26 +537,24 @@ margin:80px auto;
 
 
 
-}
-
-
-
-.hero-container{
-
-
 display:flex;
+
 
 
 align-items:center;
 
 
+
 justify-content:space-between;
+
 
 
 gap:60px;
 
 
-min-height:650px;
+
+min-height:600px;
+
 
 
 }
@@ -582,12 +563,16 @@ min-height:650px;
 
 
 
-/* ==========================
-   HERO TEXTO
-========================== */
 
 
-.hero-content{
+
+
+/* ===============================
+   HERO LEFT
+=============================== */
+
+
+.hero-left{
 
 
 width:50%;
@@ -597,18 +582,22 @@ width:50%;
 
 
 
-.hero-badge{
+.badge{
 
 
 display:inline-flex;
 
 
-padding:8px 18px;
+
+padding:
+
+8px 18px;
+
 
 
 background:
 
-rgba(132,255,114,.10);
+var(--green-soft);
 
 
 
@@ -628,50 +617,21 @@ var(--green);
 
 
 
-font-size:13px;
+font-size:12px;
 
 
 
-font-weight:900;
+font-weight:1000;
+
+
+
+letter-spacing:2px;
 
 
 
 margin-bottom:25px;
 
 
-}
-
-
-
-
-
-.hero-eyebrow{
-
-
-display:block;
-
-
-color:
-
-var(--green);
-
-
-
-font-size:14px;
-
-
-
-font-weight:900;
-
-
-
-letter-spacing:4px;
-
-
-
-margin-bottom:15px;
-
-
 
 }
 
@@ -679,7 +639,11 @@ margin-bottom:15px;
 
 
 
-.hero h1{
+
+
+
+
+.hero-left h1{
 
 
 font-size:70px;
@@ -690,11 +654,11 @@ line-height:1;
 
 
 
-font-weight:1000;
-
-
-
 letter-spacing:-3px;
+
+
+
+font-weight:1000;
 
 
 
@@ -702,7 +666,7 @@ letter-spacing:-3px;
 
 
 
-.hero h1 span{
+.hero-left h1 span{
 
 
 color:
@@ -711,6 +675,10 @@ var(--green);
 
 
 
+display:block;
+
+
+
 }
 
 
@@ -718,22 +686,32 @@ var(--green);
 
 
 
-.hero-description{
+
+
+
+.hero-left p{
 
 
 margin-top:25px;
 
 
-color:#aaa;
+
+max-width:560px;
+
 
 
 font-size:18px;
 
 
+
 line-height:1.7;
 
 
-max-width:550px;
+
+color:
+
+#999;
+
 
 
 }
@@ -746,10 +724,9 @@ max-width:550px;
 
 
 
-
-/* ==========================
-BOTONES HERO
-========================== */
+/* ===============================
+   BOTONES
+=============================== */
 
 
 .hero-buttons{
@@ -758,17 +735,22 @@ BOTONES HERO
 display:flex;
 
 
+
 gap:20px;
 
 
+
 margin-top:40px;
+
 
 
 }
 
 
 
-.primary-button{
+
+
+.btn-primary{
 
 
 background:
@@ -777,11 +759,15 @@ var(--green);
 
 
 
-color:#050505;
+color:
+
+#050505;
 
 
 
-padding:16px 35px;
+padding:
+
+16px 35px;
 
 
 
@@ -793,6 +779,10 @@ font-weight:1000;
 
 
 
+transition:.3s;
+
+
+
 display:inline-flex;
 
 
@@ -801,11 +791,7 @@ align-items:center;
 
 
 
-gap:10px;
-
-
-
-transition:.3s;
+justify-content:center;
 
 
 
@@ -813,7 +799,7 @@ transition:.3s;
 
 
 
-.primary-button:hover{
+.btn-primary:hover{
 
 
 transform:
@@ -824,7 +810,7 @@ translateY(-5px);
 
 box-shadow:
 
-0 0 35px rgba(132,255,114,.35);
+var(--shadow);
 
 
 
@@ -836,7 +822,9 @@ box-shadow:
 
 
 
-.secondary-button{
+
+
+.btn-outline{
 
 
 border:
@@ -859,6 +847,10 @@ font-weight:900;
 
 
 
+color:white;
+
+
+
 transition:.3s;
 
 
@@ -867,7 +859,7 @@ transition:.3s;
 
 
 
-.secondary-button:hover{
+.btn-outline:hover{
 
 
 background:
@@ -890,9 +882,9 @@ color:#050505;
 
 
 
-/* ==========================
-FEATURES HERO
-========================== */
+/* ===============================
+   HERO FEATURES
+=============================== */
 
 
 .hero-features{
@@ -901,55 +893,56 @@ FEATURES HERO
 display:flex;
 
 
-gap:35px;
+
+gap:30px;
+
 
 
 margin-top:50px;
 
 
-}
-
-
-
-.hero-feature{
-
-
-display:flex;
-
-
-align-items:center;
-
-
-gap:10px;
-
 
 }
 
 
 
-.hero-feature strong{
 
 
-font-size:25px;
+.hero-features div{
 
 
-color:
+background:
 
-var(--green);
-
-
-
-}
+#101010;
 
 
 
-.hero-feature span{
+border:
+
+1px solid var(--border);
+
+
+
+padding:
+
+15px 20px;
+
+
+
+border-radius:15px;
+
 
 
 font-size:14px;
 
 
-color:#aaa;
+
+font-weight:900;
+
+
+
+color:#ddd;
+
 
 
 }
@@ -962,70 +955,16 @@ color:#aaa;
 
 
 
-/* ==========================
-SHOWCASE DERECHA
-========================== */
+/* ===============================
+   HERO CARD DERECHO
+=============================== */
 
 
-.hero-showcase{
+.hero-card{
 
 
 width:45%;
 
-
-position:relative;
-
-
-}
-
-
-
-
-
-.showcase-glow{
-
-
-position:absolute;
-
-
-width:350px;
-
-
-height:350px;
-
-
-background:
-
-rgba(132,255,114,.18);
-
-
-
-filter:
-
-blur(100px);
-
-
-
-right:50px;
-
-
-top:80px;
-
-
-
-}
-
-
-
-
-
-
-
-
-.showcase-main{
-
-
-position:relative;
 
 
 background:
@@ -1034,9 +973,9 @@ linear-gradient(
 
 145deg,
 
-#161616,
+#151515,
 
-#090909
+#080808
 
 );
 
@@ -1052,7 +991,7 @@ border-radius:30px;
 
 
 
-padding:30px;
+padding:35px;
 
 
 
@@ -1062,29 +1001,99 @@ var(--shadow);
 
 
 
+position:relative;
+
+
+
+overflow:hidden;
+
+
+
 }
 
 
 
 
 
-.showcase-top{
+
+
+
+
+.hero-card::before{
+
+
+content:"";
+
+
+
+position:absolute;
+
+
+
+width:300px;
+
+
+
+height:300px;
+
+
+
+background:
+
+var(--green);
+
+
+
+opacity:.12;
+
+
+
+filter:
+
+blur(120px);
+
+
+
+right:-100px;
+
+
+
+top:-100px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.card-header{
 
 
 display:flex;
 
 
+
 justify-content:space-between;
+
+
+
+font-weight:1000;
+
+
+
+font-size:14px;
+
 
 
 color:#aaa;
 
 
-font-size:13px;
-
-
-font-weight:900;
-
 
 }
 
@@ -1092,35 +1101,7 @@ font-weight:900;
 
 
 
-.online-status{
-
-
-color:
-
-var(--green);
-
-
-}
-
-
-
-
-
-
-
-
-
-.showcase-title{
-
-
-margin-top:35px;
-
-
-}
-
-
-
-.showcase-title small{
+.card-header span{
 
 
 color:
@@ -1129,25 +1110,6 @@ var(--green);
 
 
 
-font-weight:900;
-
-
-
-}
-
-
-
-
-
-.showcase-title h2{
-
-
-font-size:35px;
-
-
-margin-top:10px;
-
-
 }
 
 
@@ -1158,15 +1120,41 @@ margin-top:10px;
 
 
 
-/* ==========================
-SERVICIOS HERO
-========================== */
+.hero-card h2{
 
 
-.showcase-grid{
+font-size:38px;
+
+
+
+margin:35px 0;
+
+
+
+font-weight:1000;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===============================
+   MINI GRID HERO
+=============================== */
+
+
+.mini-grid{
 
 
 display:grid;
+
 
 
 grid-template-columns:
@@ -1179,32 +1167,29 @@ gap:15px;
 
 
 
-margin-top:30px;
-
-
-
 }
 
 
 
 
-
-.showcase-service{
+.mini-grid div{
 
 
 background:
 
-#0d0d0d;
+#0c0c0c;
 
 
 
 border:
 
-1px solid rgba(132,255,114,.12);
+1px solid rgba(57,255,20,.12);
 
 
 
-padding:18px;
+padding:
+
+20px;
 
 
 
@@ -1212,15 +1197,11 @@ border-radius:18px;
 
 
 
-display:flex;
+font-size:18px;
 
 
 
-gap:15px;
-
-
-
-align-items:center;
+font-weight:1000;
 
 
 
@@ -1228,42 +1209,27 @@ align-items:center;
 
 
 
-
-
-.showcase-icon{
-
-
-font-size:30px;
-
-
-}
-
-
-
-
-
-.showcase-service strong{
+.mini-grid small{
 
 
 display:block;
 
 
-font-size:15px;
 
+margin-top:8px;
 
-}
-
-
-
-
-
-.showcase-service span{
 
 
 font-size:12px;
 
 
+
 color:#888;
+
+
+
+font-weight:600;
+
 
 
 }
@@ -1272,7 +1238,11 @@ color:#888;
 
 
 
-.showcase-footer{
+
+
+
+
+.hero-card footer{
 
 
 margin-top:30px;
@@ -1289,69 +1259,50 @@ border-top:
 
 
 
-display:flex;
-
-
-
-justify-content:space-between;
-
-
-
-color:#aaa;
-
-
-
-font-size:13px;
-
-
-
-}
-
-
-
-
-
-.showcase-footer strong{
-
-
 color:
 
 var(--green);
 
 
 
-}
+font-weight:900;
 
-
-
-
-
-
-
-
-
-/* =====================================
-   TITULOS DE SECCION
-===================================== */
-
-
-.section-header{
 
 
 text-align:center;
 
 
-margin:100px auto 50px;
+
+}
+/* =====================================
+   SECCION TITULOS
+===================================== */
+
+
+.section-title{
 
 
 width:90%;
+
+
+max-width:1400px;
+
+
+margin:
+
+100px auto 50px;
+
+
+
+text-align:center;
+
 
 
 }
 
 
 
-.section-tag{
+.section-title span{
 
 
 color:
@@ -1376,7 +1327,7 @@ letter-spacing:4px;
 
 
 
-.section-header h2{
+.section-title h2{
 
 
 font-size:42px;
@@ -1395,14 +1346,16 @@ font-weight:1000;
 
 
 
-.section-header p{
+.section-title p{
 
 
 margin-top:15px;
 
 
 
-color:#888;
+color:
+
+#888;
 
 
 
@@ -1411,13 +1364,21 @@ font-size:17px;
 
 
 }
+
+
+
+
+
+
+
+
+
 /* =====================================
-   PRODUCTOS - ESTILO DEXSTORE
+   GRID PRODUCTOS
 ===================================== */
 
 
-.products-section,
-.catalog-section{
+.products-grid{
 
 
 width:90%;
@@ -1426,19 +1387,8 @@ width:90%;
 max-width:1400px;
 
 
-margin:
+margin:auto;
 
-0 auto 120px;
-
-
-
-}
-
-
-
-
-
-.products-grid{
 
 
 display:grid;
@@ -1464,9 +1414,10 @@ gap:25px;
 
 
 
-/* ==========================
-   TARJETA PRODUCTO
-========================== */
+
+/* =====================================
+   CARD PRODUCTO
+===================================== */
 
 
 .product-card{
@@ -1492,11 +1443,15 @@ overflow:hidden;
 
 
 
-position:relative;
+cursor:pointer;
 
 
 
 transition:.35s;
+
+
+
+position:relative;
 
 
 
@@ -1523,7 +1478,7 @@ var(--green);
 
 box-shadow:
 
-0 0 35px rgba(132,255,114,.20);
+0 0 35px rgba(57,255,20,.18);
 
 
 
@@ -1537,20 +1492,19 @@ box-shadow:
 
 
 
-/* ==========================
+/* =====================================
    IMAGEN PRODUCTO
-========================== */
+===================================== */
 
 
 .product-image{
 
 
-height:250px;
+height:240px;
 
 
 
 background:
-
 
 linear-gradient(
 
@@ -1577,20 +1531,25 @@ overflow:hidden;
 
 
 
+
 .product-image img{
-
-
-width:100%;
 
 
 height:100%;
 
 
-object-fit:cover;
+width:100%;
+
+
+object-fit:contain;
 
 
 
 transition:.5s;
+
+
+
+padding:25px;
 
 
 
@@ -1619,12 +1578,12 @@ scale(1.08);
 
 
 
-/* ==========================
+/* =====================================
    ETIQUETAS
-========================== */
+===================================== */
 
 
-.product-badge{
+.tag{
 
 
 position:absolute;
@@ -1659,7 +1618,7 @@ color:#050505;
 
 
 
-font-size:12px;
+font-size:11px;
 
 
 
@@ -1667,18 +1626,24 @@ font-weight:1000;
 
 
 
+z-index:2;
+
+
+
 }
 
 
 
-
-
-.product-badge.popular{
+.tag.popular{
 
 
 background:
 
-#ffffff;
+white;
+
+
+
+color:black;
 
 
 
@@ -1686,14 +1651,16 @@ background:
 
 
 
-
-
-.product-badge.ia{
+.tag.pro{
 
 
 background:
 
-#7dd3fc;
+#00e5ff;
+
+
+
+color:#001;
 
 
 
@@ -1707,9 +1674,9 @@ background:
 
 
 
-/* ==========================
+/* =====================================
    INFORMACION PRODUCTO
-========================== */
+===================================== */
 
 
 .product-info{
@@ -1725,10 +1692,16 @@ padding:25px;
 
 
 
-.product-category{
+.product-info small{
 
 
-font-size:12px;
+color:
+
+var(--green);
+
+
+
+font-size:11px;
 
 
 
@@ -1737,12 +1710,6 @@ font-weight:1000;
 
 
 letter-spacing:2px;
-
-
-
-color:
-
-var(--green);
 
 
 
@@ -1784,7 +1751,7 @@ color:
 
 
 
-font-size:15px;
+font-size:14px;
 
 
 
@@ -1792,7 +1759,7 @@ line-height:1.6;
 
 
 
-min-height:50px;
+min-height:45px;
 
 
 
@@ -1806,12 +1773,12 @@ min-height:50px;
 
 
 
-/* ==========================
+/* =====================================
    PRECIO
-========================== */
+===================================== */
 
 
-.product-price{
+.price{
 
 
 display:flex;
@@ -1826,9 +1793,7 @@ gap:12px;
 
 
 
-margin:
-
-22px 0;
+margin-top:20px;
 
 
 
@@ -1836,10 +1801,11 @@ margin:
 
 
 
-.product-price strong{
+
+.price strong{
 
 
-font-size:26px;
+font-size:22px;
 
 
 
@@ -1857,103 +1823,20 @@ font-weight:1000;
 
 
 
-.product-price del{
 
 
-font-size:14px;
-
+.price del{
 
 
 color:#666;
 
 
 
-}
-
-
-
-
-
-
-
-
-
-/* ==========================
-   BOTON PRODUCTO
-========================== */
-
-
-.product-button{
-
-
-display:flex;
-
-
-
-justify-content:center;
-
-
-
-align-items:center;
-
-
-
-width:100%;
-
-
-
-padding:
-
-14px;
-
-
-
-background:
-
-var(--green);
-
-
-
-color:#050505;
-
-
-
-border-radius:12px;
-
-
-
-font-weight:1000;
-
-
-
-transition:.3s;
+font-size:13px;
 
 
 
 }
-
-
-
-
-
-.product-button:hover{
-
-
-box-shadow:
-
-0 0 25px rgba(132,255,114,.45);
-
-
-
-transform:
-
-translateY(-3px);
-
-
-
-}
-
-
 
 
 
@@ -1964,34 +1847,14 @@ translateY(-3px);
 
 
 /* =====================================
-   CATEGORIAS DESTACADAS
+   PRODUCTOS CATEGORIA
 ===================================== */
 
 
-.category-boxes{
+.category-section{
 
 
-width:90%;
-
-
-max-width:1400px;
-
-
-margin:100px auto;
-
-
-
-display:grid;
-
-
-
-grid-template-columns:
-
-repeat(5,1fr);
-
-
-
-gap:20px;
+margin-bottom:120px;
 
 
 
@@ -1999,30 +1862,49 @@ gap:20px;
 
 
 
-.category-box{
+
+
+
+
+
+
+/* =====================================
+   EFECTO CARD
+===================================== */
+
+
+.product-card::after{
+
+
+content:"";
+
+
+
+position:absolute;
+
+
+
+inset:0;
+
 
 
 background:
 
-var(--card);
+linear-gradient(
+
+120deg,
+
+transparent,
+
+rgba(57,255,20,.08),
+
+transparent
+
+);
 
 
 
-border:
-
-1px solid var(--border);
-
-
-
-border-radius:20px;
-
-
-
-padding:30px 20px;
-
-
-
-text-align:center;
+opacity:0;
 
 
 
@@ -2036,87 +1918,14 @@ transition:.3s;
 
 
 
-.category-box:hover{
+.product-card:hover::after{
 
 
-border-color:
-
-var(--green);
-
-
-
-transform:
-
-translateY(-8px);
+opacity:1;
 
 
 
 }
-
-
-
-
-.category-box span{
-
-
-font-size:40px;
-
-
-
-display:block;
-
-
-
-margin-bottom:15px;
-
-
-
-}
-
-
-
-
-
-.category-box h3{
-
-
-font-size:18px;
-
-
-
-}
-
-
-
-
-
-.category-box p{
-
-
-color:#888;
-
-
-
-font-size:13px;
-
-
-
-margin-top:8px;
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
 /* =====================================
    REVENDEDORES
 ===================================== */
@@ -2145,12 +1954,11 @@ padding:
 
 background:
 
-
 linear-gradient(
 
 145deg,
 
-#111,
+#111111,
 
 #070707
 
@@ -2158,13 +1966,13 @@ linear-gradient(
 
 
 
-border-radius:35px;
-
-
-
 border:
 
 1px solid var(--border);
+
+
+
+border-radius:35px;
 
 
 
@@ -2191,7 +1999,7 @@ repeat(4,1fr);
 
 
 
-gap:20px;
+gap:25px;
 
 
 
@@ -2212,21 +2020,23 @@ margin:
 
 background:
 
-#0b0b0b;
+#0c0c0c;
 
 
 
 border:
 
-1px solid rgba(132,255,114,.12);
+1px solid rgba(57,255,20,.15);
 
 
 
-border-radius:20px;
+border-radius:22px;
 
 
 
-padding:35px 25px;
+padding:
+
+35px 25px;
 
 
 
@@ -2239,7 +2049,14 @@ transition:.3s;
 
 
 
+
 .reseller-card:hover{
+
+
+transform:
+
+translateY(-8px);
+
 
 
 border-color:
@@ -2248,9 +2065,9 @@ var(--green);
 
 
 
-transform:
+box-shadow:
 
-translateY(-5px);
+var(--shadow);
 
 
 
@@ -2280,7 +2097,7 @@ margin-bottom:15px;
 .reseller-card p{
 
 
-color:#888;
+color:#999;
 
 
 
@@ -2289,12 +2106,21 @@ line-height:1.6;
 
 
 }
+
+
+
+
+
+
+
+
+
 /* =====================================
    BENEFICIOS
 ===================================== */
 
 
-.why-section{
+.benefits-section{
 
 
 width:90%;
@@ -2303,17 +2129,23 @@ width:90%;
 max-width:1400px;
 
 
-margin:120px auto;
+margin:
+
+120px auto;
+
 
 
 }
 
 
 
-.why-grid{
+
+
+.benefits-grid{
 
 
 display:grid;
+
 
 
 grid-template-columns:
@@ -2331,7 +2163,8 @@ gap:25px;
 
 
 
-.why-card{
+
+.benefit-card{
 
 
 background:
@@ -2350,11 +2183,17 @@ border-radius:22px;
 
 
 
-padding:35px;
+padding:
+
+40px 30px;
 
 
 
 text-align:center;
+
+
+
+font-size:40px;
 
 
 
@@ -2366,13 +2205,9 @@ transition:.3s;
 
 
 
-.why-card:hover{
 
 
-border-color:
-
-var(--green);
-
+.benefit-card:hover{
 
 
 transform:
@@ -2381,145 +2216,28 @@ translateY(-8px);
 
 
 
-box-shadow:
-
-var(--shadow);
-
-
-
-}
-
-
-
-
-
-.why-card h3{
-
-
-font-size:22px;
-
-
-margin-bottom:15px;
-
-
-
-}
-
-
-
-
-
-.why-card p{
-
-
-color:#999;
-
-
-line-height:1.6;
-
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =====================================
-   PAGOS
-===================================== */
-
-
-.payments{
-
-
-width:90%;
-
-
-max-width:1400px;
-
-
-margin:100px auto;
-
-
-
-}
-
-
-
-.payment-grid{
-
-
-display:grid;
-
-
-grid-template-columns:
-
-repeat(4,1fr);
-
-
-
-gap:25px;
-
-
-
-}
-
-
-
-.payment-card{
-
-
-background:
-
-var(--card);
-
-
-
-border:
-
-1px solid var(--border);
-
-
-
-border-radius:20px;
-
-
-
-padding:35px 20px;
-
-
-
-text-align:center;
-
-
-
-transition:.3s;
-
-
-
-}
-
-
-
-
-
-.payment-card:hover{
-
-
 border-color:
 
 var(--green);
 
 
 
-transform:
+}
 
-translateY(-5px);
+
+
+
+
+.benefit-card h3{
+
+
+font-size:22px;
+
+
+
+margin:
+
+20px 0 10px;
 
 
 
@@ -2528,28 +2246,19 @@ translateY(-5px);
 
 
 
-.payment-card h3{
+
+.benefit-card p{
 
 
-margin-top:15px;
-
-
-
-font-size:20px;
+font-size:15px;
 
 
 
-}
+color:#999;
 
 
 
-.payment-card p{
-
-
-margin-top:10px;
-
-
-color:#888;
+line-height:1.6;
 
 
 
@@ -2577,28 +2286,15 @@ width:90%;
 max-width:1000px;
 
 
-margin:120px auto;
+margin:
+
+120px auto;
 
 
 
 }
 
 
-
-.faq-container{
-
-
-display:flex;
-
-
-flex-direction:column;
-
-
-gap:20px;
-
-
-
-}
 
 
 
@@ -2621,7 +2317,13 @@ border-radius:20px;
 
 
 
-padding:30px;
+padding:
+
+30px;
+
+
+
+margin-bottom:20px;
 
 
 
@@ -2630,6 +2332,8 @@ transition:.3s;
 
 
 }
+
+
 
 
 
@@ -2647,6 +2351,7 @@ var(--green);
 
 
 
+
 .faq-item h3{
 
 
@@ -2659,6 +2364,8 @@ margin-bottom:12px;
 
 
 }
+
+
 
 
 
@@ -2688,16 +2395,18 @@ line-height:1.7;
 ===================================== */
 
 
-.contact-section{
+.final-contact{
 
 
 width:90%;
 
 
-max-width:1000px;
+max-width:1100px;
 
 
-margin:100px auto;
+margin:
+
+100px auto;
 
 
 
@@ -2713,12 +2422,11 @@ text-align:center;
 
 background:
 
-
 linear-gradient(
 
 145deg,
 
-#111,
+#121212,
 
 #070707
 
@@ -2740,10 +2448,17 @@ border:
 
 
 
-.contact-section h2{
+
+
+.final-contact h2{
 
 
 font-size:45px;
+
+
+
+font-weight:1000;
+
 
 
 margin-bottom:20px;
@@ -2754,16 +2469,113 @@ margin-bottom:20px;
 
 
 
-.contact-section p{
 
 
-color:#999;
+.final-contact p{
 
 
 font-size:18px;
 
 
+
+color:#999;
+
+
+
 margin-bottom:35px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+   WHATSAPP FLOTANTE
+===================================== */
+
+
+.floating-whatsapp{
+
+
+position:fixed;
+
+
+
+right:25px;
+
+
+
+bottom:25px;
+
+
+
+width:65px;
+
+
+
+height:65px;
+
+
+
+border-radius:50%;
+
+
+
+background:
+
+#25D366;
+
+
+
+display:flex;
+
+
+
+align-items:center;
+
+
+
+justify-content:center;
+
+
+
+font-size:32px;
+
+
+
+z-index:999;
+
+
+
+box-shadow:
+
+0 0 30px rgba(37,211,102,.5);
+
+
+
+transition:.3s;
+
+
+
+}
+
+
+
+
+
+.floating-whatsapp:hover{
+
+
+transform:
+
+scale(1.1);
 
 
 
@@ -2786,6 +2598,7 @@ footer{
 
 
 margin-top:100px;
+
 
 
 padding:
@@ -2814,10 +2627,12 @@ text-align:center;
 
 
 
-.footer-logo{
 
 
-font-size:40px;
+footer h2{
+
+
+font-size:38px;
 
 
 
@@ -2825,15 +2640,13 @@ font-weight:1000;
 
 
 
-margin-bottom:15px;
-
-
-
 }
 
 
 
-.footer-logo span{
+
+
+footer h2 span{
 
 
 color:
@@ -2846,6 +2659,8 @@ var(--green);
 
 
 
+
+
 footer p{
 
 
@@ -2853,7 +2668,9 @@ color:#888;
 
 
 
-margin:15px 0;
+margin:
+
+20px 0;
 
 
 
@@ -2861,10 +2678,13 @@ margin:15px 0;
 
 
 
+
+
 .footer-links{
 
 
 display:flex;
+
 
 
 justify-content:center;
@@ -2875,7 +2695,9 @@ gap:35px;
 
 
 
-margin:30px 0;
+margin:
+
+30px 0;
 
 
 
@@ -2883,14 +2705,16 @@ margin:30px 0;
 
 
 
+
+
 .footer-links a{
 
 
-font-weight:800;
-
-
-
 color:#ccc;
+
+
+
+font-weight:800;
 
 
 
@@ -2902,12 +2726,91 @@ transition:.3s;
 
 
 
+
+
 .footer-links a:hover{
 
 
 color:
 
 var(--green);
+
+
+
+}
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+
+
+@media(max-width:1200px){
+
+
+.header-main{
+
+width:95%;
+
+}
+
+
+
+.products-grid{
+
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+
+
+}
+
+
+
+.hero{
+
+
+gap:30px;
+
+
+
+}
+
+
+
+.hero-left h1{
+
+
+font-size:55px;
+
+
+
+}
+
+
+
+.hero-card{
+
+
+width:50%;
+
+
+
+}
+
+
+
+.reseller-grid{
+
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+
+
+}
 
 
 
@@ -2922,56 +2825,32 @@ var(--green);
 
 
 /* =====================================
-   WHATSAPP FLOTANTE
+   TABLET
 ===================================== */
 
 
-.floating-whatsapp{
-
-
-position:fixed;
-
-
-right:25px;
-
-
-bottom:25px;
-
-
-width:65px;
-
-
-height:65px;
-
-
-border-radius:50%;
-
-
-background:#25D366;
-
-
-display:flex;
-
-
-align-items:center;
-
-
-justify-content:center;
-
-
-font-size:32px;
-
-
-z-index:999;
-
-
-box-shadow:
-
-0 0 30px rgba(37,211,102,.4);
+@media(max-width:900px){
 
 
 
-transition:.3s;
+.header-main{
+
+
+height:auto;
+
+
+
+padding:
+
+20px 0;
+
+
+
+flex-direction:column;
+
+
+
+gap:20px;
 
 
 
@@ -2979,12 +2858,542 @@ transition:.3s;
 
 
 
-.floating-whatsapp:hover{
+.search{
 
 
-transform:
+width:100%;
 
-scale(1.1);
+
+
+}
+
+
+
+.contact{
+
+
+display:none;
+
+
+
+}
+
+
+
+nav{
+
+
+overflow-x:auto;
+
+
+
+justify-content:flex-start;
+
+
+
+padding:
+
+0 20px;
+
+
+
+gap:25px;
+
+
+
+}
+
+
+
+nav a{
+
+
+white-space:nowrap;
+
+
+
+}
+
+
+
+
+
+
+
+.hero{
+
+
+flex-direction:column;
+
+
+
+text-align:center;
+
+
+
+margin-top:50px;
+
+
+
+}
+
+
+
+.hero-left{
+
+
+width:100%;
+
+
+
+}
+
+
+
+.hero-left p{
+
+
+margin-left:auto;
+
+
+
+margin-right:auto;
+
+
+
+}
+
+
+
+.hero-buttons{
+
+
+justify-content:center;
+
+
+
+}
+
+
+
+.hero-features{
+
+
+justify-content:center;
+
+
+
+flex-wrap:wrap;
+
+
+
+}
+
+
+
+.hero-card{
+
+
+width:100%;
+
+
+
+}
+
+
+
+.products-grid{
+
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+
+
+}
+
+
+
+.benefits-grid{
+
+
+grid-template-columns:
+
+1fr;
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+   MOVIL
+===================================== */
+
+
+@media(max-width:600px){
+
+
+
+.top-bar{
+
+
+font-size:10px;
+
+
+
+text-align:center;
+
+
+
+padding:
+
+0 10px;
+
+
+
+}
+
+
+
+
+
+.logo{
+
+
+font-size:28px;
+
+
+
+}
+
+
+
+
+
+.hero{
+
+
+width:92%;
+
+
+
+}
+
+
+
+.hero-left h1{
+
+
+font-size:42px;
+
+
+
+letter-spacing:-2px;
+
+
+
+}
+
+
+
+.hero-left p{
+
+
+font-size:15px;
+
+
+
+}
+
+
+
+
+
+.hero-buttons{
+
+
+flex-direction:column;
+
+
+
+}
+
+
+
+.btn-primary,
+.btn-outline{
+
+
+width:100%;
+
+
+
+}
+
+
+
+
+
+.hero-features{
+
+
+flex-direction:column;
+
+
+
+}
+
+
+
+.hero-features div{
+
+
+width:100%;
+
+
+
+}
+
+
+
+
+
+.hero-card{
+
+
+padding:
+
+25px;
+
+
+
+}
+
+
+
+.hero-card h2{
+
+
+font-size:30px;
+
+
+
+}
+
+
+
+
+
+.mini-grid{
+
+
+grid-template-columns:
+
+1fr;
+
+
+
+}
+
+
+
+
+
+.section-title{
+
+
+width:92%;
+
+
+
+}
+
+
+
+.section-title h2{
+
+
+font-size:32px;
+
+
+
+}
+
+
+
+.section-title p{
+
+
+font-size:14px;
+
+
+
+}
+
+
+
+
+
+.products-grid{
+
+
+width:92%;
+
+
+
+grid-template-columns:
+
+1fr;
+
+
+
+gap:20px;
+
+
+
+}
+
+
+
+
+
+.product-image{
+
+
+height:230px;
+
+
+
+}
+
+
+
+
+
+.product-info h3{
+
+
+font-size:22px;
+
+
+
+}
+
+
+
+
+
+.price strong{
+
+
+font-size:20px;
+
+
+
+}
+
+
+
+
+
+.reseller-section{
+
+
+padding:
+
+50px 20px;
+
+
+
+}
+
+
+
+.reseller-grid{
+
+
+grid-template-columns:
+
+1fr;
+
+
+
+}
+
+
+
+.final-contact{
+
+
+padding:
+
+50px 20px;
+
+
+
+}
+
+
+
+.final-contact h2{
+
+
+font-size:32px;
+
+
+
+}
+
+
+
+
+
+.footer-links{
+
+
+flex-direction:column;
+
+
+
+gap:15px;
+
+
+
+}
+
+
+
+
+
+.floating-whatsapp{
+
+
+width:58px;
+
+
+
+height:58px;
+
+
+
+font-size:28px;
+
+
+
+}
 
 
 
@@ -3005,8 +3414,7 @@ scale(1.1);
 
 .product-card,
 .reseller-card,
-.why-card,
-.payment-card{
+.benefit-card{
 
 
 animation:
@@ -3065,18 +3473,14 @@ translateY(0);
 
 
 /* =====================================
-   TABLET
+   SCROLLBAR GAMING
 ===================================== */
 
 
-@media(max-width:1100px){
+::-webkit-scrollbar{
 
 
-
-.hero-container{
-
-
-flex-direction:column;
+width:10px;
 
 
 
@@ -3084,25 +3488,10 @@ flex-direction:column;
 
 
 
-.hero-content,
-.hero-showcase{
+::-webkit-scrollbar-track{
 
 
-width:100%;
-
-
-
-}
-
-
-
-
-.products-grid{
-
-
-grid-template-columns:
-
-repeat(2,1fr);
+background:#050505;
 
 
 
@@ -3110,42 +3499,14 @@ repeat(2,1fr);
 
 
 
-.reseller-grid{
+::-webkit-scrollbar-thumb{
 
 
-grid-template-columns:
-
-repeat(2,1fr);
-
-
-
-}
+background:#39ff14;
 
 
 
-.payment-grid{
-
-
-grid-template-columns:
-
-repeat(2,1fr);
-
-
-
-}
-
-
-
-.category-boxes{
-
-
-grid-template-columns:
-
-repeat(3,1fr);
-
-
-
-}
+border-radius:20px;
 
 
 
@@ -3160,247 +3521,20 @@ repeat(3,1fr);
 
 
 /* =====================================
-   MOVIL
+   SELECCION TEXTO
 ===================================== */
 
 
-@media(max-width:700px){
+::selection{
 
 
+background:
 
-.top-bar-content{
+#39ff14;
 
 
-gap:10px;
 
-
-font-size:10px;
-
-
-}
-
-
-
-
-.header-main{
-
-
-height:auto;
-
-
-padding:20px 0;
-
-
-flex-direction:column;
-
-
-gap:20px;
-
-
-
-}
-
-
-
-
-.header-search{
-
-
-width:100%;
-
-
-
-}
-
-
-
-.header-support{
-
-
-display:none;
-
-
-
-}
-
-
-
-
-.category-nav-inner{
-
-
-overflow-x:auto;
-
-
-justify-content:flex-start;
-
-
-padding:0 20px;
-
-
-
-}
-
-
-
-.hero{
-
-
-margin-top:40px;
-
-
-
-}
-
-
-
-.hero h1{
-
-
-font-size:45px;
-
-
-
-}
-
-
-
-.hero-buttons{
-
-
-flex-direction:column;
-
-
-
-}
-
-
-
-.hero-features{
-
-
-flex-direction:column;
-
-
-gap:15px;
-
-
-
-}
-
-
-
-.showcase-grid{
-
-
-grid-template-columns:
-
-1fr;
-
-
-
-}
-
-
-
-.products-grid{
-
-
-grid-template-columns:
-
-1fr;
-
-
-
-}
-
-
-
-.category-boxes{
-
-
-grid-template-columns:
-
-1fr;
-
-
-
-}
-
-
-
-.reseller-grid{
-
-
-grid-template-columns:
-
-1fr;
-
-
-
-}
-
-
-
-.why-grid{
-
-
-grid-template-columns:
-
-1fr;
-
-
-
-}
-
-
-
-.payment-grid{
-
-
-grid-template-columns:
-
-1fr;
-
-
-
-}
-
-
-
-.section-header h2{
-
-
-font-size:32px;
-
-
-
-}
-
-
-
-.contact-section h2{
-
-
-font-size:32px;
-
-
-
-}
-
-
-
-.footer-links{
-
-
-flex-direction:column;
-
-
-gap:15px;
-
-
-
-}
+color:#000;
 
 
 
