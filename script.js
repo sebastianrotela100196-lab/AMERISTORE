@@ -1774,3 +1774,490 @@ url,
 
 
 });
+/* =========================================
+   AMERISSTORE
+   FUNCIONES GENERALES DEL INDEX
+========================================= */
+
+
+/* =========================================
+   MENÚ MÓVIL
+========================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const menuToggle =
+        document.getElementById("menu-toggle");
+
+    const mainMenu =
+        document.getElementById("main-menu");
+
+
+    if (menuToggle && mainMenu) {
+
+        menuToggle.addEventListener("click", () => {
+
+            const abierto =
+                mainMenu.classList.toggle("open");
+
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                abierto
+            );
+
+
+            menuToggle.innerHTML =
+                abierto ? "✕" : "☰";
+
+        });
+
+
+        /* CERRAR MENÚ AL TOCAR UN ENLACE */
+
+        const enlaces =
+            mainMenu.querySelectorAll("a");
+
+
+        enlaces.forEach(enlace => {
+
+            enlace.addEventListener("click", () => {
+
+                mainMenu.classList.remove("open");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                menuToggle.innerHTML = "☰";
+
+            });
+
+        });
+
+    }
+
+});
+
+
+/* =========================================
+   CARRITO AMERISSTORE
+========================================= */
+
+let carritoAmeris = [];
+
+
+/* =========================================
+   CARGAR CARRITO GUARDADO
+========================================= */
+
+function cargarCarrito() {
+
+    const carritoGuardado =
+        localStorage.getItem(
+            "amerisstore_carrito"
+        );
+
+
+    if (carritoGuardado) {
+
+        try {
+
+            carritoAmeris =
+                JSON.parse(
+                    carritoGuardado
+                );
+
+        }
+
+        catch (error) {
+
+            carritoAmeris = [];
+
+        }
+
+    }
+
+
+    actualizarCarritoHeader();
+
+}
+
+
+/* =========================================
+   GUARDAR CARRITO
+========================================= */
+
+function guardarCarrito() {
+
+    localStorage.setItem(
+        "amerisstore_carrito",
+        JSON.stringify(carritoAmeris)
+    );
+
+
+    actualizarCarritoHeader();
+
+}
+
+
+/* =========================================
+   CONVERTIR PRECIO
+========================================= */
+
+function convertirPrecio(precio) {
+
+    if (typeof precio === "number") {
+
+        return precio;
+
+    }
+
+
+    const numero = parseInt(
+        String(precio).replace(/\D/g, "")
+    );
+
+
+    return isNaN(numero)
+        ? 0
+        : numero;
+
+}
+
+
+/* =========================================
+   FORMATEAR GUARANÍES
+========================================= */
+
+function formatearGs(numero) {
+
+    return (
+        "Gs. " +
+        Number(numero).toLocaleString(
+            "es-PY"
+        )
+    );
+
+}
+
+
+/* =========================================
+   AGREGAR AL CARRITO
+========================================= */
+
+function agregarAlCarrito(
+    nombre,
+    precio,
+    imagen = ""
+) {
+
+    const precioNumero =
+        convertirPrecio(precio);
+
+
+    const productoExistente =
+        carritoAmeris.find(
+            item => item.nombre === nombre
+        );
+
+
+    if (productoExistente) {
+
+        productoExistente.cantidad++;
+
+    }
+
+    else {
+
+        carritoAmeris.push({
+
+            nombre:
+            nombre,
+
+            precio:
+            precioNumero,
+
+            imagen:
+            imagen,
+
+            cantidad:
+            1
+
+        });
+
+    }
+
+
+    guardarCarrito();
+
+
+    mostrarNotificacion(
+        `${nombre} agregado al carrito`
+    );
+
+}
+
+
+/* =========================================
+   ACTUALIZAR HEADER DEL CARRITO
+========================================= */
+
+function actualizarCarritoHeader() {
+
+    const contador =
+        document.getElementById(
+            "cart-count"
+        );
+
+    const totalElemento =
+        document.getElementById(
+            "cart-total"
+        );
+
+
+    let cantidadTotal = 0;
+
+    let total = 0;
+
+
+    carritoAmeris.forEach(item => {
+
+        cantidadTotal +=
+            item.cantidad;
+
+
+        total +=
+            item.precio *
+            item.cantidad;
+
+    });
+
+
+    if (contador) {
+
+        contador.textContent =
+            cantidadTotal;
+
+    }
+
+
+    if (totalElemento) {
+
+        totalElemento.textContent =
+            formatearGs(total);
+
+    }
+
+}
+
+
+/* =========================================
+   ELIMINAR PRODUCTO
+========================================= */
+
+function eliminarDelCarrito(index) {
+
+    if (
+        index < 0 ||
+        index >= carritoAmeris.length
+    ) {
+
+        return;
+
+    }
+
+
+    carritoAmeris.splice(
+        index,
+        1
+    );
+
+
+    guardarCarrito();
+
+}
+
+
+/* =========================================
+   VACIAR CARRITO
+========================================= */
+
+function vaciarCarrito() {
+
+    carritoAmeris = [];
+
+
+    guardarCarrito();
+
+}
+
+
+/* =========================================
+   CANTIDAD TOTAL
+========================================= */
+
+function obtenerCantidadCarrito() {
+
+    return carritoAmeris.reduce(
+        (total, item) => {
+
+            return (
+                total +
+                item.cantidad
+            );
+
+        },
+        0
+    );
+
+}
+
+
+/* =========================================
+   PRECIO TOTAL
+========================================= */
+
+function obtenerTotalCarrito() {
+
+    return carritoAmeris.reduce(
+        (total, item) => {
+
+            return (
+                total +
+                item.precio *
+                item.cantidad
+            );
+
+        },
+        0
+    );
+
+}
+
+
+/* =========================================
+   NOTIFICACIÓN
+========================================= */
+
+function mostrarNotificacion(mensaje) {
+
+    const anterior =
+        document.querySelector(
+            ".store-notification"
+        );
+
+
+    if (anterior) {
+
+        anterior.remove();
+
+    }
+
+
+    const notificacion =
+        document.createElement(
+            "div"
+        );
+
+
+    notificacion.className =
+        "store-notification";
+
+
+    notificacion.textContent =
+        mensaje;
+
+
+    document.body.appendChild(
+        notificacion
+    );
+
+
+    requestAnimationFrame(() => {
+
+        notificacion.classList.add(
+            "show"
+        );
+
+    });
+
+
+    setTimeout(() => {
+
+        notificacion.classList.remove(
+            "show"
+        );
+
+
+        setTimeout(() => {
+
+            notificacion.remove();
+
+        }, 300);
+
+    }, 2200);
+
+}
+
+
+/* =========================================
+   CARRITO CLICK
+========================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        cargarCarrito();
+
+
+        const botonCarrito =
+            document.getElementById(
+                "cart-button"
+            );
+
+
+        if (botonCarrito) {
+
+            botonCarrito.addEventListener(
+                "click",
+                event => {
+
+                    event.preventDefault();
+
+
+                    /*
+                    MÁS ADELANTE:
+
+                    window.location.href =
+                    "carrito.html";
+                    */
+
+
+                    if (
+                        carritoAmeris.length === 0
+                    ) {
+
+                        mostrarNotificacion(
+                            "Tu carrito está vacío"
+                        );
+
+                    }
+
+                    else {
+
+                        mostrarNotificacion(
+                            `${obtenerCantidadCarrito()} producto(s) · ${formatearGs(obtenerTotalCarrito())}`
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+
+    }
+);
