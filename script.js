@@ -1,10 +1,11 @@
 /* =====================================
-   AMERISSTORE FREE FIRE CHECKOUT
-   Gaming | IA | Streaming | Digital
+   AMERISSTORE FREE FIRE
+   Gaming | Digital Store
 ===================================== */
 
 
 const whatsapp = "595981841136";
+
 
 
 
@@ -13,27 +14,36 @@ document.addEventListener(
 ()=>{
 
 
+
 console.log(
-"AMERISSTORE Free Fire cargado 🚀"
+"AMERISSTORE cargado correctamente 🚀"
 );
 
 
 
 
+
+
 /* =====================================
- VARIABLES COMPRA
+   DATOS DE COMPRA
 ===================================== */
 
 
 let compra = {
 
+
 producto:"110 Diamantes 💎",
+
 
 precio:"Gs. 6.000",
 
+
 id:"",
 
+
 cantidad:1
+
+
 
 };
 
@@ -44,19 +54,25 @@ cantidad:1
 
 
 
+
 /* =====================================
- SELECCIONAR DIAMANTES
+   SELECCIONAR DIAMANTES
 ===================================== */
 
 
 const tarjetas =
+
 document.querySelectorAll(
 ".diamond-card"
 );
 
 
 
+
+
+
 tarjetas.forEach(card=>{
+
 
 
 card.addEventListener(
@@ -64,13 +80,21 @@ card.addEventListener(
 ()=>{
 
 
+
+
+
 tarjetas.forEach(c=>{
+
 
 c.classList.remove(
 "active"
 );
 
+
+
 });
+
+
 
 
 
@@ -81,13 +105,23 @@ card.classList.add(
 
 
 
+
+
+
 compra.producto =
+
 card.dataset.producto;
 
 
 
+
+
 compra.precio =
+
 card.dataset.precio;
+
+
+
 
 
 
@@ -95,22 +129,34 @@ card.dataset.precio;
 
 // Reiniciar cantidad
 
+
 compra.cantidad = 1;
 
 
 
-const quantity =
+
+
+const cantidad =
+
 document.getElementById(
 "quantity"
 );
 
 
 
-if(quantity){
 
-quantity.value = 1;
+
+if(cantidad){
+
+
+cantidad.value = 1;
+
 
 }
+
+
+
+
 
 
 
@@ -118,10 +164,18 @@ actualizarResumen();
 
 
 
+
+
+
 });
 
 
+
 });
+
+
+
+
 
 
 
@@ -132,36 +186,54 @@ actualizarResumen();
 
 
 /* =====================================
- PASO 1 → PASO 2
+   PASO 1 → PASO 2
 ===================================== */
 
 
+
 const continuar1 =
+
 document.getElementById(
 "continueStep1"
 );
 
 
 
+
+
+
 if(continuar1){
 
 
-continuar1.onclick = ()=>{
+
+continuar1.addEventListener(
+"click",
+()=>{
+
+
+
 
 
 const step2 =
+
 document.getElementById(
 "step2"
 );
 
 
 
+
+
+
 if(step2){
+
 
 
 step2.classList.remove(
 "hidden"
 );
+
+
 
 
 
@@ -172,13 +244,22 @@ behavior:"smooth"
 });
 
 
+
+}
+
+
+
+
+});
+
+
+
 }
 
 
-};
 
 
-}
+
 
 
 
@@ -189,18 +270,24 @@ behavior:"smooth"
 
 
 /* =====================================
- ID JUGADOR
+   INPUT ID JUGADOR
 ===================================== */
 
 
+
 const inputID =
+
 document.getElementById(
 "playerID"
 );
 
 
 
+
+
+
 if(inputID){
+
 
 
 inputID.addEventListener(
@@ -208,8 +295,15 @@ inputID.addEventListener(
 ()=>{
 
 
+
+
+
 compra.id =
+
 inputID.value.trim();
+
+
+
 
 
 
@@ -217,7 +311,9 @@ actualizarResumen();
 
 
 
+
 });
+
 
 
 }
@@ -230,29 +326,43 @@ actualizarResumen();
 
 
 
+
+
+
+
 /* =====================================
- GUIA ID
+   GUIA USER ID
 ===================================== */
 
 
 const guideButton =
+
 document.getElementById(
 "openGuide"
 );
 
 
 
+
 const guideContent =
+
 document.getElementById(
 "guideContent"
 );
 
 
 
+
+
+
 if(guideButton){
 
 
-guideButton.onclick = ()=>{
+
+guideButton.addEventListener(
+"click",
+()=>{
+
 
 
 guideContent.classList.toggle(
@@ -260,10 +370,15 @@ guideContent.classList.toggle(
 );
 
 
-};
+
+});
+
 
 
 }
+
+
+
 
 
 
@@ -274,25 +389,35 @@ guideContent.classList.toggle(
 
 
 /* =====================================
- PASO 2 → PASO 3
+   PASO 2 → PASO 3
 ===================================== */
 
 
 const continuar2 =
+
 document.getElementById(
 "continueStep2"
 );
 
 
 
+
+
+
 if(continuar2){
 
 
-continuar2.onclick = ()=>{
+
+continuar2.addEventListener(
+"click",
+()=>{
+
+
 
 
 
 if(compra.id.length < 6){
+
 
 
 alert(
@@ -300,7 +425,9 @@ alert(
 );
 
 
+
 return;
+
 
 
 }
@@ -309,19 +436,30 @@ return;
 
 
 
+
+
+
 const step3 =
+
 document.getElementById(
 "step3"
 );
 
 
 
+
+
+
+
 if(step3){
+
 
 
 step3.classList.remove(
 "hidden"
 );
+
+
 
 
 
@@ -332,7 +470,10 @@ behavior:"smooth"
 });
 
 
+
 }
+
+
 
 
 
@@ -340,10 +481,17 @@ actualizarResumen();
 
 
 
-};
+
+
+
+});
+
 
 
 }
+
+
+
 
 
 
@@ -354,25 +502,31 @@ actualizarResumen();
 
 
 /* =====================================
- CONTROL CANTIDAD
+   CANTIDAD + -
 ===================================== */
 
 
+
 const plus =
+
 document.getElementById(
 "plus"
 );
 
 
 
+
 const minus =
+
 document.getElementById(
 "minus"
 );
 
 
 
+
 const quantity =
+
 document.getElementById(
 "quantity"
 );
@@ -381,32 +535,53 @@ document.getElementById(
 
 
 
+
+
+
 if(plus){
 
 
-plus.onclick = ()=>{
+
+plus.addEventListener(
+"click",
+()=>{
+
+
+
 
 
 compra.cantidad++;
 
 
 
+
+
 if(quantity){
 
+
 quantity.value =
+
 compra.cantidad;
 
+
 }
+
+
 
 
 
 actualizarResumen();
 
 
-};
+
+
+
+});
+
 
 
 }
+
 
 
 
@@ -416,35 +591,54 @@ actualizarResumen();
 if(minus){
 
 
-minus.onclick = ()=>{
+
+minus.addEventListener(
+"click",
+()=>{
+
+
+
 
 
 if(compra.cantidad > 1){
+
 
 
 compra.cantidad--;
 
 
 
+
+
 if(quantity){
 
+
 quantity.value =
+
 compra.cantidad;
 
+
 }
+
 
 
 
 actualizarResumen();
 
 
+
+}
+
+
+
+});
+
+
+
 }
 
 
-};
 
-
-}
 
 
 
@@ -455,32 +649,48 @@ actualizarResumen();
 
 
 /* =====================================
- ACTUALIZAR RESUMEN
+   ACTUALIZAR RESUMEN
 ===================================== */
 
 
 function actualizarResumen(){
 
 
+
+
+
 const producto =
+
 document.getElementById(
 "summaryProduct"
 );
 
 
+
+
+
 const precio =
+
 document.getElementById(
 "summaryPrice"
 );
 
 
+
+
+
 const id =
+
 document.getElementById(
 "summaryID"
 );
 
 
+
+
+
 const total =
+
 document.getElementById(
 "totalPrice"
 );
@@ -489,21 +699,56 @@ document.getElementById(
 
 
 
-if(producto)
+
+
+
+if(producto){
+
+
 producto.innerHTML =
+
 compra.producto;
 
 
 
-if(precio)
+}
+
+
+
+
+
+
+
+if(precio){
+
+
 precio.innerHTML =
+
 compra.precio;
 
 
 
-if(id)
+}
+
+
+
+
+
+
+
+if(id){
+
+
 id.innerHTML =
+
 compra.id || "-";
+
+
+
+}
+
+
+
 
 
 
@@ -512,48 +757,6 @@ compra.id || "-";
 if(total){
 
 
-
-let precioNumero =
-parseInt(
-compra.precio.replace(/\D/g,"")
-);
-
-
-
-let totalFinal =
-precioNumero * compra.cantidad;
-
-
-
-
-total.innerHTML =
-
-"Gs. " +
-
-totalFinal.toLocaleString();
-
-
-
-}
-
-
-}
-/* =====================================
- WHATSAPP FINAL
-===================================== */
-
-
-const botonWhatsapp =
-document.getElementById(
-"buyWhatsapp"
-);
-
-
-
-if(botonWhatsapp){
-
-
-botonWhatsapp.onclick = ()=>{
 
 
 
@@ -570,6 +773,8 @@ compra.precio.replace(
 
 
 
+
+
 let totalFinal =
 
 precioNumero *
@@ -580,7 +785,80 @@ compra.cantidad;
 
 
 
+
+total.innerHTML =
+
+"Gs. " +
+
+totalFinal.toLocaleString();
+
+
+
+}
+
+
+
+
+
+
+}
+/* =====================================
+   COMPRAR POR WHATSAPP
+===================================== */
+
+
+const botonWhatsapp =
+
+document.getElementById(
+"buyWhatsapp"
+);
+
+
+
+
+
+
+if(botonWhatsapp){
+
+
+
+botonWhatsapp.addEventListener(
+"click",
+()=>{
+
+
+
+
+
+let precioNumero =
+
+parseInt(
+
+compra.precio.replace(
+/\D/g,
+""
+)
+
+);
+
+
+
+
+
+
+let totalFinal =
+
+precioNumero *
+compra.cantidad;
+
+
+
+
+
+
+
 let mensaje =
+
 
 
 `Hola AMERISSTORE 👋🚀
@@ -613,10 +891,11 @@ Gs. ${totalFinal.toLocaleString()}
 ${compra.id}
 
 
-
 Espero confirmación de mi pedido.
 
 Gracias.`;
+
+
 
 
 
@@ -628,14 +907,24 @@ let url =
 
 
 
+
+
+
+
 window.open(
+
 url,
+
 "_blank"
+
 );
 
 
 
-};
+
+
+});
+
 
 
 }
@@ -648,8 +937,11 @@ url,
 
 
 
+
+
+
 /* =====================================
- EXTRAS
+   EXTRAS WHATSAPP
 ===================================== */
 
 
@@ -663,17 +955,28 @@ document.querySelectorAll(
 
 
 
+
 botonesExtras.forEach(
 boton=>{
 
 
-boton.onclick = ()=>{
+
+
+
+boton.addEventListener(
+"click",
+()=>{
+
+
 
 
 
 let producto =
 
 boton.dataset.producto;
+
+
+
 
 
 
@@ -685,7 +988,10 @@ boton.dataset.precio;
 
 
 
+
+
 let mensaje =
+
 
 
 `Hola AMERISSTORE 👋
@@ -702,10 +1008,11 @@ ${producto}
 ${precio}
 
 
-Quiero recibir información para completar mi compra.
+Quiero información para completar mi compra.
 
 
 Gracias 🚀`;
+
 
 
 
@@ -718,14 +1025,26 @@ let url =
 
 
 
+
+
+
+
 window.open(
+
 url,
+
 "_blank"
+
 );
 
 
 
-};
+
+
+});
+
+
+
 
 
 });
@@ -738,8 +1057,12 @@ url,
 
 
 
+
+
+
+
 /* =====================================
- CONTADOR DIAMANTES
+   CONTADOR DIAMANTES
 ===================================== */
 
 
@@ -752,14 +1075,21 @@ document.getElementById(
 
 
 
+
+
 if(counter){
+
+
 
 
 
 let number = 0;
 
 
+
 let target = 10000;
+
+
 
 
 
@@ -772,7 +1102,13 @@ setInterval(
 
 
 
+
+
 number += 200;
+
+
+
+
 
 
 
@@ -781,11 +1117,19 @@ if(number >= target){
 
 
 
+
+
 number = target;
 
 
 
+
+
 clearInterval(animation);
+
+
+
+
 
 
 
@@ -799,15 +1143,29 @@ document.querySelector(
 
 
 
+
+
 if(box){
+
+
 
 box.classList.add(
 "finished"
 );
 
+
+
 }
 
 
+
+
+
+
+
+
+
+// LLUVIA UNA SOLA VEZ
 
 
 
@@ -820,13 +1178,17 @@ if(
 ){
 
 
+
 crearDiamantes();
+
+
 
 
 
 sessionStorage.setItem(
 "diamondExplosion",
 "true"
+
 );
 
 
@@ -835,7 +1197,10 @@ sessionStorage.setItem(
 
 
 
+
+
 }
+
 
 
 
@@ -854,12 +1219,25 @@ number.toLocaleString();
 
 
 
+
 },
-50);
+
+50
+
+);
+
+
 
 
 
 }
+
+
+
+
+
+
+
 
 
 
@@ -877,12 +1255,15 @@ number.toLocaleString();
 
 
 
+
 /* =====================================
- LLUVIA DE DIAMANTES
+   LLUVIA DE DIAMANTES
 ===================================== */
 
 
 function crearDiamantes(){
+
+
 
 
 
@@ -895,9 +1276,16 @@ document.createElement(
 
 
 
+
+
+
 container.className =
 
 "diamond-effect";
+
+
+
+
 
 
 
@@ -909,11 +1297,20 @@ container
 
 
 
+
+
+
 for(
 let i=0;
+
 i<100;
+
 i++
+
 ){
+
+
+
 
 
 
@@ -926,6 +1323,9 @@ document.createElement(
 
 
 
+
+
+
 diamond.className =
 
 "falling-diamond";
@@ -933,9 +1333,14 @@ diamond.className =
 
 
 
+
+
+
 diamond.innerHTML =
 
 "💎";
+
+
 
 
 
@@ -949,9 +1354,13 @@ Math.random()*100+"%";
 
 
 
+
+
 diamond.style.animationDelay =
 
 Math.random()*2+"s";
+
+
 
 
 
@@ -965,9 +1374,15 @@ diamond.style.fontSize =
 
 
 
+
+
 container.appendChild(
 diamond
 );
+
+
+
+
 
 
 
@@ -977,16 +1392,27 @@ diamond
 
 
 
+
+
+
+
 setTimeout(
 ()=>{
+
 
 
 container.remove();
 
 
+
 },
+
 4500
+
 );
+
+
+
 
 
 
