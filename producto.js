@@ -1,276 +1,55 @@
 /* =====================================
-   AMERISSTORE PRODUCT SYSTEM
-   Producto dinámico + WhatsApp
+   CTA FINAL PRODUCTO
 ===================================== */
 
 
-
-const whatsapp = "595981841136";
-
+.product-final{
 
 
+width:90%;
 
 
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
+max-width:1200px;
+
+
+margin:
+
+120px auto;
 
 
 
+padding:
+
+80px 40px;
 
 
-console.log(
-"Producto AMERISSTORE cargado 🚀"
+
+background:
+
+linear-gradient(
+
+145deg,
+
+#151515,
+
+#080808
+
 );
 
 
 
+border:
 
+1px solid var(--border);
 
 
 
+border-radius:35px;
 
-/* =====================================
-   BASE DE DATOS PRODUCTOS
-===================================== */
 
 
-const productos = {
+text-align:center;
 
-
-
-
-
-spotify:{
-
-
-categoria:
-"MÚSICA",
-
-
-nombre:
-"Spotify Premium",
-
-
-imagen:
-"assets/productos/spotify.png",
-
-
-descripcion:
-"Escucha música sin anuncios, descarga canciones y disfruta contenido Premium.",
-
-
-planes:[
-
-{
-nombre:"1 Mes",
-precio:"Gs. 25.000"
-},
-
-{
-nombre:"3 Meses",
-precio:"Gs. 60.000"
-},
-
-{
-nombre:"6 Meses",
-precio:"Gs. 100.000"
-},
-
-{
-nombre:"1 Año",
-precio:"Gs. 200.000"
-}
-
-
-]
-
-
-},
-
-
-
-
-
-
-
-netflix:{
-
-
-categoria:
-"STREAMING",
-
-
-nombre:
-"Netflix Premium",
-
-
-imagen:
-"assets/productos/netflix.png",
-
-
-descripcion:
-"Series y películas ilimitadas en calidad Premium.",
-
-
-planes:[
-
-{
-nombre:"1 Mes",
-precio:"Gs. 30.000"
-}
-
-]
-
-
-},
-
-
-
-
-
-
-
-disney:{
-
-
-categoria:
-"STREAMING",
-
-
-nombre:
-"Disney+ + ESPN",
-
-
-imagen:
-"assets/productos/disney.png",
-
-
-descripcion:
-"Disney, Marvel, Star Wars y deportes en vivo.",
-
-
-planes:[
-
-{
-nombre:"1 Mes",
-precio:"Gs. 25.000"
-}
-
-]
-
-
-},
-
-
-
-
-
-
-
-
-max:{
-
-
-categoria:
-"STREAMING",
-
-
-nombre:
-"Max",
-
-
-imagen:
-"assets/productos/max.png",
-
-
-descripcion:
-"HBO, Warner Bros, DC y contenido Premium.",
-
-
-planes:[
-
-{
-nombre:"1 Mes",
-precio:"Gs. 15.000"
-}
-
-]
-
-
-},
-
-
-
-
-
-
-
-chatgpt:{
-
-
-categoria:
-"INTELIGENCIA ARTIFICIAL",
-
-
-nombre:
-"ChatGPT Plus",
-
-
-imagen:
-"assets/productos/chatgpt.png",
-
-
-descripcion:
-"Accede a inteligencia artificial avanzada para crear y trabajar.",
-
-
-planes:[
-
-{
-nombre:"Cuenta Premium",
-precio:"Gs. 25.000"
-}
-
-]
-
-
-},
-
-
-
-
-
-
-
-
-canva:{
-
-
-categoria:
-"DISEÑO",
-
-
-nombre:
-"Canva Pro",
-
-
-imagen:
-"assets/productos/canva.png",
-
-
-descripcion:
-"Diseña contenido profesional con todas las herramientas Premium.",
-
-
-planes:[
-
-{
-nombre:"Plan Premium",
-precio:"Desde Gs. 5.000"
-}
-
-]
 
 
 }
@@ -279,7 +58,46 @@ precio:"Desde Gs. 5.000"
 
 
 
-};
+.product-final h2{
+
+
+font-size:45px;
+
+
+
+font-weight:1000;
+
+
+
+margin-bottom:20px;
+
+
+
+}
+
+
+
+
+
+.product-final p{
+
+
+color:#999;
+
+
+
+font-size:18px;
+
+
+
+margin-bottom:35px;
+
+
+
+}
+
+
+
 
 
 
@@ -287,36 +105,651 @@ precio:"Desde Gs. 5.000"
 
 
 /* =====================================
-   OBTENER PRODUCTO URL
+   WHATSAPP FLOTANTE
 ===================================== */
 
 
-const urlParams =
+.floating-whatsapp{
 
-new URLSearchParams(
+
+position:fixed;
+
+
+
+right:25px;
+
+
+
+bottom:25px;
+
+
+
+width:65px;
+
+
+
+height:65px;
+
+
+
+background:#25D366;
+
+
+
+border-radius:50%;
+
+
+
+display:flex;
+
+
+
+align-items:center;
+
+
+
+justify-content:center;
+
+
+
+font-size:32px;
+
+
+
+z-index:999;
+
+
+
+box-shadow:
+
+0 0 30px rgba(37,211,102,.5);
+
+
+
+transition:.3s;
+
+
+
+}
+
+
+
+.floating-whatsapp:hover{
+
+
+transform:
+
+scale(1.1);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+   FOOTER PRODUCTO
+===================================== */
+
+
+.product-footer{
+
+
+margin-top:100px;
+
+
+
+padding:
+
+60px 20px;
+
+
+
+background:
+
+#080808;
+
+
+
+border-top:
+
+1px solid var(--border);
+
+
+
+text-align:center;
+
+
+
+}
+
+
+
+
+
+.product-footer h2{
+
+
+font-size:38px;
+
+
+
+font-weight:1000;
+
+
+
+}
+
+
+
+
+
+.product-footer h2 span{
+
+
+color:
+
+var(--green);
+
+
+
+}
+
+
+
+
+
+.product-footer p{
+
+
+color:#888;
+
+
+
+margin:
+
+20px 0;
+
+
+
+}
+
+
+
+
+
+.product-footer .footer-links{
+
+
+display:flex;
+
+
+
+justify-content:center;
+
+
+
+gap:35px;
+
+
+
+margin:
+
+30px 0;
+
+
+
+}
+
+
+
+
+
+.product-footer a{
+
+
+color:#ccc;
+
+
+
+font-weight:800;
+
+
+
+transition:.3s;
+
+
+
+}
+
+
+
+.product-footer a:hover{
+
+
+color:
+
+var(--green);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+   RESPONSIVE PRODUCTO
+===================================== */
+
+
+
+@media(max-width:1100px){
+
+
+
+.product-detail{
+
+
+grid-template-columns:
+
+1fr;
+
+
+
+gap:50px;
+
+
+
+}
+
+
+
+.main-product-image{
+
+
+height:450px;
+
+
+
+}
+
+
+
+.product-information h1{
+
+
+font-size:45px;
+
+
+
+}
+
+
+
+.plans-list{
+
+
+grid-template-columns:
+
+1fr;
+
+
+
+}
+
+
+
+.product-benefits{
+
+
+grid-template-columns:
+
+1fr;
+
+
+
+}
+
+
+
+.steps{
+
+
+grid-template-columns:
+
+1fr;
+
+
+
+}
+
+
+
+.devices{
+
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+
+
+}
+
+
+
+.trust-section{
+
+
+grid-template-columns:
+
+1fr;
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+@media(max-width:600px){
+
+
+
+.product-header{
+
+
+width:92%;
+
+
+
+height:auto;
+
+
+
+padding:
+
+25px 0;
+
+
+
+flex-direction:column;
+
+
+
+gap:20px;
+
+
+
+}
+
+
+
+.product-logo{
+
+
+font-size:28px;
+
+
+
+}
+
+
+
+.product-actions{
+
+
+width:100%;
+
+
+
+justify-content:center;
+
+
+
+}
+
+
+
+
+
+.breadcrumb{
+
+
+width:92%;
+
+
+
+font-size:12px;
+
+
+
+}
+
+
+
+.product-detail{
+
+
+width:92%;
+
+
+
+margin-top:20px;
+
+
+
+}
+
+
+
+.main-product-image{
+
+
+height:330px;
+
+
+
+padding:30px;
+
+
+
+border-radius:25px;
+
+
+
+}
+
+
+
+.product-information h1{
+
+
+font-size:35px;
+
+
+
+}
+
+
+
+.product-information p{
+
+
+font-size:15px;
+
+
+
+}
+
+
+
+.product-price-box strong{
+
+
+font-size:28px;
+
+
+
+}
+
+
+
+.product-price-box del{
+
+
+font-size:14px;
+
+
+
+}
+
+
+
+
+
+.product-plans h2{
+
+
+font-size:24px;
+
+
+
+}
+
+
+
+.plan-card{
+
+
+padding:20px;
+
+
+
+}
+
+
+
+.purchase-box{
+
+
+padding:20px;
+
+
+
+}
+
+
+
+.product-final{
+
+
+width:92%;
+
+
+
+padding:
+
+50px 20px;
+
+
+
+}
+
+
+
+.product-final h2{
+
+
+font-size:30px;
+
+
+
+}
+
+
+
+.devices{
+
+
+grid-template-columns:
+
+1fr;
+
+
+
+}
+
+
+
+.floating-whatsapp{
+
+
+width:55px;
+
+
+
+height:55px;
+
+
+
+font-size:25px;
+
+
+
+}
+
+
+
+}
+/* =====================================
+   OBTENER PRODUCTO DE LA URL
+===================================== */
+
+
+const params = new URLSearchParams(
 window.location.search
 );
 
 
 
-const productoID =
-
-urlParams.get(
-"id"
-);
+const productoID = params.get("id");
 
 
 
-let productoActual =
-
-productos[productoID];
+let productoActual = productos[productoID];
 
 
+
+
+
+// Producto por defecto
 
 if(!productoActual){
 
 
-productoActual = productos.spotify;
+productoActual = productos.netflix;
 
 
 }
@@ -327,65 +760,219 @@ productoActual = productos.spotify;
 
 
 
+
+
 /* =====================================
-   MOSTRAR INFORMACIÓN
+   MOSTRAR INFORMACIÓN PRODUCTO
 ===================================== */
 
 
-document.getElementById(
-"productImage"
-).src = productoActual.imagen;
 
+document.title =
 
+"AMERISSTORE | " +
 
-document.getElementById(
-"productImage"
-).alt = productoActual.nombre;
-
-
-
-
-
-document.getElementById(
-"productCategory"
-).innerHTML =
-productoActual.categoria;
-
-
-
-
-document.getElementById(
-"breadcrumbCategory"
-).innerHTML =
-productoActual.categoria;
-
-
-
-
-
-document.getElementById(
-"productName"
-).innerHTML =
 productoActual.nombre;
 
 
 
 
 
-document.getElementById(
+
+
+const imagen = document.getElementById(
+"productImage"
+);
+
+
+
+const categoria = document.getElementById(
+"productCategory"
+);
+
+
+
+const nombre = document.getElementById(
+"productName"
+);
+
+
+
+const descripcion = document.getElementById(
 "productDescription"
-).innerHTML =
+);
+
+
+
+const precio = document.getElementById(
+"productPrice"
+);
+
+
+
+const precioAnterior = document.getElementById(
+"oldPrice"
+);
+
+
+
+
+
+const breadcrumbCategoria = document.getElementById(
+"breadcrumbCategory"
+);
+
+
+
+const breadcrumbNombre = document.getElementById(
+"breadcrumbName"
+);
+
+
+
+
+
+
+
+
+if(imagen){
+
+
+imagen.src = productoActual.imagen;
+
+
+imagen.alt = productoActual.nombre;
+
+
+}
+
+
+
+
+
+
+
+if(categoria){
+
+
+categoria.innerHTML =
+
+productoActual.categoria;
+
+
+}
+
+
+
+
+
+
+
+if(nombre){
+
+
+nombre.innerHTML =
+
+productoActual.nombre;
+
+
+}
+
+
+
+
+
+
+
+if(descripcion){
+
+
+descripcion.innerHTML =
+
 productoActual.descripcion;
 
+
+}
+
+
+
+
+
+
+
+if(precio){
+
+
+precio.innerHTML =
+
+productoActual.precio;
+
+
+}
+
+
+
+
+
+
+
+if(precioAnterior){
+
+
+precioAnterior.innerHTML =
+
+productoActual.precioAnterior;
+
+
+}
+
+
+
+
+
+
+
+if(breadcrumbCategoria){
+
+
+breadcrumbCategoria.innerHTML =
+
+productoActual.categoria;
+
+
+}
+
+
+
+
+
+
+
+if(breadcrumbNombre){
+
+
+breadcrumbNombre.innerHTML =
+
+productoActual.nombre;
+
+
+}
+
+
+
+
+
+
+
+
+
 /* =====================================
-   GENERAR PLANES
+   CREAR PLANES
 ===================================== */
 
 
-const plansContainer =
-
-document.querySelector(
-".plans-list"
+const plansContainer = document.getElementById(
+"plansContainer"
 );
 
 
@@ -398,11 +985,22 @@ productoActual.planes[0];
 
 
 
+
+
 function cargarPlanes(){
 
 
 
+if(!plansContainer)
+return;
+
+
+
+
+
 plansContainer.innerHTML = "";
+
+
 
 
 
@@ -414,16 +1012,15 @@ productoActual.planes.forEach(
 
 
 
-const div =
-
-document.createElement(
+const card = document.createElement(
 "div"
 );
 
 
 
-div.className =
 
+
+card.className =
 "plan-card";
 
 
@@ -432,9 +1029,11 @@ div.className =
 
 if(index === 0){
 
-div.classList.add(
+
+card.classList.add(
 "active"
 );
+
 
 }
 
@@ -443,7 +1042,8 @@ div.classList.add(
 
 
 
-div.innerHTML = `
+
+card.innerHTML = `
 
 
 <h4>
@@ -468,7 +1068,9 @@ ${plan.precio}
 
 
 
-div.addEventListener(
+
+
+card.addEventListener(
 "click",
 ()=>{
 
@@ -477,13 +1079,12 @@ div.addEventListener(
 
 
 document
-.querySelectorAll(
-".plan-card"
-)
-.forEach(card=>{
+.querySelectorAll(".plan-card")
+.forEach(
+(item)=>{
 
 
-card.classList.remove(
+item.classList.remove(
 "active"
 );
 
@@ -494,9 +1095,13 @@ card.classList.remove(
 
 
 
-div.classList.add(
+
+
+
+card.classList.add(
 "active"
 );
+
 
 
 
@@ -508,7 +1113,10 @@ planSeleccionado = plan;
 
 
 
-actualizarPrecio();
+
+actualizarResumen();
+
+
 
 
 
@@ -523,573 +1131,8 @@ actualizarPrecio();
 
 
 plansContainer.appendChild(
-div
+card
 );
-
-
-
-
-
-}
-
-
-);
-
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =====================================
-   ACTUALIZAR PRECIO
-===================================== */
-
-
-function actualizarPrecio(){
-
-
-
-const price =
-
-document.getElementById(
-"productPrice"
-);
-
-
-
-if(price){
-
-
-price.innerHTML =
-
-planSeleccionado.precio;
-
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================
-   CARGAR PRODUCTO
-===================================== */
-
-
-cargarPlanes();
-
-
-actualizarPrecio();
-
-
-
-
-
-
-
-
-
-/* =====================================
-   BOTON WHATSAPP
-===================================== */
-
-
-const botonCompra =
-
-document.getElementById(
-"buyWhatsapp"
-);
-
-
-
-
-
-const botonCompraFinal =
-
-document.getElementById(
-"buyWhatsappBottom"
-);
-
-
-
-
-
-
-function abrirWhatsapp(){
-
-
-
-let mensaje =
-
-
-
-`Hola AMERISSTORE 👋🚀
-
-
-Estoy interesado en comprar:
-
-
-📦 Producto:
-${productoActual.nombre}
-
-
-📌 Plan:
-${planSeleccionado.nombre}
-
-
-💰 Precio:
-${planSeleccionado.precio}
-
-
-¿Me pueden ayudar con la activación?
-
-
-Gracias.`;
-
-
-window.open(
-
-`https://wa.me/${whatsapp}?text=${encodeURIComponent(mensaje)}`,
-
-"_blank"
-
-);
-
-
-
-}
-
-
-
-
-
-
-
-if(botonCompra){
-
-
-botonCompra.addEventListener(
-"click",
-abrirWhatsapp
-);
-
-
-}
-
-
-
-
-
-
-if(botonCompraFinal){
-
-
-botonCompraFinal.addEventListener(
-"click",
-abrirWhatsapp
-);
-
-
-}
-/* =====================================
-   PRODUCTOS ADICIONALES
-===================================== */
-
-
-
-Object.assign(productos,{
-
-
-
-
-
-
-prime:{
-
-
-categoria:
-"STREAMING",
-
-
-nombre:
-"Prime Video",
-
-
-imagen:
-"assets/productos/prime.png",
-
-
-descripcion:
-"Películas, series exclusivas y contenido original.",
-
-
-planes:[
-
-{
-nombre:"Plan Premium",
-precio:"Gs. 20.000"
-}
-
-]
-
-
-},
-
-
-
-
-
-
-crunchyroll:{
-
-
-categoria:
-"STREAMING",
-
-
-nombre:
-"Crunchyroll",
-
-
-imagen:
-"assets/productos/crunchyroll.png",
-
-
-descripcion:
-"El mejor catálogo de anime en streaming.",
-
-
-planes:[
-
-{
-nombre:"Plan Premium",
-precio:"Gs. 12.000"
-}
-
-]
-
-
-},
-
-
-
-
-
-
-flujo:{
-
-
-categoria:
-"STREAMING",
-
-
-nombre:
-"Flujo TV",
-
-
-imagen:
-"assets/productos/flujo.png",
-
-
-descripcion:
-"Canales en vivo, deportes y entretenimiento.",
-
-
-planes:[
-
-{
-nombre:"Servicio Premium",
-precio:"Gs. 30.000"
-}
-
-]
-
-
-},
-
-
-
-
-
-
-paramount:{
-
-
-categoria:
-"STREAMING",
-
-
-nombre:
-"Paramount+",
-
-
-imagen:
-"assets/productos/paramount.png",
-
-
-descripcion:
-"Series, películas y eventos deportivos.",
-
-
-planes:[
-
-{
-nombre:"Plan Premium",
-precio:"Gs. 15.000"
-}
-
-]
-
-
-},
-
-
-
-
-
-
-vix:{
-
-
-categoria:
-"STREAMING",
-
-
-nombre:
-"Vix+",
-
-
-imagen:
-"assets/productos/vix.png",
-
-
-descripcion:
-"Contenido latino, novelas, películas y deportes.",
-
-
-planes:[
-
-{
-nombre:"Plan Premium",
-precio:"Gs. 12.000"
-}
-
-]
-
-
-},
-
-
-
-
-
-
-youtube:{
-
-
-categoria:
-"MÚSICA",
-
-
-nombre:
-"YouTube Premium",
-
-
-imagen:
-"assets/productos/youtube.png",
-
-
-descripcion:
-"YouTube sin anuncios y YouTube Music incluido.",
-
-
-planes:[
-
-{
-nombre:"1 Mes",
-precio:"Gs. 25.000"
-},
-
-
-{
-nombre:"3 Meses",
-precio:"Gs. 60.000"
-}
-
-]
-
-
-},
-
-
-
-
-
-
-gemini:{
-
-
-categoria:
-"INTELIGENCIA ARTIFICIAL",
-
-
-nombre:
-"Google Gemini Pro",
-
-
-imagen:
-"assets/productos/gemini.png",
-
-
-descripcion:
-"IA avanzada de Google con funciones Premium.",
-
-
-planes:[
-
-{
-nombre:"Premium",
-precio:"Desde Gs. 89.000"
-}
-
-]
-
-
-},
-
-
-
-
-
-
-capcut:{
-
-
-categoria:
-"DISEÑO",
-
-
-nombre:
-"CapCut Pro",
-
-
-imagen:
-"assets/productos/capcut.png",
-
-
-descripcion:
-"Edición de video profesional con herramientas Premium.",
-
-
-planes:[
-
-{
-nombre:"1 Mes",
-precio:"Gs. 30.000"
-}
-
-]
-
-
-},
-
-
-
-
-
-
-nordvpn:{
-
-
-categoria:
-"SEGURIDAD",
-
-
-nombre:
-"NordVPN",
-
-
-imagen:
-"assets/productos/nordvpn.png",
-
-
-descripcion:
-"Protege tu conexión y navega de forma segura.",
-
-
-planes:[
-
-{
-nombre:"Premium",
-precio:"Gs. 25.000"
-}
-
-]
-
-
-},
-
-
-
-
-
-
-duolingo:{
-
-
-categoria:
-"EDUCACIÓN",
-
-
-nombre:
-"Duolingo Super",
-
-
-imagen:
-"assets/productos/duolingo.png",
-
-
-descripcion:
-"Aprende idiomas sin anuncios y con funciones avanzadas.",
-
-
-planes:[
-
-{
-nombre:"30 días",
-precio:"Gs. 25.000"
-},
-
-
-{
-nombre:"1 Año",
-precio:"Gs. 150.000"
-}
-
-]
-
-
-}
 
 
 
@@ -1099,6 +1142,10 @@ precio:"Gs. 150.000"
 
 
 
+}
+
+
+
 
 
 
@@ -1106,18 +1153,44 @@ precio:"Gs. 150.000"
 
 
 /* =====================================
-   TITULO DINAMICO
+   RESUMEN COMPRA
 ===================================== */
 
 
-document.title =
+function actualizarResumen(){
 
 
-"AMERISSTORE | " +
+
+const summaryProduct = document.getElementById(
+"summaryProduct"
+);
+
+
+
+const summaryPlan = document.getElementById(
+"summaryPlan"
+);
+
+
+
+const summaryPrice = document.getElementById(
+"summaryPrice"
+);
+
+
+
+
+
+
+if(summaryProduct){
+
+
+summaryProduct.innerHTML =
 
 productoActual.nombre;
 
 
+}
 
 
 
@@ -1125,18 +1198,76 @@ productoActual.nombre;
 
 
 
+if(summaryPlan){
+
+
+summaryPlan.innerHTML =
+
+planSeleccionado.nombre;
+
+
+}
+
+
+
+
+
+
+
+if(summaryPrice){
+
+
+summaryPrice.innerHTML =
+
+planSeleccionado.precio;
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+cargarPlanes();
+
+
+
+actualizarResumen();
 /* =====================================
-   MEJORAR MENSAJE WHATSAPP
+   BOTONES WHATSAPP
 ===================================== */
 
 
-function abrirWhatsapp(){
+const botonWhatsapp = document.getElementById(
+"buyWhatsapp"
+);
+
+
+
+const botonWhatsappFinal = document.getElementById(
+"buyWhatsappBottom"
+);
+
+
+
+
+
+
+
+
+function comprarWhatsapp(){
+
+
 
 
 
 let mensaje =
-
-
 
 `Hola AMERISSTORE 👋🚀
 
@@ -1148,7 +1279,7 @@ Quiero adquirir un servicio digital.
 ${productoActual.nombre}
 
 
-🏷 Categoría:
+📂 Categoría:
 ${productoActual.categoria}
 
 
@@ -1161,10 +1292,11 @@ ${planSeleccionado.precio}
 
 
 
-Quisiera realizar la activación.
+Quiero realizar la activación.
 
 
-Gracias por la atención 🙌`;
+Gracias 🙌`;
+
 
 
 
@@ -1173,7 +1305,17 @@ Gracias por la atención 🙌`;
 
 let url =
 
-`https://wa.me/${whatsapp}?text=${encodeURIComponent(mensaje)}`;
+"https://wa.me/" +
+
+whatsapp +
+
+"?text=" +
+
+encodeURIComponent(mensaje);
+
+
+
+
 
 
 
@@ -1197,28 +1339,125 @@ url,
 
 
 
+if(botonWhatsapp){
+
+
+
+botonWhatsapp.addEventListener(
+
+"click",
+
+comprarWhatsapp
+
+);
+
+
+
+}
+
+
+
+
+
+
+
+
+if(botonWhatsappFinal){
+
+
+
+botonWhatsappFinal.addEventListener(
+
+"click",
+
+comprarWhatsapp
+
+);
+
+
+
+}
+
+
+
+
+
+
+
+
+
 /* =====================================
-   SI NO EXISTE IMAGEN
+   ERROR IMAGEN
 ===================================== */
 
 
-const imagenProducto =
-
-document.getElementById(
+const productImg = document.getElementById(
 "productImage"
 );
 
 
 
-imagenProducto.onerror = ()=>{
 
 
-imagenProducto.src =
+if(productImg){
 
+
+productImg.onerror = function(){
+
+
+this.src =
 "assets/productos/default.png";
 
 
 };
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+   ANIMACIÓN CARGA PRODUCTO
+===================================== */
+
+
+const detalle = document.querySelector(
+".product-detail"
+);
+
+
+
+if(detalle){
+
+
+detalle.style.opacity="0";
+
+
+
+setTimeout(()=>{
+
+
+detalle.style.transition=".5s";
+
+
+
+detalle.style.opacity="1";
+
+
+
+},100);
+
+
+
+}
+
+
 
 
 
@@ -1228,7 +1467,7 @@ imagenProducto.src =
 
 console.log(
 
-"Producto cargado:",
+"Producto cargado correctamente:",
 
 productoActual.nombre
 
