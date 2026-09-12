@@ -1991,38 +1991,39 @@ body > header:not(.header) {
 
 
 /* =========================================================
-   NOVEDADES
+   NOVEDADES - TARJETA HORIZONTAL
 ========================================================= */
 
-#noticias {
+.ff-news-section {
     width: min(92%, 1150px);
-
     margin: 80px auto 0;
-
-    display: block !important;
 }
 
 
-#noticias .section-title {
+.ff-news-section .section-title {
     width: 100%;
-
-    margin: 0 0 30px;
+    margin-bottom: 30px;
 }
 
 
-#noticias .news-card {
+.ff-news-card {
     width: 100%;
 
-    min-height: 380px;
+    min-height: 360px;
 
     display: grid;
 
     grid-template-columns:
-        1.15fr 0.85fr;
+        0.9fr 1.1fr;
 
     overflow: hidden;
 
     background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(124, 53, 255, 0.16),
+            transparent 40%
+        ),
         linear-gradient(
             145deg,
             #110b19,
@@ -2030,74 +2031,32 @@ body > header:not(.header) {
         );
 
     border:
-        1px solid rgba(167, 109, 255, 0.20);
+        1px solid rgba(167, 109, 255, 0.22);
 
-    border-radius: 22px;
+    border-radius: 24px;
 
     box-shadow:
-        0 18px 45px rgba(0, 0, 0, 0.30);
+        0 18px 45px rgba(0, 0, 0, 0.30),
+        0 0 30px rgba(124, 53, 255, 0.08);
+
+    transition: 0.3s ease;
 }
 
 
-/* IMPORTANTE:
-   EVITA QUE LA IMAGEN OCUPE TODA LA PANTALLA */
+.ff-news-card:hover {
+    transform: translateY(-4px);
 
-#noticias .news-image {
-    position: relative;
+    border-color:
+        rgba(167, 109, 255, 0.45);
 
-    width: 100%;
-
-    height: 380px;
-
-    min-height: 0;
-
-    overflow: hidden;
-
-    background: #09070d;
+    box-shadow:
+        0 22px 50px rgba(0, 0, 0, 0.36),
+        0 0 32px rgba(124, 53, 255, 0.13);
 }
 
 
-#noticias .news-image img {
-    display: block;
-
-    width: 100%;
-
-    height: 100%;
-
-    max-width: 100%;
-
-    margin: 0;
-
-    padding: 0;
-
-    object-fit: cover;
-
-    object-position: center;
-
-    transform: none;
-}
-
-
-#noticias .news-image::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent 55%,
-            rgba(8, 6, 12, 0.72)
-        );
-
-    pointer-events: none;
-}
-
-
-#noticias .news-content {
-    padding: 42px 36px;
+.ff-news-content {
+    padding: 44px 40px;
 
     display: flex;
 
@@ -2106,40 +2065,51 @@ body > header:not(.header) {
     justify-content: center;
 
     align-items: flex-start;
-
-    text-align: left;
 }
 
 
-#noticias .news-content > span {
+.ff-news-tag {
+    display: inline-flex;
+
+    padding: 7px 12px;
+
+    background:
+        rgba(124, 53, 255, 0.12);
+
+    border:
+        1px solid rgba(167, 109, 255, 0.25);
+
+    border-radius: 50px;
+
     color: #a76dff;
 
-    font-size: 10px;
+    font-size: 9px;
 
     font-weight: 1000;
 
-    letter-spacing: 1.8px;
+    letter-spacing: 1.2px;
 }
 
 
-#noticias .news-content h3 {
-    margin-top: 10px;
+.ff-news-content h3 {
+    margin-top: 14px;
 
     color: #ffffff;
 
-    font-size:
-        clamp(26px, 3vw, 38px);
+    font-size: clamp(28px, 3vw, 40px);
 
     line-height: 1.05;
 
     font-weight: 1000;
 
-    letter-spacing: -1px;
+    letter-spacing: -1.2px;
 }
 
 
-#noticias .news-content p {
+.ff-news-content p {
     margin-top: 16px;
+
+    max-width: 450px;
 
     color: #aaa3b8;
 
@@ -2149,8 +2119,8 @@ body > header:not(.header) {
 }
 
 
-#noticias .news-content .button {
-    margin-top: 25px;
+.ff-news-button {
+    margin-top: 26px;
 
     min-height: 46px;
 
@@ -2171,7 +2141,7 @@ body > header:not(.header) {
 
     border-radius: 11px;
 
-    color: white;
+    color: #ffffff;
 
     font-size: 11px;
 
@@ -2181,14 +2151,60 @@ body > header:not(.header) {
 }
 
 
-#noticias .news-content .button:hover {
+.ff-news-button:hover {
     transform: translateY(-2px);
 
     box-shadow:
-        0 10px 28px
-        rgba(124, 53, 255, 0.35);
+        0 10px 28px rgba(124, 53, 255, 0.35);
 }
 
+
+.ff-news-image {
+    position: relative;
+
+    min-height: 360px;
+
+    overflow: hidden;
+}
+
+
+.ff-news-image::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 6, 12, 0.96) 0%,
+            rgba(8, 6, 12, 0.45) 18%,
+            transparent 45%
+        );
+
+    pointer-events: none;
+}
+
+
+.ff-news-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition: 0.45s ease;
+}
+
+
+.ff-news-card:hover .ff-news-image img {
+    transform: scale(1.04);
+}
 
 
 /* =========================================================
