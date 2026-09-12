@@ -1700,3 +1700,77 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+/* =====================================
+   COMPRA PRODUCTOS WHATSAPP
+===================================== */
+
+
+const botonesProductos = document.querySelectorAll(
+".buy-product"
+);
+
+
+
+botonesProductos.forEach(
+boton=>{
+
+
+boton.addEventListener(
+"click",
+(e)=>{
+
+
+e.preventDefault();
+
+
+
+let producto =
+boton.dataset.producto;
+
+
+
+let precio =
+boton.dataset.precio;
+
+
+
+
+let mensaje =
+
+`Hola AMERISSTORE 👋🔥
+
+
+Quiero adquirir este servicio:
+
+
+📦 Servicio:
+${producto}
+
+
+💰 Costo:
+${precio}
+
+
+¿Me pueden ayudar con la activación?
+
+
+Gracias.`;
+
+
+let url =
+
+`https://wa.me/595981841136?text=${encodeURIComponent(mensaje)}`;
+
+
+
+window.open(
+url,
+"_blank"
+);
+
+
+
+});
+
+
+});
