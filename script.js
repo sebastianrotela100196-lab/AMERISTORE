@@ -2261,3 +2261,399 @@ document.addEventListener(
 
     }
 );
+/* =========================================
+   CARRITO AMERISSTORE
+========================================= */
+
+let carritoAmeris = [];
+
+
+/* =========================================
+   CARGAR CARRITO
+========================================= */
+
+function cargarCarrito() {
+
+    const guardado =
+        localStorage.getItem(
+            "amerisstore_carrito"
+        );
+
+
+    if (guardado) {
+
+        try {
+
+            carritoAmeris =
+                JSON.parse(guardado);
+
+        }
+
+        catch (error) {
+
+            carritoAmeris = [];
+
+        }
+
+    }
+
+
+    actualizarCarritoHeader();
+
+}
+
+
+/* =========================================
+   GUARDAR CARRITO
+========================================= */
+
+function guardarCarrito() {
+
+    localStorage.setItem(
+        "amerisstore_carrito",
+        JSON.stringify(carritoAmeris)
+    );
+
+
+    actualizarCarritoHeader();
+
+}
+
+
+/* =========================================
+   CONVERTIR PRECIO
+========================================= */
+
+function convertirPrecio(precio) {
+
+    if (typeof precio === "number") {
+
+        return precio;
+
+    }
+
+
+    const numero =
+        parseInt(
+            String(precio)
+                .replace(/\D/g, "")
+        );
+
+
+    return isNaN(numero)
+        ? 0
+        : numero;
+
+}
+
+
+/* =========================================
+   FORMATEAR GUARANÍES
+========================================= */
+
+function formatearGs(numero) {
+
+    return (
+        "Gs. " +
+        Number(numero)
+            .toLocaleString("es-PY")
+    );
+
+}
+
+
+/* =========================================
+   AGREGAR AL CARRITO
+========================================= */
+
+function agregarAlCarrito(
+    nombre,
+    precio,
+    imagen = ""
+) {
+
+    const precioNumero =
+        convertirPrecio(precio);
+
+
+    const existente =
+        carritoAmeris.find(
+            item =>
+                item.nombre === nombre
+        );
+
+
+    if (existente) {
+
+        existente.cantidad++;
+
+    }
+
+    else {
+
+        carritoAmeris.push({
+
+            nombre: nombre,
+
+            precio: precioNumero,
+
+            imagen: imagen,
+
+            cantidad: 1
+
+        });
+
+    }
+
+
+    guardarCarrito();
+
+
+    mostrarNotificacion(
+        `${nombre} agregado al carrito`
+    );
+
+}
+
+
+/* =========================================
+   ACTUALIZAR HEADER
+========================================= */
+
+function actualizarCarritoHeader() {
+
+    const contador =
+        document.getElementById(
+            "cart-count"
+        );
+
+
+    const totalElemento =
+        document.getElementById(
+            "cart-total"
+        );
+
+
+    let cantidad = 0;
+
+    let total = 0;
+
+
+    carritoAmeris.forEach(item => {
+
+        cantidad +=
+            item.cantidad;
+
+
+        total +=
+            item.precio *
+            item.cantidad;
+
+    });
+
+
+    if (contador) {
+
+        contador.textContent =
+            cantidad;
+
+    }
+
+
+    if (totalElemento) {
+
+        totalElemento.textContent =
+            formatearGs(total);
+
+    }
+
+}
+
+
+/* =========================================
+   ELIMINAR PRODUCTO
+========================================= */
+
+function eliminarDelCarrito(index) {
+
+    if (
+        index < 0 ||
+        index >= carritoAmeris.length
+    ) {
+
+        return;
+
+    }
+
+
+    carritoAmeris.splice(
+        index,
+        1
+    );
+
+
+    guardarCarrito();
+
+}
+
+
+/* =========================================
+   VACIAR CARRITO
+========================================= */
+
+function vaciarCarrito() {
+
+    carritoAmeris = [];
+
+
+    guardarCarrito();
+
+}
+
+
+/* =========================================
+   OBTENER CANTIDAD
+========================================= */
+
+function obtenerCantidadCarrito() {
+
+    return carritoAmeris.reduce(
+        (total, item) =>
+            total + item.cantidad,
+        0
+    );
+
+}
+
+
+/* =========================================
+   OBTENER TOTAL
+========================================= */
+
+function obtenerTotalCarrito() {
+
+    return carritoAmeris.reduce(
+        (total, item) =>
+            total +
+            item.precio *
+            item.cantidad,
+        0
+    );
+
+}
+
+
+/* =========================================
+   NOTIFICACIÓN
+========================================= */
+
+function mostrarNotificacion(mensaje) {
+
+    const anterior =
+        document.querySelector(
+            ".store-notification"
+        );
+
+
+    if (anterior) {
+
+        anterior.remove();
+
+    }
+
+
+    const notificacion =
+        document.createElement("div");
+
+
+    notificacion.className =
+        "store-notification";
+
+
+    notificacion.textContent =
+        mensaje;
+
+
+    document.body.appendChild(
+        notificacion
+    );
+
+
+    requestAnimationFrame(() => {
+
+        notificacion.classList.add(
+            "show"
+        );
+
+    });
+
+
+    setTimeout(() => {
+
+        notificacion.classList.remove(
+            "show"
+        );
+
+
+        setTimeout(() => {
+
+            notificacion.remove();
+
+        }, 300);
+
+    }, 2200);
+
+}
+
+
+/* =========================================
+   INICIAR CARRITO
+========================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        cargarCarrito();
+
+
+        const botonCarrito =
+            document.getElementById(
+                "cart-button"
+            );
+
+
+        if (botonCarrito) {
+
+            botonCarrito.addEventListener(
+                "click",
+                event => {
+
+                    event.preventDefault();
+
+
+                    if (
+                        carritoAmeris.length === 0
+                    ) {
+
+                        mostrarNotificacion(
+                            "Tu carrito está vacío"
+                        );
+
+                    }
+
+                    else {
+
+                        mostrarNotificacion(
+                            `${obtenerCantidadCarrito()} producto(s) · ${formatearGs(obtenerTotalCarrito())}`
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+
+    }
+);
