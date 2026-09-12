@@ -1,0 +1,370 @@
+/* =========================================================
+   FREE FIRE - ESTILOS ESPECIFICOS
+   Cargar DESPUES de style.css
+========================================================= */
+
+/* ---------- Extras ---------- */
+
+.ff-extra-section {
+    width: min(92%, 1150px);
+    margin: 80px auto 0;
+}
+
+.ff-extra-section .section-title {
+    width: 100%;
+    margin: 0 0 32px;
+}
+
+.ff-extra-grid {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+}
+
+.ff-extra-card {
+    position: relative !important;
+    min-width: 0 !important;
+    padding: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    overflow: hidden !important;
+    background:
+        radial-gradient(circle at 100% 0%, rgba(124,53,255,.14), transparent 42%),
+        linear-gradient(180deg, #120b1c 0%, #09070d 100%) !important;
+    border: 1px solid rgba(167,109,255,.22) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 14px 35px rgba(0,0,0,.24) !important;
+    transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease !important;
+}
+
+.ff-extra-card:hover {
+    transform: translateY(-6px) !important;
+    border-color: rgba(167,109,255,.58) !important;
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.32),
+        0 0 24px rgba(124,53,255,.13) !important;
+}
+
+.ff-extra-icon {
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 0 18px !important;
+    display: grid !important;
+    place-items: center !important;
+    background: rgba(124,53,255,.11) !important;
+    border: 1px solid rgba(167,109,255,.22) !important;
+    border-radius: 14px !important;
+    font-size: 24px !important;
+}
+
+.ff-extra-label {
+    display: inline-block !important;
+    margin: 0 0 7px !important;
+    color: #a76dff !important;
+    font-size: 9px !important;
+    font-weight: 1000 !important;
+    letter-spacing: 1.4px !important;
+    text-transform: uppercase !important;
+}
+
+.ff-extra-card h3 {
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+    font-weight: 1000 !important;
+}
+
+.ff-extra-card p {
+    min-height: 46px !important;
+    margin: 9px 0 0 !important;
+    color: #aaa3b8 !important;
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+}
+
+.ff-extra-bottom {
+    margin-top: 24px !important;
+    padding-top: 18px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 14px !important;
+    border-top: 1px solid rgba(167,109,255,.10) !important;
+}
+
+.ff-extra-bottom strong {
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: 19px !important;
+    font-weight: 1000 !important;
+}
+
+.ff-extra-bottom .buy-button {
+    width: auto !important;
+    min-width: 110px !important;
+    min-height: 40px !important;
+    margin: 0 !important;
+    padding: 0 16px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: linear-gradient(135deg, rgba(124,53,255,.22), rgba(167,109,255,.12)) !important;
+    border: 1px solid rgba(167,109,255,.30) !important;
+    border-radius: 10px !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    font-size: 10px !important;
+    font-weight: 1000 !important;
+    letter-spacing: .4px !important;
+    transition: .25s ease !important;
+}
+
+.ff-extra-bottom .buy-button:hover {
+    background: linear-gradient(135deg, #7c35ff, #a76dff) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 22px rgba(124,53,255,.28) !important;
+}
+
+/* ---------- Novedades ---------- */
+
+.ff-news-section {
+    width: min(92%, 1150px);
+    margin: 80px auto 0;
+}
+
+.ff-news-section .section-title {
+    width: 100%;
+    margin: 0 0 30px;
+}
+
+.ff-news-card {
+    width: 100%;
+    min-height: 360px;
+    display: grid !important;
+    grid-template-columns: .9fr 1.1fr !important;
+    overflow: hidden !important;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(124,53,255,.16), transparent 40%),
+        linear-gradient(145deg, #110b19, #08060c) !important;
+    border: 1px solid rgba(167,109,255,.22) !important;
+    border-radius: 24px !important;
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.30),
+        0 0 30px rgba(124,53,255,.08) !important;
+}
+
+.ff-news-content {
+    padding: 44px 40px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+}
+
+.ff-news-tag {
+    display: inline-flex !important;
+    padding: 7px 12px !important;
+    background: rgba(124,53,255,.12) !important;
+    border: 1px solid rgba(167,109,255,.25) !important;
+    border-radius: 999px !important;
+    color: #a76dff !important;
+    font-size: 9px !important;
+    font-weight: 1000 !important;
+    letter-spacing: 1.2px !important;
+}
+
+.ff-news-content h3 {
+    margin: 14px 0 0 !important;
+    color: #fff !important;
+    font-size: clamp(28px, 3vw, 40px) !important;
+    line-height: 1.05 !important;
+    font-weight: 1000 !important;
+}
+
+.ff-news-content p {
+    max-width: 450px !important;
+    margin: 16px 0 0 !important;
+    color: #aaa3b8 !important;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+}
+
+.ff-news-button {
+    margin-top: 26px !important;
+    min-height: 46px !important;
+    padding: 0 22px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: linear-gradient(135deg, #7c35ff, #a76dff) !important;
+    border-radius: 11px !important;
+    color: #fff !important;
+    font-size: 11px !important;
+    font-weight: 1000 !important;
+}
+
+.ff-news-image {
+    position: relative !important;
+    min-height: 360px !important;
+    overflow: hidden !important;
+}
+
+.ff-news-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, rgba(8,6,12,.96) 0%, rgba(8,6,12,.42) 18%, transparent 45%);
+    pointer-events: none;
+}
+
+.ff-news-image img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 360px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+/* ---------- FAQ ---------- */
+
+.ff-faq-section {
+    width: min(92%, 1000px);
+    margin: 80px auto 90px;
+}
+
+.ff-faq-section .section-title {
+    width: 100%;
+    margin: 0 0 30px;
+}
+
+.ff-faq-grid {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+    gap: 16px !important;
+}
+
+.ff-faq-card {
+    padding: 22px 24px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    background:
+        radial-gradient(circle at 100% 0%, rgba(124,53,255,.10), transparent 45%),
+        linear-gradient(180deg, #100b17, #09070d) !important;
+    border: 1px solid rgba(167,109,255,.18) !important;
+    border-radius: 18px !important;
+    transition: .25s ease !important;
+}
+
+.ff-faq-card:hover {
+    transform: translateY(-3px) !important;
+    border-color: rgba(167,109,255,.45) !important;
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.22),
+        0 0 18px rgba(124,53,255,.10) !important;
+}
+
+.ff-faq-icon {
+    flex-shrink: 0 !important;
+    width: 42px !important;
+    height: 42px !important;
+    display: grid !important;
+    place-items: center !important;
+    background: rgba(124,53,255,.11) !important;
+    border: 1px solid rgba(167,109,255,.20) !important;
+    border-radius: 12px !important;
+    color: #a76dff !important;
+    font-size: 11px !important;
+    font-weight: 1000 !important;
+}
+
+.ff-faq-card h3 {
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: 16px !important;
+    font-weight: 900 !important;
+}
+
+.ff-faq-card p {
+    margin: 7px 0 0 !important;
+    color: #aaa3b8 !important;
+    font-size: 12px !important;
+    line-height: 1.65 !important;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+    .ff-extra-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+    }
+
+    .ff-extra-card:last-child {
+        grid-column: span 2;
+    }
+
+    .ff-news-card {
+        grid-template-columns: 1fr !important;
+    }
+
+    .ff-news-image {
+        min-height: 280px !important;
+        order: -1;
+    }
+
+    .ff-news-image img {
+        min-height: 280px !important;
+    }
+
+    .ff-news-image::before {
+        background: linear-gradient(180deg, transparent 45%, rgba(8,6,12,.86) 100%);
+    }
+
+    .ff-faq-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .ff-extra-section,
+    .ff-news-section,
+    .ff-faq-section {
+        width: 92%;
+        margin-top: 58px;
+    }
+
+    .ff-extra-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .ff-extra-card:last-child {
+        grid-column: auto;
+    }
+
+    .ff-extra-bottom {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .ff-extra-bottom .buy-button {
+        width: 100% !important;
+    }
+
+    .ff-news-content {
+        padding: 28px 22px !important;
+    }
+
+    .ff-news-image,
+    .ff-news-image img {
+        min-height: 220px !important;
+    }
+
+    .ff-news-button {
+        width: 100% !important;
+    }
+}
