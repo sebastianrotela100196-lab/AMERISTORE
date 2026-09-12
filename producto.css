@@ -1,7 +1,7 @@
 /* =========================================================
    AMERISSTORE
    PRODUCT PAGE
-   GENGAR STYLE
+   GENGAR STYLE CLEAN
 ========================================================= */
 
 
@@ -13,8 +13,8 @@
     --card:
         #100b18;
 
-    --card-soft:
-        #151021;
+    --card-hover:
+        #160d24;
 
     --purple:
         #8b3dff;
@@ -23,7 +23,7 @@
         #b06cff;
 
     --purple-glow:
-        rgba(139,61,255,.25);
+        rgba(139,61,255,.30);
 
     --white:
         #ffffff;
@@ -63,11 +63,13 @@
 body {
 
     background:
+
         radial-gradient(
             circle at top,
-            rgba(139,61,255,.12),
+            rgba(139,61,255,.15),
             transparent 35%
         ),
+
         var(--bg);
 
     color:
@@ -97,6 +99,8 @@ img {
 
 
 
+
+
 /* =========================================================
    HEADER
 ========================================================= */
@@ -104,20 +108,33 @@ img {
 
 .product-header {
 
+
     width:
         min(92%,1400px);
 
+
     height:
+
         80px;
 
+
     margin:
+
         auto;
 
-    display:flex;
+
+    display:
+
+        flex;
+
 
     align-items:center;
 
-    justify-content:space-between;
+
+    justify-content:
+
+        space-between;
+
 
     border-bottom:
 
@@ -129,13 +146,16 @@ img {
 
 .product-logo {
 
+
     font-size:
 
         32px;
 
+
     font-weight:
 
         1000;
+
 
 }
 
@@ -143,19 +163,31 @@ img {
 
 .product-logo span {
 
+
     color:
 
         var(--purple-light);
+
+
+    text-shadow:
+
+        0 0 20px rgba(176,108,255,.4);
 
 }
 
 
 
+
+
 .product-actions {
+
 
     display:flex;
 
-    gap:15px;
+
+    gap:
+
+        15px;
 
 }
 
@@ -163,25 +195,31 @@ img {
 
 .product-actions a {
 
+
     padding:
 
-        12px 20px;
+        12px 22px;
+
 
     border:
 
         1px solid var(--border);
 
+
     border-radius:
 
         12px;
+
 
     font-size:
 
         13px;
 
+
     font-weight:
 
         900;
+
 
     transition:
 
@@ -193,15 +231,19 @@ img {
 
 .product-actions a:hover {
 
+
     background:
 
         var(--purple);
+
 
     box-shadow:
 
         0 0 25px var(--purple-glow);
 
 }
+
+
 
 
 
@@ -214,17 +256,21 @@ img {
 
 .breadcrumb {
 
+
     width:
 
         min(92%,1400px);
+
 
     margin:
 
         30px auto;
 
+
     color:
 
         var(--gray);
+
 
     font-size:
 
@@ -236,6 +282,7 @@ img {
 
 .breadcrumb a {
 
+
     color:
 
         var(--purple-light);
@@ -244,14 +291,16 @@ img {
 
 
 
-
 .breadcrumb strong {
+
 
     color:
 
         white;
 
 }
+
+
 
 
 
@@ -264,27 +313,39 @@ img {
 
 .product-detail {
 
+
     width:
 
         min(92%,1400px);
 
+
     margin:
 
-        40px auto 90px;
+        50px auto 90px;
 
 
-    display:grid;
+
+    display:
+
+        grid;
+
+
 
     grid-template-columns:
 
         1fr 1fr;
 
 
+
     gap:
 
         70px;
 
-    align-items:center;
+
+
+    align-items:
+
+        center;
 
 }
 
@@ -292,14 +353,41 @@ img {
 
 
 
+
+
+
 /* =========================================================
-   IMAGEN
+   IMAGEN PRODUCTO
 ========================================================= */
+
+
+.product-gallery {
+
+
+    display:
+
+        flex;
+
+
+    justify-content:
+
+        center;
+
+}
+
 
 
 .main-product-image {
 
-    position:relative;
+
+    position:
+
+        relative;
+
+
+    width:
+
+        100%;
 
 
     height:
@@ -312,26 +400,46 @@ img {
         40px;
 
 
-    display:flex;
+    display:
 
-    align-items:center;
+        flex;
 
-    justify-content:center;
+
+    align-items:
+
+        center;
+
+
+    justify-content:
+
+        center;
+
 
 
     background:
 
+
         radial-gradient(
+
             circle,
-            rgba(139,61,255,.18),
-            transparent 55%
+
+            rgba(139,61,255,.25),
+
+            transparent 60%
+
         ),
 
+
         linear-gradient(
+
             145deg,
+
             #161020,
+
             #09070d
+
         );
+
 
 
     border:
@@ -339,19 +447,27 @@ img {
         1px solid var(--border);
 
 
+
     border-radius:
 
         30px;
 
 
-    overflow:hidden;
+
+    overflow:
+
+        hidden;
+
 
 
     box-shadow:
 
-        0 0 50px rgba(139,61,255,.12);
+
+        0 0 50px rgba(139,61,255,.18);
 
 }
+
+
 
 
 
@@ -373,11 +489,13 @@ img {
         contain;
 
 
+
     transition:
 
-        .4s;
+        .35s;
 
 }
+
 
 
 
@@ -392,21 +510,32 @@ img {
 
 
 
+
+
+
 .product-badge {
 
 
-    position:absolute;
+    position:
+
+        absolute;
 
 
-    top:20px;
+    top:
+
+        20px;
 
 
-    left:20px;
+    left:
+
+        20px;
+
 
 
     padding:
 
-        7px 14px;
+        7px 15px;
+
 
 
     border-radius:
@@ -414,13 +543,20 @@ img {
         999px;
 
 
+
     background:
 
+
         linear-gradient(
+
             135deg,
+
             var(--purple),
+
             var(--purple-light)
+
         );
+
 
 
     font-size:
@@ -428,21 +564,44 @@ img {
         10px;
 
 
+
     font-weight:
 
         1000;
 
 
-    z-index:2;
+
+    z-index:
+
+        5;
 
 }
 
 
 
 
+
+
+
 /* =========================================================
-   INFORMACIÓN
+   INFORMACIÓN PRODUCTO
 ========================================================= */
+
+
+.product-information {
+
+
+    display:
+
+        flex;
+
+
+    flex-direction:
+
+        column;
+
+}
+
 
 
 .product-category {
@@ -453,21 +612,25 @@ img {
         var(--purple-light);
 
 
+
     font-size:
 
         11px;
+
+
+
+    letter-spacing:
+
+        3px;
+
 
 
     font-weight:
 
         1000;
 
-
-    letter-spacing:
-
-        2px;
-
 }
+
 
 
 
@@ -480,9 +643,11 @@ img {
         15px;
 
 
+
     font-size:
 
-        55px;
+        clamp(38px,5vw,55px);
+
 
 
     line-height:
@@ -490,12 +655,14 @@ img {
         1;
 
 
+
     font-weight:
 
         1000;
 
-
 }
+
+
 
 
 
@@ -507,9 +674,11 @@ img {
         18px;
 
 
+
     color:
 
         var(--gray);
+
 
 
     font-size:
@@ -517,11 +686,14 @@ img {
         16px;
 
 
+
     line-height:
 
         1.7;
 
 }
+
+
 
 
 
@@ -535,22 +707,29 @@ img {
 .product-price-box {
 
 
-    margin:
+    display:
 
-        25px 0;
-
-
-    display:flex;
+        flex;
 
 
-    align-items:center;
+    align-items:
+
+        center;
+
 
 
     gap:
 
         15px;
 
+
+
+    margin:
+
+        25px 0;
+
 }
+
 
 
 
@@ -559,7 +738,8 @@ img {
 
     font-size:
 
-        34px;
+        35px;
+
 
 
     color:
@@ -567,7 +747,13 @@ img {
         var(--purple-light);
 
 
+
+    font-weight:
+
+        1000;
+
 }
+
 
 
 
@@ -585,6 +771,8 @@ img {
 
 
 
+
+
 /* =========================================================
    PLANES
 ========================================================= */
@@ -595,7 +783,7 @@ img {
 
     margin-top:
 
-        35px;
+        25px;
 
 }
 
@@ -609,6 +797,7 @@ img {
         20px;
 
 
+
     font-size:
 
         22px;
@@ -617,18 +806,27 @@ img {
 
 
 
+
 .plans-list {
 
 
-    display:flex;
+    display:
 
-    flex-direction:column;
+        flex;
+
+
+    flex-direction:
+
+        column;
+
+
 
     gap:
 
         12px;
 
 }
+
 
 
 
@@ -640,14 +838,22 @@ img {
         18px 22px;
 
 
-    display:flex;
 
-    justify-content:space-between;
+    display:
 
-    align-items:center;
+        flex;
 
 
-    cursor:pointer;
+    justify-content:
+
+        space-between;
+
+
+
+    align-items:
+
+        center;
+
 
 
     background:
@@ -655,9 +861,11 @@ img {
         var(--card);
 
 
+
     border:
 
         1px solid var(--border);
+
 
 
     border-radius:
@@ -665,11 +873,20 @@ img {
         15px;
 
 
+
+    cursor:
+
+        pointer;
+
+
+
     transition:
 
         .25s;
 
 }
+
+
 
 
 
@@ -681,11 +898,21 @@ img {
         translateX(5px);
 
 
+
     border-color:
 
         var(--purple-light);
 
+
+
+    background:
+
+        var(--card-hover);
+
 }
+
+
+
 
 
 
@@ -697,9 +924,11 @@ img {
         2px solid var(--purple-light);
 
 
+
     background:
 
-        rgba(139,61,255,.12);
+        rgba(139,61,255,.14);
+
 
 
     box-shadow:
@@ -707,6 +936,8 @@ img {
         0 0 25px var(--purple-glow);
 
 }
+
+
 
 
 
@@ -721,12 +952,15 @@ img {
 
 
 
+
+
 .plan-card strong {
 
 
     color:
 
         var(--purple-light);
+
 
 
     font-size:
@@ -739,8 +973,11 @@ img {
 
 
 
+
+
+
 /* =========================================================
-   RESUMEN
+   RESUMEN COMPRA
 ========================================================= */
 
 
@@ -752,9 +989,11 @@ img {
         25px;
 
 
+
     padding:
 
         25px;
+
 
 
     background:
@@ -762,9 +1001,11 @@ img {
         var(--card);
 
 
+
     border:
 
         1px solid var(--border);
+
 
 
     border-radius:
@@ -775,16 +1016,45 @@ img {
 
 
 
+
+.purchase-box h3 {
+
+
+    margin-bottom:
+
+        20px;
+
+
+
+    font-size:
+
+        20px;
+
+}
+
+
+
+
+
 .purchase-summary {
 
 
-    display:flex;
+    display:
 
-    flex-direction:column;
+        flex;
+
+
+
+    flex-direction:
+
+        column;
+
+
 
     gap:
 
         12px;
+
 
 
     margin-bottom:
@@ -792,6 +1062,7 @@ img {
         20px;
 
 }
+
 
 
 
@@ -806,16 +1077,23 @@ img {
 
 
 
+
 .purchase-summary strong {
 
 
-    color:white;
+    color:
+
+        white;
 
 }
 
 
 
-/* BOTON */
+
+
+/* =========================================================
+   BOTÓN CARRITO
+========================================================= */
 
 
 .buy-button {
@@ -826,9 +1104,11 @@ img {
         100%;
 
 
+
     min-height:
 
         52px;
+
 
 
     border:
@@ -836,21 +1116,38 @@ img {
         0;
 
 
+
     border-radius:
 
         12px;
 
 
+
     background:
 
+
         linear-gradient(
+
             135deg,
+
             var(--purple),
+
             var(--purple-light)
+
         );
 
 
-    color:white;
+
+    color:
+
+        white;
+
+
+
+    font-size:
+
+        15px;
+
 
 
     font-weight:
@@ -858,7 +1155,11 @@ img {
         1000;
 
 
-    cursor:pointer;
+
+    cursor:
+
+        pointer;
+
 
 
     transition:
@@ -866,6 +1167,7 @@ img {
         .25s;
 
 }
+
 
 
 
@@ -877,295 +1179,18 @@ img {
         translateY(-3px);
 
 
+
     box-shadow:
 
         0 12px 30px var(--purple-glow);
 
 }
-
-
-
-
-
 /* =========================================================
-   BENEFICIOS
+   DESCRIPCIÓN PRODUCTO
 ========================================================= */
 
 
-.product-benefits {
-
-
-    width:
-
-        min(92%,1400px);
-
-
-    margin:
-
-        80px auto;
-
-
-    display:grid;
-
-
-    grid-template-columns:
-
-        repeat(3,1fr);
-
-
-    gap:
-
-        20px;
-
-}
-
-
-
-.benefit-box {
-
-
-    padding:
-
-        35px;
-
-
-    text-align:center;
-
-
-    background:
-
-        var(--card);
-
-
-    border:
-
-        1px solid var(--border);
-
-
-    border-radius:
-
-        22px;
-
-
-}
-
-
-
-.benefit-icon {
-
-
-    font-size:
-
-        40px;
-
-
-    margin-bottom:
-
-        15px;
-
-}
-
-
-
-.benefit-box h3 {
-
-
-    margin-bottom:
-
-        10px;
-
-}
-
-
-
-.benefit-box p {
-
-
-    color:
-
-        var(--gray);
-
-}
-
-
-
-
-
-/* =========================================================
-   PASOS
-========================================================= */
-
-
-.how-buy,
-.compatibility,
-.trust-section {
-
-
-    width:
-
-        min(92%,1400px);
-
-
-    margin:
-
-        100px auto;
-
-}
-
-
-
-.steps {
-
-
-    display:grid;
-
-
-    grid-template-columns:
-
-        repeat(3,1fr);
-
-
-    gap:
-
-        20px;
-
-}
-
-
-
-.step {
-
-
-    padding:
-
-        30px;
-
-
-    background:
-
-        var(--card);
-
-
-    border:
-
-        1px solid var(--border);
-
-
-    border-radius:
-
-        20px;
-
-}
-
-
-
-.step strong {
-
-
-    color:
-
-        var(--purple-light);
-
-
-    font-size:
-
-        35px;
-
-}
-
-
-
-
-.step p {
-
-
-    margin-top:
-
-        10px;
-
-
-    color:
-
-        var(--gray);
-
-}
-
-
-
-
-
-/* =========================================================
-   DISPOSITIVOS
-========================================================= */
-
-
-.devices {
-
-
-    display:grid;
-
-
-    grid-template-columns:
-
-        repeat(4,1fr);
-
-
-    gap:
-
-        20px;
-
-}
-
-
-
-.devices div {
-
-
-    padding:
-
-        30px;
-
-
-    text-align:center;
-
-
-    background:
-
-        var(--card);
-
-
-    border:
-
-        1px solid var(--border);
-
-
-    border-radius:
-
-        18px;
-
-}
-
-
-
-.devices div:first-child {
-
-
-    font-size:
-
-        40px;
-
-}
-
-
-
-
-
-/* =========================================================
-   CTA FINAL
-========================================================= */
-
-
-.product-final {
+.product-description-box {
 
 
     width:
@@ -1173,26 +1198,23 @@ img {
         min(92%,1200px);
 
 
+
     margin:
 
-        100px auto;
+        80px auto;
+
 
 
     padding:
 
-        70px 30px;
+        35px;
 
-
-    text-align:center;
 
 
     background:
 
-        linear-gradient(
-            145deg,
-            #161020,
-            #09070d
-        );
+        var(--card);
+
 
 
     border:
@@ -1200,52 +1222,409 @@ img {
         1px solid var(--border);
 
 
+
     border-radius:
 
-        30px;
+        22px;
+
+
 
 }
 
 
 
-.product-final h2 {
+
+
+.product-description-box span {
+
+
+    color:
+
+        var(--purple-light);
+
 
 
     font-size:
 
-        42px;
+        10px;
+
+
+
+    font-weight:
+
+        1000;
+
+
+
+    letter-spacing:
+
+        2px;
 
 }
 
 
 
-.product-final p {
 
 
-    margin:
+.product-description-box h2 {
+
+
+    margin-top:
+
+        12px;
+
+
+
+    font-size:
+
+        30px;
+
+
+
+    font-weight:
+
+        1000;
+
+}
+
+
+
+
+
+.product-description-box p {
+
+
+    margin-top:
 
         15px;
+
 
 
     color:
 
         var(--gray);
 
+
+
+    font-size:
+
+        15px;
+
+
+
+    line-height:
+
+        1.7;
+
 }
 
 
 
 
 
+
+
+
+
 /* =========================================================
-   WHATSAPP
+   PRODUCTOS RELACIONADOS
+========================================================= */
+
+
+.related-products {
+
+
+    width:
+
+        min(92%,1200px);
+
+
+
+    margin:
+
+        100px auto;
+
+}
+
+
+
+
+
+.section-title span {
+
+
+    color:
+
+        var(--purple-light);
+
+
+
+    font-size:
+
+        10px;
+
+
+
+    font-weight:
+
+        1000;
+
+
+
+    letter-spacing:
+
+        2px;
+
+}
+
+
+
+
+
+.section-title h2 {
+
+
+    margin-top:
+
+        10px;
+
+
+
+    font-size:
+
+        34px;
+
+
+
+    font-weight:
+
+        1000;
+
+}
+
+
+
+
+
+.related-grid {
+
+
+    margin-top:
+
+        35px;
+
+
+
+    display:
+
+        grid;
+
+
+
+    grid-template-columns:
+
+        repeat(4,1fr);
+
+
+
+    gap:
+
+        18px;
+
+}
+
+
+
+
+
+
+.related-card {
+
+
+    padding:
+
+        18px;
+
+
+
+    background:
+
+        var(--card);
+
+
+
+    border:
+
+        1px solid var(--border);
+
+
+
+    border-radius:
+
+        18px;
+
+
+
+    transition:
+
+        .25s;
+
+
+
+    overflow:
+
+        hidden;
+
+}
+
+
+
+
+.related-card:hover {
+
+
+    transform:
+
+        translateY(-6px);
+
+
+
+    border-color:
+
+        var(--purple-light);
+
+
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,.35),
+
+        0 0 25px var(--purple-glow);
+
+}
+
+
+
+
+
+.related-card img {
+
+
+    width:
+
+        100%;
+
+
+
+    height:
+
+        150px;
+
+
+
+    object-fit:
+
+        contain;
+
+
+
+    border-radius:
+
+        12px;
+
+
+
+    background:
+
+        #09070d;
+
+}
+
+
+
+
+
+
+.related-card h3 {
+
+
+    margin-top:
+
+        18px;
+
+
+
+    color:
+
+        white;
+
+
+
+    font-size:
+
+        16px;
+
+
+
+    font-weight:
+
+        900;
+
+}
+
+
+
+
+
+.related-card strong {
+
+
+    display:
+
+        block;
+
+
+
+    margin-top:
+
+        10px;
+
+
+
+    color:
+
+        var(--purple-light);
+
+
+
+    font-size:
+
+        17px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   WHATSAPP FLOTANTE
 ========================================================= */
 
 
 .floating-whatsapp {
 
 
-    position:fixed;
+    position:
+
+        fixed;
+
 
 
     right:
@@ -1253,9 +1632,11 @@ img {
         25px;
 
 
+
     bottom:
 
         25px;
+
 
 
     width:
@@ -1263,18 +1644,29 @@ img {
         60px;
 
 
+
     height:
 
         60px;
 
 
-    display:flex;
+
+    display:
+
+        flex;
 
 
-    align-items:center;
+
+    align-items:
+
+        center;
 
 
-    justify-content:center;
+
+    justify-content:
+
+        center;
+
 
 
     border-radius:
@@ -1282,9 +1674,17 @@ img {
         50%;
 
 
+
     background:
 
         #25d366;
+
+
+
+    color:
+
+        white;
+
 
 
     font-size:
@@ -1292,11 +1692,41 @@ img {
         30px;
 
 
+
     z-index:
 
         999;
 
+
+
+    box-shadow:
+
+        0 0 30px rgba(37,211,102,.45);
+
+
+
+    transition:
+
+        .25s;
+
 }
+
+
+
+
+
+.floating-whatsapp:hover {
+
+
+    transform:
+
+        scale(1.1);
+
+}
+
+
+
+
 
 
 
@@ -1310,23 +1740,60 @@ img {
 .product-footer {
 
 
+    margin-top:
+
+        80px;
+
+
+
     padding:
 
         50px 20px;
 
 
-    text-align:center;
+
+    text-align:
+
+        center;
+
 
 
     border-top:
 
         1px solid var(--border);
 
+
+
+    background:
+
+        #08060d;
+
 }
 
 
 
-.product-footer span {
+
+
+.product-footer h2 {
+
+
+    font-size:
+
+        36px;
+
+
+
+    font-weight:
+
+        1000;
+
+}
+
+
+
+
+
+.product-footer h2 span {
 
 
     color:
@@ -1334,6 +1801,8 @@ img {
         var(--purple-light);
 
 }
+
+
 
 
 
@@ -1345,42 +1814,56 @@ img {
         15px;
 
 
+
     color:
 
         var(--gray);
 
+
+
+    font-size:
+
+        13px;
+
 }
+
+
+
+
 
 
 
 
 
 /* =========================================================
-   RESPONSIVE
+   RESPONSIVE TABLET
 ========================================================= */
 
 
-@media(max-width:900px){
+@media(max-width:1000px){
 
 
-.product-detail{
 
-    grid-template-columns:1fr;
+.product-detail {
+
+
+    grid-template-columns:
+
+        1fr;
+
+
+
+    gap:
+
+        40px;
 
 }
 
 
 
-.product-benefits,
-.steps{
 
-    grid-template-columns:1fr;
+.related-grid {
 
-}
-
-
-
-.devices{
 
     grid-template-columns:
 
@@ -1390,9 +1873,12 @@ img {
 
 
 
-.product-information h1{
+.product-information h1 {
 
-    font-size:40px;
+
+    font-size:
+
+        42px;
 
 }
 
@@ -1401,53 +1887,266 @@ img {
 }
 
 
+
+
+
+
+
+
+
+/* =========================================================
+   RESPONSIVE MOBILE
+========================================================= */
 
 
 @media(max-width:600px){
 
 
-.product-header{
 
-    height:auto;
+.product-header {
 
-    padding:20px 0;
 
-    flex-direction:column;
+    height:
 
-}
+        auto;
 
 
 
-.product-detail{
+    padding:
 
-    width:92%;
-
-}
+        20px 0;
 
 
 
-.main-product-image{
+    flex-direction:
 
-    height:350px;
-
-}
+        column;
 
 
 
-.devices{
+    gap:
 
-    grid-template-columns:1fr;
+        20px;
 
 }
 
 
 
-.product-final h2{
 
-    font-size:30px;
+
+.product-logo {
+
+
+    font-size:
+
+        26px;
 
 }
 
+
+
+
+
+.product-actions {
+
+
+    width:
+
+        100%;
+
+
+
+    justify-content:
+
+        center;
+
+}
+
+
+
+
+
+.product-detail {
+
+
+    width:
+
+        92%;
+
+
+
+    margin-top:
+
+        25px;
+
+}
+
+
+
+
+
+.main-product-image {
+
+
+    height:
+
+        340px;
+
+
+
+    padding:
+
+        25px;
+
+}
+
+
+
+
+
+.product-information h1 {
+
+
+    font-size:
+
+        34px;
+
+}
+
+
+
+
+
+.product-price-box strong {
+
+
+    font-size:
+
+        28px;
+
+}
+
+
+
+
+
+.plan-card {
+
+
+    padding:
+
+        16px;
+
+}
+
+
+
+
+
+.purchase-box {
+
+
+    padding:
+
+        20px;
+
+}
+
+
+
+
+
+.product-description-box {
+
+
+    width:
+
+        92%;
+
+
+
+    padding:
+
+        25px;
+
+}
+
+
+
+
+
+.product-description-box h2 {
+
+
+    font-size:
+
+        25px;
+
+}
+
+
+
+
+
+.related-products {
+
+
+    width:
+
+        92%;
+
+}
+
+
+
+
+
+.related-grid {
+
+
+    grid-template-columns:
+
+        1fr;
+
+}
+
+
+
+
+
+.related-card img {
+
+
+    height:
+
+        180px;
+
+}
+
+
+
+
+
+.floating-whatsapp {
+
+
+    width:
+
+        55px;
+
+
+
+    height:
+
+        55px;
+
+
+
+    font-size:
+
+        25px;
+
+}
 
 
 }
