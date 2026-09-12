@@ -33,27 +33,12 @@ AMERISSTORE | Producto
 
 
 
-<!-- =====================================
+<!-- =========================
 HEADER PRODUCTO
-===================================== -->
+========================= -->
 
 
 <header class="product-header">
-
-
-
-<a 
-href="index.html"
-class="back-button"
->
-
-
-← Volver a la tienda
-
-
-</a>
-
-
 
 
 
@@ -67,20 +52,26 @@ AMERIS<span>STORE</span>
 
 
 
+<div class="product-actions">
 
-<a
 
-href="https://wa.me/595981841136"
+<a href="index.html">
 
-target="_blank"
+← Volver
 
-class="header-whatsapp"
+</a>
 
->
+
+
+<a href="https://wa.me/595981841136">
 
 💬 WhatsApp
 
 </a>
+
+
+
+</div>
 
 
 
@@ -94,29 +85,38 @@ class="header-whatsapp"
 
 
 
-<!-- =====================================
-CONTENEDOR PRODUCTO
-===================================== -->
-
-
-<main class="product-container">
-
-
-
+<!-- =========================
+BREADCRUMB
+========================= -->
 
 
 <div class="breadcrumb">
 
 
+<a href="index.html">
+
 Inicio
+
+</a>
+
 
 /
 
 <span id="breadcrumbCategory">
 
-Producto
+Streaming
 
 </span>
+
+
+/
+
+<strong id="breadcrumbName">
+
+Producto
+
+</strong>
+
 
 
 </div>
@@ -127,6 +127,11 @@ Producto
 
 
 
+
+
+<!-- =========================
+PRODUCT DETAIL
+========================= -->
 
 
 <section class="product-detail">
@@ -136,13 +141,7 @@ Producto
 
 
 
-
-
-
-<!-- ==========================
-IMAGEN PRODUCTO
-========================== -->
-
+<!-- IMAGEN -->
 
 
 <div class="product-gallery">
@@ -152,12 +151,11 @@ IMAGEN PRODUCTO
 <div class="main-product-image">
 
 
-
 <img
 
 id="productImage"
 
-src=""
+src="assets/productos/default.png"
 
 alt="Producto"
 
@@ -166,12 +164,6 @@ alt="Producto"
 
 
 
-<div class="product-label">
-
-
-PREMIUM
-
-
 </div>
 
 
@@ -181,35 +173,21 @@ PREMIUM
 
 
 
-</div>
 
 
 
 
 
+<!-- INFORMACION -->
+
+
+<div class="product-information">
 
 
 
-
-<!-- ==========================
-INFORMACIÓN PRODUCTO
-========================== -->
-
-
-
-<div class="product-info-detail">
-
-
-
-
-
-<span
-
-id="productCategory"
-
-class="product-category-detail"
-
->
+<span 
+class="product-category"
+id="productCategory">
 
 STREAMING
 
@@ -219,16 +197,9 @@ STREAMING
 
 
 
+<h1 id="productName">
 
-
-
-<h1
-
-id="productName"
-
->
-
-Nombre del producto
+Netflix
 
 </h1>
 
@@ -237,14 +208,9 @@ Nombre del producto
 
 
 
+<p id="productDescription">
 
-<p
-
-id="productDescription"
-
->
-
-Descripción del producto
+Series y películas ilimitadas en calidad Premium.
 
 </p>
 
@@ -254,32 +220,77 @@ Descripción del producto
 
 
 
+<div class="product-price-box">
 
 
-<div class="price-box">
+<strong id="productPrice">
+
+Gs. 30.000
+
+</strong>
+
+
+<del id="oldPrice">
+
+Gs.45.000
+
+</del>
+
+
+</div>
 
 
 
-<span>
-
-Precio
-
-</span>
 
 
 
-<h2
 
-id="productPrice"
+</div>
 
->
 
-Gs. 0
+
+
+
+
+</section>
+<!-- =========================
+PLANES DEL PRODUCTO
+========================= -->
+
+
+<div class="product-plans">
+
+
+
+<h2>
+
+Elige una opción
 
 </h2>
 
 
 
+
+<div class="plans-list" id="plansContainer">
+
+
+
+
+
+<!--
+LOS PLANES SE CARGAN
+AUTOMÁTICAMENTE
+CON PRODUCTO.JS
+-->
+
+
+
+</div>
+
+
+
+
+
 </div>
 
 
@@ -290,45 +301,80 @@ Gs. 0
 
 
 
+<!-- =========================
+COMPRA
+========================= -->
+
+
+<div class="purchase-box">
 
 
 
 
-<!-- PLANES -->
 
-
-<div 
-
-id="productPlans"
-
-class="plans-container"
-
->
-
-
+<div class="purchase-summary">
 
 
 
 <h3>
 
-Selecciona una opción
+Resumen
 
 </h3>
 
 
 
+<div>
 
 
-<div class="plans-list">
+Producto:
 
+<strong id="summaryProduct">
 
+Netflix
 
-
-
-<!-- JS INSERTARÁ PLANES AQUÍ -->
+</strong>
 
 
 </div>
+
+
+
+
+
+<div>
+
+
+Plan:
+
+<strong id="summaryPlan">
+
+1 Mes
+
+</strong>
+
+
+</div>
+
+
+
+
+
+
+<div>
+
+
+Total:
+
+<strong id="summaryPrice">
+
+Gs. 30.000
+
+</strong>
+
+
+</div>
+
 
 
 
@@ -346,12 +392,10 @@ Selecciona una opción
 
 id="buyWhatsapp"
 
-class="buy-product-button"
-
->
+class="buy-button">
 
 
-Comprar por WhatsApp
+💬 Comprar por WhatsApp
 
 
 </button>
@@ -361,75 +405,21 @@ Comprar por WhatsApp
 
 
 
-
 </div>
-
-
-
-
-
-
-
-
-</section>
-<!-- =====================================
-INFORMACIÓN DEL PRODUCTO
-===================================== -->
+<!-- =========================
+BENEFICIOS DEL PRODUCTO
+========================= -->
 
 
 <section class="product-benefits">
-
-
-
-
-
-<div class="benefits-title">
-
-
-<span>
-AMERISSTORE
-</span>
-
-
-
-<h2>
-¿Por qué comprar con nosotros?
-</h2>
-
-
-
-<p>
-Disfruta tus servicios digitales de forma rápida y segura.
-</p>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="benefits-grid">
-
-
-
-
-
 
 
 <div class="benefit-box">
 
 
 <div class="benefit-icon">
-
 ⚡
-
 </div>
-
 
 
 <h3>
@@ -437,17 +427,12 @@ Activación rápida
 </h3>
 
 
-
 <p>
 Recibe tu servicio después de confirmar el pago.
 </p>
 
 
-
 </div>
-
-
-
 
 
 
@@ -458,11 +443,8 @@ Recibe tu servicio después de confirmar el pago.
 
 
 <div class="benefit-icon">
-
 🛡️
-
 </div>
-
 
 
 <h3>
@@ -470,16 +452,12 @@ Compra segura
 </h3>
 
 
-
 <p>
 Atención personalizada durante todo el proceso.
 </p>
 
 
-
 </div>
-
-
 
 
 
@@ -491,11 +469,8 @@ Atención personalizada durante todo el proceso.
 
 
 <div class="benefit-icon">
-
 💬
-
 </div>
-
 
 
 <h3>
@@ -503,24 +478,12 @@ Soporte directo
 </h3>
 
 
-
 <p>
-Te ayudamos con cualquier consulta.
+Ayuda para activar y resolver cualquier duda.
 </p>
 
 
-
 </div>
-
-
-
-
-
-
-
-</div>
-
-
 
 
 
@@ -536,35 +499,28 @@ Te ayudamos con cualquier consulta.
 
 
 
-
-
-
-
-<!-- =====================================
+<!-- =========================
 COMO COMPRAR
-===================================== -->
+========================= -->
 
 
 <section class="how-buy">
 
 
 
-
-
-<div class="benefits-title">
+<div class="section-title">
 
 
 <span>
-PROCESO
+PROCESO DE COMPRA
 </span>
 
 
 <h2>
-¿Cómo comprar?
+¿Cómo funciona?
 </h2>
 
 
-
 </div>
 
 
@@ -572,40 +528,31 @@ PROCESO
 
 
 
-
-
-
-<div class="steps-container">
-
+<div class="steps">
 
 
 
 
 
 
-<div class="step-card">
+<div class="step">
 
 
-<div class="step-number">
-
+<strong>
 01
-
-</div>
-
+</strong>
 
 
 <h3>
-Selecciona tu servicio
+Selecciona tu plan
 </h3>
 
 
-
 <p>
-Elige el producto y plan que deseas adquirir.
+Elige la opción que más se adapte a ti.
 </p>
 
 
-
 </div>
 
 
@@ -615,16 +562,12 @@ Elige el producto y plan que deseas adquirir.
 
 
 
+<div class="step">
 
-<div class="step-card">
 
-
-<div class="step-number">
-
+<strong>
 02
-
-</div>
-
+</strong>
 
 
 <h3>
@@ -632,13 +575,11 @@ Realiza el pago
 </h3>
 
 
-
 <p>
 Te indicaremos los métodos disponibles.
 </p>
 
 
-
 </div>
 
 
@@ -648,16 +589,12 @@ Te indicaremos los métodos disponibles.
 
 
 
+<div class="step">
 
-<div class="step-card">
 
-
-<div class="step-number">
-
+<strong>
 03
-
-</div>
-
+</strong>
 
 
 <h3>
@@ -665,13 +602,11 @@ Recibe tu activación
 </h3>
 
 
-
 <p>
-Te enviamos los datos de acceso.
+Disfruta tu servicio digital.
 </p>
 
 
-
 </div>
 
 
@@ -679,14 +614,7 @@ Te enviamos los datos de acceso.
 
 
 
-
-
-
 </div>
-
-
-
-
 
 
 </section>
@@ -699,169 +627,28 @@ Te enviamos los datos de acceso.
 
 
 
+<!-- =========================
+COMPATIBILIDAD
+========================= -->
 
 
+<section class="compatibility">
 
-<!-- =====================================
-DETALLES ENTREGA
-===================================== -->
 
 
-<section class="delivery-info">
-
-
-
-
-
-<div class="delivery-card">
-
-
-
-<div class="delivery-icon">
-
-🚀
-
-</div>
-
-
-
-<div>
-
-
-<h3>
-Entrega rápida
-</h3>
-
-
-
-<p>
-La activación normalmente se realiza después de confirmar el pago.
-</p>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="delivery-card">
-
-
-
-<div class="delivery-icon">
-
-📱
-
-</div>
-
-
-
-<div>
-
-
-<h3>
-Compatible con tus dispositivos
-</h3>
-
-
-
-<p>
-Utiliza tus servicios desde celulares, computadoras y Smart TV según corresponda.
-</p>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="delivery-card">
-
-
-
-<div class="delivery-icon">
-
-🔒
-
-</div>
-
-
-
-<div>
-
-
-<h3>
-Atención personalizada
-</h3>
-
-
-
-<p>
-Estamos disponibles para ayudarte antes y después de tu compra.
-</p>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-</section>
-
-
-
-
-</main>
-/* =====================================
-   PREGUNTAS FRECUENTES
-===================================== */
-
-
-<section class="product-faq">
-
-
-
-<div class="benefits-title">
+<div class="section-title">
 
 
 <span>
-AYUDA
+COMPATIBLE CON
 </span>
 
 
-
 <h2>
-Preguntas frecuentes
+Dispositivos disponibles
 </h2>
 
 
-
 </div>
 
 
@@ -869,28 +656,92 @@ Preguntas frecuentes
 
 
 
-<div class="faq-product-container">
+
+<div class="devices">
+
+
+
+<div>
+
+📺
+
+<h3>
+Smart TV
+</h3>
+
+</div>
 
 
 
 
 
+<div>
 
-<div class="faq-product-item">
+📱
+
+<h3>
+Android
+</h3>
+
+</div>
+
+
+
+
+
+<div>
+
+🍎
+
+<h3>
+iPhone
+</h3>
+
+</div>
+
+
+
+
+
+<div>
+
+💻
+
+<h3>
+PC
+</h3>
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+</section>
+<!-- =========================
+CONFIANZA AMERISSTORE
+========================= -->
+
+
+<section class="trust-section">
+
+
+
+<div class="trust-card">
 
 
 <h3>
-¿Cómo recibo mi producto?
+⚡ Entrega inmediata
 </h3>
 
 
-
 <p>
-Luego de confirmar el pago,
-realizamos la activación y enviamos
-los datos correspondientes.
+Activación rápida después de confirmar tu compra.
 </p>
-
 
 
 </div>
@@ -900,22 +751,17 @@ los datos correspondientes.
 
 
 
-
-
-<div class="faq-product-item">
+<div class="trust-card">
 
 
 <h3>
-¿Cuánto tarda la activación?
+🔒 Servicio confiable
 </h3>
 
 
-
 <p>
-La mayoría de servicios se activan
-rápidamente después de la confirmación.
+Productos digitales con atención personalizada.
 </p>
-
 
 
 </div>
@@ -926,33 +772,20 @@ rápidamente después de la confirmación.
 
 
 
-
-<div class="faq-product-item">
+<div class="trust-card">
 
 
 <h3>
-¿Necesito ayuda después de comprar?
+⭐ Clientes satisfechos
 </h3>
 
 
-
 <p>
-Sí, contamos con soporte para ayudarte
-con cualquier inconveniente.
+Soporte antes y después de tu compra.
 </p>
 
 
-
 </div>
-
-
-
-
-
-
-</div>
-
-
 
 
 
@@ -967,16 +800,12 @@ con cualquier inconveniente.
 
 
 
+<!-- =========================
+CTA FINAL
+========================= -->
 
 
-
-<!-- =====================================
-   CTA FINAL
-===================================== -->
-
-
-<section class="product-contact">
-
+<section class="product-final">
 
 
 <h2>
@@ -989,27 +818,24 @@ con cualquier inconveniente.
 
 <p>
 
-Compra ahora y recibe atención directa
-por WhatsApp.
+Compra ahora y recibe tu activación rápidamente.
 
 </p>
 
 
 
 
-
 <button
 
-class="buy-product-button"
+class="buy-button"
 
-id="buyWhatsappBottom"
+id="buyWhatsappBottom">
 
->
 
-Comprar por WhatsApp
+💬 Comprar por WhatsApp
+
 
 </button>
-
 
 
 
@@ -1024,12 +850,9 @@ Comprar por WhatsApp
 
 
 
-
-
-
-<!-- =====================================
-   WHATSAPP FLOTANTE
-===================================== -->
+<!-- =========================
+WHATSAPP FLOTANTE
+========================= -->
 
 
 <a
@@ -1038,9 +861,7 @@ href="https://wa.me/595981841136"
 
 target="_blank"
 
-class="floating-whatsapp"
-
->
+class="floating-whatsapp">
 
 
 💬
@@ -1056,22 +877,20 @@ class="floating-whatsapp"
 
 
 
-<!-- =====================================
-   FOOTER
-===================================== -->
+<!-- =========================
+FOOTER
+========================= -->
 
 
-<footer>
+<footer class="product-footer">
 
 
 
-<div class="footer-logo">
-
+<h2>
 
 AMERIS<span>STORE</span>
 
-
-</div>
+</h2>
 
 
 
@@ -1081,9 +900,6 @@ AMERIS<span>STORE</span>
 Gaming • Streaming • Música • IA • Diseño
 
 </p>
-
-
-
 
 
 
@@ -1107,6 +923,7 @@ TikTok
 
 
 
+
 <a href="#">
 
 Facebook
@@ -1116,7 +933,6 @@ Facebook
 
 
 </div>
-
 
 
 
@@ -1133,8 +949,6 @@ Todos los derechos reservados.
 
 
 
-
-
 </footer>
 
 
@@ -1145,8 +959,10 @@ Todos los derechos reservados.
 
 
 
-<script src="producto.js"></script>
+<!-- SCRIPT PRODUCTO -->
 
+
+<script src="producto.js"></script>
 
 
 
