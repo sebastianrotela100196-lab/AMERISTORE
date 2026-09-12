@@ -5,9 +5,7 @@
 
 <head>
 
-
 <meta charset="UTF-8">
-
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,29 +15,22 @@ AMERISSTORE | Producto
 </title>
 
 
-
 <link rel="stylesheet" href="producto.css">
 
 
 </head>
 
 
-
-
-
 <body>
 
 
 
-
-
 <!-- =========================
-HEADER PRODUCTO
+HEADER
 ========================= -->
 
 
 <header class="product-header">
-
 
 
 <div class="product-logo">
@@ -47,8 +38,6 @@ HEADER PRODUCTO
 AMERIS<span>STORE</span>
 
 </div>
-
-
 
 
 
@@ -70,9 +59,7 @@ AMERIS<span>STORE</span>
 </a>
 
 
-
 </div>
-
 
 
 </header>
@@ -102,21 +89,22 @@ Inicio
 
 /
 
+
 <span id="breadcrumbCategory">
 
-Streaming
+Categoría
 
 </span>
 
 
 /
 
+
 <strong id="breadcrumbName">
 
 Producto
 
 </strong>
-
 
 
 </div>
@@ -130,7 +118,7 @@ Producto
 
 
 <!-- =========================
-PRODUCT DETAIL
+PRODUCTO PRINCIPAL
 ========================= -->
 
 
@@ -140,15 +128,21 @@ PRODUCT DETAIL
 
 
 
-
-<!-- IMAGEN -->
+<!-- IMAGEN PRODUCTO -->
 
 
 <div class="product-gallery">
 
 
-
 <div class="main-product-image">
+
+
+<div class="product-badge" id="productBadge">
+
+OFERTA
+
+</div>
+
 
 
 <img
@@ -160,12 +154,12 @@ src="assets/productos/default.png"
 alt="Producto"
 
 
+
 >
 
 
 
 </div>
-
 
 
 </div>
@@ -185,13 +179,16 @@ alt="Producto"
 
 
 
-<span 
+<span
+
 class="product-category"
+
 id="productCategory">
 
 STREAMING
 
 </span>
+
 
 
 
@@ -220,14 +217,16 @@ Series y películas ilimitadas en calidad Premium.
 
 
 
+
 <div class="product-price-box">
 
 
 <strong id="productPrice">
 
-Gs. 30.000
+Gs.30.000
 
 </strong>
+
 
 
 <del id="oldPrice">
@@ -237,22 +236,10 @@ Gs.45.000
 </del>
 
 
-</div>
-
-
-
-
-
-
 
 </div>
 
 
-
-
-
-
-</section>
 <!-- =========================
 PLANES DEL PRODUCTO
 ========================= -->
@@ -263,30 +250,23 @@ PLANES DEL PRODUCTO
 
 
 <h2>
-
 Elige una opción
-
 </h2>
 
 
 
 
-<div class="plans-list" id="plansContainer">
+
+<div 
+
+class="plans-list"
+
+id="plansContainer">
 
 
-
-
-
-<!--
-LOS PLANES SE CARGAN
-AUTOMÁTICAMENTE
-CON PRODUCTO.JS
--->
-
-
+<!-- PRODUCTO.JS CARGA LOS PLANES -->
 
 </div>
-
 
 
 
@@ -302,7 +282,7 @@ CON PRODUCTO.JS
 
 
 <!-- =========================
-COMPRA
+RESUMEN COMPRA
 ========================= -->
 
 
@@ -318,14 +298,17 @@ COMPRA
 
 <h3>
 
-Resumen
+Resumen de compra
 
 </h3>
 
 
 
-<div>
 
+
+
+
+<div>
 
 Producto:
 
@@ -342,8 +325,9 @@ Netflix
 
 
 
-<div>
 
+
+<div>
 
 Plan:
 
@@ -361,14 +345,14 @@ Plan:
 
 
 
-<div>
 
+<div>
 
 Total:
 
 <strong id="summaryPrice">
 
-Gs. 30.000
+Gs.30.000
 
 </strong>
 
@@ -378,8 +362,9 @@ Gs. 30.000
 
 
 
-</div>
 
+
+</div>
 
 
 
@@ -403,36 +388,55 @@ class="buy-button">
 
 
 
-
-
 </div>
+
+
+
+
+
+
+
+
+
+</section>
 <!-- =========================
-BENEFICIOS DEL PRODUCTO
+BENEFICIOS
 ========================= -->
 
 
 <section class="product-benefits">
 
 
+
 <div class="benefit-box">
 
 
 <div class="benefit-icon">
+
 ⚡
+
 </div>
 
 
 <h3>
+
 Activación rápida
+
 </h3>
 
 
+
 <p>
-Recibe tu servicio después de confirmar el pago.
+
+Recibe tu servicio después
+de confirmar el pago.
+
 </p>
 
 
+
 </div>
+
 
 
 
@@ -443,18 +447,27 @@ Recibe tu servicio después de confirmar el pago.
 
 
 <div class="benefit-icon">
+
 🛡️
+
 </div>
 
 
 <h3>
+
 Compra segura
+
 </h3>
 
 
+
 <p>
-Atención personalizada durante todo el proceso.
+
+Atención personalizada
+durante todo el proceso.
+
 </p>
+
 
 
 </div>
@@ -469,18 +482,27 @@ Atención personalizada durante todo el proceso.
 
 
 <div class="benefit-icon">
+
 💬
+
 </div>
 
 
 <h3>
+
 Soporte directo
+
 </h3>
 
 
+
 <p>
-Ayuda para activar y resolver cualquier duda.
+
+Ayuda para activar
+tu servicio.
+
 </p>
+
 
 
 </div>
@@ -500,7 +522,7 @@ Ayuda para activar y resolver cualquier duda.
 
 
 <!-- =========================
-COMO COMPRAR
+PROCESO COMPRA
 ========================= -->
 
 
@@ -512,16 +534,23 @@ COMO COMPRAR
 
 
 <span>
+
 PROCESO DE COMPRA
+
 </span>
 
 
+
 <h2>
+
 ¿Cómo funciona?
+
 </h2>
 
 
 </div>
+
+
 
 
 
@@ -539,21 +568,31 @@ PROCESO DE COMPRA
 
 
 <strong>
+
 01
+
 </strong>
 
 
+
 <h3>
+
 Selecciona tu plan
+
 </h3>
 
 
+
 <p>
-Elige la opción que más se adapte a ti.
+
+Elige la opción que prefieras.
+
 </p>
 
 
+
 </div>
+
 
 
 
@@ -566,21 +605,31 @@ Elige la opción que más se adapte a ti.
 
 
 <strong>
+
 02
+
 </strong>
 
 
+
 <h3>
+
 Realiza el pago
+
 </h3>
 
 
+
 <p>
-Te indicaremos los métodos disponibles.
+
+Te indicamos los métodos disponibles.
+
 </p>
 
 
+
 </div>
+
 
 
 
@@ -593,28 +642,40 @@ Te indicaremos los métodos disponibles.
 
 
 <strong>
+
 03
+
 </strong>
 
 
+
 <h3>
+
 Recibe tu activación
+
 </h3>
 
 
+
 <p>
-Disfruta tu servicio digital.
+
+Disfruta tu producto digital.
+
 </p>
 
 
-</div>
-
-
-
-
-
 
 </div>
+
+
+
+
+
+
+
+
+</div>
+
 
 
 </section>
@@ -640,16 +701,23 @@ COMPATIBILIDAD
 
 
 <span>
+
 COMPATIBLE CON
+
 </span>
 
 
+
 <h2>
+
 Dispositivos disponibles
+
 </h2>
 
 
+
 </div>
+
 
 
 
@@ -666,10 +734,13 @@ Dispositivos disponibles
 📺
 
 <h3>
+
 Smart TV
+
 </h3>
 
 </div>
+
 
 
 
@@ -680,10 +751,13 @@ Smart TV
 📱
 
 <h3>
+
 Android
+
 </h3>
 
 </div>
+
 
 
 
@@ -694,10 +768,13 @@ Android
 🍎
 
 <h3>
+
 iPhone
+
 </h3>
 
 </div>
+
 
 
 
@@ -708,7 +785,9 @@ iPhone
 💻
 
 <h3>
+
 PC
+
 </h3>
 
 </div>
@@ -740,11 +819,13 @@ CONFIANZA AMERISSTORE
 
 
 <p>
-Activación rápida después de confirmar tu compra.
+Activación rápida después
+de confirmar tu compra.
 </p>
 
 
 </div>
+
 
 
 
@@ -760,7 +841,8 @@ Activación rápida después de confirmar tu compra.
 
 
 <p>
-Productos digitales con atención personalizada.
+Productos digitales con
+atención personalizada.
 </p>
 
 
@@ -781,11 +863,13 @@ Productos digitales con atención personalizada.
 
 
 <p>
-Soporte antes y después de tu compra.
+Soporte antes y después
+de tu compra.
 </p>
 
 
 </div>
+
 
 
 
@@ -808,6 +892,7 @@ CTA FINAL
 <section class="product-final">
 
 
+
 <h2>
 
 ¿Listo para disfrutar tu servicio?
@@ -816,11 +901,15 @@ CTA FINAL
 
 
 
+
 <p>
 
 Compra ahora y recibe tu activación rápidamente.
 
 </p>
+
+
+
 
 
 
@@ -895,6 +984,7 @@ AMERIS<span>STORE</span>
 
 
 
+
 <p>
 
 Gaming • Streaming • Música • IA • Diseño
@@ -904,7 +994,11 @@ Gaming • Streaming • Música • IA • Diseño
 
 
 
+
+
+
 <div class="footer-links">
+
 
 
 <a href="#">
@@ -912,6 +1006,7 @@ Gaming • Streaming • Música • IA • Diseño
 Instagram
 
 </a>
+
 
 
 
@@ -939,12 +1034,15 @@ Facebook
 
 
 
+
+
 <p>
 
 © 2026 AMERISSTORE.
 Todos los derechos reservados.
 
 </p>
+
 
 
 
@@ -959,10 +1057,13 @@ Todos los derechos reservados.
 
 
 
-<!-- SCRIPT PRODUCTO -->
+<!-- =========================
+SCRIPT PRODUCTO
+========================= -->
 
 
 <script src="producto.js"></script>
+
 
 
 
