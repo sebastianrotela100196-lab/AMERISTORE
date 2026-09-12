@@ -3123,3 +3123,1308 @@ main {
     }
 
 }
+/* =========================================================
+   FREE FIRE - FIX COMPLETO
+   PEGAR AL FINAL DE STYLE.CSS
+========================================================= */
+
+
+/* =========================================================
+   HEADER FREE FIRE
+========================================================= */
+
+body {
+    background: #07050b;
+}
+
+
+body > header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: rgba(7, 5, 11, 0.95);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid rgba(167, 109, 255, 0.18);
+}
+
+
+.navbar {
+    width: min(92%, 1400px);
+    min-height: 76px;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 35px;
+
+    background: transparent;
+
+    border: 0;
+}
+
+
+.navbar .logo {
+    margin: 0;
+
+    flex-shrink: 0;
+
+    color: #ffffff;
+
+    font-size: 27px;
+
+    font-weight: 1000;
+
+    letter-spacing: -1px;
+}
+
+
+.navbar .logo span {
+    color: #a76dff;
+
+    text-shadow:
+        0 0 18px rgba(167, 109, 255, 0.45);
+}
+
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    list-style: none;
+}
+
+
+.navbar ul li {
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar ul li a {
+    display: block;
+
+    padding: 28px 0;
+
+    color: #aaa3b8;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 0.5px;
+
+    transition: 0.25s ease;
+}
+
+
+.navbar ul li a:hover {
+    color: #a76dff;
+}
+
+
+.navbar .btn-whatsapp {
+    flex-shrink: 0;
+
+    padding: 12px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c35ff,
+            #a76dff
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 12px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 8px 25px rgba(124, 53, 255, 0.25);
+
+    transition: 0.25s ease;
+}
+
+
+.navbar .btn-whatsapp:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px rgba(124, 53, 255, 0.40);
+}
+
+
+
+/* =========================================================
+   SECCIÓN FREE FIRE
+========================================================= */
+
+.ff-shop {
+    width: 100%;
+
+    padding: 60px 0 40px;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(124, 53, 255, 0.10),
+            transparent 32%
+        ),
+
+        #07050b;
+}
+
+
+.ff-shop > .section-title {
+    width: min(92%, 1150px);
+
+    margin: 0 auto 35px;
+
+    text-align: left;
+}
+
+
+.ff-shop > .section-title > span {
+    display: inline-block;
+
+    margin-bottom: 9px;
+
+    color: #a76dff;
+
+    font-size: 11px;
+
+    font-weight: 1000;
+
+    letter-spacing: 2.5px;
+}
+
+
+.ff-shop > .section-title h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(34px, 5vw, 52px);
+
+    line-height: 1;
+
+    font-weight: 1000;
+
+    letter-spacing: -2px;
+}
+
+
+.ff-shop > .section-title p {
+    max-width: 620px;
+
+    margin-top: 12px;
+
+    color: #aaa3b8;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+
+/* =========================================================
+   CHECKOUT BOX
+========================================================= */
+
+.ff-shop .checkout-box {
+    width: min(92%, 1150px);
+
+    margin: 0 auto 28px;
+
+    padding: 30px;
+
+    display: block;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #110b19,
+            #09070d
+        );
+
+    border: 1px solid rgba(167, 109, 255, 0.20);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.30);
+
+    overflow: visible;
+}
+
+
+.ff-shop .checkout-box.hidden {
+    display: none !important;
+}
+
+
+
+/* =========================================================
+   CABECERA DE PASOS
+========================================================= */
+
+.ff-shop .checkout-header {
+    width: 100%;
+
+    margin-bottom: 28px;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: 15px;
+}
+
+
+.ff-shop .step-number {
+    flex-shrink: 0;
+
+    width: 42px;
+
+    height: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c35ff,
+            #a76dff
+        );
+
+    border-radius: 12px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 1000;
+
+    box-shadow:
+        0 0 18px rgba(124, 53, 255, 0.35);
+}
+
+
+.ff-shop .checkout-header h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    line-height: 1.2;
+
+    font-weight: 1000;
+}
+
+
+.ff-shop .checkout-header p {
+    margin-top: 4px;
+
+    color: #8f889b;
+
+    font-size: 12px;
+}
+
+
+
+/* =========================================================
+   GRID DE DIAMANTES
+========================================================= */
+
+.ff-shop .diamond-grid {
+    width: 100%;
+
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr)) !important;
+
+    gap: 15px;
+}
+
+
+
+/* =========================================================
+   TARJETAS DIAMANTES
+========================================================= */
+
+.ff-shop .diamond-card {
+    position: relative;
+
+    width: 100%;
+
+    min-width: 0;
+
+    min-height: 175px;
+
+    margin: 0;
+
+    padding: 20px 14px;
+
+    display: flex !important;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0e0a14,
+            #09070d
+        );
+
+    border:
+        1px solid rgba(167, 109, 255, 0.16);
+
+    border-radius: 17px;
+
+    box-shadow: none;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.ff-shop .diamond-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #8f4cff;
+
+    background:
+        linear-gradient(
+            180deg,
+            #160e21,
+            #0b0810
+        );
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.30),
+        0 0 20px rgba(124, 53, 255, 0.15);
+}
+
+
+.ff-shop .diamond-card.active {
+    border-color: #a76dff;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(124, 53, 255, 0.18),
+            transparent 55%
+        ),
+
+        #0d0913;
+
+    box-shadow:
+        0 0 25px rgba(124, 53, 255, 0.20);
+}
+
+
+
+/* =========================================================
+   ESTE ES EL FIX MÁS IMPORTANTE:
+   TAMAÑO DEL DIAMANTE
+========================================================= */
+
+.ff-shop .diamond-card img {
+    display: block !important;
+
+    width: 64px !important;
+
+    max-width: 64px !important;
+
+    height: 64px !important;
+
+    max-height: 64px !important;
+
+    min-width: 0 !important;
+
+    margin: 0 auto 10px !important;
+
+    padding: 0 !important;
+
+    object-fit: contain !important;
+
+    object-position: center !important;
+
+    transform: none;
+
+    filter:
+        drop-shadow(
+            0 0 12px rgba(70, 160, 255, 0.30)
+        );
+}
+
+
+.ff-shop .diamond-card:hover img {
+    transform: scale(1.08);
+}
+
+
+
+/* =========================================================
+   TEXTO DIAMANTES
+========================================================= */
+
+.ff-shop .diamond-card h3,
+.ff-shop .diamond-card h4 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    line-height: 1.25;
+
+    font-weight: 900;
+}
+
+
+.ff-shop .diamond-card strong {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #a76dff;
+
+    font-size: 16px;
+
+    font-weight: 1000;
+}
+
+
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.ff-shop .diamond-card .badge {
+    position: absolute;
+
+    top: 10px;
+
+    right: 10px;
+
+    left: auto;
+
+    width: auto;
+
+    margin: 0;
+
+    padding: 5px 8px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c35ff,
+            #ff3ca6
+        );
+
+    border: 0;
+
+    border-radius: 50px;
+
+    color: #ffffff;
+
+    font-size: 7px;
+
+    font-weight: 1000;
+
+    letter-spacing: 0.7px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    z-index: 5;
+}
+
+
+.ff-shop .diamond-card .badge.premium {
+    background:
+        linear-gradient(
+            135deg,
+            #ff3ca6,
+            #7c35ff
+        );
+}
+
+
+
+/* =========================================================
+   AYUDA SELECCIÓN
+========================================================= */
+
+.selection-help {
+    margin-top: 20px;
+
+    color: #8f889b;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+
+/* =========================================================
+   INPUT USER ID
+========================================================= */
+
+.ff-shop .player-id-area {
+    width: 100%;
+}
+
+
+.ff-shop .input-title {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #a76dff;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+.ff-shop #playerID {
+    display: block;
+
+    width: 100%;
+
+    height: 54px;
+
+    margin: 0;
+
+    padding: 0 17px;
+
+    background: #08060c;
+
+    border:
+        1px solid rgba(167, 109, 255, 0.22);
+
+    border-radius: 12px;
+
+    color: #ffffff;
+
+    outline: none;
+
+    font-size: 16px;
+
+    appearance: textfield;
+}
+
+
+.ff-shop #playerID:focus {
+    border-color: #a76dff;
+
+    box-shadow:
+        0 0 18px rgba(124, 53, 255, 0.16);
+}
+
+
+.ff-shop .player-id-area small {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #716b7c;
+
+    font-size: 11px;
+}
+
+
+
+/* =========================================================
+   GUÍA USER ID
+========================================================= */
+
+.ff-shop .id-guide {
+    width: 100%;
+
+    margin-top: 20px;
+
+    overflow: hidden;
+
+    background: #09070d;
+
+    border:
+        1px solid rgba(167, 109, 255, 0.18);
+
+    border-radius: 14px;
+}
+
+
+.ff-shop .guide-button {
+    width: 100%;
+
+    min-height: 50px;
+
+    padding: 0 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    background:
+        rgba(124, 53, 255, 0.07);
+
+    border: 0;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+.ff-shop .guide-content {
+    display: none;
+
+    padding: 20px;
+
+    background: #09070d;
+}
+
+
+.ff-shop .guide-content.show {
+    display: block;
+}
+
+
+.ff-shop .guide-image {
+    width: 100%;
+
+    text-align: center;
+}
+
+
+.ff-shop .guide-image img {
+    display: block !important;
+
+    width: 100% !important;
+
+    max-width: 500px !important;
+
+    height: auto !important;
+
+    margin: 0 auto !important;
+
+    padding: 0 !important;
+
+    object-fit: contain !important;
+
+    border-radius: 14px;
+}
+
+
+.ff-shop .guide-steps {
+    margin-top: 18px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+
+.ff-shop .guide-step {
+    padding: 16px;
+
+    text-align: center;
+
+    background: #0d0913;
+
+    border:
+        1px solid rgba(167, 109, 255, 0.16);
+
+    border-radius: 12px;
+}
+
+
+.ff-shop .guide-step .circle {
+    width: 28px;
+
+    height: 28px;
+
+    margin: 0 auto 9px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #7c35ff;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 900;
+}
+
+
+.ff-shop .guide-step p {
+    color: #aaa3b8;
+
+    font-size: 12px;
+}
+
+
+
+/* =========================================================
+   CONTINUAR
+========================================================= */
+
+.ff-shop .continue-btn {
+    width: 100%;
+
+    min-height: 50px;
+
+    margin-top: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c35ff,
+            #a76dff
+        );
+
+    border: 0;
+
+    border-radius: 12px;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 1000;
+
+    letter-spacing: 0.8px;
+
+    transition: 0.25s ease;
+}
+
+
+.ff-shop .continue-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 28px rgba(124, 53, 255, 0.35);
+}
+
+
+
+/* =========================================================
+   RESUMEN
+========================================================= */
+
+.ff-shop .summary {
+    width: 100%;
+
+    padding: 22px;
+
+    background: #09070d;
+
+    border:
+        1px solid rgba(167, 109, 255, 0.16);
+
+    border-radius: 16px;
+}
+
+
+.ff-shop .summary-row {
+    padding: 14px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom:
+        1px solid rgba(167, 109, 255, 0.10);
+}
+
+
+.ff-shop .summary-row span {
+    color: #8f889b;
+
+    font-size: 12px;
+}
+
+
+.ff-shop .summary-row strong {
+    color: #ffffff;
+
+    font-size: 14px;
+
+    text-align: right;
+}
+
+
+
+/* =========================================================
+   CANTIDAD
+========================================================= */
+
+.ff-shop .quantity-box {
+    margin-top: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.ff-shop .quantity-box > span {
+    color: #aaa3b8;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+
+.ff-shop .quantity-control {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.ff-shop .quantity-control button {
+    width: 40px;
+
+    height: 40px;
+
+    padding: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        rgba(124, 53, 255, 0.10);
+
+    border:
+        1px solid rgba(167, 109, 255, 0.20);
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    font-weight: 900;
+}
+
+
+.ff-shop .quantity-control input {
+    width: 65px;
+
+    height: 40px;
+
+    padding: 0;
+
+    text-align: center;
+
+    background: #08060c;
+
+    border:
+        1px solid rgba(167, 109, 255, 0.20);
+
+    border-radius: 10px;
+
+    color: #ffffff;
+}
+
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+.ff-shop .total-box {
+    margin-top: 20px;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(124, 53, 255, 0.14),
+            rgba(255, 60, 166, 0.05)
+        );
+
+    border:
+        1px solid rgba(167, 109, 255, 0.20);
+
+    border-radius: 14px;
+}
+
+
+.ff-shop .total-box p {
+    color: #8f889b;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+.ff-shop .total-box small {
+    margin-top: 3px;
+
+    color: #716b7c;
+
+    font-size: 10px;
+}
+
+
+.ff-shop .total-box h2 {
+    margin: 0;
+
+    color: #a76dff;
+
+    font-size: 25px;
+
+    font-weight: 1000;
+}
+
+
+
+/* =========================================================
+   COMPRAR WHATSAPP
+========================================================= */
+
+.ff-shop .buy-final {
+    width: 100%;
+
+    min-height: 54px;
+
+    margin-top: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #25d366,
+            #13b653
+        );
+
+    border: 0;
+
+    border-radius: 12px;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 1000;
+
+    transition: 0.25s ease;
+}
+
+
+.ff-shop .buy-final:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(37, 211, 102, 0.25);
+}
+
+
+.ff-shop .whatsapp-note {
+    margin-top: 10px;
+
+    color: #716b7c;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+
+/* =========================================================
+   APARICIÓN DE PASOS
+========================================================= */
+
+.ff-shop .checkout-box {
+    animation:
+        ffStep .35s ease;
+}
+
+
+@keyframes ffStep {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar ul {
+        display: none;
+    }
+
+
+    .ff-shop .diamond-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+    }
+
+
+    .ff-shop .guide-steps {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        width: 92%;
+
+        min-height: 66px;
+
+        gap: 10px;
+    }
+
+
+    .navbar .logo {
+        font-size: 22px;
+    }
+
+
+    .navbar .btn-whatsapp {
+        padding: 10px 13px;
+
+        font-size: 10px;
+    }
+
+
+    .ff-shop {
+        padding-top: 38px;
+    }
+
+
+    .ff-shop > .section-title h1 {
+        font-size: 33px;
+    }
+
+
+    .ff-shop .checkout-box {
+        width: 92%;
+
+        padding: 20px 14px;
+
+        border-radius: 18px;
+    }
+
+
+    .ff-shop .diamond-grid {
+        gap: 10px;
+    }
+
+
+    .ff-shop .diamond-card {
+        min-height: 145px;
+
+        padding: 16px 8px;
+    }
+
+
+    .ff-shop .diamond-card img {
+        width: 50px !important;
+
+        max-width: 50px !important;
+
+        height: 50px !important;
+
+        max-height: 50px !important;
+    }
+
+
+    .ff-shop .diamond-card h3,
+    .ff-shop .diamond-card h4 {
+        font-size: 13px;
+    }
+
+
+    .ff-shop .diamond-card strong {
+        font-size: 13px;
+    }
+
+
+    .ff-shop .quantity-box {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .ff-shop .total-box {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .ff-shop .summary-row {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+
+    .ff-shop .summary-row strong {
+        text-align: left;
+    }
+
+}
