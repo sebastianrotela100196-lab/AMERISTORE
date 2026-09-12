@@ -1904,10 +1904,3 @@ body > header {
         width: 100% !important;
     }
 }
-.continue-btn.is-disabled,
-.continue-btn:disabled {
-    opacity: 0.38;
-    cursor: not-allowed;
-    transform: none !important;
-    box-shadow: none !important;
-}
