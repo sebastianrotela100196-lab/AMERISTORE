@@ -42,29 +42,24 @@ imagen:
 badge:"OFERTA",
 
 descripcion:
-"Series y películas ilimitadas en calidad Premium.",
+"Disfruta Netflix Premium con diferentes opciones de acceso.",
 
 
 planes:[
 
 {
-nombre:"1 Mes",
-precio:30000
+nombre:"Perfil Compartido",
+precio:25000
 },
 
 {
-nombre:"3 Meses",
-precio:70000
+nombre:"Perfil Cuenta 4K",
+precio:40000
 },
 
 {
-nombre:"6 Meses",
-precio:140000
-},
-
-{
-nombre:"12 Meses",
-precio:280000
+nombre:"Cuenta Completa",
+precio:100000
 }
 
 ]
