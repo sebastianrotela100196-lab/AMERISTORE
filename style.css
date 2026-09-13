@@ -541,75 +541,191 @@ img {
    INDEX - RESELLERS
 ========================================================= */
 
-.reseller-section {
-  position: relative;
-  width: min(92%, 1400px);
-  margin: 86px auto 0;
-  padding: 58px 38px;
-  overflow: hidden;
-  text-align: center;
-  background:
-    radial-gradient(circle at 50% 0%, rgba(124, 53, 255, 0.15), transparent 38%),
-    linear-gradient(145deg, #100a18, #08060c);
-  border: 1px solid var(--border);
-  border-radius: 26px;
-  box-shadow: var(--shadow);
+/* =========================================
+   REVENDEDOR HOME PREMIUM
+========================================= */
+
+
+.reseller-home{
+
+
+    width:min(92%,1100px);
+
+
+    margin:90px auto;
+
+
+    padding:70px 40px;
+
+
+    text-align:center;
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+
+    background:
+
+
+    radial-gradient(
+        circle at top,
+        rgba(124,53,255,.25),
+        transparent 50%
+    ),
+
+
+    linear-gradient(
+        145deg,
+        #120c1b,
+        #08060d
+    );
+
+
+
+    border:
+
+    1px solid var(--border);
+
+
+
+    border-radius:30px;
+
+
+
+    box-shadow:
+
+    var(--shadow);
+
+
 }
 
-.reseller-section .section-title {
-  width: 100%;
-  max-width: 760px;
-  margin: 0 auto 40px;
-  text-align: center;
+
+
+
+
+.reseller-home::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:300px;
+
+
+    height:300px;
+
+
+    top:-150px;
+
+
+    left:50%;
+
+
+    transform:translateX(-50%);
+
+
+    background:
+
+    rgba(124,53,255,.20);
+
+
+
+    filter:
+
+    blur(80px);
+
+
+
 }
 
-.reseller-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-  margin-bottom: 36px;
+
+
+
+
+.reseller-home .section-label{
+
+
+    position:relative;
+
+
+    display:block;
+
+
+    text-align:center;
+
+
 }
 
-.reseller-card {
-  padding: 28px 20px;
-  background: rgba(10, 7, 14, 0.78);
-  border: 1px solid rgba(167, 109, 255, 0.16);
-  border-radius: 18px;
-  transition: 0.28s ease;
+
+
+
+.reseller-home h2{
+
+
+    position:relative;
+
+
+    margin-top:15px;
+
+
+    color:white;
+
+
+    font-size:
+
+    clamp(30px,4vw,45px);
+
+
+
+    font-weight:1000;
+
+
 }
 
-.reseller-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--border-hover);
-  background: rgba(18, 11, 27, 0.92);
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
+
+
+
+.reseller-home p{
+
+
+    position:relative;
+
+
+    max-width:650px;
+
+
+    margin:20px auto 35px;
+
+
+    color:var(--gray);
+
+
+    font-size:16px;
+
+
+    line-height:1.7;
+
+
 }
 
-.reseller-icon {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  margin: 0 auto 17px;
-  background: var(--purple-soft);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  font-size: 23px;
-}
 
-.reseller-card h3 {
-  color: var(--white);
-  font-size: 18px;
-  font-weight: 900;
-}
 
-.reseller-card p {
-  margin-top: 9px;
-  color: var(--gray);
-  font-size: 13px;
-  line-height: 1.55;
-}
 
+
+.reseller-home .btn-primary{
+
+
+    position:relative;
+
+
+}
 /* =========================================================
    INDEX - FINAL CTA
 ========================================================= */
