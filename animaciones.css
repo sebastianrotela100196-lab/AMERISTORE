@@ -1,0 +1,537 @@
+/* =========================================================
+   AMERISSTORE
+   ANIMACIONES GLOBALES
+========================================================= */
+
+
+
+/* =========================
+   ENTRADAS GENERALES
+========================= */
+
+
+.fade-up {
+
+    animation:
+    fadeUp .6s ease both;
+
+}
+
+
+
+.fade-down {
+
+    animation:
+    fadeDown .6s ease both;
+
+}
+
+
+
+.fade-left {
+
+    animation:
+    fadeLeft .6s ease both;
+
+}
+
+
+
+.fade-right {
+
+    animation:
+    fadeRight .6s ease both;
+
+}
+
+
+
+.zoom-in {
+
+    animation:
+    zoomIn .5s ease both;
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+   KEYFRAMES
+========================= */
+
+
+@keyframes fadeUp {
+
+
+from {
+
+    opacity:0;
+
+    transform:
+    translateY(30px);
+
+}
+
+
+to {
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+@keyframes fadeDown {
+
+
+from {
+
+    opacity:0;
+
+    transform:
+    translateY(-30px);
+
+}
+
+
+to {
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+@keyframes fadeLeft {
+
+
+from {
+
+    opacity:0;
+
+    transform:
+    translateX(-30px);
+
+}
+
+
+to {
+
+    opacity:1;
+
+    transform:
+    translateX(0);
+
+}
+
+
+}
+
+
+
+
+
+@keyframes fadeRight {
+
+
+from {
+
+    opacity:0;
+
+    transform:
+    translateX(30px);
+
+}
+
+
+to {
+
+    opacity:1;
+
+    transform:
+    translateX(0);
+
+}
+
+
+}
+
+
+
+
+
+@keyframes zoomIn {
+
+
+from {
+
+    opacity:0;
+
+    transform:
+    scale(.9);
+
+}
+
+
+to {
+
+    opacity:1;
+
+    transform:
+    scale(1);
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   HOVER CARDS
+========================= */
+
+
+.hover-lift {
+
+    transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+
+}
+
+
+
+.hover-lift:hover {
+
+
+    transform:
+
+    translateY(-8px);
+
+
+    box-shadow:
+
+    0 20px 40px rgba(139,61,255,.25);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   IMAGENES
+========================= */
+
+
+.image-zoom {
+
+    overflow:hidden;
+
+}
+
+
+
+.image-zoom img {
+
+
+    transition:
+
+    transform .35s ease;
+
+
+}
+
+
+
+.image-zoom:hover img {
+
+
+    transform:
+
+    scale(1.08);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   BOTONES
+========================= */
+
+
+.button-animation {
+
+
+    transition:
+
+    transform .25s ease,
+    box-shadow .25s ease;
+
+
+}
+
+
+
+.button-animation:hover {
+
+
+    transform:
+
+    translateY(-3px);
+
+
+    box-shadow:
+
+    0 12px 25px rgba(139,61,255,.35);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   BADGES OFERTAS
+========================= */
+
+
+.badge-pulse {
+
+
+    animation:
+
+    pulseBadge 1.8s infinite;
+
+
+}
+
+
+
+@keyframes pulseBadge {
+
+
+0% {
+
+
+    transform:
+    scale(1);
+
+
+}
+
+
+50% {
+
+
+    transform:
+    scale(1.08);
+
+
+}
+
+
+100% {
+
+
+    transform:
+    scale(1);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   NOTIFICACIONES
+========================= */
+
+
+.store-notification {
+
+
+    opacity:0;
+
+
+    transform:
+
+    translateY(20px);
+
+
+    transition:
+
+    .3s ease;
+
+
+}
+
+
+
+.store-notification.show {
+
+
+    opacity:1;
+
+
+    transform:
+
+    translateY(0);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   CARGA SUAVE
+========================= */
+
+
+.page-load {
+
+
+    animation:
+
+    pageLoad .5s ease;
+
+
+}
+
+
+
+@keyframes pageLoad {
+
+
+from {
+
+
+    opacity:0;
+
+
+}
+
+
+to {
+
+
+    opacity:1;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   STAGGER PRODUCTOS
+========================= */
+
+
+.products-grid .product-card:nth-child(1){
+
+    animation-delay:.1s;
+
+}
+
+
+.products-grid .product-card:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+
+.products-grid .product-card:nth-child(3){
+
+    animation-delay:.3s;
+
+}
+
+
+.products-grid .product-card:nth-child(4){
+
+    animation-delay:.4s;
+
+}
+
+
+.products-grid .product-card:nth-child(5){
+
+    animation-delay:.5s;
+
+}
+
+
+.products-grid .product-card:nth-child(6){
+
+    animation-delay:.6s;
+
+}
