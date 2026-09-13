@@ -1,7 +1,7 @@
 /* =========================================================
    AMERISSTORE
    PRODUCTO DINÁMICO
-   CATALOGO MAESTRO V2
+   CATALOGO REAL V3
 ========================================================= */
 
 
@@ -13,25 +13,28 @@ document.addEventListener(
 ()=>{
 
 
-
 /* =========================================================
-   CONFIGURACIÓN
+   CONFIG
 ========================================================= */
 
 
-const CART_KEY = 
+const CART_KEY =
 "amerisstore_carrito";
 
 
 
 
 
+
+
 /* =========================================================
-   BASE DE DATOS PRODUCTOS
+   BASE DE PRODUCTOS
 ========================================================= */
 
 
 const productos = {
+
+
 
 
 
@@ -61,7 +64,7 @@ badge:
 
 descripcion:
 
-"Disfruta Netflix Premium con diferentes opciones de acceso.",
+"Netflix Premium con diferentes opciones de acceso.",
 
 
 
@@ -71,19 +74,26 @@ planes:[
 
 {
 
+
 nombre:"Perfil Premium 4K",
+
 
 tipo:
 "Perfil compartido 4K",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 32000,
 
+
 etiqueta:
 "⭐ Más vendido"
+
+
 
 },
 
@@ -92,19 +102,26 @@ etiqueta:
 
 {
 
+
 nombre:"Perfil TV",
+
 
 tipo:
 "Perfil exclusivo TV",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 22000,
 
+
 etiqueta:
 "🔥 Mejor valor"
+
+
 
 },
 
@@ -113,87 +130,32 @@ etiqueta:
 
 {
 
+
 nombre:"Cuenta Completa",
+
 
 tipo:
 "Cuenta privada completa",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 110000,
 
-etiqueta:
-"👑 Premium"
-
-},
-
-
-
-
-{
-
-nombre:"Perfil Premium 4K",
-
-tipo:
-"Perfil compartido 4K",
-
-duracion:
-"3 meses",
-
-precio:
-90000,
-
-etiqueta:
-"💰 Ahorro"
-
-},
-
-
-
-
-{
-
-nombre:"Perfil Premium 4K",
-
-tipo:
-"Perfil compartido 4K",
-
-duracion:
-"6 meses",
-
-precio:
-170000,
-
-etiqueta:
-"🔥 Mejor valor"
-
-},
-
-
-
-
-{
-
-nombre:"Perfil Premium 4K",
-
-tipo:
-"Perfil compartido 4K",
-
-duracion:
-"12 meses",
-
-precio:
-320000,
 
 etiqueta:
 "👑 Premium"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -222,7 +184,7 @@ imagen:
 
 
 badge:
-"⭐ MÁS VENDIDO",
+"⭐ POPULAR",
 
 
 descripcion:
@@ -237,87 +199,90 @@ planes:[
 
 {
 
+
 nombre:"Disney Premium + ESPN",
+
 
 tipo:
 "Perfil Premium con deportes ESPN",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 25000,
 
+
 etiqueta:
 "⭐ Más vendido"
+
+
 
 },
 
 
 
 
+
 {
 
+
 nombre:"Disney Premium",
+
 
 tipo:
 "Perfil sin ESPN",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 18000,
 
+
 etiqueta:
 "🔥 Mejor valor"
+
+
 
 },
 
 
 
 
+
 {
 
+
 nombre:"Cuenta Completa",
+
 
 tipo:
 "Cuenta privada completa",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 90000,
 
+
 etiqueta:
 "👑 Premium"
 
-},
 
-
-
-
-{
-
-nombre:"Disney Premium + ESPN",
-
-tipo:
-"Perfil Premium con ESPN",
-
-duracion:
-"3 meses",
-
-precio:
-70000,
-
-etiqueta:
-"💰 Ahorro"
 
 }
 
 
 ]
+
 
 },
 
@@ -361,66 +326,90 @@ planes:[
 
 {
 
+
 nombre:"Perfil Estándar",
+
 
 tipo:
 "Perfil compartido",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 18000,
 
+
 etiqueta:
 "🔥 Mejor valor"
+
+
 
 },
 
 
 
 
+
 {
 
+
 nombre:"Perfil Platino",
+
 
 tipo:
 "Perfil Premium",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 20000,
 
+
 etiqueta:
 "⭐ Popular"
+
+
 
 },
 
 
 
 
+
 {
 
+
 nombre:"Cuenta Completa",
+
 
 tipo:
 "Cuenta privada",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 55000,
 
+
 etiqueta:
 "👑 Premium"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -464,47 +453,63 @@ planes:[
 
 {
 
+
 nombre:"Perfil Prime Video",
+
 
 tipo:
 "Perfil compartido",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 25000,
 
+
 etiqueta:
 "⭐ Popular"
+
+
 
 },
 
 
 
+
+
 {
 
+
 nombre:"Cuenta Completa",
+
 
 tipo:
 "Cuenta privada completa",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 50000,
 
+
 etiqueta:
 "👑 Premium"
+
+
 
 }
 
 
 ]
 
-},
 
+},
 
 /* =========================================================
    CRUNCHYROLL
@@ -537,46 +542,64 @@ descripcion:
 planes:[
 
 
+
 {
 
+
 nombre:"Perfil Premium",
+
 
 tipo:
 "Perfil compartido Premium",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 15000,
 
+
 etiqueta:
 "⭐ Popular"
+
+
 
 },
 
 
 
+
+
 {
 
+
 nombre:"Cuenta Completa",
+
 
 tipo:
 "Cuenta privada completa",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 45000,
 
+
 etiqueta:
 "👑 Premium"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -620,64 +643,88 @@ planes:[
 
 {
 
+
 nombre:"Perfil Exclusivo",
+
 
 tipo:
 "Perfil privado",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 20000,
 
+
 etiqueta:
 "⭐ Popular"
+
+
 
 },
 
 
 
+
 {
 
+
 nombre:"Perfil No Exclusivo",
+
 
 tipo:
 "Perfil compartido",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 15000,
 
+
 etiqueta:
 "🔥 Mejor valor"
+
+
 
 },
 
 
 
+
 {
+
 
 nombre:"Cuenta Completa",
 
+
 tipo:
-"Cuenta privada",
+"Cuenta privada completa",
+
 
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 50000,
 
+
 etiqueta:
 "👑 Premium"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -721,84 +768,60 @@ planes:[
 
 {
 
+
 nombre:"Spotify Premium",
+
 
 tipo:
 "Cuenta Premium",
+
 
 duracion:
 "1 mes",
 
+
 precio:
 25000,
+
 
 etiqueta:
 "⭐ Popular"
 
+
+
 },
+
 
 
 
 {
 
+
 nombre:"Spotify Premium",
+
 
 tipo:
 "Cuenta Premium",
+
 
 duracion:
 "3 meses",
 
+
 precio:
 60000,
+
 
 etiqueta:
 "🔥 Mejor valor"
 
-},
 
-
-
-{
-
-nombre:"Spotify Premium",
-
-tipo:
-"Cuenta Premium",
-
-duracion:
-"6 meses",
-
-precio:
-100000,
-
-etiqueta:
-"💰 Ahorro"
-
-},
-
-
-
-{
-
-nombre:"Spotify Premium",
-
-tipo:
-"Cuenta Premium",
-
-duracion:
-"12 meses",
-
-precio:
-200000,
-
-etiqueta:
-"👑 Premium"
 
 }
 
 
 ]
+
 
 },
 
@@ -842,84 +865,60 @@ planes:[
 
 {
 
+
 nombre:"YouTube Premium",
+
 
 tipo:
 "Cuenta Premium",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 25000,
 
+
 etiqueta:
 "⭐ Popular"
+
+
 
 },
 
 
 
+
 {
+
 
 nombre:"YouTube Premium",
 
+
 tipo:
 "Cuenta Premium",
+
 
 duracion:
 "3 meses",
 
+
 precio:
 60000,
+
 
 etiqueta:
 "🔥 Mejor valor"
 
-},
 
-
-
-{
-
-nombre:"YouTube Premium",
-
-tipo:
-"Cuenta Premium",
-
-duracion:
-"6 meses",
-
-precio:
-110000,
-
-etiqueta:
-"💰 Ahorro"
-
-},
-
-
-
-{
-
-nombre:"YouTube Premium",
-
-tipo:
-"Cuenta Premium",
-
-duracion:
-"12 meses",
-
-precio:
-200000,
-
-etiqueta:
-"👑 Premium"
 
 }
 
 
 ]
+
 
 },
 
@@ -960,26 +959,35 @@ descripcion:
 planes:[
 
 
+
 {
 
+
 nombre:"Deezer Premium",
+
 
 tipo:
 "Cuenta Premium",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 20000,
 
+
 etiqueta:
 "⭐ Nuevo"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -1023,24 +1031,60 @@ planes:[
 
 {
 
+
 nombre:"ChatGPT Plus",
+
 
 tipo:
 "Cuenta Premium",
 
+
 duracion:
 "1 mes",
+
 
 precio:
 35000,
 
+
 etiqueta:
 "⭐ Más vendido"
+
+
+
+},
+
+
+
+
+{
+
+
+nombre:"ChatGPT Plus",
+
+
+tipo:
+"Cuenta Premium",
+
+
+duracion:
+"3 meses",
+
+
+precio:
+95000,
+
+
+etiqueta:
+"🔥 Mejor valor"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -1074,7 +1118,7 @@ badge:
 
 descripcion:
 
-"IA avanzada de Google con almacenamiento y funciones Premium.",
+"IA avanzada de Google con almacenamiento incluido.",
 
 
 
@@ -1084,44 +1128,60 @@ planes:[
 
 {
 
+
 nombre:"Gemini Pro",
+
 
 tipo:
 "Cuenta Premium",
 
+
 duracion:
 "12 meses",
+
 
 precio:
 89000,
 
+
 etiqueta:
 "⭐ Popular"
+
+
 
 },
 
 
 
+
 {
 
+
 nombre:"Gemini Pro",
+
 
 tipo:
 "Cuenta Premium",
 
+
 duracion:
 "18 meses",
+
 
 precio:
 109000,
 
+
 etiqueta:
 "👑 Premium"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -1139,7 +1199,7 @@ etiqueta:
 googleonefamiliar:{
 
 
-categoria:"EXTRAS",
+categoria:"IA TOOLS",
 
 
 nombre:"Google One Familiar",
@@ -1165,24 +1225,32 @@ planes:[
 
 {
 
+
 nombre:"Google One Familiar",
+
 
 tipo:
 "Cuenta familiar",
 
+
 duracion:
 "18 meses",
+
 
 precio:
 180000,
 
+
 etiqueta:
 "👑 Premium"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -1226,84 +1294,116 @@ planes:[
 
 {
 
+
 nombre:"Canva Pro",
+
 
 tipo:
 "Cuenta Premium",
+
 
 duracion:
 "1 mes",
 
+
 precio:
 15000,
+
 
 etiqueta:
 "⭐ Popular"
 
+
+
 },
+
 
 
 
 {
 
+
 nombre:"Canva Pro",
+
 
 tipo:
 "Cuenta Premium",
+
 
 duracion:
 "3 meses",
 
+
 precio:
 30000,
+
 
 etiqueta:
 "🔥 Mejor valor"
 
+
+
 },
+
 
 
 
 {
 
+
 nombre:"Canva Pro",
+
 
 tipo:
 "Cuenta Premium",
+
 
 duracion:
 "6 meses",
 
+
 precio:
 45000,
 
+
 etiqueta:
 "💰 Ahorro"
+
+
 
 },
 
 
 
+
 {
 
+
 nombre:"Canva Pro",
+
 
 tipo:
 "Cuenta Premium",
 
+
 duracion:
 "12 meses",
+
 
 precio:
 70000,
 
+
 etiqueta:
 "👑 Premium"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -1337,7 +1437,7 @@ badge:
 
 descripcion:
 
-"Edición profesional de videos con herramientas Premium.",
+"Edición profesional de videos.",
 
 
 
@@ -1347,24 +1447,32 @@ planes:[
 
 {
 
+
 nombre:"CapCut Pro",
+
 
 tipo:
 "Cuenta Premium",
 
+
 duracion:
 "30 días",
+
 
 precio:
 50000,
 
+
 etiqueta:
 "⭐ Popular"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -1408,24 +1516,32 @@ planes:[
 
 {
 
+
 nombre:"Autodesk",
 
+
 tipo:
-"Licencia Premium",
+"Licencia digital",
+
 
 duracion:
 "12 meses",
 
+
 precio:
 60000,
 
+
 etiqueta:
 "👑 Premium"
+
+
 
 }
 
 
 ]
+
 
 },
 /* =========================================================
@@ -1462,84 +1578,119 @@ planes:[
 
 {
 
+
 nombre:"IPTV 1 Dispositivo",
+
 
 tipo:
 "Activación en 1 dispositivo",
 
+
 duracion:
 "1 mes",
+
 
 precio:
 19900,
 
+
 etiqueta:
 "⭐ Popular"
+
+
 
 },
 
 
 
+
+
 {
+
 
 nombre:"IPTV 4 Dispositivos",
 
+
 tipo:
 "Multidispositivo",
+
 
 duracion:
 "1 mes",
 
+
 precio:
 34900,
+
 
 etiqueta:
 "🔥 Mejor valor"
 
+
+
 },
+
+
 
 
 
 {
 
+
 nombre:"IPTV 4 Dispositivos",
+
 
 tipo:
 "Multidispositivo",
+
 
 duracion:
 "3 meses",
 
+
 precio:
 69900,
 
+
 etiqueta:
 "💰 Ahorro"
+
+
 
 },
 
 
 
+
+
 {
 
+
 nombre:"IPTV 4 Dispositivos",
+
 
 tipo:
 "Multidispositivo",
 
+
 duracion:
 "6 meses",
+
 
 precio:
 149900,
 
+
 etiqueta:
 "👑 Premium"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -1583,44 +1734,61 @@ planes:[
 
 {
 
+
 nombre:"Perfil 1 Dispositivo",
+
 
 tipo:
 "Perfil exclusivo",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 40000,
 
+
 etiqueta:
 "⭐ Popular"
+
+
 
 },
 
 
 
+
+
 {
 
+
 nombre:"Cuenta Completa",
+
 
 tipo:
 "Cuenta privada",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 70000,
 
+
 etiqueta:
 "👑 Premium"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -1664,24 +1832,32 @@ planes:[
 
 {
 
+
 nombre:"Oleada TV",
+
 
 tipo:
 "Servicio digital",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 30000,
 
+
 etiqueta:
 "⭐ Popular"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -1725,64 +1901,90 @@ planes:[
 
 {
 
+
 nombre:"Perfil No Exclusivo",
+
 
 tipo:
 "Perfil compartido",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 40000,
 
+
 etiqueta:
 "🔥 Mejor valor"
+
+
 
 },
 
 
 
+
+
 {
 
+
 nombre:"Perfil Exclusivo + Liga 1 Max",
+
 
 tipo:
 "Perfil privado",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 60000,
 
+
 etiqueta:
 "⭐ Premium"
+
+
 
 },
 
 
 
+
+
 {
 
+
 nombre:"Cuenta Completa",
+
 
 tipo:
 "Cuenta privada",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 100000,
 
+
 etiqueta:
 "👑 Premium"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -1826,24 +2028,32 @@ planes:[
 
 {
 
+
 nombre:"Apple TV + MLS",
+
 
 tipo:
 "Perfil Premium",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 25000,
 
+
 etiqueta:
 "⭐ Popular"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -1887,24 +2097,32 @@ planes:[
 
 {
 
+
 nombre:"Viki Premium",
+
 
 tipo:
 "Perfil Premium",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 25000,
 
+
 etiqueta:
 "⭐ Popular"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -1948,44 +2166,61 @@ planes:[
 
 {
 
+
 nombre:"Perfil ViX",
+
 
 tipo:
 "Perfil Premium",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 15000,
 
+
 etiqueta:
 "🔥 Mejor valor"
+
+
 
 },
 
 
 
+
+
 {
 
+
 nombre:"Cuenta Completa",
+
 
 tipo:
 "Cuenta privada",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 35000,
 
+
 etiqueta:
 "👑 Premium"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -2029,44 +2264,61 @@ planes:[
 
 {
 
+
 nombre:"Perfil Tele Latino",
+
 
 tipo:
 "Perfil individual",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 30000,
 
+
 etiqueta:
 "⭐ Popular"
+
+
 
 },
 
 
 
+
+
 {
 
+
 nombre:"Cuenta Completa",
+
 
 tipo:
 "3 dispositivos",
 
+
 duracion:
-"3 meses",
+"1 mes renovable",
+
 
 precio:
 60000,
 
+
 etiqueta:
 "👑 Premium"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -2110,24 +2362,32 @@ planes:[
 
 {
 
+
 nombre:"Universal+",
+
 
 tipo:
 "Perfil Premium",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 25000,
 
+
 etiqueta:
 "⭐ Popular"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -2161,7 +2421,7 @@ badge:
 
 descripcion:
 
-"Licencia y activación profesional para PC.",
+"Licencia digital para activar Windows.",
 
 
 
@@ -2171,24 +2431,32 @@ planes:[
 
 {
 
+
 nombre:"Windows Pro",
+
 
 tipo:
 "Licencia digital",
 
+
 duracion:
 "De por vida",
+
 
 precio:
 80000,
 
+
 etiqueta:
 "👑 Premium"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -2232,24 +2500,32 @@ planes:[
 
 {
 
+
 nombre:"Número Virtual",
+
 
 tipo:
 "Servicio digital",
 
+
 duracion:
-"Según disponibilidad",
+"Único",
+
 
 precio:
 70000,
 
+
 etiqueta:
 "⭐ Popular"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -2293,24 +2569,32 @@ planes:[
 
 {
 
+
 nombre:"1000 Seguidores",
+
 
 tipo:
 "Red social",
 
+
 duracion:
-"Entrega según servicio",
+"Único",
+
 
 precio:
 20000,
 
+
 etiqueta:
 "🔥 Popular"
+
+
 
 }
 
 
 ]
+
 
 },
 
@@ -2347,36 +2631,47 @@ descripcion:
 "Servicio digital adicional.",
 
 
+
 planes:[
+
 
 
 {
 
+
 nombre:"Cuenta Premium",
+
 
 tipo:
 "Cuenta digital",
 
+
 duracion:
-"1 mes",
+"1 mes renovable",
+
 
 precio:
 25000,
 
+
 etiqueta:
 "👑 Premium"
+
+
 
 }
 
 
 ]
 
-}
 
-}; 
+},
 /* =========================================================
-   OBTENER PRODUCTO ACTUAL
+   CERRAR BASE DE PRODUCTOS
 ========================================================= */
+
+
+};
 
 
 const params =
@@ -2396,7 +2691,6 @@ params.get("id");
 let producto =
 
 productos[id];
-
 
 
 
@@ -2534,7 +2828,7 @@ document.getElementById(
 
 
 /* =========================================================
-   CARGAR INFORMACION PRODUCTO
+   CARGAR PRODUCTO
 ========================================================= */
 
 
@@ -2545,7 +2839,6 @@ document.title =
 +
 
 producto.nombre;
-
 
 
 
@@ -2565,7 +2858,6 @@ producto.nombre;
 
 
 
-
 if(name){
 
 name.textContent =
@@ -2573,7 +2865,6 @@ name.textContent =
 producto.nombre;
 
 }
-
 
 
 
@@ -2587,7 +2878,6 @@ producto.categoria;
 
 
 
-
 if(description){
 
 description.textContent =
@@ -2595,7 +2885,6 @@ description.textContent =
 producto.descripcion;
 
 }
-
 
 
 
@@ -2633,7 +2922,7 @@ producto.planes[0];
 
 
 /* =========================================================
-   CREAR CATALOGO INTERNO
+   CREAR PLANES
 ========================================================= */
 
 
@@ -2669,6 +2958,7 @@ document.createElement(
 
 
 
+
 card.className =
 
 "plan-card";
@@ -2677,7 +2967,7 @@ card.className =
 
 
 
-if(index === 0){
+if(index===0){
 
 card.classList.add(
 "active"
@@ -2692,9 +2982,24 @@ card.classList.add(
 card.innerHTML = `
 
 
-<div class="plan-tag">
+<div class="plan-header">
 
-${plan.etiqueta}
+
+<span>
+
+${plan.duracion}
+
+</span>
+
+
+
+<strong>
+
+Gs.
+${plan.precio.toLocaleString("es-PY")}
+
+</strong>
+
 
 </div>
 
@@ -2710,7 +3015,7 @@ ${plan.nombre}
 
 <p>
 
-📌 ${plan.tipo}
+${plan.tipo}
 
 </p>
 
@@ -2718,18 +3023,10 @@ ${plan.nombre}
 
 <small>
 
-📅 ${plan.duracion}
+${plan.etiqueta}
 
 </small>
 
-
-
-<strong>
-
-Gs.
-${plan.precio.toLocaleString("es-PY")}
-
-</strong>
 
 
 `;
@@ -2758,13 +3055,16 @@ document
 
 (item)=>{
 
+
 item.classList.remove(
 "active"
 );
 
+
 }
 
 );
+
 
 
 
@@ -2794,8 +3094,8 @@ actualizarResumen();
 
 }
 
-
 );
+
 
 
 
@@ -2826,7 +3126,7 @@ card
 
 
 /* =========================================================
-   ACTUALIZAR RESUMEN
+   RESUMEN
 ========================================================= */
 
 
@@ -2844,7 +3144,6 @@ producto.nombre;
 
 
 
-
 if(summaryPlan){
 
 summaryPlan.textContent =
@@ -2852,7 +3151,6 @@ summaryPlan.textContent =
 planActual.nombre;
 
 }
-
 
 
 
@@ -2866,7 +3164,6 @@ planActual.tipo;
 
 
 
-
 if(summaryDuration){
 
 summaryDuration.textContent =
@@ -2874,7 +3171,6 @@ summaryDuration.textContent =
 planActual.duracion;
 
 }
-
 
 
 
@@ -2894,10 +3190,7 @@ planActual.precio.toLocaleString(
 
 
 
-
-
 if(productPrice){
-
 
 productPrice.textContent =
 
@@ -2909,10 +3202,7 @@ planActual.precio.toLocaleString(
 "es-PY"
 );
 
-
-
 }
-
 
 
 }
@@ -2953,7 +3243,6 @@ CART_KEY
 
 
 
-
 function guardarCarrito(carrito){
 
 
@@ -2977,7 +3266,6 @@ carrito
 
 
 
-
 function agregarCarrito(){
 
 
@@ -2990,8 +3278,8 @@ obtenerCarrito();
 
 
 
-carrito.push({
 
+carrito.push({
 
 
 producto:
@@ -2999,11 +3287,9 @@ producto:
 producto.nombre,
 
 
-
 plan:
 
 planActual.nombre,
-
 
 
 tipo:
@@ -3011,17 +3297,9 @@ tipo:
 planActual.tipo,
 
 
-
 duracion:
 
 planActual.duracion,
-
-
-
-etiqueta:
-
-planActual.etiqueta,
-
 
 
 precio:
@@ -3029,17 +3307,14 @@ precio:
 planActual.precio,
 
 
-
 imagen:
 
 producto.imagen,
 
 
-
 cantidad:
 
 1
-
 
 
 });
@@ -3066,8 +3341,6 @@ mostrarMensaje(
 
 
 
-
-
 }
 
 
@@ -3079,11 +3352,12 @@ mostrarMensaje(
 
 
 /* =========================================================
-   BOTON CARRITO
+   BOTON
 ========================================================= */
 
 
 if(addButton){
+
 
 
 addButton.textContent =
@@ -3108,7 +3382,7 @@ agregarCarrito;
 
 
 /* =========================================================
-   MENSAJE
+   NOTIFICACIÓN
 ========================================================= */
 
 
@@ -3169,7 +3443,7 @@ box.remove();
 
 
 /* =========================================================
-   INICIAR
+   INICIO
 ========================================================= */
 
 
@@ -3177,8 +3451,6 @@ cargarPlanes();
 
 
 actualizarResumen();
-
-
 
 
 
