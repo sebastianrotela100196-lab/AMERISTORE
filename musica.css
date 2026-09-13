@@ -5,193 +5,101 @@
 ========================================================= */
 
 
-/* =========================================================
-   VARIABLES
-========================================================= */
-
-
 :root {
-
-
-    --music-bg:#05040a;
-
-    --music-card:#100b18;
 
     --music-purple:#8b3dff;
 
     --music-light:#b06cff;
+
+    --music-card:#100b18;
 
     --music-gray:#aaa3b8;
 
     --music-border:
     rgba(139,61,255,.25);
 
-
 }
 
 
 
-
-
-
-/* =========================================================
-   TITULO CATEGORIA
-========================================================= */
-
+/* TITULO */
 
 .category-header {
 
-
     width:
-
     min(92%,1200px);
 
-
-
     margin:
-
     70px auto 30px;
 
-
 }
-
 
 
 .category-header span {
 
-
     color:
-
     var(--music-light);
 
-
-
     font-size:
-
     11px;
 
-
-
     font-weight:
-
     1000;
 
-
-
     letter-spacing:
-
     3px;
 
-
 }
-
-
 
 
 .category-header h1 {
 
-
     margin-top:
-
     12px;
 
-
-
     color:
-
     white;
 
-
-
     font-size:
-
     clamp(38px,5vw,55px);
 
-
-
     font-weight:
-
     1000;
 
-
 }
-
-
-
 
 
 .category-header p {
 
-
     margin-top:
-
     15px;
 
-
-
     color:
-
     var(--music-gray);
-
-
-
-    font-size:
-
-    16px;
-
 
 }
 
 
 
-
-
-
-
-
-
-/* =========================================================
-   HORARIO
-========================================================= */
-
+/* HORARIO */
 
 .attention-card {
 
-
     width:
-
     min(92%,1200px);
 
-
-
     margin:
-
     35px auto 50px;
 
-
-
     padding:
-
     25px 35px;
 
 
+    display:flex;
 
-    display:
+    align-items:center;
 
-    flex;
-
-
-
-    align-items:
-
-    center;
-
-
-
-    gap:
-
-    20px;
-
+    gap:20px;
 
 
     background:
@@ -203,17 +111,14 @@
     );
 
 
-
     border:
 
     1px solid var(--music-border);
 
 
-
     border-radius:
 
     22px;
-
 
 }
 
@@ -221,27 +126,17 @@
 
 .attention-icon {
 
-
     width:
 
     55px;
-
-
 
     height:
 
     55px;
 
-
-
-    display:
-
-    grid;
-
-
+    display:grid;
 
     place-items:center;
-
 
 
     background:
@@ -249,34 +144,22 @@
     rgba(139,61,255,.15);
 
 
-
     border-radius:
 
     15px;
-
 
 
     font-size:
 
     30px;
 
-
 }
-
 
 
 
 .attention-card h3 {
 
-
     color:white;
-
-
-
-    font-size:
-
-    18px;
-
 
 }
 
@@ -284,17 +167,13 @@
 
 .attention-card p {
 
-
     margin-top:
 
     5px;
 
-
-
     color:
 
     var(--music-gray);
-
 
 }
 
@@ -302,70 +181,43 @@
 
 .attention-card strong {
 
-
     color:
 
     var(--music-light);
-
 
 }
 
 
 
-
-
-
-
-
-
-/* =========================================================
-   PRODUCTOS
-========================================================= */
-
+/* PRODUCTOS */
 
 .products-section {
-
 
     width:
 
     min(92%,1200px);
 
-
-
     margin:
 
     50px auto;
 
-
 }
-
-
 
 
 
 .products-grid {
 
-
-    display:
-
-    grid;
-
-
+    display:grid;
 
     grid-template-columns:
 
     repeat(3,1fr);
 
-
-
     gap:
 
     25px;
 
-
 }
-
-
 
 
 
@@ -374,10 +226,7 @@
 .product-card {
 
 
-    overflow:
-
-    hidden;
-
+    overflow:hidden;
 
 
     background:
@@ -389,11 +238,9 @@
     );
 
 
-
     border:
 
     1px solid var(--music-border);
-
 
 
     border-radius:
@@ -401,20 +248,14 @@
     22px;
 
 
-
-    transition:
-
-    .35s ease;
-
+    transition:.35s;
 
 
     animation:
 
     musicShow .6s ease;
 
-
 }
-
 
 
 
@@ -426,21 +267,16 @@
     translateY(-8px);
 
 
-
     border-color:
 
     var(--music-light);
-
 
 
     box-shadow:
 
     0 20px 40px rgba(139,61,255,.25);
 
-
 }
-
-
 
 
 
@@ -451,30 +287,20 @@
 
     height:
 
-    270px;
+    260px;
 
 
-
-    position:
-
-    relative;
+    overflow:hidden;
 
 
-
-    overflow:
-
-    hidden;
-
+    position:relative;
 
 
     background:
 
     #09070d;
 
-
 }
-
-
 
 
 
@@ -486,54 +312,35 @@
     100%;
 
 
-
     height:
 
     100%;
 
 
-
-    object-fit:
-
-    cover;
+    object-fit:cover;
 
 
-
-    transition:
-
-    .35s ease;
-
+    transition:.35s;
 
 }
 
 
 
-
-
-.product-card:hover 
-.product-image img {
+.product-card:hover img {
 
 
     transform:
 
     scale(1.08);
 
-
 }
-
-
-
-
 
 
 
 .product-badge {
 
 
-    position:
-
-    absolute;
-
+    position:absolute;
 
 
     top:
@@ -541,11 +348,9 @@
     15px;
 
 
-
     left:
 
     15px;
-
 
 
     padding:
@@ -553,11 +358,9 @@
     7px 13px;
 
 
-
     border-radius:
 
     50px;
-
 
 
     background:
@@ -569,11 +372,7 @@
     );
 
 
-
-    color:
-
-    white;
-
+    color:white;
 
 
     font-size:
@@ -581,17 +380,11 @@
     10px;
 
 
-
     font-weight:
 
     1000;
 
-
 }
-
-
-
-
 
 
 
@@ -602,10 +395,7 @@
 
     25px;
 
-
 }
-
-
 
 
 
@@ -617,11 +407,9 @@
     var(--music-light);
 
 
-
     font-size:
 
     10px;
-
 
 
     font-weight:
@@ -629,16 +417,11 @@
     1000;
 
 
-
     letter-spacing:
 
     2px;
 
-
 }
-
-
-
 
 
 
@@ -650,23 +433,14 @@
     10px;
 
 
-
-    color:
-
-    white;
-
+    color:white;
 
 
     font-size:
 
     24px;
 
-
 }
-
-
-
-
 
 
 
@@ -678,28 +452,16 @@
     12px;
 
 
-
     color:
 
     var(--music-gray);
-
 
 
     font-size:
 
     13px;
 
-
-
-    line-height:
-
-    1.5;
-
-
 }
-
-
-
 
 
 
@@ -710,40 +472,26 @@
 
     20px;
 
-
 }
-
 
 
 
 .price strong {
 
 
-    color:
-
-    white;
-
+    color:white;
 
 
     font-size:
 
-    24px;
-
+    23px;
 
 }
 
 
 
 
-
-
-
-
-
-/* =========================================================
-   CTA FINAL
-========================================================= */
-
+/* CTA */
 
 .final-contact {
 
@@ -753,11 +501,9 @@
     min(92%,1100px);
 
 
-
     margin:
 
     100px auto;
-
 
 
     padding:
@@ -765,9 +511,7 @@
     70px 30px;
 
 
-
     text-align:center;
-
 
 
     background:
@@ -779,42 +523,30 @@
     );
 
 
-
     border:
 
     1px solid var(--music-border);
-
 
 
     border-radius:
 
     30px;
 
-
 }
-
-
-
 
 
 
 .final-contact h2 {
 
 
-    color:
-
-    white;
-
+    color:white;
 
 
     font-size:
 
     40px;
 
-
 }
-
-
 
 
 
@@ -826,15 +558,11 @@
     15px;
 
 
-
     color:
 
     var(--music-gray);
 
-
 }
-
-
 
 
 
@@ -842,16 +570,12 @@
 .btn-primary {
 
 
-    display:
-
-    inline-flex;
-
+    display:inline-flex;
 
 
     padding:
 
     14px 28px;
-
 
 
     background:
@@ -863,107 +587,24 @@
     );
 
 
-
     border-radius:
 
     12px;
 
 
-
-    color:
-
-    white;
-
+    color:white;
 
 
     font-weight:
 
     1000;
 
-
-
-    transition:
-
-    .25s;
-
-
 }
 
 
 
 
-
-
-.btn-primary:hover {
-
-
-    transform:
-
-    translateY(-3px);
-
-
-
-    box-shadow:
-
-    0 15px 30px rgba(139,61,255,.35);
-
-
-}
-
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   WHATSAPP
-========================================================= */
-
-
-.floating-whatsapp {
-
-
-    box-shadow:
-
-    0 0 30px rgba(37,211,102,.35);
-
-
-
-    transition:
-
-    .3s;
-
-
-}
-
-
-
-.floating-whatsapp:hover {
-
-
-    transform:
-
-    scale(1.1);
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   FOOTER SIMPLE
-========================================================= */
-
+/* FOOTER */
 
 .footer {
 
@@ -973,11 +614,9 @@
     100%;
 
 
-
     margin-top:
 
     80px;
-
 
 
     padding:
@@ -985,31 +624,23 @@
     25px 40px;
 
 
-
     background:
 
     #08070d;
-
 
 
     border-top:
 
     1px solid rgba(139,61,255,.25);
 
-
 }
-
-
 
 
 
 .footer-simple {
 
 
-    display:
-
-    flex;
-
+    display:flex;
 
 
     justify-content:
@@ -1017,113 +648,55 @@
     space-between;
 
 
-
-    align-items:center;
-
-
-
-    max-width:
-
-    1400px;
-
-
-
-    margin:auto;
-
-
 }
-
-
-
 
 
 
 .footer-simple strong {
 
 
-    color:
-
-    white;
-
-
-
-    font-size:
-
-    14px;
-
-
-
-    font-weight:
-
-    1000;
+    color:white;
 
 
 }
-
-
 
 
 
 .footer-simple span {
 
 
-    color:
-
-    #777;
-
-
-
-    font-size:
-
-    12px;
+    color:#777;
 
 
 }
 
 
 
-
-
-
-
-
-
-
-
-/* =========================================================
-   ANIMACIONES
-========================================================= */
+/* ANIMACION */
 
 
 @keyframes musicShow {
 
 
-from {
-
+from{
 
 opacity:0;
-
 
 transform:
 
 translateY(25px);
 
-
 }
 
 
-
-to {
-
+to{
 
 opacity:1;
-
 
 transform:
 
 translateY(0);
 
-
 }
 
 
@@ -1132,116 +705,69 @@ translateY(0);
 
 
 
-
-
-
-
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+/* RESPONSIVE */
 
 
 @media(max-width:900px){
 
 
-.products-grid {
-
+.products-grid{
 
 grid-template-columns:
 
 repeat(2,1fr);
 
-
 }
 
 
-
 }
-
-
 
 
 
 @media(max-width:600px){
 
 
-
-.category-header h1 {
-
-
-font-size:
-
-34px;
-
-
-}
-
-
-
-.attention-card {
-
-
-flex-direction:
-
-column;
-
-
-text-align:center;
-
-
-}
-
-
-
-.products-grid {
-
+.products-grid{
 
 grid-template-columns:
 
 1fr;
 
-
 }
 
 
 
-.product-image {
-
-
-height:
-
-260px;
-
-
-}
-
-
-
-.final-contact h2 {
-
-
-font-size:
-
-30px;
-
-
-}
-
-
-
-.footer-simple {
-
+.attention-card{
 
 flex-direction:
 
 column;
 
+text-align:center;
+
+}
+
+
+
+.footer-simple{
+
+flex-direction:
+
+column;
 
 gap:
 
 10px;
 
+}
+
+
+
+.final-contact h2{
+
+font-size:
+
+30px;
 
 }
 
