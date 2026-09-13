@@ -2,12 +2,9 @@
 
 <html lang="es">
 
-
 <head>
 
-
 <meta charset="UTF-8">
-
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,13 +14,12 @@ AMERISSTORE | Diseño
 </title>
 
 
-
 <link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="diseno.css">
 
 
 </head>
-
-
 
 
 
@@ -31,116 +27,24 @@ AMERISSTORE | Diseño
 
 
 
-
-
-<!-- =================================
-TOP BAR
-================================= -->
-
-
-<div class="top-bar">
-
-
-<span>
-⚡ ACTIVACIÓN RÁPIDA
-</span>
-
-
-<span>
-🎨 HERRAMIENTAS CREATIVAS
-</span>
-
-
-<span>
-💬 SOPORTE WHATSAPP
-</span>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- =================================
+<!-- =========================
 HEADER
-================================= -->
+========================= -->
 
 
 <header class="header">
 
 
-<div class="logo">
+<div class="header-container">
 
+
+<a href="index.html" class="logo">
 
 AMERIS<span>STORE</span>
 
-
-</div>
-
-
-
-
-
-<div class="search">
-
-
-<input
-
-type="text"
-
-placeholder="🔍 Buscar herramientas de diseño..."
-
-
->
-
-
-</div>
-
-
-
-
-
-
-
-<div class="user-area">
-
-
-<a href="#">
-Iniciar sesión
 </a>
 
 
-<span>
-Gs. 0
-</span>
-
-
-🛒
-
-
-</div>
-
-
-
-
-</header>
-
-
-
-
-
-
-
-
-
-<!-- =================================
-MENU
-================================= -->
 
 
 <nav class="menu">
@@ -171,18 +75,8 @@ IA TOOLS
 </a>
 
 
-<a href="diseno.html">
+<a href="diseno.html" class="active">
 DISEÑO
-</a>
-
-
-<a href="seguridad.html">
-SEGURIDAD
-</a>
-
-
-<a href="revendedores.html">
-REVENDEDORES
 </a>
 
 
@@ -194,34 +88,127 @@ REVENDEDORES
 
 
 
+<a href="#"
+class="cart-button"
+id="cart-button">
 
 
+🛒
 
-<!-- =================================
-BREADCRUMB
-================================= -->
-
-
-<div class="breadcrumb">
+<span>
+Carrito
+</span>
 
 
-<a href="index.html">
+<strong id="cart-total">
 
-INICIO
+Gs. 0
+
+</strong>
+
 
 </a>
 
 
 
+</div>
+
+
+</header>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+TITULO
+========================= -->
+
+
+<section class="category-header">
+
+
 <span>
-/
+
+DISEÑO DIGITAL
+
 </span>
 
 
 
+<h1>
+
+Crea contenido profesional
+
+</h1>
+
+
+
+<p>
+
+Herramientas premium para diseñadores, creadores y emprendedores.
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+HORARIO
+========================= -->
+
+
+<div class="attention-card">
+
+
+<div class="attention-icon">
+
+⚡
+
+</div>
+
+
+
+<div>
+
+
+<h3>
+
+Horario de atención rápida
+
+</h3>
+
+
+
+<p>
+
+Activaciones disponibles:
+
 <strong>
-DISEÑO
+
+11:00 AM - 22:00 PM
+
 </strong>
+
+
+</p>
+
+
+</div>
+
 
 
 </div>
@@ -234,35 +221,9 @@ DISEÑO
 
 
 
-<!-- =================================
-TITULO DISEÑO
-================================= -->
-
-
-<section class="category-header">
-
-
-<span>
-DISEÑO DIGITAL
-</span>
-
-
-<h1>
-Crea contenido profesional
-</h1>
-
-
-<p>
-Herramientas premium para diseñadores,
-creadores y emprendedores.
-</p>
-
-
-
-</section>
-<!-- =================================
-PRODUCTOS DISEÑO
-================================= -->
+<!-- =========================
+PRODUCTOS
+========================= -->
 
 
 <section class="products-section">
@@ -274,16 +235,11 @@ PRODUCTOS DISEÑO
 
 
 
+<!-- CANVA -->
 
 
-<!-- CANVA PRO -->
-
-
-<div class="product-card">
-
-
-<a href="producto.html?id=canva">
-
+<a href="producto.html?id=canva"
+class="product-card">
 
 
 <div class="product-image">
@@ -295,22 +251,17 @@ src="assets/productos/canva.png"
 
 alt="Canva Pro"
 
-
-
 >
 
 
+<span class="product-badge">
 
-<div class="badge">
 POPULAR
+
+</span>
+
+
 </div>
-
-
-
-</div>
-
-
-
 
 
 
@@ -318,25 +269,27 @@ POPULAR
 <div class="product-info">
 
 
-<span>
+<span class="product-category">
+
 DISEÑO
+
 </span>
 
 
 
+<h2>
 
-<h3>
 Canva Pro
-</h3>
 
+</h2>
 
 
 
 <p>
-Diseños profesionales con todas las funciones Premium.
+
+Diseños profesionales con funciones Premium.
+
 </p>
-
-
 
 
 
@@ -345,19 +298,13 @@ Diseños profesionales con todas las funciones Premium.
 
 
 <strong>
+
 Desde Gs. 5.000
+
 </strong>
 
 
-
-<del>
-Gs.15.000
-</del>
-
-
 </div>
-
-
 
 
 
@@ -367,7 +314,6 @@ Gs.15.000
 </a>
 
 
-</div>
 
 
 
@@ -375,16 +321,11 @@ Gs.15.000
 
 
 
+<!-- CAPCUT -->
 
 
-<!-- CAPCUT PRO -->
-
-
-<div class="product-card">
-
-
-<a href="producto.html?id=capcut">
-
+<a href="producto.html?id=capcut"
+class="product-card">
 
 
 <div class="product-image">
@@ -396,22 +337,17 @@ src="assets/productos/capcut.png"
 
 alt="CapCut Pro"
 
-
-
 >
 
 
+<span class="product-badge">
 
-<div class="badge">
 OFERTA
+
+</span>
+
+
 </div>
-
-
-
-</div>
-
-
-
 
 
 
@@ -419,25 +355,27 @@ OFERTA
 <div class="product-info">
 
 
-<span>
+<span class="product-category">
+
 DISEÑO
+
 </span>
 
 
 
+<h2>
 
-<h3>
 CapCut Pro
-</h3>
 
+</h2>
 
 
 
 <p>
-Edición profesional de videos con herramientas Premium.
+
+Edición profesional de videos.
+
 </p>
-
-
 
 
 
@@ -446,19 +384,13 @@ Edición profesional de videos con herramientas Premium.
 
 
 <strong>
+
 Gs. 30.000
+
 </strong>
 
 
-
-<del>
-Gs.50.000
-</del>
-
-
 </div>
-
-
 
 
 
@@ -466,9 +398,6 @@ Gs.50.000
 
 
 </a>
-
-
-</div>
 
 
 
@@ -481,11 +410,8 @@ Gs.50.000
 <!-- AUTODESK -->
 
 
-<div class="product-card">
-
-
-<a href="producto.html?id=autodesk">
-
+<a href="producto.html?id=autodesk"
+class="product-card">
 
 
 <div class="product-image">
@@ -497,22 +423,17 @@ src="assets/productos/autodesk.png"
 
 alt="Autodesk"
 
-
-
 >
 
 
+<span class="product-badge">
 
-<div class="badge">
 PRO
+
+</span>
+
+
 </div>
-
-
-
-</div>
-
-
-
 
 
 
@@ -520,25 +441,27 @@ PRO
 <div class="product-info">
 
 
-<span>
+<span class="product-category">
+
 DISEÑO
+
 </span>
 
 
 
+<h2>
 
-<h3>
 Autodesk
-</h3>
 
+</h2>
 
 
 
 <p>
+
 Herramientas profesionales para arquitectura y diseño.
+
 </p>
-
-
 
 
 
@@ -547,13 +470,13 @@ Herramientas profesionales para arquitectura y diseño.
 
 
 <strong>
+
 Consultar
+
 </strong>
 
 
 </div>
-
-
 
 
 
@@ -563,10 +486,6 @@ Consultar
 </a>
 
 
-</div>
-
-
-
 
 
 
@@ -576,150 +495,21 @@ Consultar
 
 
 </section>
-<!-- =================================
-BENEFICIOS DISEÑO
-================================= -->
 
 
-<section class="benefits">
 
 
 
-<div class="benefit-card">
 
 
-<div class="benefit-icon">
 
-🎨
 
-</div>
-
-
-
-<div>
-
-
-<h3>
-Diseña profesionalmente
-</h3>
-
-
-
-<p>
-Accede a herramientas Premium
-para tus proyectos.
-</p>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="benefit-card">
-
-
-<div class="benefit-icon">
-
-🚀
-
-</div>
-
-
-
-<div>
-
-
-<h3>
-Más creatividad
-</h3>
-
-
-
-<p>
-Crea contenido para redes,
-negocios y clientes.
-</p>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="benefit-card">
-
-
-<div class="benefit-icon">
-
-⚡
-
-</div>
-
-
-
-<div>
-
-
-<h3>
-Activación rápida
-</h3>
-
-
-
-<p>
-Obtén tus herramientas digitales
-sin esperar.
-</p>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- =================================
-CTA DISEÑO
-================================= -->
+<!-- =========================
+CTA
+========================= -->
 
 
 <section class="final-contact">
-
-
-
 
 
 <h2>
@@ -730,23 +520,20 @@ Crea sin límites
 
 
 
-
-
 <p>
 
-Canva Pro, CapCut Pro y herramientas
-para llevar tus diseños al siguiente nivel.
+Canva Pro, CapCut Pro y herramientas para llevar tus diseños al siguiente nivel.
 
 </p>
 
 
 
 
-
-
-<a 
+<a
 
 href="https://wa.me/595981841136"
+
+target="_blank"
 
 class="btn-primary">
 
@@ -758,14 +545,19 @@ class="btn-primary">
 
 
 
-
-
-
-
 </section>
-<!-- =================================
-WHATSAPP FLOTANTE
-================================= -->
+
+
+
+
+
+
+
+
+
+<!-- =========================
+WHATSAPP
+========================= -->
 
 
 <a
@@ -779,7 +571,6 @@ class="floating-whatsapp">
 
 💬
 
-
 </a>
 
 
@@ -790,89 +581,32 @@ class="floating-whatsapp">
 
 
 
-<!-- =================================
+<!-- =========================
 FOOTER
-================================= -->
+========================= -->
 
 
-<footer>
+<footer class="footer">
 
 
+<div class="footer-simple">
 
 
-<h2>
+<strong>
 
-AMERIS<span>STORE</span>
+AMERISSTORE
 
-</h2>
-
-
+</strong>
 
 
+<span>
 
-<p>
+© 2026 AMERISSTORE
 
-Gaming • Streaming • Música • IA • Diseño
-
-</p>
-
-
-
-
-
-
-
-
-
-<div class="footer-links">
-
-
-
-<a href="#">
-
-Instagram
-
-</a>
-
-
-
-
-<a href="#">
-
-TikTok
-
-</a>
-
-
-
-
-<a href="#">
-
-Facebook
-
-</a>
-
+</span>
 
 
 </div>
-
-
-
-
-
-
-
-
-
-<p>
-
-© 2026 AMERISSTORE.
-Todos los derechos reservados.
-
-</p>
-
-
-
 
 
 </footer>
@@ -886,7 +620,6 @@ Todos los derechos reservados.
 
 
 <script src="script.js"></script>
-
 
 
 </body>
