@@ -1,1235 +1,319 @@
-/* =========================================================
-   AMERISSTORE
-   IA TOOLS PAGE
-   GENGAR STYLE
-========================================================= */
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
 
-/* =========================================================
-   VARIABLES
-========================================================= */
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-:root {
+<title>AMERISSTORE | IA Tools</title>
 
-    --ia-purple:#8b3dff;
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="ia.css">
 
-    --ia-light:#b06cff;
+</head>
 
-    --ia-card:#100b18;
+<body>
 
-    --ia-gray:#aaa3b8;
 
-    --ia-border:
-    rgba(139,61,255,.25);
+<!-- =========================
+HEADER
+========================= -->
 
-}
+<header class="header">
 
+<div class="header-container">
 
+<a href="index.html" class="logo">
+AMERIS<span>STORE</span>
+</a>
 
 
+<nav class="menu">
 
-/* =========================================================
-   TITULO
-========================================================= */
+<a href="index.html">
+INICIO
+</a>
 
+<a href="streaming.html">
+STREAMING
+</a>
 
-.category-header {
+<a href="musica.html">
+MÚSICA
+</a>
 
+<a href="gaming.html">
+GAMING
+</a>
 
-    width:
-    min(92%,1200px);
+<a href="ia.html" class="active">
+IA TOOLS
+</a>
 
+<a href="diseno.html">
+DISEÑO
+</a>
 
-    margin:
+<a href="extras.html">
+EXTRAS
+</a>
 
-    70px auto 30px;
+</nav>
 
 
-}
+<a
+href="#"
+class="cart-button"
+id="cart-button"
+>
 
+🛒
 
+<span>
+Carrito
+</span>
 
-.category-header span {
+<strong id="cart-total">
+Gs. 0
+</strong>
 
+</a>
 
-    color:
+</div>
 
-    var(--ia-light);
+</header>
 
 
-    font-size:
 
-    11px;
+<!-- =========================
+TITULO
+========================= -->
 
+<section class="category-header">
 
-    font-weight:
+<span>
+INTELIGENCIA ARTIFICIAL
+</span>
 
-    1000;
+<h1>
+Potencia tu productividad con IA
+</h1>
 
+<p>
+Herramientas inteligentes para crear, trabajar y aprender más rápido.
+</p>
 
-    letter-spacing:
+</section>
 
-    3px;
 
 
-}
+<!-- =========================
+HORARIO
+========================= -->
 
+<div class="attention-card">
 
+<div class="attention-icon">
+⚡
+</div>
 
-.category-header h1 {
+<div>
 
+<h3>
+Horario de atención rápida
+</h3>
 
-    margin-top:
+<p>
+Activaciones:
 
-    12px;
+<strong>
+11:00 AM - 22:00 PM
+</strong>
 
+</p>
 
-    color:
+</div>
 
-    white;
+</div>
 
 
-    font-size:
 
-    clamp(38px,5vw,55px);
+<!-- =========================
+PRODUCTOS
+========================= -->
 
+<section class="products-section">
 
-    font-weight:
+<div class="products-grid">
 
-    1000;
 
+<!-- CHATGPT -->
 
-}
+<a
+href="producto.html?id=chatgpt"
+class="product-card"
+>
 
+<div class="product-image">
 
+<img
+src="assets/productos/chatgpt.png"
+alt="ChatGPT"
+>
 
-.category-header p {
+<span class="product-badge">
+POPULAR
+</span>
 
+</div>
 
-    margin-top:
 
-    15px;
+<div class="product-info">
 
+<span class="product-category">
+IA TOOLS
+</span>
 
-    color:
+<h2>
+ChatGPT
+</h2>
 
-    var(--ia-gray);
+<p>
+Inteligencia artificial avanzada para crear, estudiar y trabajar.
+</p>
 
+<div class="price">
 
-    font-size:
+<strong>
+Desde Gs. 25.000
+</strong>
 
-    16px;
+</div>
 
+</div>
 
-}
+</a>
 
 
 
+<!-- GOOGLE ONE + GEMINI PRO -->
 
+<a
+href="producto.html?id=gemini"
+class="product-card"
+>
 
+<div class="product-image">
 
+<img
+src="assets/productos/gemini.png"
+alt="Google One + Gemini Pro"
+>
 
+<span class="product-badge">
+PREMIUM
+</span>
 
+</div>
 
-/* =========================================================
-   HORARIO
-========================================================= */
 
+<div class="product-info">
 
-.attention-card {
+<span class="product-category">
+IA TOOLS
+</span>
 
+<h2>
+Google One + Gemini Pro
+</h2>
 
-    width:
+<p>
+IA avanzada de Google con almacenamiento y funciones Premium.
+</p>
 
-    min(92%,1200px);
+<div class="price">
 
+<strong>
+Desde Gs. 89.000
+</strong>
 
-    margin:
+</div>
 
-    35px auto 50px;
+</div>
 
+</a>
 
-    padding:
 
-    25px 35px;
+</div>
 
+</section>
 
-    display:
 
-    flex;
 
+<!-- =========================
+CTA
+========================= -->
 
-    align-items:
+<section class="final-contact">
 
-    center;
+<h2>
+Potencia tus ideas con IA
+</h2>
 
+<p>
+ChatGPT y Gemini para crear, aprender y trabajar de forma más eficiente.
+</p>
 
-    gap:
+<a
+href="https://wa.me/595981841136"
+target="_blank"
+class="btn-primary"
+>
+🤖 Solicitar IA
+</a>
 
-    20px;
+</section>
 
 
 
-    background:
+<!-- =========================
+WHATSAPP
+========================= -->
 
-    linear-gradient(
-        145deg,
-        #161020,
-        #09070d
-    );
+<a
+href="https://wa.me/595981841136"
+target="_blank"
+class="floating-whatsapp"
+>
+💬
+</a>
 
 
-    border:
 
-    1px solid var(--ia-border);
+<!-- =========================
+FOOTER
+========================= -->
 
+<footer class="footer">
 
-    border-radius:
+<div class="footer-simple">
 
-    22px;
+<strong>
+AMERISSTORE
+</strong>
 
+<span>
+© 2026 AMERISSTORE
+</span>
 
+</div>
 
-    box-shadow:
+</footer>
 
-    0 0 35px rgba(139,61,255,.12);
 
+<script src="script.js"></script>
 
-}
+</body>
 
-
-
-
-
-.attention-icon {
-
-
-    width:
-
-    55px;
-
-
-    height:
-
-    55px;
-
-
-
-    display:
-
-    grid;
-
-
-    place-items:
-
-    center;
-
-
-    background:
-
-    rgba(139,61,255,.15);
-
-
-
-    border-radius:
-
-    15px;
-
-
-
-    font-size:
-
-    30px;
-
-
-}
-
-
-
-
-
-.attention-card h3 {
-
-
-    color:
-
-    white;
-
-
-}
-
-
-
-.attention-card p {
-
-
-    margin-top:
-
-    5px;
-
-
-    color:
-
-    var(--ia-gray);
-
-
-}
-
-
-
-.attention-card strong {
-
-
-    color:
-
-    var(--ia-light);
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   PRODUCTOS IA
-========================================================= */
-
-
-.products-section {
-
-
-    width:
-
-    min(92%,1200px);
-
-
-
-    margin:
-
-    50px auto;
-
-
-}
-
-
-
-
-
-.products-grid {
-
-
-    display:
-
-    grid;
-
-
-    grid-template-columns:
-
-    repeat(3,1fr);
-
-
-    gap:
-
-    25px;
-
-
-}
-
-
-
-
-
-
-
-.product-card {
-
-
-    overflow:
-
-    hidden;
-
-
-    background:
-
-    linear-gradient(
-        145deg,
-        #120b1d,
-        #08060d
-    );
-
-
-
-    border:
-
-    1px solid var(--ia-border);
-
-
-
-    border-radius:
-
-    22px;
-
-
-
-    transition:
-
-    .35s ease;
-
-
-    animation:
-
-    iaShow .6s ease;
-
-
-}
-
-
-
-
-
-
-.product-card:hover {
-
-
-    transform:
-
-    translateY(-8px);
-
-
-
-    border-color:
-
-    var(--ia-light);
-
-
-
-    box-shadow:
-
-    0 20px 40px rgba(139,61,255,.25);
-
-
-}
-
-
-
-
-
-
-
-.product-image {
-
-
-    height:
-
-    270px;
-
-
-    position:
-
-    relative;
-
-
-    overflow:
-
-    hidden;
-
-
-
-    background:
-
-    #09070d;
-
-
-}
-
-
-
-
-
-
-
-.product-image img {
-
-
-    width:
-
-    100%;
-
-
-    height:
-
-    100%;
-
-
-    object-fit:
-
-    cover;
-
-
-
-    transition:
-
-    .35s;
-
-
-}
-
-
-
-
-
-
-.product-card:hover 
-.product-image img {
-
-
-    transform:
-
-    scale(1.08);
-
-
-}
-
-
-
-
-
-
-
-.product-badge {
-
-
-    position:
-
-    absolute;
-
-
-
-    top:
-
-    15px;
-
-
-    left:
-
-    15px;
-
-
-
-    padding:
-
-    7px 13px;
-
-
-
-    border-radius:
-
-    50px;
-
-
-
-    background:
-
-    linear-gradient(
-        135deg,
-        var(--ia-purple),
-        var(--ia-light)
-    );
-
-
-
-    color:
-
-    white;
-
-
-
-    font-size:
-
-    10px;
-
-
-
-    font-weight:
-
-    1000;
-
-
-}
-
-
-
-
-
-
-
-.product-info {
-
-
-    padding:
-
-    25px;
-
-
-}
-
-
-
-
-
-
-
-.product-category {
-
-
-    color:
-
-    var(--ia-light);
-
-
-
-    font-size:
-
-    10px;
-
-
-
-    font-weight:
-
-    1000;
-
-
-
-    letter-spacing:
-
-    2px;
-
-
-}
-
-
-
-
-
-
-
-.product-info h2 {
-
-
-    margin-top:
-
-    10px;
-
-
-
-    color:
-
-    white;
-
-
-
-    font-size:
-
-    24px;
-
-
-}
-
-
-
-
-
-
-
-.product-info p {
-
-
-    margin-top:
-
-    12px;
-
-
-
-    color:
-
-    var(--ia-gray);
-
-
-
-    font-size:
-
-    13px;
-
-
-
-    line-height:
-
-    1.5;
-
-
-}
-
-
-
-
-
-
-
-.price {
-
-
-    margin-top:
-
-    20px;
-
-
-}
-
-
-
-
-
-.price strong {
-
-
-    color:
-
-    white;
-
-
-
-    font-size:
-
-    23px;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   CTA
-========================================================= */
-
-
-.final-contact {
-
-
-    width:
-
-    min(92%,1100px);
-
-
-    margin:
-
-    100px auto;
-
-
-
-    padding:
-
-    70px 30px;
-
-
-
-    text-align:
-
-    center;
-
-
-
-    background:
-
-    linear-gradient(
-        145deg,
-        #161020,
-        #09070d
-    );
-
-
-
-    border:
-
-    1px solid var(--ia-border);
-
-
-
-    border-radius:
-
-    30px;
-
-
-}
-
-
-
-
-
-
-.final-contact h2 {
-
-
-    color:
-
-    white;
-
-
-
-    font-size:
-
-    40px;
-
-
-}
-
-
-
-
-
-.final-contact p {
-
-
-    margin:
-
-    15px;
-
-
-
-    color:
-
-    var(--ia-gray);
-
-
-}
-
-
-
-
-
-
-
-.btn-primary {
-
-
-    display:
-
-    inline-flex;
-
-
-
-    align-items:
-
-    center;
-
-
-    justify-content:
-
-    center;
-
-
-
-    padding:
-
-    14px 28px;
-
-
-
-    background:
-
-    linear-gradient(
-        135deg,
-        var(--ia-purple),
-        var(--ia-light)
-    );
-
-
-
-    border-radius:
-
-    12px;
-
-
-
-    color:
-
-    white;
-
-
-
-    font-weight:
-
-    1000;
-
-
-
-    transition:
-
-    .25s;
-
-
-}
-
-
-
-
-
-
-.btn-primary:hover {
-
-
-    transform:
-
-    translateY(-3px);
-
-
-
-    box-shadow:
-
-    0 15px 30px rgba(139,61,255,.35);
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   WHATSAPP
-========================================================= */
-
-
-.floating-whatsapp {
-
-
-    box-shadow:
-
-    0 0 30px rgba(37,211,102,.35);
-
-
-    transition:
-
-    .3s;
-
-
-}
-
-
-
-.floating-whatsapp:hover {
-
-
-    transform:
-
-    scale(1.1);
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   FOOTER SIMPLE
-========================================================= */
-
-
-.footer {
-
-
-    width:
-
-    100%;
-
-
-
-    margin-top:
-
-    80px;
-
-
-
-    padding:
-
-    25px 40px;
-
-
-
-    background:
-
-    #08070d;
-
-
-
-    border-top:
-
-    1px solid rgba(139,61,255,.25);
-
-
-}
-
-
-
-
-
-.footer-simple {
-
-
-    display:
-
-    flex;
-
-
-
-    justify-content:
-
-    space-between;
-
-
-
-    align-items:
-
-    center;
-
-
-
-}
-
-
-
-
-
-.footer-simple strong {
-
-
-    color:
-
-    white;
-
-
-
-    font-size:
-
-    14px;
-
-
-
-    font-weight:
-
-    1000;
-
-
-}
-
-
-
-
-
-
-
-.footer-simple span {
-
-
-    color:
-
-    #777;
-
-
-
-    font-size:
-
-    12px;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   ANIMACION
-========================================================= */
-
-
-@keyframes iaShow {
-
-
-from {
-
-    opacity:
-
-    0;
-
-
-    transform:
-
-    translateY(25px);
-
-
-}
-
-
-to {
-
-
-    opacity:
-
-    1;
-
-
-    transform:
-
-    translateY(0);
-
-
-}
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-
-@media(max-width:900px){
-
-
-.products-grid{
-
-
-    grid-template-columns:
-
-    repeat(2,1fr);
-
-
-}
-
-
-
-}
-
-
-
-
-
-@media(max-width:600px){
-
-
-
-.category-header h1 {
-
-
-    font-size:
-
-    34px;
-
-
-}
-
-
-
-.attention-card {
-
-
-    flex-direction:
-
-    column;
-
-
-    text-align:
-
-    center;
-
-
-}
-
-
-
-.products-grid {
-
-
-    grid-template-columns:
-
-    1fr;
-
-
-}
-
-
-
-.product-image {
-
-
-    height:
-
-    260px;
-
-
-}
-
-
-
-.final-contact h2 {
-
-
-    font-size:
-
-    30px;
-
-
-}
-
-
-
-.footer-simple {
-
-
-    flex-direction:
-
-    column;
-
-
-    gap:
-
-    10px;
-
-
-}
-
-
-
-}
+</html>
