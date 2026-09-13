@@ -1,650 +1,1249 @@
-<!DOCTYPE html>
+/* =========================================================
+   AMERISSTORE
+   MUSICA PAGE
+   GENGAR STYLE
+========================================================= */
 
-<html lang="es">
 
+/* =========================================================
+   VARIABLES
+========================================================= */
 
-<head>
 
+:root {
 
-<meta charset="UTF-8">
 
+    --music-bg:#05040a;
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    --music-card:#100b18;
 
+    --music-purple:#8b3dff;
 
-<title>
-AMERISSTORE | Música
-</title>
+    --music-light:#b06cff;
 
+    --music-gray:#aaa3b8;
 
+    --music-border:
+    rgba(139,61,255,.25);
 
-<link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="musica.css">
+}
 
 
-</head>
 
 
 
-<body>
 
+/* =========================================================
+   TITULO CATEGORIA
+========================================================= */
 
 
-<!-- =========================
-HEADER
-========================= -->
+.category-header {
 
 
-<header class="header">
+    width:
 
+    min(92%,1200px);
 
-<div class="header-container">
 
 
-<a href="index.html" class="logo">
+    margin:
 
-AMERIS<span>STORE</span>
+    70px auto 30px;
 
-</a>
 
+}
 
 
 
-<nav class="menu">
+.category-header span {
 
 
-<a href="index.html">
+    color:
 
-INICIO
+    var(--music-light);
 
-</a>
 
 
-<a href="streaming.html">
+    font-size:
 
-STREAMING
+    11px;
 
-</a>
 
 
-<a href="musica.html" class="active">
+    font-weight:
 
-MÚSICA
+    1000;
 
-</a>
 
 
-<a href="gaming.html">
+    letter-spacing:
 
-GAMING
+    3px;
 
-</a>
 
+}
 
-<a href="ia.html">
 
-IA TOOLS
 
-</a>
 
+.category-header h1 {
 
-<a href="diseno.html">
 
-DISEÑO
+    margin-top:
 
-</a>
+    12px;
 
 
 
-</nav>
+    color:
 
+    white;
 
 
 
+    font-size:
 
+    clamp(38px,5vw,55px);
 
-<a href="#"
-class="cart-button"
-id="cart-button">
 
 
-🛒
+    font-weight:
 
-<span>
-Carrito
-</span>
+    1000;
 
 
-<strong id="cart-total">
+}
 
-Gs. 0
 
-</strong>
 
 
-</a>
 
+.category-header p {
 
 
-</div>
+    margin-top:
 
+    15px;
 
-</header>
 
 
+    color:
 
+    var(--music-gray);
 
 
 
+    font-size:
 
+    16px;
 
 
-<!-- =========================
-TITULO
-========================= -->
+}
 
 
-<section class="category-header">
 
 
-<span>
 
-MÚSICA
 
-</span>
 
 
 
-<h1>
+/* =========================================================
+   HORARIO
+========================================================= */
 
-Disfruta tu música favorita
 
-</h1>
+.attention-card {
 
 
+    width:
 
-<p>
+    min(92%,1200px);
 
-Escucha sin límites, sin anuncios y con funciones Premium.
 
-</p>
 
+    margin:
 
+    35px auto 50px;
 
-</section>
 
 
+    padding:
 
+    25px 35px;
 
 
 
+    display:
 
+    flex;
 
 
-<!-- =========================
-HORARIO
-========================= -->
 
+    align-items:
 
-<div class="attention-card">
+    center;
 
 
-<div class="attention-icon">
 
-⚡
+    gap:
 
-</div>
+    20px;
 
 
 
-<div>
+    background:
 
+    linear-gradient(
+        145deg,
+        #161020,
+        #09070d
+    );
 
-<h3>
 
-Horario de atención rápida
 
-</h3>
+    border:
 
+    1px solid var(--music-border);
 
 
-<p>
 
-Activaciones:
+    border-radius:
 
-<strong>
+    22px;
 
-11:00 AM - 22:00 PM
 
-</strong>
+}
 
-</p>
 
 
+.attention-icon {
 
-</div>
 
+    width:
 
+    55px;
 
-</div>
 
 
+    height:
 
+    55px;
 
 
 
+    display:
 
+    grid;
 
 
-<!-- =========================
-PRODUCTOS
-========================= -->
 
+    place-items:center;
 
-<section class="products-section">
 
 
-<div class="products-grid">
+    background:
 
+    rgba(139,61,255,.15);
 
 
 
+    border-radius:
 
+    15px;
 
-<!-- SPOTIFY -->
 
 
-<a href="producto.html?id=spotify"
-class="product-card">
+    font-size:
 
+    30px;
 
-<div class="product-image">
 
+}
 
-<img
 
-src="assets/productos/spotify.png"
 
-alt="Spotify Premium"
 
->
+.attention-card h3 {
 
 
-<span class="product-badge">
+    color:white;
 
-POPULAR
 
-</span>
 
+    font-size:
 
-</div>
+    18px;
 
 
+}
 
 
-<div class="product-info">
 
+.attention-card p {
 
-<span class="product-category">
 
-MÚSICA
+    margin-top:
 
-</span>
+    5px;
 
 
 
+    color:
 
-<h2>
+    var(--music-gray);
 
-Spotify Premium
 
-</h2>
+}
 
 
 
+.attention-card strong {
 
-<p>
 
-Música sin anuncios y sin límites.
+    color:
 
-</p>
+    var(--music-light);
 
 
+}
 
 
-<div class="price">
 
 
-<strong>
 
-Gs. 25.000
 
-</strong>
 
 
-</div>
 
+/* =========================================================
+   PRODUCTOS
+========================================================= */
 
 
-</div>
+.products-section {
 
 
-</a>
+    width:
 
+    min(92%,1200px);
 
 
 
+    margin:
 
+    50px auto;
 
 
+}
 
 
-<!-- YOUTUBE -->
 
 
-<a href="producto.html?id=youtube"
-class="product-card">
 
+.products-grid {
 
-<div class="product-image">
 
+    display:
 
-<img
+    grid;
 
-src="assets/productos/youtube.png"
 
-alt="YouTube Premium"
 
->
+    grid-template-columns:
 
+    repeat(3,1fr);
 
-<span class="product-badge">
 
-OFERTA
 
-</span>
+    gap:
 
+    25px;
 
-</div>
 
+}
 
 
 
-<div class="product-info">
 
 
-<span class="product-category">
 
-MÚSICA
 
-</span>
+.product-card {
 
 
+    overflow:
 
+    hidden;
 
-<h2>
 
-YouTube Premium
 
-</h2>
+    background:
 
+    linear-gradient(
+        145deg,
+        #120b1d,
+        #08060d
+    );
 
 
 
-<p>
+    border:
 
-YouTube sin anuncios y YouTube Music incluido.
+    1px solid var(--music-border);
 
-</p>
 
 
+    border-radius:
 
+    22px;
 
-<div class="price">
 
 
-<strong>
+    transition:
 
-Gs. 25.000
+    .35s ease;
 
-</strong>
 
 
-</div>
+    animation:
 
+    musicShow .6s ease;
 
 
-</div>
+}
 
 
-</a>
 
 
+.product-card:hover {
 
 
+    transform:
 
+    translateY(-8px);
 
 
 
+    border-color:
 
-<!-- DEEZER -->
+    var(--music-light);
 
 
-<a href="producto.html?id=deezer"
-class="product-card">
 
+    box-shadow:
 
-<div class="product-image">
+    0 20px 40px rgba(139,61,255,.25);
 
 
-<img
+}
 
-src="assets/productos/deezer.png"
 
-alt="Deezer Premium"
 
->
 
 
-<span class="product-badge">
 
-NUEVO
 
-</span>
+.product-image {
 
 
-</div>
+    height:
 
+    270px;
 
 
 
-<div class="product-info">
+    position:
 
+    relative;
 
-<span class="product-category">
 
-MÚSICA
 
-</span>
+    overflow:
 
+    hidden;
 
 
 
-<h2>
+    background:
 
-Deezer Premium
+    #09070d;
 
-</h2>
 
+}
 
 
 
-<p>
 
-Millones de canciones sin anuncios.
 
-</p>
+.product-image img {
 
 
+    width:
 
+    100%;
 
-<div class="price">
 
 
-<strong>
+    height:
 
-Gs. 20.000
+    100%;
 
-</strong>
 
 
-</div>
+    object-fit:
 
+    cover;
 
 
-</div>
 
+    transition:
 
-</a>
+    .35s ease;
 
 
+}
 
 
 
 
 
-</div>
+.product-card:hover 
+.product-image img {
 
 
-</section>
+    transform:
 
+    scale(1.08);
 
 
+}
 
 
 
 
 
 
-<!-- =========================
-CTA
-========================= -->
 
+.product-badge {
 
-<section class="final-contact">
 
+    position:
 
-<h2>
+    absolute;
 
-Lleva tu música al siguiente nivel
 
-</h2>
 
+    top:
 
+    15px;
 
-<p>
 
-Spotify, YouTube Premium y Deezer para disfrutar sin límites.
 
-</p>
+    left:
 
+    15px;
 
 
-<a
 
-href="https://wa.me/595981841136"
+    padding:
 
-target="_blank"
+    7px 13px;
 
-class="btn-primary">
 
 
-💬 Solicitar servicio
+    border-radius:
 
+    50px;
 
-</a>
 
 
+    background:
 
-</section>
+    linear-gradient(
+        135deg,
+        var(--music-purple),
+        var(--music-light)
+    );
 
 
 
+    color:
 
+    white;
 
 
 
+    font-size:
 
+    10px;
 
-<!-- =========================
-WHATSAPP
-========================= -->
 
 
-<a
+    font-weight:
 
-href="https://wa.me/595981841136"
+    1000;
 
-target="_blank"
 
-class="floating-whatsapp">
+}
 
 
-💬
 
 
-</a>
 
 
 
+.product-info {
 
 
+    padding:
 
+    25px;
 
 
-<!-- =========================
-FOOTER
-========================= -->
+}
 
 
-<footer class="footer">
 
 
-<div class="footer-simple">
 
+.product-category {
 
-<strong>
 
-AMERISSTORE
+    color:
 
-</strong>
+    var(--music-light);
 
 
 
-<span>
+    font-size:
 
-© 2026 AMERISSTORE
+    10px;
 
-</span>
 
 
+    font-weight:
 
-</div>
+    1000;
 
 
-</footer>
 
+    letter-spacing:
 
+    2px;
 
 
+}
 
 
 
-<script src="script.js"></script>
 
 
-</body>
 
+.product-info h2 {
 
-</html>
+
+    margin-top:
+
+    10px;
+
+
+
+    color:
+
+    white;
+
+
+
+    font-size:
+
+    24px;
+
+
+}
+
+
+
+
+
+
+
+.product-info p {
+
+
+    margin-top:
+
+    12px;
+
+
+
+    color:
+
+    var(--music-gray);
+
+
+
+    font-size:
+
+    13px;
+
+
+
+    line-height:
+
+    1.5;
+
+
+}
+
+
+
+
+
+
+.price {
+
+
+    margin-top:
+
+    20px;
+
+
+}
+
+
+
+
+.price strong {
+
+
+    color:
+
+    white;
+
+
+
+    font-size:
+
+    24px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   CTA FINAL
+========================================================= */
+
+
+.final-contact {
+
+
+    width:
+
+    min(92%,1100px);
+
+
+
+    margin:
+
+    100px auto;
+
+
+
+    padding:
+
+    70px 30px;
+
+
+
+    text-align:center;
+
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #161020,
+        #09070d
+    );
+
+
+
+    border:
+
+    1px solid var(--music-border);
+
+
+
+    border-radius:
+
+    30px;
+
+
+}
+
+
+
+
+
+
+.final-contact h2 {
+
+
+    color:
+
+    white;
+
+
+
+    font-size:
+
+    40px;
+
+
+}
+
+
+
+
+
+.final-contact p {
+
+
+    margin:
+
+    15px;
+
+
+
+    color:
+
+    var(--music-gray);
+
+
+}
+
+
+
+
+
+
+.btn-primary {
+
+
+    display:
+
+    inline-flex;
+
+
+
+    padding:
+
+    14px 28px;
+
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--music-purple),
+        var(--music-light)
+    );
+
+
+
+    border-radius:
+
+    12px;
+
+
+
+    color:
+
+    white;
+
+
+
+    font-weight:
+
+    1000;
+
+
+
+    transition:
+
+    .25s;
+
+
+}
+
+
+
+
+
+
+.btn-primary:hover {
+
+
+    transform:
+
+    translateY(-3px);
+
+
+
+    box-shadow:
+
+    0 15px 30px rgba(139,61,255,.35);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+
+.floating-whatsapp {
+
+
+    box-shadow:
+
+    0 0 30px rgba(37,211,102,.35);
+
+
+
+    transition:
+
+    .3s;
+
+
+}
+
+
+
+.floating-whatsapp:hover {
+
+
+    transform:
+
+    scale(1.1);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   FOOTER SIMPLE
+========================================================= */
+
+
+.footer {
+
+
+    width:
+
+    100%;
+
+
+
+    margin-top:
+
+    80px;
+
+
+
+    padding:
+
+    25px 40px;
+
+
+
+    background:
+
+    #08070d;
+
+
+
+    border-top:
+
+    1px solid rgba(139,61,255,.25);
+
+
+}
+
+
+
+
+
+.footer-simple {
+
+
+    display:
+
+    flex;
+
+
+
+    justify-content:
+
+    space-between;
+
+
+
+    align-items:center;
+
+
+
+    max-width:
+
+    1400px;
+
+
+
+    margin:auto;
+
+
+}
+
+
+
+
+
+
+.footer-simple strong {
+
+
+    color:
+
+    white;
+
+
+
+    font-size:
+
+    14px;
+
+
+
+    font-weight:
+
+    1000;
+
+
+}
+
+
+
+
+
+.footer-simple span {
+
+
+    color:
+
+    #777;
+
+
+
+    font-size:
+
+    12px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   ANIMACIONES
+========================================================= */
+
+
+@keyframes musicShow {
+
+
+from {
+
+
+opacity:0;
+
+
+transform:
+
+translateY(25px);
+
+
+}
+
+
+
+to {
+
+
+opacity:1;
+
+
+transform:
+
+translateY(0);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+
+@media(max-width:900px){
+
+
+.products-grid {
+
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+
+}
+
+
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+
+.category-header h1 {
+
+
+font-size:
+
+34px;
+
+
+}
+
+
+
+.attention-card {
+
+
+flex-direction:
+
+column;
+
+
+text-align:center;
+
+
+}
+
+
+
+.products-grid {
+
+
+grid-template-columns:
+
+1fr;
+
+
+}
+
+
+
+.product-image {
+
+
+height:
+
+260px;
+
+
+}
+
+
+
+.final-contact h2 {
+
+
+font-size:
+
+30px;
+
+
+}
+
+
+
+.footer-simple {
+
+
+flex-direction:
+
+column;
+
+
+gap:
+
+10px;
+
+
+}
+
+
+}
