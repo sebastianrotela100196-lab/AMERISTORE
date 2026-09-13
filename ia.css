@@ -1,7 +1,6 @@
 /* =========================================================
    AMERISSTORE
    IA TOOLS PAGE
-   GENGAR STYLE
 ========================================================= */
 
 
@@ -16,16 +15,16 @@
 
 
 
-/* =========================================================
+/* =========================
    TITULO
-========================================================= */
+========================= */
 
 
 .category-header {
 
     width:min(92%,1200px);
 
-    margin:70px auto 30px;
+    margin:80px auto 35px;
 
 }
 
@@ -73,18 +72,20 @@
 
 
 
-/* =========================================================
+
+/* =========================
    HORARIO
-========================================================= */
+========================= */
 
 
 .attention-card {
 
     width:min(92%,1200px);
 
-    margin:35px auto 50px;
+    margin:30px auto 55px;
 
     padding:25px 35px;
+
 
     display:flex;
 
@@ -94,7 +95,6 @@
 
 
     background:
-
     linear-gradient(
         145deg,
         #161020,
@@ -102,10 +102,7 @@
     );
 
 
-    border:
-
-    1px solid var(--ia-border);
-
+    border:1px solid var(--ia-border);
 
     border-radius:22px;
 
@@ -126,12 +123,10 @@
 
 
     background:
-
     rgba(139,61,255,.15);
 
 
     border-radius:15px;
-
 
     font-size:30px;
 
@@ -142,6 +137,8 @@
 .attention-card h3 {
 
     color:white;
+
+    font-size:18px;
 
 }
 
@@ -169,9 +166,9 @@
 
 
 
-/* =========================================================
+/* =========================
    PRODUCTOS
-========================================================= */
+========================= */
 
 
 .products-section {
@@ -189,25 +186,24 @@
     display:grid;
 
     grid-template-columns:
-
-    repeat(2,1fr);
-
-    gap:30px;
+    repeat(2,380px);
 
     justify-content:center;
+
+    gap:35px;
 
 }
 
 
 
-
-
 .product-card {
+
+    width:380px;
 
     overflow:hidden;
 
-    background:
 
+    background:
     linear-gradient(
         145deg,
         #120b1d,
@@ -215,44 +211,29 @@
     );
 
 
-    border:
+    border:1px solid var(--ia-border);
 
-    1px solid var(--ia-border);
-
-
-    border-radius:25px;
+    border-radius:24px;
 
 
     transition:.35s ease;
 
 
-    animation:
-
-    iaShow .6s ease;
-
+    animation:iaShow .6s ease;
 
 }
-
-
 
 
 
 .product-card:hover {
 
-    transform:
+    transform:translateY(-8px);
 
-    translateY(-8px);
-
-
-    border-color:
-
-    var(--ia-light);
+    border-color:var(--ia-light);
 
 
     box-shadow:
-
     0 20px 45px rgba(139,61,255,.25);
-
 
 }
 
@@ -262,9 +243,14 @@
 
 
 
+/* =========================
+   IMAGEN
+========================= */
+
+
 .product-image {
 
-    height:330px;
+    height:300px;
 
     position:relative;
 
@@ -273,7 +259,6 @@
     background:#09070d;
 
 }
-
 
 
 
@@ -291,12 +276,9 @@
 
 
 
-
 .product-card:hover .product-image img {
 
-    transform:
-
-    scale(1.08);
+    transform:scale(1.08);
 
 }
 
@@ -304,29 +286,22 @@
 
 
 
-
 .product-badge {
-
 
     position:absolute;
 
-
     top:15px;
-
 
     left:15px;
 
 
-    padding:
-
-    7px 13px;
+    padding:7px 13px;
 
 
     border-radius:50px;
 
 
     background:
-
     linear-gradient(
         135deg,
         var(--ia-purple),
@@ -339,9 +314,7 @@
 
     font-size:10px;
 
-
     font-weight:1000;
-
 
 }
 
@@ -351,9 +324,12 @@
 
 
 
+/* =========================
+   INFO PRODUCTO
+========================= */
+
 
 .product-info {
-
 
     padding:28px;
 
@@ -361,90 +337,59 @@
 
 
 
-
-
 .product-category {
 
-
-    color:
-
-    var(--ia-light);
-
+    color:var(--ia-light);
 
     font-size:10px;
 
-
     font-weight:1000;
-
 
     letter-spacing:2px;
 
-
 }
-
-
 
 
 
 .product-info h2 {
 
-
     margin-top:12px;
-
 
     color:white;
 
-
     font-size:26px;
 
-
 }
-
-
 
 
 
 .product-info p {
 
-
     margin-top:12px;
-
 
     color:var(--ia-gray);
 
-
     font-size:14px;
-
 
     line-height:1.5;
 
-
 }
-
-
 
 
 
 .price {
 
-
     margin-top:25px;
 
-
 }
-
-
 
 
 
 .price strong {
 
-
     color:white;
 
-
     font-size:25px;
-
 
 }
 
@@ -454,15 +399,12 @@
 
 
 
-
-
-/* =========================================================
+/* =========================
    CTA
-========================================================= */
+========================= */
 
 
 .final-contact {
-
 
     width:min(92%,1100px);
 
@@ -476,7 +418,6 @@
     text-align:center;
 
 
-
     background:
 
     linear-gradient(
@@ -486,15 +427,10 @@
     );
 
 
-
-    border:
-
-    1px solid var(--ia-border);
-
+    border:1px solid var(--ia-border);
 
 
     border-radius:30px;
-
 
 }
 
@@ -502,12 +438,9 @@
 
 .final-contact h2 {
 
-
     color:white;
 
-
     font-size:40px;
-
 
 }
 
@@ -515,17 +448,11 @@
 
 .final-contact p {
 
-
     margin:15px;
-
 
     color:var(--ia-gray);
 
-
 }
-
-
-
 
 
 
@@ -558,25 +485,17 @@
 
     transition:.25s;
 
-
 }
-
-
 
 
 
 .btn-primary:hover {
 
-
-    transform:
-
-    translateY(-3px);
+    transform:translateY(-3px);
 
 
     box-shadow:
-
     0 15px 30px rgba(139,61,255,.35);
-
 
 }
 
@@ -586,35 +505,25 @@
 
 
 
-
-/* =========================================================
+/* =========================
    WHATSAPP
-========================================================= */
+========================= */
 
 
 .floating-whatsapp {
 
-
-    box-shadow:
-
-    0 0 30px rgba(37,211,102,.35);
-
-
     transition:.3s;
 
+    box-shadow:
+    0 0 30px rgba(37,211,102,.35);
 
 }
-
 
 
 
 .floating-whatsapp:hover {
 
-
-    transform:
-
-    scale(1.1);
-
+    transform:scale(1.1);
 
 }
 
@@ -624,20 +533,17 @@
 
 
 
-
-
-/* =========================================================
+/* =========================
    FOOTER
-========================================================= */
+========================= */
 
 
 .footer {
 
-
     width:100%;
 
 
-    margin-top:80px;
+    margin-top:90px;
 
 
     padding:25px 40px;
@@ -647,19 +553,16 @@
 
 
     border-top:
-
     1px solid rgba(139,61,255,.25);
 
-
 }
-
 
 
 
 .footer-simple {
 
 
-    max-width:1400px;
+    width:min(92%,1200px);
 
 
     margin:auto;
@@ -673,36 +576,25 @@
 
     align-items:center;
 
-
 }
-
-
 
 
 
 .footer-simple strong {
 
-
     color:white;
-
 
     font-size:14px;
 
-
 }
-
-
 
 
 
 .footer-simple span {
 
-
     color:#777;
 
-
     font-size:12px;
-
 
 }
 
@@ -712,10 +604,9 @@
 
 
 
-
-/* =========================================================
+/* =========================
    ANIMACION
-========================================================= */
+========================= */
 
 
 @keyframes iaShow {
@@ -725,21 +616,16 @@ from {
 
     opacity:0;
 
-    transform:
-
-    translateY(25px);
+    transform:translateY(25px);
 
 }
-
 
 
 to {
 
     opacity:1;
 
-    transform:
-
-    translateY(0);
+    transform:translateY(0);
 
 }
 
@@ -752,29 +638,25 @@ to {
 
 
 
-
-
-/* =========================================================
+/* =========================
    RESPONSIVE
-========================================================= */
+========================= */
 
 
-@media(max-width:800px){
+@media(max-width:900px){
 
 
 .products-grid {
 
     grid-template-columns:
-
     1fr;
 
 }
 
 
+.product-card {
 
-.product-image {
-
-    height:280px;
+    width:100%;
 
 }
 
@@ -797,11 +679,17 @@ to {
 
 .attention-card {
 
-    flex-direction:
-
-    column;
+    flex-direction:column;
 
     text-align:center;
+
+}
+
+
+
+.product-image {
+
+    height:260px;
 
 }
 
@@ -817,129 +705,11 @@ to {
 
 .footer-simple {
 
-    flex-direction:
-
-    column;
+    flex-direction:column;
 
     gap:10px;
 
-}
-
-
-}
-/* =========================================================
-   AJUSTE FINAL IA
-========================================================= */
-
-
-.category-header,
-.products-section,
-.final-contact {
-
-    width: min(92%,1200px);
-
-    margin-left:auto;
-
-    margin-right:auto;
-
-}
-
-
-
-.products-section {
-
-    margin-top:60px;
-
-}
-
-
-
-.products-grid {
-
-
-    width:100%;
-
-
-    display:grid;
-
-
-    grid-template-columns:
-
-    repeat(2,380px);
-
-
-    justify-content:center;
-
-
-    gap:35px;
-
-
-}
-
-
-
-.product-card {
-
-
-    width:380px;
-
-
-}
-
-
-
-.product-image {
-
-
-    height:300px;
-
-
-}
-
-
-
-.footer {
-
-
-    margin-top:100px;
-
-
-}
-
-
-
-.footer-simple {
-
-
-    width:min(92%,1200px);
-
-
-    margin:auto;
-
-
-}
-
-
-
-@media(max-width:900px){
-
-
-.products-grid{
-
-
-grid-template-columns:
-
-1fr;
-
-
-}
-
-
-.product-card{
-
-
-width:100%;
-
+    text-align:center;
 
 }
 
