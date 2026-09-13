@@ -2,7 +2,6 @@
 
 <html lang="es">
 
-
 <head>
 
 
@@ -17,129 +16,36 @@ AMERISSTORE | Streaming
 </title>
 
 
-
 <link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="streaming.css">
 
 
 </head>
-
-
-
 
 
 <body>
 
 
 
-
-
-<!-- =================================
-TOP BAR
-================================= -->
-
-
-<div class="top-bar">
-
-
-<span>
-⚡ ACTIVACIÓN RÁPIDA
-</span>
-
-
-<span>
-🛡 COMPRA SEGURA
-</span>
-
-
-<span>
-💬 SOPORTE WHATSAPP
-</span>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- =================================
+<!-- =========================
 HEADER
-================================= -->
+========================= -->
 
 
 <header class="header">
 
 
-<div class="logo">
+<div class="header-container">
 
+
+<a href="index.html" class="logo">
 
 AMERIS<span>STORE</span>
 
-
-</div>
-
-
-
-
-
-<div class="search">
-
-
-<input
-
-type="text"
-
-placeholder="🔍 Buscar productos..."
-
->
-
-
-</div>
-
-
-
-
-
-
-
-<div class="user-area">
-
-
-<a href="#">
-Iniciar sesión
 </a>
 
 
-<span>
-Gs. 0
-</span>
-
-
-🛒
-
-
-</div>
-
-
-
-
-</header>
-
-
-
-
-
-
-
-
-
-<!-- =================================
-MENU
-================================= -->
 
 
 <nav class="menu">
@@ -150,7 +56,7 @@ INICIO
 </a>
 
 
-<a href="streaming.html">
+<a href="streaming.html" class="active">
 STREAMING
 </a>
 
@@ -175,47 +81,68 @@ DISEÑO
 </a>
 
 
-<a href="seguridad.html">
-SEGURIDAD
-</a>
-
-
-<a href="revendedores.html">
-REVENDEDORES
-</a>
-
-
-
 </nav>
 
 
 
 
 
+<a href="#" class="cart-button" id="cart-button">
+
+
+🛒
+
+<span>
+Carrito
+</span>
+
+
+<strong id="cart-total">
+
+Gs. 0
+
+</strong>
+
+
+</a>
+
+
+
+</div>
+
+
+</header>
 
 
 
 
-<!-- =================================
+
+
+
+
+
+<!-- =========================
 BREADCRUMB
-================================= -->
+========================= -->
 
 
 <div class="breadcrumb">
 
 
 <a href="index.html">
-INICIO
+
+Inicio
+
 </a>
 
 
-<span>
 /
-</span>
 
 
 <strong>
-STREAMING
+
+Streaming
+
 </strong>
 
 
@@ -229,34 +156,105 @@ STREAMING
 
 
 
-<!-- =================================
-TITULO CATEGORIA
-================================= -->
+<!-- =========================
+TITULO
+========================= -->
 
 
 <section class="category-header">
 
 
 <span>
+
 STREAMING
+
 </span>
 
 
+
 <h1>
+
 Entretenimiento Premium
+
 </h1>
 
 
+
 <p>
-Series, películas y contenido exclusivo.
+
+Series, películas y plataformas digitales en un solo lugar.
+
 </p>
 
 
 
 </section>
-<!-- =================================
-PRODUCTOS STREAMING
-================================= -->
+
+
+
+
+
+
+
+
+
+<!-- =========================
+HORARIO
+========================= -->
+
+
+<div class="attention-card">
+
+
+<div class="attention-icon">
+
+⚡
+
+</div>
+
+
+
+<div>
+
+
+<h3>
+
+Horario de atención rápida
+
+</h3>
+
+
+<p>
+
+Activaciones disponibles:
+
+<strong>
+
+11:00 AM - 22:00 PM
+
+</strong>
+
+</p>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+PRODUCTOS
+========================= -->
 
 
 <section class="products-section">
@@ -270,81 +268,71 @@ PRODUCTOS STREAMING
 
 <!-- NETFLIX -->
 
-<div class="product-card">
 
-
-<a href="producto.html?id=netflix">
-
+<a href="producto.html?id=netflix"
+class="product-card">
 
 
 <div class="product-image">
 
 
-<img 
-src="assets/productos/netflix.png"
-alt="Netflix">
+<img src="assets/productos/netflix.png">
 
 
+<span class="product-badge">
 
-<div class="badge">
 OFERTA
-</div>
+
+</span>
 
 
 </div>
-
-
 
 
 
 <div class="product-info">
 
 
-<span>
+<span class="product-category">
+
 STREAMING
+
 </span>
 
 
 
-<h3>
-Netflix
-</h3>
+<h2>
+
+Netflix Premium
+
+</h2>
 
 
 
 <p>
-Series y películas ilimitadas en calidad Premium.
+
+Series y películas ilimitadas.
+
 </p>
-
-
 
 
 
 <div class="price">
 
-
 <strong>
-Gs. 30.000
+
+Gs. 25.000
+
 </strong>
 
 
-
-<del>
-Gs. 45.000
-</del>
-
-
 </div>
-
 
 
 </div>
 
 
 </a>
-
-
-</div>
 
 
 
@@ -357,72 +345,62 @@ Gs. 45.000
 <!-- DISNEY -->
 
 
-<div class="product-card">
-
-
-<a href="producto.html?id=disney">
-
+<a href="producto.html?id=disney"
+class="product-card">
 
 
 <div class="product-image">
 
 
-<img 
-src="assets/productos/disney.png"
-alt="Disney Plus">
+<img src="assets/productos/disney.png">
 
 
+<span class="product-badge">
 
-<div class="badge">
 OFERTA
-</div>
+
+</span>
 
 
 </div>
-
-
 
 
 
 <div class="product-info">
 
 
-<span>
+<span class="product-category">
+
 STREAMING
+
 </span>
 
 
+<h2>
 
-<h3>
 Disney+ Premium
-</h3>
 
+</h2>
 
 
 <p>
-Disney, Marvel, Star Wars y mucho más.
+
+Disney, Marvel y Star Wars.
+
 </p>
-
-
 
 
 
 <div class="price">
 
-
 <strong>
+
 Gs. 25.000
+
 </strong>
 
 
-
-<del>
-Gs. 40.000
-</del>
-
-
 </div>
-
 
 
 </div>
@@ -431,7 +409,6 @@ Gs. 40.000
 </a>
 
 
-</div>
 
 
 
@@ -439,86 +416,70 @@ Gs. 40.000
 
 
 
+<!-- HBO -->
 
 
-<!-- HBO MAX -->
-
-
-<div class="product-card">
-
-
-<a href="producto.html?id=HBOMAX">
-
+<a href="producto.html?id=HBOMAX"
+class="product-card">
 
 
 <div class="product-image">
 
 
-<img 
-src="assets/productos/HBOMAX.png"
-alt="HBO Max">
+<img src="assets/productos/HBOMAX.png">
 
 
+<span class="product-badge">
 
-<div class="badge">
-OFERTA
+PREMIUM
+
+</span>
+
+
 </div>
-
-
-</div>
-
-
 
 
 
 <div class="product-info">
 
 
-<span>
+<span class="product-category">
+
 STREAMING
+
 </span>
 
 
+<h2>
 
-<h3>
 HBO Max
-</h3>
 
+</h2>
 
 
 <p>
-Películas, series y contenido exclusivo.
+
+Películas y series exclusivas.
+
 </p>
-
-
-
 
 
 <div class="price">
 
-
 <strong>
+
 Gs. 15.000
+
 </strong>
 
 
-
-<del>
-Gs. 35.000
-</del>
-
-
 </div>
-
 
 
 </div>
 
 
 </a>
-
-
-</div>
 
 
 
@@ -531,81 +492,67 @@ Gs. 35.000
 <!-- PARAMOUNT -->
 
 
-<div class="product-card">
-
-
-<a href="producto.html?id=paramount">
-
+<a href="producto.html?id=paramount"
+class="product-card">
 
 
 <div class="product-image">
 
 
-<img 
-src="assets/productos/paramount.png"
-alt="Paramount Plus">
+<img src="assets/productos/paramount.png">
 
 
+<span class="product-badge">
 
-<div class="badge">
 OFERTA
-</div>
+
+</span>
 
 
 </div>
-
-
 
 
 
 <div class="product-info">
 
 
-<span>
+<span class="product-category">
+
 STREAMING
+
 </span>
 
 
+<h2>
 
-<h3>
 Paramount+
-</h3>
 
+</h2>
 
 
 <p>
-Películas, series y contenido exclusivo.
+
+Contenido exclusivo.
+
 </p>
-
-
-
 
 
 <div class="price">
 
-
 <strong>
+
 Gs. 15.000
+
 </strong>
 
 
-
-<del>
-Gs. 30.000
-</del>
-
-
 </div>
-
 
 
 </div>
 
 
 </a>
-
-
-</div>
 
 
 
@@ -618,72 +565,61 @@ Gs. 30.000
 <!-- CRUNCHYROLL -->
 
 
-<div class="product-card">
-
-
-<a href="producto.html?id=crunchyroll">
-
+<a href="producto.html?id=crunchyroll"
+class="product-card">
 
 
 <div class="product-image">
 
 
-<img 
-src="assets/productos/crunchyroll.png"
-alt="Crunchyroll">
+<img src="assets/productos/crunchyroll.png">
 
 
+<span class="product-badge">
 
-<div class="badge">
 POPULAR
-</div>
+
+</span>
 
 
 </div>
-
-
 
 
 
 <div class="product-info">
 
 
-<span>
+<span class="product-category">
+
 STREAMING
+
 </span>
 
 
+<h2>
 
-<h3>
 Crunchyroll Premium
-</h3>
 
+</h2>
 
 
 <p>
-Anime sin límites y contenido exclusivo.
+
+Anime sin límites.
+
 </p>
-
-
-
 
 
 <div class="price">
 
-
 <strong>
+
 Gs. 15.000
+
 </strong>
 
 
-
-<del>
-Gs. 30.000
-</del>
-
-
 </div>
-
 
 
 </div>
@@ -692,7 +628,6 @@ Gs. 30.000
 </a>
 
 
-</div>
 
 
 
@@ -700,77 +635,64 @@ Gs. 30.000
 
 
 
+<!-- FLUJO -->
 
 
-<!-- FLUJO TV -->
-
-
-<div class="product-card">
-
-
-<a href="producto.html?id=flujotv">
-
+<a href="producto.html?id=flujotv"
+class="product-card">
 
 
 <div class="product-image">
 
 
-<img 
-src="assets/productos/flujotv.png"
-alt="Flujo TV">
+<img src="assets/productos/flujotv.png">
 
 
+<span class="product-badge">
 
-<div class="badge">
-OFERTA
+TOP
+
+</span>
+
+
 </div>
-
-
-</div>
-
-
 
 
 
 <div class="product-info">
 
 
-<span>
+<span class="product-category">
+
 STREAMING
+
 </span>
 
 
+<h2>
 
-<h3>
 Flujo TV
-</h3>
 
+</h2>
 
 
 <p>
-Canales en vivo, deportes y entretenimiento.
+
+Canales en vivo y deportes.
+
 </p>
-
-
-
 
 
 <div class="price">
 
-
 <strong>
-Gs. 15.000
+
+Gs. 30.000
+
 </strong>
 
 
-
-<del>
-Gs. 45.000
-</del>
-
-
 </div>
-
 
 
 </div>
@@ -779,162 +701,26 @@ Gs. 45.000
 </a>
 
 
-</div>
-
-
-
-
-
-
 
 </div>
 
 
 </section>
-<!-- =================================
-BENEFICIOS STREAMING
-================================= -->
 
 
-<section class="benefits">
 
 
 
-<div class="benefit-card">
 
 
-<div class="benefit-icon">
 
-⚡
 
-</div>
-
-
-
-<div>
-
-
-<h3>
-Activación rápida
-</h3>
-
-
-
-<p>
-Recibe tu servicio digital
-en pocos minutos.
-</p>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="benefit-card">
-
-
-<div class="benefit-icon">
-
-🛡️
-
-</div>
-
-
-
-<div>
-
-
-<h3>
-Compra segura
-</h3>
-
-
-
-<p>
-Proceso confiable y
-soporte personalizado.
-</p>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="benefit-card">
-
-
-<div class="benefit-icon">
-
-📺
-
-</div>
-
-
-
-<div>
-
-
-<h3>
-Contenido Premium
-</h3>
-
-
-
-<p>
-Disfruta series, películas
-y entretenimiento.
-</p>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- =================================
-CTA STREAMING
-================================= -->
+<!-- =========================
+CTA
+========================= -->
 
 
 <section class="final-contact">
-
-
-
 
 
 <h2>
@@ -945,23 +731,19 @@ Disfruta tus plataformas favoritas
 
 
 
-
-
 <p>
 
-Netflix, Disney+, HBO Max, Spotify,
-Flujo TV y mucho más.
+Netflix, Disney+, HBO Max, Spotify, Flujo TV y más.
 
 </p>
 
 
 
-
-
-
-<a 
+<a
 
 href="https://wa.me/595981841136"
+
+target="_blank"
 
 class="btn-primary">
 
@@ -973,14 +755,19 @@ class="btn-primary">
 
 
 
-
-
-
-
 </section>
-<!-- =================================
-WHATSAPP FLOTANTE
-================================= -->
+
+
+
+
+
+
+
+
+
+<!-- =========================
+WHATSAPP
+========================= -->
 
 
 <a
@@ -1004,15 +791,12 @@ class="floating-whatsapp">
 
 
 
-
-<!-- =================================
+<!-- =========================
 FOOTER
-================================= -->
+========================= -->
 
 
-<footer>
-
-
+<footer class="footer">
 
 
 <h2>
@@ -1020,8 +804,6 @@ FOOTER
 AMERIS<span>STORE</span>
 
 </h2>
-
-
 
 
 
@@ -1033,60 +815,11 @@ Gaming • Streaming • Música • IA • Diseño
 
 
 
-
-
-
-
-
-
-<div class="footer-links">
-
-
-
-<a href="#">
-
-Instagram
-
-</a>
-
-
-
-
-<a href="#">
-
-TikTok
-
-</a>
-
-
-
-
-<a href="#">
-
-Facebook
-
-</a>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
 <p>
 
-© 2026 AMERISSTORE.
-Todos los derechos reservados.
+© 2026 AMERISSTORE
 
 </p>
-
-
 
 
 
@@ -1097,14 +830,9 @@ Todos los derechos reservados.
 
 
 
-
-
-
 <script src="script.js"></script>
 
 
-
 </body>
-
 
 </html>
