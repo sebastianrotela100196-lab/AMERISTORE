@@ -1,6 +1,6 @@
 /* =========================================================
    AMERISSTORE
-   CARRITO PROFESIONAL
+   CARRITO SIMPLE PROFESIONAL
 ========================================================= */
 
 
@@ -12,78 +12,44 @@ document.addEventListener(
 ()=>{
 
 
-
-/* =========================
-CONFIG
-========================= */
-
-
 const CART_KEY =
 "amerisstore_carrito";
 
 
 
-
-
-/* =========================
-ELEMENTOS
-========================= */
-
-
 const cartItems =
-document.getElementById(
-"cartItems"
-);
-
+document.getElementById("cartItems");
 
 
 const cartCount =
-document.getElementById(
-"cartCount"
-);
-
+document.getElementById("cartCount");
 
 
 const cartTotal =
-document.getElementById(
-"cartTotal"
-);
-
+document.getElementById("cartTotal");
 
 
 const checkoutButton =
-document.getElementById(
-"checkoutWhatsapp"
-);
-
-
-
-
+document.getElementById("checkoutWhatsapp");
 
 
 
 
 
 /* =========================
-OBTENER CARRITO
+   CARRITO
 ========================= */
 
 
 function obtenerCarrito(){
 
-
 return JSON.parse(
 
-localStorage.getItem(
-CART_KEY
-)
+localStorage.getItem(CART_KEY)
 
 )
 
-||
-
-[];
-
+|| [];
 
 }
 
@@ -91,28 +57,15 @@ CART_KEY
 
 
 
-
-
-
-
-/* =========================
-GUARDAR CARRITO
-========================= */
-
-
 function guardarCarrito(carrito){
-
 
 localStorage.setItem(
 
 CART_KEY,
 
-JSON.stringify(
-carrito
-)
+JSON.stringify(carrito)
 
 );
-
 
 }
 
@@ -120,23 +73,16 @@ carrito
 
 
 
-
-
-
-
 /* =========================
-MOSTRAR CARRITO
+   MOSTRAR PRODUCTOS
 ========================= */
 
 
 function mostrarCarrito(){
 
 
-
-let carrito =
+const carrito =
 obtenerCarrito();
-
-
 
 
 
@@ -145,12 +91,7 @@ return;
 
 
 
-
-
 cartItems.innerHTML="";
-
-
-
 
 
 
@@ -158,29 +99,19 @@ cartItems.innerHTML="";
 if(carrito.length===0){
 
 
-
-cartItems.innerHTML = `
-
+cartItems.innerHTML=`
 
 <div class="empty-cart">
 
-
 <h2>
-
 Tu carrito está vacío
-
 </h2>
 
-
 <p>
-
 Agrega productos para verlos aquí.
-
 </p>
 
-
 </div>
-
 
 `;
 
@@ -188,12 +119,10 @@ Agrega productos para verlos aquí.
 
 actualizarResumen([]);
 
-
 return;
 
 
 }
-
 
 
 
@@ -206,15 +135,8 @@ carrito.forEach(
 (producto,index)=>{
 
 
-
-
-
 const card =
-document.createElement(
-"div"
-);
-
-
+document.createElement("div");
 
 
 
@@ -223,31 +145,10 @@ card.className =
 
 
 
-
-
 card.innerHTML = `
 
 
-<div class="cart-image">
-
-
-<img
-
-src="${producto.imagen}"
-
-alt="${producto.producto}"
-
->
-
-
-</div>
-
-
-
-
-
 <div class="cart-info">
-
 
 
 <h3>
@@ -258,8 +159,7 @@ ${producto.producto}
 
 
 
-
-<p class="cart-plan">
+<p>
 
 ${producto.plan}
 
@@ -267,21 +167,19 @@ ${producto.plan}
 
 
 
-
-<span>
+<small>
 
 ${producto.tipo}
 
-</span>
+</small>
 
 
 
-
-<small>
+<span>
 
 ${producto.duracion}
 
-</small>
+</span>
 
 
 
@@ -290,11 +188,7 @@ ${producto.duracion}
 
 
 
-
-
-
 <div class="cart-actions">
-
 
 
 <strong>
@@ -306,51 +200,15 @@ ${producto.precio.toLocaleString("es-PY")}
 
 
 
-
-<div class="quantity-box">
-
-
-<button class="minus">
-
-−
-
-</button>
-
-
-
-<span>
-
-1
-
-</span>
-
-
-
-<button class="plus">
-
-+
-
-</button>
-
-
-
-</div>
-
-
-
-
-
 <button
 
 class="remove-product"
 
 data-index="${index}">
 
-
 ✕
 
 </button>
-
 
 
 </div>
@@ -360,14 +218,7 @@ data-index="${index}">
 
 
 
-
-
-
-cartItems.appendChild(
-card
-);
-
-
+cartItems.appendChild(card);
 
 
 
@@ -382,21 +233,13 @@ card
 
 
 document
-.querySelectorAll(
-".remove-product"
-)
-
+.querySelectorAll(".remove-product")
 .forEach(
 
 button=>{
 
 
-button.addEventListener(
-
-"click",
-
-()=>{
-
+button.onclick=()=>{
 
 
 let carrito =
@@ -404,10 +247,9 @@ obtenerCarrito();
 
 
 
-
 carrito.splice(
 
-button.dataset.index,
+Number(button.dataset.index),
 
 1
 
@@ -415,27 +257,14 @@ button.dataset.index,
 
 
 
-
-
-guardarCarrito(
-carrito
-);
-
-
+guardarCarrito(carrito);
 
 
 
 mostrarCarrito();
 
 
-
-
-
-}
-
-
-);
-
+};
 
 
 }
@@ -444,11 +273,7 @@ mostrarCarrito();
 
 
 
-
-
-actualizarResumen(
-carrito
-);
+actualizarResumen(carrito);
 
 
 
@@ -463,31 +288,29 @@ carrito
 
 
 /* =========================
-RESUMEN
+   TOTAL
 ========================= */
 
 
 function actualizarResumen(carrito){
 
 
-
-let cantidad =
+const cantidad =
 carrito.length;
 
 
 
+const total =
 
-let total =
 carrito.reduce(
 
-(sum,item)=>
+(total,item)=>
 
-sum + item.precio,
+total + item.precio,
 
 0
 
 );
-
 
 
 
@@ -502,8 +325,6 @@ cantidad;
 
 
 
-
-
 if(cartTotal){
 
 cartTotal.textContent =
@@ -512,12 +333,9 @@ cartTotal.textContent =
 
 +
 
-total.toLocaleString(
-"es-PY"
-);
+total.toLocaleString("es-PY");
 
 }
-
 
 
 
@@ -532,18 +350,15 @@ total.toLocaleString(
 
 
 /* =========================
-WHATSAPP
+   WHATSAPP
 ========================= */
 
 
 function comprarWhatsapp(){
 
 
-
-let carrito =
+const carrito =
 obtenerCarrito();
-
-
 
 
 
@@ -564,8 +379,6 @@ return;
 
 
 
-
-
 let mensaje =
 
 `Hola AMERISSTORE 👋
@@ -578,7 +391,6 @@ Quiero realizar este pedido:
 
 
 
-
 carrito.forEach(
 
 (item,index)=>{
@@ -586,7 +398,7 @@ carrito.forEach(
 
 mensaje += `
 
-${index+1}) ${item.producto}
+${index + 1}) ${item.producto}
 
 Plan:
 ${item.plan}
@@ -612,8 +424,7 @@ Gs. ${item.precio.toLocaleString("es-PY")}
 
 
 
-
-let total =
+const total =
 
 carrito.reduce(
 
@@ -635,7 +446,12 @@ TOTAL:
 
 Gs. ${total.toLocaleString("es-PY")}
 
-Gracias.`;
+Gracias.
+`;
+
+
+
+
 
 
 window.open(
@@ -644,9 +460,7 @@ window.open(
 
 +
 
-encodeURIComponent(
-mensaje
-),
+encodeURIComponent(mensaje),
 
 "_blank"
 
@@ -665,16 +479,14 @@ mensaje
 
 
 /* =========================
-BOTON COMPRA
+   BOTÓN COMPRA
 ========================= */
 
 
 if(checkoutButton){
 
-
 checkoutButton.onclick =
 comprarWhatsapp;
-
 
 }
 
@@ -685,9 +497,8 @@ comprarWhatsapp;
 
 
 
-
 /* =========================
-INICIAR
+   INICIO
 ========================= */
 
 
@@ -695,4 +506,4 @@ mostrarCarrito();
 
 
 
-});arrito.j
+});
