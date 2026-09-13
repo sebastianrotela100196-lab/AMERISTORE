@@ -1,7 +1,7 @@
 /* =========================================================
    AMERISSTORE
-   PRODUCTO DINÁMICO + CARRITO
-   CATALOGO MAESTRO
+   PRODUCTO DINÁMICO
+   CATALOGO MAESTRO V2
 ========================================================= */
 
 
@@ -13,14 +13,14 @@ document.addEventListener(
 ()=>{
 
 
+
 /* =========================================================
-   CONFIG
+   CONFIGURACIÓN
 ========================================================= */
 
 
-const CART_KEY =
+const CART_KEY = 
 "amerisstore_carrito";
-
 
 
 
@@ -32,6 +32,8 @@ const CART_KEY =
 
 
 const productos = {
+
+
 
 
 
@@ -53,7 +55,8 @@ imagen:
 "assets/productos/netflix.png",
 
 
-badge:"⭐ MÁS VENDIDO",
+badge:
+"⭐ MÁS VENDIDO",
 
 
 descripcion:
@@ -62,13 +65,11 @@ descripcion:
 
 
 
-
 planes:[
 
 
 
 {
-
 
 nombre:"Perfil Premium 4K",
 
@@ -84,14 +85,12 @@ precio:
 etiqueta:
 "⭐ Más vendido"
 
-
 },
 
 
 
 
 {
-
 
 nombre:"Perfil TV",
 
@@ -107,15 +106,12 @@ precio:
 etiqueta:
 "🔥 Mejor valor"
 
-
 },
 
 
 
 
-
 {
-
 
 nombre:"Cuenta Completa",
 
@@ -131,15 +127,12 @@ precio:
 etiqueta:
 "👑 Premium"
 
-
 },
 
 
 
 
-
 {
-
 
 nombre:"Perfil Premium 4K",
 
@@ -155,15 +148,12 @@ precio:
 etiqueta:
 "💰 Ahorro"
 
-
 },
 
 
 
 
-
 {
-
 
 nombre:"Perfil Premium 4K",
 
@@ -179,15 +169,12 @@ precio:
 etiqueta:
 "🔥 Mejor valor"
 
-
 },
 
 
 
 
-
 {
-
 
 nombre:"Perfil Premium 4K",
 
@@ -202,7 +189,6 @@ precio:
 
 etiqueta:
 "👑 Premium"
-
 
 }
 
@@ -245,13 +231,11 @@ descripcion:
 
 
 
-
 planes:[
 
 
 
 {
-
 
 nombre:"Disney Premium + ESPN",
 
@@ -267,14 +251,12 @@ precio:
 etiqueta:
 "⭐ Más vendido"
 
-
 },
 
 
 
 
 {
-
 
 nombre:"Disney Premium",
 
@@ -290,15 +272,12 @@ precio:
 etiqueta:
 "🔥 Mejor valor"
 
-
 },
 
 
 
 
-
 {
-
 
 nombre:"Cuenta Completa",
 
@@ -314,15 +293,12 @@ precio:
 etiqueta:
 "👑 Premium"
 
-
 },
 
 
 
 
-
 {
-
 
 nombre:"Disney Premium + ESPN",
 
@@ -338,31 +314,6 @@ precio:
 etiqueta:
 "💰 Ahorro"
 
-
-},
-
-
-
-
-
-{
-
-
-nombre:"Disney Premium + ESPN",
-
-tipo:
-"Perfil Premium con ESPN",
-
-duracion:
-"12 meses",
-
-precio:
-240000,
-
-etiqueta:
-"👑 Premium"
-
-
 }
 
 
@@ -376,10 +327,8 @@ etiqueta:
 
 
 
-
-
 /* =========================================================
-   MAX HBO MAX
+   MAX / HBO MAX
 ========================================================= */
 
 
@@ -406,14 +355,11 @@ descripcion:
 
 
 
-
-
 planes:[
 
 
 
 {
-
 
 nombre:"Perfil Estándar",
 
@@ -429,14 +375,12 @@ precio:
 etiqueta:
 "🔥 Mejor valor"
 
-
 },
 
 
 
 
 {
-
 
 nombre:"Perfil Platino",
 
@@ -452,15 +396,12 @@ precio:
 etiqueta:
 "⭐ Popular"
 
-
 },
 
 
 
 
-
 {
-
 
 nombre:"Cuenta Completa",
 
@@ -475,7 +416,6 @@ precio:
 
 etiqueta:
 "👑 Premium"
-
 
 }
 
@@ -518,14 +458,11 @@ descripcion:
 
 
 
-
-
 planes:[
 
 
 
 {
-
 
 nombre:"Perfil Prime Video",
 
@@ -541,14 +478,11 @@ precio:
 etiqueta:
 "⭐ Popular"
 
-
 },
 
 
 
-
 {
-
 
 nombre:"Cuenta Completa",
 
@@ -563,7 +497,6 @@ precio:
 
 etiqueta:
 "👑 Premium"
-
 
 }
 
@@ -604,9 +537,7 @@ descripcion:
 planes:[
 
 
-
 {
-
 
 nombre:"Perfil Premium",
 
@@ -622,13 +553,11 @@ precio:
 etiqueta:
 "⭐ Popular"
 
-
 },
 
 
 
 {
-
 
 nombre:"Cuenta Completa",
 
@@ -643,7 +572,6 @@ precio:
 
 etiqueta:
 "👑 Premium"
-
 
 }
 
@@ -692,7 +620,6 @@ planes:[
 
 {
 
-
 nombre:"Perfil Exclusivo",
 
 tipo:
@@ -707,13 +634,11 @@ precio:
 etiqueta:
 "⭐ Popular"
 
-
 },
 
 
 
 {
-
 
 nombre:"Perfil No Exclusivo",
 
@@ -729,13 +654,11 @@ precio:
 etiqueta:
 "🔥 Mejor valor"
 
-
 },
 
 
 
 {
-
 
 nombre:"Cuenta Completa",
 
@@ -750,7 +673,6 @@ precio:
 
 etiqueta:
 "👑 Premium"
-
 
 }
 
@@ -784,7 +706,7 @@ imagen:
 
 
 badge:
-"MÁS VENDIDO",
+"⭐ MÁS VENDIDO",
 
 
 descripcion:
@@ -798,7 +720,6 @@ planes:[
 
 
 {
-
 
 nombre:"Spotify Premium",
 
@@ -814,13 +735,11 @@ precio:
 etiqueta:
 "⭐ Popular"
 
-
 },
 
 
 
 {
-
 
 nombre:"Spotify Premium",
 
@@ -836,13 +755,11 @@ precio:
 etiqueta:
 "🔥 Mejor valor"
 
-
 },
 
 
 
 {
-
 
 nombre:"Spotify Premium",
 
@@ -858,13 +775,11 @@ precio:
 etiqueta:
 "💰 Ahorro"
 
-
 },
 
 
 
 {
-
 
 nombre:"Spotify Premium",
 
@@ -879,7 +794,6 @@ precio:
 
 etiqueta:
 "👑 Premium"
-
 
 }
 
@@ -928,7 +842,6 @@ planes:[
 
 {
 
-
 nombre:"YouTube Premium",
 
 tipo:
@@ -943,13 +856,11 @@ precio:
 etiqueta:
 "⭐ Popular"
 
-
 },
 
 
 
 {
-
 
 nombre:"YouTube Premium",
 
@@ -965,13 +876,11 @@ precio:
 etiqueta:
 "🔥 Mejor valor"
 
-
 },
 
 
 
 {
-
 
 nombre:"YouTube Premium",
 
@@ -987,13 +896,11 @@ precio:
 etiqueta:
 "💰 Ahorro"
 
-
 },
 
 
 
 {
-
 
 nombre:"YouTube Premium",
 
@@ -1008,7 +915,6 @@ precio:
 
 etiqueta:
 "👑 Premium"
-
 
 }
 
@@ -1054,9 +960,7 @@ descripcion:
 planes:[
 
 
-
 {
-
 
 nombre:"Deezer Premium",
 
@@ -1071,7 +975,6 @@ precio:
 
 etiqueta:
 "⭐ Nuevo"
-
 
 }
 
@@ -1120,7 +1023,6 @@ planes:[
 
 {
 
-
 nombre:"ChatGPT Plus",
 
 tipo:
@@ -1134,29 +1036,6 @@ precio:
 
 etiqueta:
 "⭐ Más vendido"
-
-
-},
-
-
-
-{
-
-
-nombre:"ChatGPT Go",
-
-tipo:
-"Cuenta compartida",
-
-duracion:
-"1 mes",
-
-precio:
-30000,
-
-etiqueta:
-"🔥 Mejor valor"
-
 
 }
 
@@ -1190,7 +1069,7 @@ imagen:
 
 
 badge:
-"PREMIUM",
+"👑 PREMIUM",
 
 
 descripcion:
@@ -1204,7 +1083,6 @@ planes:[
 
 
 {
-
 
 nombre:"Gemini Pro",
 
@@ -1220,13 +1098,11 @@ precio:
 etiqueta:
 "⭐ Popular"
 
-
 },
 
 
 
 {
-
 
 nombre:"Gemini Pro",
 
@@ -1241,7 +1117,6 @@ precio:
 
 etiqueta:
 "👑 Premium"
-
 
 }
 
@@ -1264,7 +1139,7 @@ etiqueta:
 googleonefamiliar:{
 
 
-categoria:"IA TOOLS",
+categoria:"EXTRAS",
 
 
 nombre:"Google One Familiar",
@@ -1290,7 +1165,6 @@ planes:[
 
 {
 
-
 nombre:"Google One Familiar",
 
 tipo:
@@ -1304,7 +1178,6 @@ precio:
 
 etiqueta:
 "👑 Premium"
-
 
 }
 
@@ -1320,7 +1193,7 @@ etiqueta:
 
 
 /* =========================================================
-   CANVA
+   CANVA PRO
 ========================================================= */
 
 
@@ -1353,7 +1226,6 @@ planes:[
 
 {
 
-
 nombre:"Canva Pro",
 
 tipo:
@@ -1368,13 +1240,11 @@ precio:
 etiqueta:
 "⭐ Popular"
 
-
 },
 
 
 
 {
-
 
 nombre:"Canva Pro",
 
@@ -1390,13 +1260,11 @@ precio:
 etiqueta:
 "🔥 Mejor valor"
 
-
 },
 
 
 
 {
-
 
 nombre:"Canva Pro",
 
@@ -1412,13 +1280,11 @@ precio:
 etiqueta:
 "💰 Ahorro"
 
-
 },
 
 
 
 {
-
 
 nombre:"Canva Pro",
 
@@ -1434,7 +1300,6 @@ precio:
 etiqueta:
 "👑 Premium"
 
-
 }
 
 
@@ -1449,7 +1314,7 @@ etiqueta:
 
 
 /* =========================================================
-   CAPCUT
+   CAPCUT PRO
 ========================================================= */
 
 
@@ -1482,7 +1347,6 @@ planes:[
 
 {
 
-
 nombre:"CapCut Pro",
 
 tipo:
@@ -1496,7 +1360,6 @@ precio:
 
 etiqueta:
 "⭐ Popular"
-
 
 }
 
@@ -1545,7 +1408,6 @@ planes:[
 
 {
 
-
 nombre:"Autodesk",
 
 tipo:
@@ -1559,7 +1421,6 @@ precio:
 
 etiqueta:
 "👑 Premium"
-
 
 }
 
@@ -1831,7 +1692,7 @@ etiqueta:
 
 
 /* =========================================================
-   DGO
+   DGO + LIGA 1 MAX
 ========================================================= */
 
 
@@ -1993,7 +1854,7 @@ etiqueta:
 
 
 /* =========================================================
-   VIKI
+   VIKI RAKUTEN
 ========================================================= */
 
 
@@ -2277,7 +2138,7 @@ etiqueta:
 
 
 /* =========================================================
-   WINDOWS
+   WINDOWS 10 / 11 PRO
 ========================================================= */
 
 
@@ -2460,7 +2321,7 @@ etiqueta:
 
 
 /* =========================================================
-   PORNHUB
+   PORNHUB PREMIUM
 ========================================================= */
 
 
@@ -2505,7 +2366,7 @@ precio:
 25000,
 
 etiqueta:
-"Premium"
+"👑 Premium"
 
 }
 
@@ -2514,11 +2375,12 @@ etiqueta:
 
 },
 /* =========================================================
-   OBTENER PRODUCTO POR URL
+   OBTENER PRODUCTO ACTUAL
 ========================================================= */
 
 
 const params =
+
 new URLSearchParams(
 window.location.search
 );
@@ -2526,12 +2388,15 @@ window.location.search
 
 
 const id =
+
 params.get("id");
 
 
 
 let producto =
+
 productos[id];
+
 
 
 
@@ -2539,10 +2404,12 @@ if(!producto){
 
 
 producto =
+
 productos.netflix;
 
 
 }
+
 
 
 
@@ -2557,6 +2424,7 @@ productos.netflix;
 
 
 const image =
+
 document.getElementById(
 "productImage"
 );
@@ -2564,6 +2432,7 @@ document.getElementById(
 
 
 const name =
+
 document.getElementById(
 "productName"
 );
@@ -2571,6 +2440,7 @@ document.getElementById(
 
 
 const category =
+
 document.getElementById(
 "productCategory"
 );
@@ -2578,6 +2448,7 @@ document.getElementById(
 
 
 const description =
+
 document.getElementById(
 "productDescription"
 );
@@ -2585,6 +2456,7 @@ document.getElementById(
 
 
 const badge =
+
 document.getElementById(
 "productBadge"
 );
@@ -2592,6 +2464,7 @@ document.getElementById(
 
 
 const productPrice =
+
 document.getElementById(
 "productPrice"
 );
@@ -2599,6 +2472,7 @@ document.getElementById(
 
 
 const plansContainer =
+
 document.getElementById(
 "plansContainer"
 );
@@ -2606,6 +2480,7 @@ document.getElementById(
 
 
 const summaryProduct =
+
 document.getElementById(
 "summaryProduct"
 );
@@ -2613,13 +2488,31 @@ document.getElementById(
 
 
 const summaryPlan =
+
 document.getElementById(
 "summaryPlan"
 );
 
 
 
+const summaryType =
+
+document.getElementById(
+"summaryType"
+);
+
+
+
+const summaryDuration =
+
+document.getElementById(
+"summaryDuration"
+);
+
+
+
 const summaryPrice =
+
 document.getElementById(
 "summaryPrice"
 );
@@ -2627,16 +2520,12 @@ document.getElementById(
 
 
 const addButton =
+
 document.getElementById(
 "buyWhatsapp"
 );
 
 
-
-const addButtonBottom =
-document.getElementById(
-"buyWhatsappBottom"
-);
 
 
 
@@ -2645,7 +2534,7 @@ document.getElementById(
 
 
 /* =========================================================
-   CARGAR INFORMACIÓN PRODUCTO
+   CARGAR INFORMACION PRODUCTO
 ========================================================= */
 
 
@@ -2660,12 +2549,16 @@ producto.nombre;
 
 
 
+
 if(image){
 
 image.src =
+
 producto.imagen;
 
+
 image.alt =
+
 producto.nombre;
 
 }
@@ -2676,6 +2569,7 @@ producto.nombre;
 if(name){
 
 name.textContent =
+
 producto.nombre;
 
 }
@@ -2686,6 +2580,7 @@ producto.nombre;
 if(category){
 
 category.textContent =
+
 producto.categoria;
 
 }
@@ -2696,6 +2591,7 @@ producto.categoria;
 if(description){
 
 description.textContent =
+
 producto.descripcion;
 
 }
@@ -2706,6 +2602,7 @@ producto.descripcion;
 if(badge){
 
 badge.textContent =
+
 producto.badge;
 
 }
@@ -2724,6 +2621,7 @@ producto.badge;
 
 
 let planActual =
+
 producto.planes[0];
 
 
@@ -2735,7 +2633,7 @@ producto.planes[0];
 
 
 /* =========================================================
-   CARGAR PLANES
+   CREAR CATALOGO INTERNO
 ========================================================= */
 
 
@@ -2744,11 +2642,14 @@ function cargarPlanes(){
 
 
 if(!plansContainer)
+
 return;
 
 
 
-plansContainer.innerHTML="";
+
+plansContainer.innerHTML = "";
+
 
 
 
@@ -2760,18 +2661,23 @@ producto.planes.forEach(
 
 
 const card =
+
 document.createElement(
 "div"
 );
 
 
 
+
 card.className =
+
 "plan-card";
 
 
 
-if(index===0){
+
+
+if(index === 0){
 
 card.classList.add(
 "active"
@@ -2786,7 +2692,12 @@ card.classList.add(
 card.innerHTML = `
 
 
-<div>
+<div class="plan-tag">
+
+${plan.etiqueta}
+
+</div>
+
 
 
 <h4>
@@ -2796,11 +2707,13 @@ ${plan.nombre}
 </h4>
 
 
+
 <p>
 
-${plan.tipo}
+📌 ${plan.tipo}
 
 </p>
+
 
 
 <small>
@@ -2808,9 +2721,6 @@ ${plan.tipo}
 📅 ${plan.duracion}
 
 </small>
-
-
-</div>
 
 
 
@@ -2828,12 +2738,18 @@ ${plan.precio.toLocaleString("es-PY")}
 
 
 
+
+
 card.addEventListener(
+
 "click",
+
 ()=>{
 
 
+
 document
+
 .querySelectorAll(
 ".plan-card"
 )
@@ -2861,8 +2777,11 @@ card.classList.add(
 
 
 
+
 planActual =
+
 plan;
+
 
 
 
@@ -2872,9 +2791,12 @@ actualizarResumen();
 
 
 
+
 }
 
+
 );
+
 
 
 
@@ -2904,13 +2826,11 @@ card
 
 
 /* =========================================================
-   ACTUALIZAR PRECIO Y RESUMEN
+   ACTUALIZAR RESUMEN
 ========================================================= */
 
 
 function actualizarResumen(){
-
-
 
 
 
@@ -2936,6 +2856,27 @@ planActual.nombre;
 
 
 
+if(summaryType){
+
+summaryType.textContent =
+
+planActual.tipo;
+
+}
+
+
+
+
+if(summaryDuration){
+
+summaryDuration.textContent =
+
+planActual.duracion;
+
+}
+
+
+
 
 if(summaryPrice){
 
@@ -2958,7 +2899,6 @@ planActual.precio.toLocaleString(
 if(productPrice){
 
 
-
 productPrice.textContent =
 
 "Gs. "
@@ -2968,28 +2908,6 @@ productPrice.textContent =
 planActual.precio.toLocaleString(
 "es-PY"
 );
-
-
-
-
-
-productPrice.classList.add(
-"price-update"
-);
-
-
-
-
-
-setTimeout(()=>{
-
-
-productPrice.classList.remove(
-"price-update"
-);
-
-
-},400);
 
 
 
@@ -3035,8 +2953,8 @@ CART_KEY
 
 
 
-function guardarCarrito(carrito){
 
+function guardarCarrito(carrito){
 
 
 localStorage.setItem(
@@ -3059,11 +2977,13 @@ carrito
 
 
 
+
 function agregarCarrito(){
 
 
 
 let carrito =
+
 obtenerCarrito();
 
 
@@ -3098,6 +3018,12 @@ planActual.duracion,
 
 
 
+etiqueta:
+
+planActual.etiqueta,
+
+
+
 precio:
 
 planActual.precio,
@@ -3122,6 +3048,8 @@ cantidad:
 
 
 
+
+
 guardarCarrito(
 carrito
 );
@@ -3139,62 +3067,6 @@ mostrarMensaje(
 
 
 
-}
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   WHATSAPP
-========================================================= */
-
-
-function comprarWhatsapp(){
-
-
-let mensaje =
-
-`Hola AMERISSTORE 👋
-
-Quiero consultar este producto:
-
-🎯 Producto:
-${producto.nombre}
-
-⭐ Plan:
-${planActual.nombre}
-
-📌 Tipo:
-${planActual.tipo}
-
-📅 Duración:
-${planActual.duracion}
-
-💰 Precio:
-Gs. ${planActual.precio.toLocaleString("es-PY")}
-
-Gracias.`;
-
-
-window.open(
-
-"https://wa.me/595981841136?text="
-
-+
-
-encodeURIComponent(
-mensaje
-),
-
-"_blank"
-
-);
-
 
 }
 
@@ -3207,12 +3079,11 @@ mensaje
 
 
 /* =========================================================
-   BOTONES
+   BOTON CARRITO
 ========================================================= */
 
 
 if(addButton){
-
 
 
 addButton.textContent =
@@ -3234,33 +3105,10 @@ agregarCarrito;
 
 
 
-if(addButtonBottom){
-
-
-
-addButtonBottom.textContent =
-
-"🛒 Agregar al carrito";
-
-
-
-addButtonBottom.onclick =
-
-agregarCarrito;
-
-
-}
-
-
-
-
-
-
-
 
 
 /* =========================================================
-   NOTIFICACION
+   MENSAJE
 ========================================================= */
 
 
@@ -3268,7 +3116,7 @@ function mostrarMensaje(texto){
 
 
 
-const div =
+const box =
 
 document.createElement(
 "div"
@@ -3277,14 +3125,14 @@ document.createElement(
 
 
 
-div.className =
+box.className =
 
 "store-notification";
 
 
 
 
-div.textContent =
+box.textContent =
 
 texto;
 
@@ -3292,8 +3140,9 @@ texto;
 
 
 document.body.appendChild(
-div
+box
 );
+
 
 
 
@@ -3302,7 +3151,7 @@ div
 setTimeout(()=>{
 
 
-div.remove();
+box.remove();
 
 
 },2500);
@@ -3320,7 +3169,7 @@ div.remove();
 
 
 /* =========================================================
-   INICIO
+   INICIAR
 ========================================================= */
 
 
@@ -3328,6 +3177,8 @@ cargarPlanes();
 
 
 actualizarResumen();
+
+
 
 
 
