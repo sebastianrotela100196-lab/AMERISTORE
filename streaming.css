@@ -1330,33 +1330,98 @@ to {
 
 
 
-/* =========================================================
-   RESPONSIVE FOOTER
-========================================================= */
+/* =========================================
+   FOOTER SIMPLE
+========================================= */
 
 
-@media(max-width:800px){
+.footer {
 
 
-.footer-content{
+    width:100%;
 
 
-grid-template-columns:
-
-1fr;
+    margin-top:80px;
 
 
-text-align:center;
+    padding:25px 40px;
+
+
+    background:#08070d;
+
+
+    border-top:
+
+    1px solid rgba(139,61,255,.25);
+
+}
+
+
+
+.footer-simple {
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:space-between;
+
+
+    max-width:1400px;
+
+
+    margin:auto;
+
+}
+
+
+
+.footer-simple strong {
+
+
+    color:white;
+
+
+    font-size:14px;
+
+
+    font-weight:1000;
 
 
 }
 
 
 
-.footer-brand p{
+.footer-simple span {
 
 
-margin:auto;
+    color:#777;
+
+
+    font-size:12px;
+
+
+}
+
+
+
+
+@media(max-width:600px){
+
+
+.footer-simple{
+
+
+flex-direction:column;
+
+
+gap:10px;
+
+
+text-align:center;
 
 
 }
