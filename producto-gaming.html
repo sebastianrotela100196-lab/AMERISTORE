@@ -33,12 +33,11 @@ AMERISSTORE | Gaming
 
 <link rel="stylesheet" href="animaciones.css">
 
-<link rel="stylesheet" href="gaming.css">
+<link rel="stylesheet" href="productogaming.css">
 
 
 
 </head>
-
 
 
 
@@ -50,52 +49,18 @@ AMERISSTORE | Gaming
 
 
 
-<!-- HEADER -->
 
 
-<header>
+<!-- =========================
+HEADER
+========================= -->
 
 
-<nav class="navbar">
-
-
-
-<a href="index.html" class="logo">
-
-AMERIS<span>STORE</span>
-
-</a>
+<header class="gaming-header">
 
 
 
-
-
-
-<ul>
-
-<li>
-<a href="index.html">
-Inicio
-</a>
-</li>
-
-
-<li>
-<a href="#recarga">
-Recarga
-</a>
-</li>
-
-
-<li>
-<a href="#faq">
-FAQ
-</a>
-</li>
-
-
-</ul>
-
+<div class="gaming-header-container">
 
 
 
@@ -103,14 +68,12 @@ FAQ
 
 <a
 
-href="https://wa.me/595981841136"
+href="index.html"
 
-target="_blank"
-
-class="btn-whatsapp">
+class="logo">
 
 
-WhatsApp
+AMERIS<span>STORE</span>
 
 
 </a>
@@ -118,7 +81,48 @@ WhatsApp
 
 
 
-</nav>
+
+
+
+<div class="gaming-actions">
+
+
+<a
+
+href="gaming.html"
+
+class="back-button">
+
+
+← Volver
+
+
+</a>
+
+
+
+
+<a
+
+href="carrito.html"
+
+class="cart-button">
+
+
+🛒 Carrito
+
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+</div>
 
 
 </header>
@@ -131,48 +135,56 @@ WhatsApp
 
 
 
+<!-- =========================
+PRODUCTO PRINCIPAL
+========================= -->
+
+
 <main>
 
 
 
 
 
-<!-- PRODUCTO -->
-
-
-<section class="ff-shop" id="recarga">
+<section class="gaming-product">
 
 
 
 
 
+<!-- IMAGEN -->
 
-<div class="section-title">
+
+<div class="gaming-image-box fade-up">
 
 
-<span id="gameCategory">
+
+<span
+
+class="gaming-badge"
+
+id="gameBadge">
+
 
 GAMING
+
 
 </span>
 
 
 
 
-<h1 id="gameTitle">
+<img
 
-Recarga tu juego favorito
+id="gameImage"
 
-</h1>
+src="assets/productos/mobilelegends.png"
+
+alt="Juego"
+
+>
 
 
-
-
-<p id="gameDescription">
-
-Selecciona tu paquete y completa tu compra.
-
-</p>
 
 
 
@@ -186,10 +198,84 @@ Selecciona tu paquete y completa tu compra.
 
 
 
-<!-- PASO 1 -->
+<!-- INFORMACIÓN -->
 
 
-<div class="checkout-box">
+<div class="gaming-info fade-up">
+
+
+
+
+
+<span
+
+class="gaming-category"
+
+id="gameCategory">
+
+
+GAMING
+
+
+</span>
+
+
+
+
+
+
+
+<h1
+
+id="gameTitle">
+
+
+Juego
+
+
+</h1>
+
+
+
+
+
+
+
+<p
+
+id="gameDescription">
+
+
+Descripción del juego.
+
+
+</p>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</section>
+<!-- =========================
+PASO 1
+PAQUETES
+========================= -->
+
+
+<section class="gaming-checkout">
+
+
+
+<div class="checkout-box fade-up">
 
 
 
@@ -203,13 +289,17 @@ Selecciona tu paquete y completa tu compra.
 </div>
 
 
+
+
 <div>
+
 
 <h2>
 
 Elegí tu paquete
 
 </h2>
+
 
 
 <p>
@@ -219,11 +309,12 @@ Selecciona una opción para continuar.
 </p>
 
 
-</div>
-
-
 
 </div>
+
+
+</div>
+
 
 
 
@@ -238,11 +329,7 @@ class="diamond-grid"
 id="packagesContainer">
 
 
-
-</div>
-
-
-
+<!-- PRODUCTOS GENERADOS POR JS -->
 
 
 </div>
@@ -252,17 +339,49 @@ id="packagesContainer">
 
 
 
+<p class="selection-help">
+
+🎮 Selecciona un paquete para continuar.
+
+</p>
 
 
 
-<!-- PASO 2 -->
 
 
-<div
+</div>
 
-class="checkout-box hidden"
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+PASO 2
+DATOS DEL JUGADOR
+========================= -->
+
+
+<section
+
+class="gaming-checkout hidden"
 
 id="step2">
+
+
+
+
+
+<div class="checkout-box">
 
 
 
@@ -276,7 +395,10 @@ id="step2">
 </div>
 
 
+
+
 <div>
+
 
 <h2>
 
@@ -285,17 +407,23 @@ Datos del jugador
 </h2>
 
 
+
+
 <p>
 
-Necesitamos tus datos para realizar la recarga.
+Necesitamos estos datos para realizar la recarga.
 
 </p>
 
 
+
 </div>
 
 
+
 </div>
+
+
 
 
 
@@ -307,11 +435,18 @@ Necesitamos tus datos para realizar la recarga.
 
 
 
-<label class="input-title" id="playerLabel">
+<label
+
+class="input-title"
+
+id="playerLabel">
+
 
 🎮 ID DEL JUGADOR
 
+
 </label>
+
 
 
 
@@ -330,9 +465,6 @@ autocomplete="off"
 
 
 
-
-
-
 </div>
 
 
@@ -341,6 +473,9 @@ autocomplete="off"
 
 
 
+
+
+<!-- SERVER MOBILE LEGENDS -->
 
 
 <div
@@ -353,11 +488,16 @@ style="display:none;">
 
 
 
-<label class="input-title">
+<label
+
+class="input-title">
+
 
 🌐 SERVER ID
 
+
 </label>
+
 
 
 
@@ -373,8 +513,8 @@ placeholder="Ingresá tu servidor"
 >
 
 
-
 </div>
+
 
 
 
@@ -404,21 +544,24 @@ CONTINUAR →
 
 
 
+</section>
+<!-- =========================
+PASO 3
+RESUMEN
+========================= -->
 
 
+<section
 
-
-<!-- PASO 3 -->
-
-
-<div
-
-class="checkout-box hidden"
+class="gaming-checkout hidden"
 
 id="step3">
 
 
 
+
+
+<div class="checkout-box">
 
 
 
@@ -432,7 +575,10 @@ id="step3">
 </div>
 
 
+
+
 <div>
+
 
 <h2>
 
@@ -441,18 +587,21 @@ Resumen de compra
 </h2>
 
 
+
 <p>
 
-Verifica tus datos.
+Verifica tus datos antes de enviar el pedido.
 
 </p>
 
 
-</div>
-
-
 
 </div>
+
+
+
+</div>
+
 
 
 
@@ -467,7 +616,9 @@ Verifica tus datos.
 
 
 
+
 <div class="summary-row">
+
 
 <span>
 
@@ -476,14 +627,20 @@ Producto
 </span>
 
 
-<strong id="summaryProduct">
+
+<strong
+
+id="summaryProduct">
 
 -
 
 </strong>
 
 
+
 </div>
+
+
 
 
 
@@ -493,21 +650,28 @@ Producto
 
 <div class="summary-row">
 
+
 <span>
 
-ID jugador
+ID Jugador
 
 </span>
 
 
-<strong id="summaryID">
+
+<strong
+
+id="summaryID">
 
 -
 
 </strong>
 
 
+
 </div>
+
+
 
 
 
@@ -531,14 +695,19 @@ Servidor
 </span>
 
 
-<strong id="summaryServer">
+
+<strong
+
+id="summaryServer">
 
 -
 
 </strong>
 
 
+
 </div>
+
 
 
 
@@ -549,6 +718,7 @@ Servidor
 
 <div class="summary-row">
 
+
 <span>
 
 Precio
@@ -556,22 +726,28 @@ Precio
 </span>
 
 
-<strong id="summaryPrice">
+
+<strong
+
+id="summaryPrice">
 
 -
 
 </strong>
 
 
+
+</div>
+
+
+
+
+
+
+
 </div>
 
 
-
-
-
-
-
-</div>
 
 
 
@@ -595,11 +771,21 @@ id="buyWhatsapp">
 
 
 
+<p class="whatsapp-note">
+
+
+Al continuar se abrirá WhatsApp con los datos de tu pedido preparados automáticamente.
+
+
+</p>
+
+
+
+
+
+
+
 </div>
-
-
-
-
 
 
 
@@ -615,10 +801,14 @@ id="buyWhatsapp">
 
 
 
-<!-- INFORMACION -->
+<!-- =========================
+INFORMACIÓN IMPORTANTE
+========================= -->
 
 
 <section class="checkout-box info-game">
+
+
 
 
 
@@ -632,6 +822,8 @@ id="buyWhatsapp">
 </div>
 
 
+
+
 <div>
 
 
@@ -642,10 +834,15 @@ Información importante
 </h2>
 
 
+
 </div>
 
 
+
 </div>
+
+
+
 
 
 
@@ -653,18 +850,25 @@ Información importante
 
 <p id="gameInfo">
 
+
 Para realizar la recarga solamente necesitamos tu ID de jugador.
+
 
 <br><br>
 
+
 Nunca solicitamos la contraseña de tu cuenta.
+
 
 </p>
 
 
 
 
+
+
 </section>
+
 
 
 
@@ -683,15 +887,18 @@ Nunca solicitamos la contraseña de tu cuenta.
 
 
 
+<!-- =========================
+WHATSAPP FLOTANTE
+========================= -->
 
 
 <a
 
 href="https://wa.me/595981841136"
 
-class="floating-whatsapp"
+target="_blank"
 
-target="_blank">
+class="floating-whatsapp">
 
 
 💬
@@ -705,6 +912,13 @@ target="_blank">
 
 
 
+
+
+<!-- =========================
+FOOTER
+========================= -->
+
+
 <footer>
 
 
@@ -712,23 +926,27 @@ target="_blank">
 
 AMERIS<span>STORE</span>
 
+
 </h3>
 
 
 
+
 <p>
 
-Gaming • Streaming • Música • IA
+Gaming • Streaming • Música • IA • Diseño
 
 </p>
 
 
 
+
 <p>
 
-© 2026 AMERISSTORE
+© 2026 AMERISSTORE. Todos los derechos reservados.
 
 </p>
+
 
 
 </footer>
@@ -740,7 +958,7 @@ Gaming • Streaming • Música • IA
 
 
 
-<script src="gaming.js"></script>
+<script src="productogaming.js"></script>
 
 
 
