@@ -1087,3 +1087,279 @@ to {
 
 
 }
+/* =========================================================
+   FOOTER STREAMING
+========================================================= */
+
+
+.footer {
+
+
+    width:100%;
+
+
+    margin-top:100px;
+
+
+    padding:60px 8%;
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #100b18,
+        #05040a
+    );
+
+
+    border-top:
+
+    1px solid rgba(139,61,255,.25);
+
+}
+
+
+
+.footer-content {
+
+
+    max-width:1200px;
+
+
+    margin:auto;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    2fr 1fr 1fr;
+
+
+    gap:50px;
+
+}
+
+
+
+.footer-brand h2 {
+
+
+    color:white;
+
+
+    font-size:34px;
+
+
+    font-weight:1000;
+
+
+}
+
+
+
+.footer-brand h2 span {
+
+
+    color:#b06cff;
+
+
+}
+
+
+
+.footer-brand p {
+
+
+    margin-top:15px;
+
+
+    color:#aaa3b8;
+
+
+    max-width:350px;
+
+
+    line-height:1.6;
+
+}
+
+
+
+
+
+.footer-links {
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:12px;
+
+}
+
+
+
+.footer-links h3 {
+
+
+    color:white;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+.footer-links a {
+
+
+    color:#aaa3b8;
+
+
+    transition:.25s;
+
+}
+
+
+
+.footer-links a:hover {
+
+
+    color:#b06cff;
+
+
+    transform:translateX(5px);
+
+}
+
+
+
+
+
+.footer-bottom {
+
+
+    max-width:1200px;
+
+
+    margin:40px auto 0;
+
+
+    padding-top:25px;
+
+
+    border-top:
+
+    1px solid rgba(139,61,255,.15);
+
+
+    text-align:center;
+
+
+    color:#777;
+
+
+    font-size:13px;
+
+}
+
+
+
+
+
+
+
+/* =========================================================
+   MEJORAR TITULO STREAMING
+========================================================= */
+
+
+.category-header {
+
+
+    animation:
+
+    fadeStream .7s ease;
+
+}
+
+
+
+
+
+/* =========================================================
+   MEJORAR BOTON WHATSAPP
+========================================================= */
+
+
+.floating-whatsapp {
+
+
+    box-shadow:
+
+    0 0 30px rgba(37,211,102,.35);
+
+
+    transition:.3s;
+
+}
+
+
+
+.floating-whatsapp:hover {
+
+
+    transform:
+
+    scale(1.12);
+
+
+}
+
+
+
+
+
+
+
+/* =========================================================
+   RESPONSIVE FOOTER
+========================================================= */
+
+
+@media(max-width:800px){
+
+
+.footer-content{
+
+
+grid-template-columns:
+
+1fr;
+
+
+text-align:center;
+
+
+}
+
+
+
+.footer-brand p{
+
+
+margin:auto;
+
+
+}
+
+
+}
