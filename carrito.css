@@ -1,10 +1,10 @@
 /* =========================================================
    AMERISSTORE
-   CARRITO PROFESIONAL
+   CARRITO STYLE PREMIUM
 ========================================================= */
 
 
-:root {
+:root{
 
     --bg:#05040a;
 
@@ -19,22 +19,13 @@
     --border:
     rgba(139,61,255,.25);
 
-    --white:#ffffff;
-
 }
 
 
 
 
 
-
-
-/* =========================
-RESET
-========================= */
-
-
-* {
+*{
 
     margin:0;
 
@@ -51,7 +42,9 @@ RESET
 
 
 
-body {
+body{
+
+    min-height:100vh;
 
     background:
 
@@ -69,7 +62,7 @@ body {
 
 
 
-a {
+a{
 
     text-decoration:none;
 
@@ -84,30 +77,26 @@ a {
 
 
 
+
 /* =========================
 HEADER
 ========================= */
 
 
-.cart-header {
+.cart-header{
 
 
-    width:min(92%,1300px);
-
-
-    margin:auto;
-
+    width:min(92%,1200px);
 
     height:80px;
 
+    margin:auto;
 
     display:flex;
 
+    justify-content:space-between;
 
     align-items:center;
-
-
-    justify-content:space-between;
 
 
     border-bottom:
@@ -119,11 +108,10 @@ HEADER
 
 
 
-.cart-logo {
+.cart-logo{
 
 
-    font-size:30px;
-
+    font-size:28px;
 
     font-weight:1000;
 
@@ -132,24 +120,22 @@ HEADER
 
 
 
-.cart-logo span {
+.cart-logo span{
 
 
-    color:
-
-    var(--purple-light);
+    color:var(--purple-light);
 
 
 }
 
 
 
-.back-button {
+.back-button{
 
 
     padding:
 
-    12px 20px;
+    10px 18px;
 
 
     border:
@@ -163,27 +149,10 @@ HEADER
     font-size:13px;
 
 
-    font-weight:800;
-
-
-    transition:.25s;
+    font-weight:900;
 
 
 }
-
-
-
-.back-button:hover {
-
-
-    background:
-
-    rgba(139,61,255,.15);
-
-
-}
-
-
 
 
 
@@ -196,7 +165,7 @@ CONTENEDOR
 ========================= */
 
 
-.cart-container {
+.cart-container{
 
 
     width:min(92%,1200px);
@@ -204,30 +173,24 @@ CONTENEDOR
 
     margin:
 
-    50px auto 80px;
+    45px auto 80px;
 
 
 }
 
 
 
-.cart-container h1 {
+.cart-container h1{
 
 
-    font-size:
-
-    42px;
-
-
-    margin-bottom:35px;
-
+    font-size:40px;
 
     font-weight:1000;
 
+    margin-bottom:30px;
+
 
 }
-
-
 
 
 
@@ -240,7 +203,7 @@ LAYOUT
 ========================= */
 
 
-.cart-content {
+.cart-content{
 
 
     display:grid;
@@ -248,7 +211,7 @@ LAYOUT
 
     grid-template-columns:
 
-    1fr 350px;
+    1fr 330px;
 
 
     gap:30px;
@@ -265,11 +228,11 @@ LAYOUT
 
 
 /* =========================
-LISTA PRODUCTOS
+PRODUCTOS
 ========================= */
 
 
-.cart-items {
+.cart-items{
 
 
     display:flex;
@@ -278,7 +241,7 @@ LISTA PRODUCTOS
     flex-direction:column;
 
 
-    gap:18px;
+    gap:15px;
 
 
 }
@@ -290,11 +253,7 @@ LISTA PRODUCTOS
 
 
 
-
-/* TARJETA PRODUCTO */
-
-
-.cart-product {
+.cart-product{
 
 
     display:grid;
@@ -302,24 +261,24 @@ LISTA PRODUCTOS
 
     grid-template-columns:
 
-    120px 1fr auto;
+    95px 1fr auto;
 
 
-    gap:22px;
+    gap:18px;
 
 
     align-items:center;
 
 
-    padding:20px;
+    padding:18px;
 
 
     background:
 
     linear-gradient(
         145deg,
-        #120b1d,
-        #08060d
+        #140d20,
+        #09070d
     );
 
 
@@ -328,7 +287,7 @@ LISTA PRODUCTOS
     1px solid var(--border);
 
 
-    border-radius:20px;
+    border-radius:18px;
 
 
     transition:.25s;
@@ -338,17 +297,12 @@ LISTA PRODUCTOS
 
 
 
-.cart-product:hover {
+.cart-product:hover{
 
 
     border-color:
 
     var(--purple-light);
-
-
-    transform:
-
-    translateY(-3px);
 
 
 }
@@ -361,22 +315,24 @@ LISTA PRODUCTOS
 
 
 
-/* IMAGEN */
+/* =========================
+IMAGEN
+========================= */
 
 
-.cart-product img {
+.cart-image img{
 
 
-    width:120px;
+    width:95px;
 
 
-    height:120px;
+    height:95px;
 
 
     object-fit:cover;
 
 
-    border-radius:15px;
+    border-radius:14px;
 
 
     background:#08060d;
@@ -391,14 +347,15 @@ LISTA PRODUCTOS
 
 
 
-
-/* INFO */
-
-
-.cart-info h3 {
+/* =========================
+INFORMACION
+========================= */
 
 
-    font-size:20px;
+.cart-info h3{
+
+
+    font-size:18px;
 
 
     margin-bottom:8px;
@@ -408,30 +365,54 @@ LISTA PRODUCTOS
 
 
 
-.cart-info p {
+.cart-plan{
 
 
-    color:
+    color:white;
 
-    var(--gray);
+
+    font-weight:800;
 
 
     font-size:14px;
 
 
-    margin-top:5px;
+}
+
+
+
+.cart-info span{
+
+
+    display:block;
+
+
+    margin-top:6px;
+
+
+    color:var(--gray);
+
+
+    font-size:13px;
 
 
 }
 
 
 
-.cart-info strong {
+.cart-info small{
 
 
-    color:
+    display:block;
 
-    var(--purple-light);
+
+    margin-top:6px;
+
+
+    color:var(--purple-light);
+
+
+    font-size:12px;
 
 
 }
@@ -444,10 +425,12 @@ LISTA PRODUCTOS
 
 
 
-/* PRECIO */
+/* =========================
+ACCIONES
+========================= */
 
 
-.cart-price {
+.cart-actions{
 
 
     text-align:right;
@@ -457,32 +440,104 @@ LISTA PRODUCTOS
 
 
 
-.cart-price strong {
+.cart-actions strong{
 
 
     display:block;
 
 
-    font-size:22px;
+    font-size:20px;
 
 
-    color:white;
+    font-weight:1000;
 
 
 }
 
 
 
-.cart-price button {
 
 
-    margin-top:15px;
+.quantity-box{
 
 
-    background:none;
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:flex-end;
+
+
+    gap:8px;
+
+
+    margin-top:12px;
+
+
+}
+
+
+
+.quantity-box button{
+
+
+    width:28px;
+
+
+    height:28px;
+
+
+    border-radius:8px;
+
+
+    background:
+
+    var(--card);
+
+
+    border:
+
+    1px solid var(--border);
+
+
+    color:white;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+.quantity-box span{
+
+
+    min-width:18px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+
+.remove-product{
+
+
+    margin-top:10px;
 
 
     border:0;
+
+
+    background:none;
 
 
     color:#ff6b6b;
@@ -491,7 +546,7 @@ LISTA PRODUCTOS
     cursor:pointer;
 
 
-    font-size:13px;
+    font-size:18px;
 
 
 }
@@ -509,13 +564,19 @@ RESUMEN
 ========================= */
 
 
-.cart-summary {
+.cart-summary{
+
+
+    height:max-content;
 
 
     padding:25px;
 
 
-    height:max-content;
+    position:sticky;
+
+
+    top:20px;
 
 
     background:
@@ -535,30 +596,23 @@ RESUMEN
     border-radius:22px;
 
 
-    position:sticky;
-
-
-    top:20px;
-
-
 }
 
 
 
-.cart-summary h2 {
+.cart-summary h2{
 
 
     margin-bottom:25px;
 
 
-    font-size:22px;
-
-
 }
 
 
 
-.summary-line {
+
+
+.summary-line{
 
 
     display:flex;
@@ -567,14 +621,10 @@ RESUMEN
     justify-content:space-between;
 
 
-    padding:
-
-    14px 0;
+    padding:12px 0;
 
 
-    color:
-
-    var(--gray);
+    color:var(--gray);
 
 
     border-bottom:
@@ -586,7 +636,7 @@ RESUMEN
 
 
 
-.summary-line strong {
+.summary-line strong{
 
 
     color:white;
@@ -596,7 +646,7 @@ RESUMEN
 
 
 
-.summary-line.total {
+.summary-line.total{
 
 
     margin-top:10px;
@@ -605,14 +655,14 @@ RESUMEN
     border:0;
 
 
-    font-size:20px;
+    font-size:22px;
 
 
 }
 
 
 
-.summary-line.total strong {
+.summary-line.total strong{
 
 
     color:
@@ -630,19 +680,21 @@ RESUMEN
 
 
 
-/* BOTON COMPRA */
+/* =========================
+BOTON WHATSAPP
+========================= */
 
 
-.checkout-button {
+.checkout-button{
 
 
     width:100%;
 
 
-    margin-top:25px;
-
-
     height:55px;
+
+
+    margin-top:25px;
 
 
     border:0;
@@ -651,7 +703,13 @@ RESUMEN
     border-radius:14px;
 
 
-    cursor:pointer;
+    background:
+
+    linear-gradient(
+        135deg,
+        #20c86b,
+        #25d366
+    );
 
 
     color:white;
@@ -660,16 +718,7 @@ RESUMEN
     font-weight:1000;
 
 
-    font-size:15px;
-
-
-    background:
-
-    linear-gradient(
-        135deg,
-        var(--purple),
-        var(--purple-light)
-    );
+    cursor:pointer;
 
 
     transition:.25s;
@@ -679,7 +728,7 @@ RESUMEN
 
 
 
-.checkout-button:hover {
+.checkout-button:hover{
 
 
     transform:
@@ -687,11 +736,6 @@ RESUMEN
     translateY(-3px);
 
 
-    box-shadow:
-
-    0 15px 30px rgba(139,61,255,.35);
-
-
 }
 
 
@@ -703,121 +747,11 @@ RESUMEN
 
 
 /* =========================
-WHATSAPP
+CARRITO VACIO
 ========================= */
 
 
-.floating-whatsapp {
-
-
-    position:fixed;
-
-
-    right:25px;
-
-
-    bottom:25px;
-
-
-    width:60px;
-
-
-    height:60px;
-
-
-    border-radius:50%;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-    background:#25d366;
-
-
-    font-size:28px;
-
-
-    box-shadow:
-
-    0 0 30px rgba(37,211,102,.4);
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
-FOOTER
-========================= */
-
-
-.cart-footer {
-
-
-    border-top:
-
-    1px solid var(--border);
-
-
-    padding:25px;
-
-
-    display:flex;
-
-
-    justify-content:space-between;
-
-
-    width:min(92%,1200px);
-
-
-    margin:auto;
-
-
-    color:#777;
-
-
-    font-size:13px;
-
-
-}
-
-
-
-.cart-footer strong {
-
-
-    color:white;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
-VACIO
-========================= */
-
-
-.empty-cart {
+.empty-cart{
 
 
     padding:50px;
@@ -843,20 +777,115 @@ VACIO
 
 
 
-.empty-cart h2 {
+.empty-cart p{
 
 
-    margin-bottom:10px;
+    margin-top:10px;
+
+
+    color:var(--gray);
 
 
 }
 
 
 
-.empty-cart p {
 
 
-    color:var(--gray);
+
+
+
+
+/* =========================
+WHATSAPP FLOTANTE
+========================= */
+
+
+.floating-whatsapp{
+
+
+    position:fixed;
+
+
+    right:25px;
+
+
+    bottom:25px;
+
+
+    width:58px;
+
+
+    height:58px;
+
+
+    border-radius:50%;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    background:#25d366;
+
+
+    font-size:28px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+FOOTER
+========================= */
+
+
+.cart-footer{
+
+
+    width:min(92%,1200px);
+
+
+    margin:auto;
+
+
+    padding:25px 0;
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    border-top:
+
+    1px solid var(--border);
+
+
+    color:#777;
+
+
+}
+
+
+
+.cart-footer strong{
+
+
+    color:white;
 
 
 }
@@ -877,7 +906,7 @@ RESPONSIVE
 @media(max-width:900px){
 
 
-.cart-content {
+.cart-content{
 
 
     grid-template-columns:
@@ -889,7 +918,7 @@ RESPONSIVE
 
 
 
-.cart-summary {
+.cart-summary{
 
 
     position:relative;
@@ -898,9 +927,8 @@ RESPONSIVE
 }
 
 
+
 }
-
-
 
 
 
@@ -909,32 +937,32 @@ RESPONSIVE
 @media(max-width:600px){
 
 
-.cart-product {
+.cart-product{
 
 
     grid-template-columns:
 
-    90px 1fr;
+    75px 1fr;
 
 
 }
 
 
 
-.cart-product img {
+.cart-image img{
 
 
-    width:90px;
+    width:75px;
 
 
-    height:90px;
+    height:75px;
 
 
 }
 
 
 
-.cart-price {
+.cart-actions{
 
 
     grid-column:
@@ -949,23 +977,20 @@ RESPONSIVE
 
 
 
-.cart-container h1 {
+.quantity-box{
 
 
-    font-size:32px;
+    justify-content:flex-start;
 
 
 }
 
 
 
-.cart-footer {
+.cart-container h1{
 
 
-    flex-direction:column;
-
-
-    gap:10px;
+    font-size:32px;
 
 
 }
