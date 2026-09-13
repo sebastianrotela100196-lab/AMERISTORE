@@ -2152,3 +2152,102 @@ body.cart-open {
     }
 
 }
+/* =========================================
+   INDEX PREMIUM IMPROVEMENTS
+========================================= */
+
+
+/* PRODUCTOS DESTACADOS */
+
+.featured {
+
+    padding:80px 0 50px;
+
+}
+
+
+
+.featured .product-card {
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(18,12,28,.95),
+        rgba(8,6,12,.98)
+    );
+
+
+    border-radius:24px;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+.featured .product-card:hover {
+
+
+    transform:
+
+    translateY(-12px);
+
+
+    box-shadow:
+
+    0 25px 60px rgba(124,53,255,.25);
+
+
+}
+
+
+
+.featured .product-image {
+
+
+    height:300px;
+
+
+}
+
+
+
+.featured .product-info {
+
+
+    padding:28px;
+
+
+}
+
+
+
+.featured .product-info h2 {
+
+
+    font-size:23px;
+
+
+}
+
+
+
+
+.featured .product-arrow {
+
+
+    width:42px;
+
+    height:42px;
+
+
+    background:
+
+    rgba(139,61,255,.15);
+
+
+}
