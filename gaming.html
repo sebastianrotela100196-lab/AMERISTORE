@@ -20,10 +20,10 @@ AMERISSTORE | Gaming
 
 <link rel="stylesheet" href="style.css">
 
+<link rel="stylesheet" href="gaming.css">
+
 
 </head>
-
-
 
 
 
@@ -32,100 +32,104 @@ AMERISSTORE | Gaming
 
 
 
-
-<!-- =================================
-TOP BAR
-================================= -->
-
-
-<div class="top-bar">
-
-
-<span>
-⚡ ACTIVACIÓN RÁPIDA
-</span>
-
-
-<span>
-🎮 RECARGAS VÍA ID
-</span>
-
-
-<span>
-💬 SOPORTE GAMER
-</span>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- =================================
+<!-- =========================
 HEADER
-================================= -->
+========================= -->
 
 
 <header class="header">
 
 
-<div class="logo">
+<div class="header-container">
 
+
+<a href="index.html" class="logo">
 
 AMERIS<span>STORE</span>
 
-
-</div>
-
-
-
-
-
-<div class="search">
-
-
-<input
-
-type="text"
-
-placeholder="🔍 Buscar juegos..."
-
-
->
-
-
-</div>
-
-
-
-
-
-
-
-<div class="user-area">
-
-
-<a href="#">
-Iniciar sesión
 </a>
 
 
-<span>
-Gs. 0
-</span>
+
+
+
+<nav class="menu">
+
+
+<a href="index.html">
+
+INICIO
+
+</a>
+
+
+<a href="streaming.html">
+
+STREAMING
+
+</a>
+
+
+<a href="musica.html">
+
+MÚSICA
+
+</a>
+
+
+<a href="gaming.html" class="active">
+
+GAMING
+
+</a>
+
+
+<a href="ia.html">
+
+IA TOOLS
+
+</a>
+
+
+<a href="diseno.html">
+
+DISEÑO
+
+</a>
+
+
+</nav>
+
+
+
+
+
+
+
+<a href="#"
+class="cart-button"
+id="cart-button">
 
 
 🛒
 
+<span>
+Carrito
+</span>
+
+
+<strong id="cart-total">
+
+Gs. 0
+
+</strong>
+
+
+</a>
+
+
 
 </div>
-
-
 
 
 </header>
@@ -138,90 +142,89 @@ Gs. 0
 
 
 
-<!-- =================================
-MENU
-================================= -->
+<!-- =========================
+TITULO
+========================= -->
 
 
-<nav class="menu">
-
-
-<a href="index.html">
-INICIO
-</a>
-
-
-<a href="streaming.html">
-STREAMING
-</a>
-
-
-<a href="musica.html">
-MÚSICA
-</a>
-
-
-<a href="gaming.html">
-GAMING
-</a>
-
-
-<a href="ia.html">
-IA TOOLS
-</a>
-
-
-<a href="diseno.html">
-DISEÑO
-</a>
-
-
-<a href="seguridad.html">
-SEGURIDAD
-</a>
-
-
-<a href="revendedores.html">
-REVENDEDORES
-</a>
-
-
-
-</nav>
-
-
-
-
-
-
-
-
-
-<!-- =================================
-BREADCRUMB
-================================= -->
-
-
-<div class="breadcrumb">
-
-
-<a href="index.html">
-
-INICIO
-
-</a>
-
+<section class="category-header">
 
 
 <span>
-/
+
+GAMING
+
 </span>
 
 
 
+<h1>
+
+Recargas para tus juegos favoritos
+
+</h1>
+
+
+
+<p>
+
+Diamantes, monedas y créditos digitales para gamers.
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+HORARIO
+========================= -->
+
+
+<div class="attention-card">
+
+
+<div class="attention-icon">
+
+⚡
+
+</div>
+
+
+
+<div>
+
+
+<h3>
+
+Horario de atención rápida
+
+</h3>
+
+
+<p>
+
+Recargas disponibles:
+
 <strong>
-GAMING
+
+11:00 AM - 22:00 PM
+
 </strong>
+
+</p>
+
+
+
+</div>
 
 
 </div>
@@ -234,35 +237,9 @@ GAMING
 
 
 
-<!-- =================================
-TITULO GAMING
-================================= -->
-
-
-<section class="category-header">
-
-
-<span>
-GAMING
-</span>
-
-
-<h1>
-Recargas para tus juegos favoritos
-</h1>
-
-
-<p>
-Diamantes, monedas y créditos digitales
-para gamers.
-</p>
-
-
-
-</section>
-<!-- =================================
-PRODUCTOS GAMING
-================================= -->
+<!-- =========================
+PRODUCTOS
+========================= -->
 
 
 <section class="products-section">
@@ -274,16 +251,11 @@ PRODUCTOS GAMING
 
 
 
-
-
 <!-- FREE FIRE -->
 
 
-<div class="product-card">
-
-
-<a href="freefire.html">
-
+<a href="freefire.html"
+class="product-card">
 
 
 <div class="product-image">
@@ -293,24 +265,20 @@ PRODUCTOS GAMING
 
 src="assets/productos/freefire.png"
 
-alt="Free Fire Diamantes"
-
+alt="Free Fire"
 
 
 >
 
 
+<span class="product-badge">
 
-<div class="badge">
 TOP VENTA
+
+</span>
+
+
 </div>
-
-
-
-</div>
-
-
-
 
 
 
@@ -318,26 +286,28 @@ TOP VENTA
 <div class="product-info">
 
 
-<span>
+<span class="product-category">
+
 GAMING
+
 </span>
 
 
 
 
-<h3>
-Recargas Free Fire
-</h3>
+<h2>
 
+Recargas Free Fire
+
+</h2>
 
 
 
 <p>
-Diamantes Free Fire mediante ID de jugador.
+
+Diamantes Free Fire mediante ID.
+
 </p>
-
-
-
 
 
 
@@ -345,13 +315,13 @@ Diamantes Free Fire mediante ID de jugador.
 
 
 <strong>
+
 Desde Gs. 5.000
+
 </strong>
 
 
 </div>
-
-
 
 
 
@@ -361,7 +331,6 @@ Desde Gs. 5.000
 </a>
 
 
-</div>
 
 
 
@@ -369,16 +338,11 @@ Desde Gs. 5.000
 
 
 
+<!-- PUBG -->
 
 
-<!-- PUBG MOBILE -->
-
-
-<div class="product-card">
-
-
-<a href="producto.html?id=pubg">
-
+<a href="producto.html?id=pubg"
+class="product-card">
 
 
 <div class="product-image">
@@ -391,21 +355,17 @@ src="assets/productos/pubg.png"
 alt="PUBG Mobile"
 
 
-
 >
 
 
+<span class="product-badge">
 
-<div class="badge">
 OFERTA
+
+</span>
+
+
 </div>
-
-
-
-</div>
-
-
-
 
 
 
@@ -413,26 +373,28 @@ OFERTA
 <div class="product-info">
 
 
-<span>
+<span class="product-category">
+
 GAMING
+
 </span>
 
 
 
 
-<h3>
-PUBG Mobile
-</h3>
+<h2>
 
+PUBG Mobile
+
+</h2>
 
 
 
 <p>
-UC y recargas para mejorar tu experiencia.
+
+UC y recargas para mejorar tu cuenta.
+
 </p>
-
-
-
 
 
 
@@ -440,14 +402,13 @@ UC y recargas para mejorar tu experiencia.
 
 
 <strong>
+
 Desde Gs. 10.000
+
 </strong>
 
 
-
 </div>
-
-
 
 
 
@@ -455,9 +416,6 @@ Desde Gs. 10.000
 
 
 </a>
-
-
-</div>
 
 
 
@@ -470,11 +428,8 @@ Desde Gs. 10.000
 <!-- BLOOD STRIKE -->
 
 
-<div class="product-card">
-
-
-<a href="producto.html?id=bloodstrike">
-
+<a href="producto.html?id=bloodstrike"
+class="product-card">
 
 
 <div class="product-image">
@@ -487,21 +442,17 @@ src="assets/productos/bloodstrike.png"
 alt="Blood Strike"
 
 
-
 >
 
 
+<span class="product-badge">
 
-<div class="badge">
 NUEVO
+
+</span>
+
+
 </div>
-
-
-
-</div>
-
-
-
 
 
 
@@ -509,26 +460,28 @@ NUEVO
 <div class="product-info">
 
 
-<span>
+<span class="product-category">
+
 GAMING
+
 </span>
 
 
 
 
-<h3>
-Blood Strike
-</h3>
+<h2>
 
+Blood Strike
+
+</h2>
 
 
 
 <p>
-Recargas y créditos para tu cuenta.
+
+Créditos y recargas para tu cuenta.
+
 </p>
-
-
-
 
 
 
@@ -536,14 +489,13 @@ Recargas y créditos para tu cuenta.
 
 
 <strong>
+
 Desde Gs. 10.000
+
 </strong>
 
 
-
 </div>
-
-
 
 
 
@@ -551,9 +503,6 @@ Desde Gs. 10.000
 
 
 </a>
-
-
-</div>
 
 
 
@@ -566,11 +515,8 @@ Desde Gs. 10.000
 <!-- MOBILE LEGENDS -->
 
 
-<div class="product-card">
-
-
-<a href="producto.html?id=mobilelegends">
-
+<a href="producto.html?id=mobilelegends"
+class="product-card">
 
 
 <div class="product-image">
@@ -583,21 +529,17 @@ src="assets/productos/mobilelegends.png"
 alt="Mobile Legends"
 
 
-
 >
 
 
+<span class="product-badge">
 
-<div class="badge">
 POPULAR
+
+</span>
+
+
 </div>
-
-
-
-</div>
-
-
-
 
 
 
@@ -605,26 +547,28 @@ POPULAR
 <div class="product-info">
 
 
-<span>
+<span class="product-category">
+
 GAMING
+
 </span>
 
 
 
 
-<h3>
-Mobile Legends
-</h3>
+<h2>
 
+Mobile Legends
+
+</h2>
 
 
 
 <p>
-Diamantes y recargas para tu héroe.
+
+Diamantes para tus héroes.
+
 </p>
-
-
-
 
 
 
@@ -632,14 +576,13 @@ Diamantes y recargas para tu héroe.
 
 
 <strong>
+
 Desde Gs. 10.000
+
 </strong>
 
 
-
 </div>
-
-
 
 
 
@@ -649,13 +592,6 @@ Desde Gs. 10.000
 </a>
 
 
-</div>
-
-
-
-
-
-
 
 
 
@@ -663,150 +599,21 @@ Desde Gs. 10.000
 
 
 </section>
-  <!-- =================================
-BENEFICIOS GAMING
-================================= -->
 
 
-<section class="benefits">
 
 
 
-<div class="benefit-card">
 
 
-<div class="benefit-icon">
 
-🎮
 
-</div>
-
-
-
-<div>
-
-
-<h3>
-Recargas por ID
-</h3>
-
-
-
-<p>
-Recibe tus diamantes y créditos
-directamente en tu cuenta.
-</p>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="benefit-card">
-
-
-<div class="benefit-icon">
-
-⚡
-
-</div>
-
-
-
-<div>
-
-
-<h3>
-Entrega rápida
-</h3>
-
-
-
-<p>
-Procesamos tus recargas
-sin largas esperas.
-</p>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="benefit-card">
-
-
-<div class="benefit-icon">
-
-💬
-
-</div>
-
-
-
-<div>
-
-
-<h3>
-Soporte gamer
-</h3>
-
-
-
-<p>
-Te ayudamos con tus compras
-y activaciones.
-</p>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- =================================
-CTA GAMING
-================================= -->
+<!-- =========================
+CTA
+========================= -->
 
 
 <section class="final-contact">
-
-
-
 
 
 <h2>
@@ -817,23 +624,19 @@ Potencia tu juego
 
 
 
-
-
 <p>
 
-Diamantes, monedas y créditos
-para tus juegos favoritos.
+Diamantes, monedas y créditos para tus juegos favoritos.
 
 </p>
 
 
 
-
-
-
-<a 
+<a
 
 href="https://wa.me/595981841136"
+
+target="_blank"
 
 class="btn-primary">
 
@@ -845,14 +648,19 @@ class="btn-primary">
 
 
 
-
-
-
-
 </section>
-<!-- =================================
-WHATSAPP FLOTANTE
-================================= -->
+
+
+
+
+
+
+
+
+
+<!-- =========================
+WHATSAPP
+========================= -->
 
 
 <a
@@ -877,89 +685,34 @@ class="floating-whatsapp">
 
 
 
-<!-- =================================
+<!-- =========================
 FOOTER
-================================= -->
+========================= -->
 
 
-<footer>
+<footer class="footer">
 
 
+<div class="footer-simple">
 
 
-<h2>
+<strong>
 
-AMERIS<span>STORE</span>
+AMERISSTORE
 
-</h2>
-
-
-
-
-
-<p>
-
-Gaming • Streaming • Música • IA • Diseño
-
-</p>
+</strong>
 
 
 
+<span>
 
+© 2026 AMERISSTORE
 
-
-
-
-
-<div class="footer-links">
-
-
-
-<a href="#">
-
-Instagram
-
-</a>
-
-
-
-
-<a href="#">
-
-TikTok
-
-</a>
-
-
-
-
-<a href="#">
-
-Facebook
-
-</a>
+</span>
 
 
 
 </div>
-
-
-
-
-
-
-
-
-
-<p>
-
-© 2026 AMERISSTORE.
-Todos los derechos reservados.
-
-</p>
-
-
-
 
 
 </footer>
@@ -971,9 +724,7 @@ Todos los derechos reservados.
 
 
 
-
 <script src="script.js"></script>
-
 
 
 </body>
