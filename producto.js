@@ -1,6 +1,7 @@
 /* =========================================================
    AMERISSTORE
    PRODUCTO DINÁMICO + CARRITO
+   CATALOGO MAESTRO
 ========================================================= */
 
 
@@ -24,305 +25,191 @@ const CART_KEY =
 
 
 
+
 /* =========================================================
-   BASE PRODUCTOS
+   BASE DE DATOS PRODUCTOS
 ========================================================= */
 
 
 const productos = {
 
 
+
+/* =========================================================
+   NETFLIX
+========================================================= */
+
+
 netflix:{
+
 
 categoria:"STREAMING",
 
+
 nombre:"Netflix Premium",
+
 
 imagen:
 "assets/productos/netflix.png",
 
-badge:"OFERTA",
+
+badge:"⭐ MÁS VENDIDO",
+
 
 descripcion:
+
 "Disfruta Netflix Premium con diferentes opciones de acceso.",
 
 
+
+
 planes:[
 
-{
-nombre:"Perfil Compartido",
-precio:25000
-},
+
 
 {
-nombre:"Perfil Cuenta 4K",
-precio:40000
+
+
+nombre:"Perfil Premium 4K",
+
+tipo:
+"Perfil compartido 4K",
+
+duracion:
+"1 mes",
+
+precio:
+32000,
+
+etiqueta:
+"⭐ Más vendido"
+
+
 },
 
+
+
+
 {
+
+
+nombre:"Perfil TV",
+
+tipo:
+"Perfil exclusivo TV",
+
+duracion:
+"1 mes",
+
+precio:
+22000,
+
+etiqueta:
+"🔥 Mejor valor"
+
+
+},
+
+
+
+
+
+{
+
+
 nombre:"Cuenta Completa",
-precio:100000
+
+tipo:
+"Cuenta privada completa",
+
+duracion:
+"1 mes",
+
+precio:
+110000,
+
+etiqueta:
+"👑 Premium"
+
+
+},
+
+
+
+
+
+{
+
+
+nombre:"Perfil Premium 4K",
+
+tipo:
+"Perfil compartido 4K",
+
+duracion:
+"3 meses",
+
+precio:
+90000,
+
+etiqueta:
+"💰 Ahorro"
+
+
+},
+
+
+
+
+
+{
+
+
+nombre:"Perfil Premium 4K",
+
+tipo:
+"Perfil compartido 4K",
+
+duracion:
+"6 meses",
+
+precio:
+170000,
+
+etiqueta:
+"🔥 Mejor valor"
+
+
+},
+
+
+
+
+
+{
+
+
+nombre:"Perfil Premium 4K",
+
+tipo:
+"Perfil compartido 4K",
+
+duracion:
+"12 meses",
+
+precio:
+320000,
+
+etiqueta:
+"👑 Premium"
+
+
 }
+
 
 ]
 
 },
-
-
-
-
-disney:{
-
-categoria:"STREAMING",
-
-nombre:"Disney+ Premium",
-
-imagen:
-"assets/productos/disney.png",
-
-badge:"OFERTA",
-
-descripcion:
-"Disney, Marvel, Star Wars y contenido exclusivo.",
-
-
-planes:[
-
-{
-nombre:"1 Mes",
-precio:25000
-}
-
-]
-
-},
-
-
-
-
-HBOMAX:{
-
-categoria:"STREAMING",
-
-nombre:"HBO Max",
-
-imagen:
-"assets/productos/HBOMAX.png",
-
-badge:"PREMIUM",
-
-descripcion:
-"Películas, series y contenido exclusivo de HBO.",
-
-
-planes:[
-
-{
-nombre:"1 Mes",
-precio:15000
-}
-
-]
-
-},
-
-
-
-
-paramount:{
-
-categoria:"STREAMING",
-
-nombre:"Paramount+",
-
-imagen:
-"assets/productos/paramount.png",
-
-badge:"OFERTA",
-
-descripcion:
-"Series, películas y contenido Premium.",
-
-
-planes:[
-
-{
-nombre:"1 Mes",
-precio:15000
-}
-
-]
-
-},
-
-
-
-
-crunchyroll:{
-
-categoria:"STREAMING",
-
-nombre:"Crunchyroll Premium",
-
-imagen:
-"assets/productos/crunchyroll.png",
-
-badge:"POPULAR",
-
-descripcion:
-"Anime sin límites y contenido exclusivo.",
-
-
-planes:[
-
-{
-nombre:"1 Mes",
-precio:12000
-}
-
-]
-
-},
-
-
-
-
-flujotv:{
-
-categoria:"STREAMING",
-
-nombre:"Flujo TV",
-
-imagen:
-"assets/productos/flujotv.png",
-
-badge:"TOP VENTA",
-
-descripcion:
-"Canales en vivo, deportes y entretenimiento.",
-
-
-planes:[
-
-{
-nombre:"1 Mes",
-precio:30000
-},
-
-{
-nombre:"3 Meses",
-precio:80000
-}
-
-]
-
-},
-
-
-
-
-spotify:{
-
-categoria:"MÚSICA",
-
-nombre:"Spotify Premium",
-
-imagen:
-"assets/productos/spotify.png",
-
-badge:"POPULAR",
-
-descripcion:
-"Música sin anuncios y sin límites.",
-
-
-planes:[
-
-{
-nombre:"1 Mes",
-precio:25000
-},
-
-{
-nombre:"3 Meses",
-precio:60000
-},
-
-{
-nombre:"6 Meses",
-precio:100000
-},
-
-{
-nombre:"1 Año",
-precio:200000
-}
-
-]
-
-},
-
-
-
-
-canva:{
-
-categoria:"DISEÑO",
-
-nombre:"Canva Pro",
-
-imagen:
-"assets/productos/canva.png",
-
-badge:"PRO",
-
-descripcion:
-"Diseños profesionales con herramientas Premium.",
-
-
-planes:[
-
-{
-nombre:"Cuenta Premium",
-precio:5000
-}
-
-]
-
-},
-
-
-
-
-chatgpt:{
-
-categoria:"IA",
-
-nombre:"ChatGPT Plus",
-
-imagen:
-"assets/productos/chatgpt.png",
-
-badge:"POPULAR",
-
-descripcion:
-"Inteligencia artificial avanzada para crear contenido.",
-
-
-planes:[
-
-{
-nombre:"Cuenta Premium",
-precio:25000
-}
-
-]
-
-}
-
-
-
-};
 
 
 
@@ -331,7 +218,2303 @@ precio:25000
 
 
 /* =========================================================
-   OBTENER ID PRODUCTO
+   DISNEY+
+========================================================= */
+
+
+disney:{
+
+
+categoria:"STREAMING",
+
+
+nombre:"Disney+ Premium",
+
+
+imagen:
+"assets/productos/disney.png",
+
+
+badge:
+"⭐ MÁS VENDIDO",
+
+
+descripcion:
+
+"Disney, Marvel, Pixar, Star Wars y contenido exclusivo.",
+
+
+
+
+planes:[
+
+
+
+{
+
+
+nombre:"Disney Premium + ESPN",
+
+tipo:
+"Perfil Premium con deportes ESPN",
+
+duracion:
+"1 mes",
+
+precio:
+25000,
+
+etiqueta:
+"⭐ Más vendido"
+
+
+},
+
+
+
+
+{
+
+
+nombre:"Disney Premium",
+
+tipo:
+"Perfil sin ESPN",
+
+duracion:
+"1 mes",
+
+precio:
+18000,
+
+etiqueta:
+"🔥 Mejor valor"
+
+
+},
+
+
+
+
+
+{
+
+
+nombre:"Cuenta Completa",
+
+tipo:
+"Cuenta privada completa",
+
+duracion:
+"1 mes",
+
+precio:
+90000,
+
+etiqueta:
+"👑 Premium"
+
+
+},
+
+
+
+
+
+{
+
+
+nombre:"Disney Premium + ESPN",
+
+tipo:
+"Perfil Premium con ESPN",
+
+duracion:
+"3 meses",
+
+precio:
+70000,
+
+etiqueta:
+"💰 Ahorro"
+
+
+},
+
+
+
+
+
+{
+
+
+nombre:"Disney Premium + ESPN",
+
+tipo:
+"Perfil Premium con ESPN",
+
+duracion:
+"12 meses",
+
+precio:
+240000,
+
+etiqueta:
+"👑 Premium"
+
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   MAX HBO MAX
+========================================================= */
+
+
+HBOMAX:{
+
+
+categoria:"STREAMING",
+
+
+nombre:"Max / HBO Max",
+
+
+imagen:
+"assets/productos/HBOMAX.png",
+
+
+badge:
+"PREMIUM",
+
+
+descripcion:
+
+"Películas, series y contenido exclusivo de HBO.",
+
+
+
+
+
+planes:[
+
+
+
+{
+
+
+nombre:"Perfil Estándar",
+
+tipo:
+"Perfil compartido",
+
+duracion:
+"1 mes",
+
+precio:
+18000,
+
+etiqueta:
+"🔥 Mejor valor"
+
+
+},
+
+
+
+
+{
+
+
+nombre:"Perfil Platino",
+
+tipo:
+"Perfil Premium",
+
+duracion:
+"1 mes",
+
+precio:
+20000,
+
+etiqueta:
+"⭐ Popular"
+
+
+},
+
+
+
+
+
+{
+
+
+nombre:"Cuenta Completa",
+
+tipo:
+"Cuenta privada",
+
+duracion:
+"1 mes",
+
+precio:
+55000,
+
+etiqueta:
+"👑 Premium"
+
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   PRIME VIDEO
+========================================================= */
+
+
+prime:{
+
+
+categoria:"STREAMING",
+
+
+nombre:"Prime Video",
+
+
+imagen:
+"assets/productos/prime.png",
+
+
+badge:
+"NUEVO",
+
+
+descripcion:
+
+"Películas, series y producciones originales de Amazon.",
+
+
+
+
+
+planes:[
+
+
+
+{
+
+
+nombre:"Perfil Prime Video",
+
+tipo:
+"Perfil compartido",
+
+duracion:
+"1 mes",
+
+precio:
+25000,
+
+etiqueta:
+"⭐ Popular"
+
+
+},
+
+
+
+
+{
+
+
+nombre:"Cuenta Completa",
+
+tipo:
+"Cuenta privada completa",
+
+duracion:
+"1 mes",
+
+precio:
+50000,
+
+etiqueta:
+"👑 Premium"
+
+
+}
+
+
+]
+
+},
+
+
+/* =========================================================
+   CRUNCHYROLL
+========================================================= */
+
+
+crunchyroll:{
+
+
+categoria:"STREAMING",
+
+
+nombre:"Crunchyroll Premium",
+
+
+imagen:
+"assets/productos/crunchyroll.png",
+
+
+badge:
+"ANIME",
+
+
+descripcion:
+
+"Anime sin límites y contenido exclusivo.",
+
+
+
+planes:[
+
+
+
+{
+
+
+nombre:"Perfil Premium",
+
+tipo:
+"Perfil compartido Premium",
+
+duracion:
+"1 mes",
+
+precio:
+15000,
+
+etiqueta:
+"⭐ Popular"
+
+
+},
+
+
+
+{
+
+
+nombre:"Cuenta Completa",
+
+tipo:
+"Cuenta privada completa",
+
+duracion:
+"1 mes",
+
+precio:
+45000,
+
+etiqueta:
+"👑 Premium"
+
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   PARAMOUNT+
+========================================================= */
+
+
+paramount:{
+
+
+categoria:"STREAMING",
+
+
+nombre:"Paramount+",
+
+
+imagen:
+"assets/productos/paramount.png",
+
+
+badge:
+"PREMIUM",
+
+
+descripcion:
+
+"Series, películas y contenido exclusivo.",
+
+
+
+planes:[
+
+
+
+{
+
+
+nombre:"Perfil Exclusivo",
+
+tipo:
+"Perfil privado",
+
+duracion:
+"1 mes",
+
+precio:
+20000,
+
+etiqueta:
+"⭐ Popular"
+
+
+},
+
+
+
+{
+
+
+nombre:"Perfil No Exclusivo",
+
+tipo:
+"Perfil compartido",
+
+duracion:
+"1 mes",
+
+precio:
+15000,
+
+etiqueta:
+"🔥 Mejor valor"
+
+
+},
+
+
+
+{
+
+
+nombre:"Cuenta Completa",
+
+tipo:
+"Cuenta privada",
+
+duracion:
+"1 mes",
+
+precio:
+50000,
+
+etiqueta:
+"👑 Premium"
+
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   SPOTIFY
+========================================================= */
+
+
+spotify:{
+
+
+categoria:"MÚSICA",
+
+
+nombre:"Spotify Premium",
+
+
+imagen:
+"assets/productos/spotify.png",
+
+
+badge:
+"MÁS VENDIDO",
+
+
+descripcion:
+
+"Música sin anuncios y sin límites.",
+
+
+
+planes:[
+
+
+
+{
+
+
+nombre:"Spotify Premium",
+
+tipo:
+"Cuenta Premium",
+
+duracion:
+"1 mes",
+
+precio:
+25000,
+
+etiqueta:
+"⭐ Popular"
+
+
+},
+
+
+
+{
+
+
+nombre:"Spotify Premium",
+
+tipo:
+"Cuenta Premium",
+
+duracion:
+"3 meses",
+
+precio:
+60000,
+
+etiqueta:
+"🔥 Mejor valor"
+
+
+},
+
+
+
+{
+
+
+nombre:"Spotify Premium",
+
+tipo:
+"Cuenta Premium",
+
+duracion:
+"6 meses",
+
+precio:
+100000,
+
+etiqueta:
+"💰 Ahorro"
+
+
+},
+
+
+
+{
+
+
+nombre:"Spotify Premium",
+
+tipo:
+"Cuenta Premium",
+
+duracion:
+"12 meses",
+
+precio:
+200000,
+
+etiqueta:
+"👑 Premium"
+
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   YOUTUBE PREMIUM
+========================================================= */
+
+
+youtube:{
+
+
+categoria:"MÚSICA",
+
+
+nombre:"YouTube Premium",
+
+
+imagen:
+"assets/productos/youtube.png",
+
+
+badge:
+"POPULAR",
+
+
+descripcion:
+
+"YouTube sin anuncios y YouTube Music incluido.",
+
+
+
+planes:[
+
+
+
+{
+
+
+nombre:"YouTube Premium",
+
+tipo:
+"Cuenta Premium",
+
+duracion:
+"1 mes",
+
+precio:
+25000,
+
+etiqueta:
+"⭐ Popular"
+
+
+},
+
+
+
+{
+
+
+nombre:"YouTube Premium",
+
+tipo:
+"Cuenta Premium",
+
+duracion:
+"3 meses",
+
+precio:
+60000,
+
+etiqueta:
+"🔥 Mejor valor"
+
+
+},
+
+
+
+{
+
+
+nombre:"YouTube Premium",
+
+tipo:
+"Cuenta Premium",
+
+duracion:
+"6 meses",
+
+precio:
+110000,
+
+etiqueta:
+"💰 Ahorro"
+
+
+},
+
+
+
+{
+
+
+nombre:"YouTube Premium",
+
+tipo:
+"Cuenta Premium",
+
+duracion:
+"12 meses",
+
+precio:
+200000,
+
+etiqueta:
+"👑 Premium"
+
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   DEEZER
+========================================================= */
+
+
+deezer:{
+
+
+categoria:"MÚSICA",
+
+
+nombre:"Deezer Premium",
+
+
+imagen:
+"assets/productos/deezer.png",
+
+
+badge:
+"NUEVO",
+
+
+descripcion:
+
+"Millones de canciones sin anuncios.",
+
+
+
+planes:[
+
+
+
+{
+
+
+nombre:"Deezer Premium",
+
+tipo:
+"Cuenta Premium",
+
+duracion:
+"1 mes",
+
+precio:
+20000,
+
+etiqueta:
+"⭐ Nuevo"
+
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   CHATGPT
+========================================================= */
+
+
+chatgpt:{
+
+
+categoria:"IA TOOLS",
+
+
+nombre:"ChatGPT",
+
+
+imagen:
+"assets/productos/chatgpt.png",
+
+
+badge:
+"POPULAR",
+
+
+descripcion:
+
+"Inteligencia artificial avanzada para crear, estudiar y trabajar.",
+
+
+
+planes:[
+
+
+
+{
+
+
+nombre:"ChatGPT Plus",
+
+tipo:
+"Cuenta Premium",
+
+duracion:
+"1 mes",
+
+precio:
+35000,
+
+etiqueta:
+"⭐ Más vendido"
+
+
+},
+
+
+
+{
+
+
+nombre:"ChatGPT Go",
+
+tipo:
+"Cuenta compartida",
+
+duracion:
+"1 mes",
+
+precio:
+30000,
+
+etiqueta:
+"🔥 Mejor valor"
+
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   GEMINI
+========================================================= */
+
+
+gemini:{
+
+
+categoria:"IA TOOLS",
+
+
+nombre:"Google One + Gemini Pro",
+
+
+imagen:
+"assets/productos/gemini.png",
+
+
+badge:
+"PREMIUM",
+
+
+descripcion:
+
+"IA avanzada de Google con almacenamiento y funciones Premium.",
+
+
+
+planes:[
+
+
+
+{
+
+
+nombre:"Gemini Pro",
+
+tipo:
+"Cuenta Premium",
+
+duracion:
+"12 meses",
+
+precio:
+89000,
+
+etiqueta:
+"⭐ Popular"
+
+
+},
+
+
+
+{
+
+
+nombre:"Gemini Pro",
+
+tipo:
+"Cuenta Premium",
+
+duracion:
+"18 meses",
+
+precio:
+109000,
+
+etiqueta:
+"👑 Premium"
+
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   GOOGLE ONE FAMILIAR
+========================================================= */
+
+
+googleonefamiliar:{
+
+
+categoria:"IA TOOLS",
+
+
+nombre:"Google One Familiar",
+
+
+imagen:
+"assets/productos/googleone.png",
+
+
+badge:
+"NUBE",
+
+
+descripcion:
+
+"Almacenamiento familiar en la nube.",
+
+
+
+planes:[
+
+
+
+{
+
+
+nombre:"Google One Familiar",
+
+tipo:
+"Cuenta familiar",
+
+duracion:
+"18 meses",
+
+precio:
+180000,
+
+etiqueta:
+"👑 Premium"
+
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   CANVA
+========================================================= */
+
+
+canva:{
+
+
+categoria:"DISEÑO",
+
+
+nombre:"Canva Pro",
+
+
+imagen:
+"assets/productos/canva.png",
+
+
+badge:
+"DISEÑO",
+
+
+descripcion:
+
+"Diseños profesionales con herramientas Premium.",
+
+
+
+planes:[
+
+
+
+{
+
+
+nombre:"Canva Pro",
+
+tipo:
+"Cuenta Premium",
+
+duracion:
+"1 mes",
+
+precio:
+15000,
+
+etiqueta:
+"⭐ Popular"
+
+
+},
+
+
+
+{
+
+
+nombre:"Canva Pro",
+
+tipo:
+"Cuenta Premium",
+
+duracion:
+"3 meses",
+
+precio:
+30000,
+
+etiqueta:
+"🔥 Mejor valor"
+
+
+},
+
+
+
+{
+
+
+nombre:"Canva Pro",
+
+tipo:
+"Cuenta Premium",
+
+duracion:
+"6 meses",
+
+precio:
+45000,
+
+etiqueta:
+"💰 Ahorro"
+
+
+},
+
+
+
+{
+
+
+nombre:"Canva Pro",
+
+tipo:
+"Cuenta Premium",
+
+duracion:
+"12 meses",
+
+precio:
+70000,
+
+etiqueta:
+"👑 Premium"
+
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   CAPCUT
+========================================================= */
+
+
+capcut:{
+
+
+categoria:"DISEÑO",
+
+
+nombre:"CapCut Pro",
+
+
+imagen:
+"assets/productos/capcut.png",
+
+
+badge:
+"EDITOR",
+
+
+descripcion:
+
+"Edición profesional de videos con herramientas Premium.",
+
+
+
+planes:[
+
+
+
+{
+
+
+nombre:"CapCut Pro",
+
+tipo:
+"Cuenta Premium",
+
+duracion:
+"30 días",
+
+precio:
+50000,
+
+etiqueta:
+"⭐ Popular"
+
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   AUTODESK
+========================================================= */
+
+
+autodesk:{
+
+
+categoria:"DISEÑO",
+
+
+nombre:"Autodesk",
+
+
+imagen:
+"assets/productos/autodesk.png",
+
+
+badge:
+"PRO",
+
+
+descripcion:
+
+"Herramientas profesionales para arquitectura y diseño.",
+
+
+
+planes:[
+
+
+
+{
+
+
+nombre:"Autodesk",
+
+tipo:
+"Licencia Premium",
+
+duracion:
+"12 meses",
+
+precio:
+60000,
+
+etiqueta:
+"👑 Premium"
+
+
+}
+
+
+]
+
+},
+/* =========================================================
+   IPTV
+========================================================= */
+
+
+iptv:{
+
+
+categoria:"STREAMING",
+
+
+nombre:"IPTV",
+
+
+imagen:
+"assets/productos/iptv.png",
+
+
+badge:
+"🔥 MEJOR VALOR",
+
+
+descripcion:
+
+"Canales en vivo, deportes y entretenimiento digital.",
+
+
+
+planes:[
+
+
+
+{
+
+nombre:"IPTV 1 Dispositivo",
+
+tipo:
+"Activación en 1 dispositivo",
+
+duracion:
+"1 mes",
+
+precio:
+19900,
+
+etiqueta:
+"⭐ Popular"
+
+},
+
+
+
+{
+
+nombre:"IPTV 4 Dispositivos",
+
+tipo:
+"Multidispositivo",
+
+duracion:
+"1 mes",
+
+precio:
+34900,
+
+etiqueta:
+"🔥 Mejor valor"
+
+},
+
+
+
+{
+
+nombre:"IPTV 4 Dispositivos",
+
+tipo:
+"Multidispositivo",
+
+duracion:
+"3 meses",
+
+precio:
+69900,
+
+etiqueta:
+"💰 Ahorro"
+
+},
+
+
+
+{
+
+nombre:"IPTV 4 Dispositivos",
+
+tipo:
+"Multidispositivo",
+
+duracion:
+"6 meses",
+
+precio:
+149900,
+
+etiqueta:
+"👑 Premium"
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   FLUJO TV
+========================================================= */
+
+
+flujotv:{
+
+
+categoria:"STREAMING",
+
+
+nombre:"Flujo TV",
+
+
+imagen:
+"assets/productos/flujotv.png",
+
+
+badge:
+"TOP VENTA",
+
+
+descripcion:
+
+"Canales en vivo, deportes y entretenimiento.",
+
+
+
+planes:[
+
+
+
+{
+
+nombre:"Perfil 1 Dispositivo",
+
+tipo:
+"Perfil exclusivo",
+
+duracion:
+"1 mes",
+
+precio:
+40000,
+
+etiqueta:
+"⭐ Popular"
+
+},
+
+
+
+{
+
+nombre:"Cuenta Completa",
+
+tipo:
+"Cuenta privada",
+
+duracion:
+"1 mes",
+
+precio:
+70000,
+
+etiqueta:
+"👑 Premium"
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   OLEADA TV
+========================================================= */
+
+
+oleadatv:{
+
+
+categoria:"STREAMING",
+
+
+nombre:"Oleada TV",
+
+
+imagen:
+"assets/productos/oleadatv.png",
+
+
+badge:
+"NUEVO",
+
+
+descripcion:
+
+"Televisión digital, películas y entretenimiento.",
+
+
+
+planes:[
+
+
+
+{
+
+nombre:"Oleada TV",
+
+tipo:
+"Servicio digital",
+
+duracion:
+"1 mes",
+
+precio:
+30000,
+
+etiqueta:
+"⭐ Popular"
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   DGO
+========================================================= */
+
+
+dgo:{
+
+
+categoria:"STREAMING",
+
+
+nombre:"DGO + Liga 1 Max",
+
+
+imagen:
+"assets/productos/dgo.png",
+
+
+badge:
+"⚽ DEPORTES",
+
+
+descripcion:
+
+"Televisión deportiva y contenido premium.",
+
+
+
+planes:[
+
+
+
+{
+
+nombre:"Perfil No Exclusivo",
+
+tipo:
+"Perfil compartido",
+
+duracion:
+"1 mes",
+
+precio:
+40000,
+
+etiqueta:
+"🔥 Mejor valor"
+
+},
+
+
+
+{
+
+nombre:"Perfil Exclusivo + Liga 1 Max",
+
+tipo:
+"Perfil privado",
+
+duracion:
+"1 mes",
+
+precio:
+60000,
+
+etiqueta:
+"⭐ Premium"
+
+},
+
+
+
+{
+
+nombre:"Cuenta Completa",
+
+tipo:
+"Cuenta privada",
+
+duracion:
+"1 mes",
+
+precio:
+100000,
+
+etiqueta:
+"👑 Premium"
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   APPLE TV + MLS
+========================================================= */
+
+
+appletv:{
+
+
+categoria:"STREAMING",
+
+
+nombre:"Apple TV + MLS",
+
+
+imagen:
+"assets/productos/appletv.png",
+
+
+badge:
+"PREMIUM",
+
+
+descripcion:
+
+"Apple TV+ y contenido deportivo MLS.",
+
+
+
+planes:[
+
+
+
+{
+
+nombre:"Apple TV + MLS",
+
+tipo:
+"Perfil Premium",
+
+duracion:
+"1 mes",
+
+precio:
+25000,
+
+etiqueta:
+"⭐ Popular"
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   VIKI
+========================================================= */
+
+
+viki:{
+
+
+categoria:"STREAMING",
+
+
+nombre:"Viki Rakuten Pass",
+
+
+imagen:
+"assets/productos/viki.png",
+
+
+badge:
+"SERIES",
+
+
+descripcion:
+
+"Dramas, películas y contenido asiático.",
+
+
+
+planes:[
+
+
+
+{
+
+nombre:"Viki Premium",
+
+tipo:
+"Perfil Premium",
+
+duracion:
+"1 mes",
+
+precio:
+25000,
+
+etiqueta:
+"⭐ Popular"
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   VIX
+========================================================= */
+
+
+vix:{
+
+
+categoria:"STREAMING",
+
+
+nombre:"ViX Premium",
+
+
+imagen:
+"assets/productos/vix.png",
+
+
+badge:
+"PREMIUM",
+
+
+descripcion:
+
+"Series, películas y novelas.",
+
+
+
+planes:[
+
+
+
+{
+
+nombre:"Perfil ViX",
+
+tipo:
+"Perfil Premium",
+
+duracion:
+"1 mes",
+
+precio:
+15000,
+
+etiqueta:
+"🔥 Mejor valor"
+
+},
+
+
+
+{
+
+nombre:"Cuenta Completa",
+
+tipo:
+"Cuenta privada",
+
+duracion:
+"1 mes",
+
+precio:
+35000,
+
+etiqueta:
+"👑 Premium"
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   TELE LATINO
+========================================================= */
+
+
+telelatino:{
+
+
+categoria:"STREAMING",
+
+
+nombre:"Tele Latino",
+
+
+imagen:
+"assets/productos/telelatino.png",
+
+
+badge:
+"TV",
+
+
+descripcion:
+
+"Películas, canales y entretenimiento.",
+
+
+
+planes:[
+
+
+
+{
+
+nombre:"Perfil Tele Latino",
+
+tipo:
+"Perfil individual",
+
+duracion:
+"1 mes",
+
+precio:
+30000,
+
+etiqueta:
+"⭐ Popular"
+
+},
+
+
+
+{
+
+nombre:"Cuenta Completa",
+
+tipo:
+"3 dispositivos",
+
+duracion:
+"3 meses",
+
+precio:
+60000,
+
+etiqueta:
+"👑 Premium"
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   UNIVERSAL+
+========================================================= */
+
+
+universal:{
+
+
+categoria:"STREAMING",
+
+
+nombre:"Universal+",
+
+
+imagen:
+"assets/productos/universal.png",
+
+
+badge:
+"PREMIUM",
+
+
+descripcion:
+
+"Series, películas y contenido exclusivo.",
+
+
+
+planes:[
+
+
+
+{
+
+nombre:"Universal+",
+
+tipo:
+"Perfil Premium",
+
+duracion:
+"1 mes",
+
+precio:
+25000,
+
+etiqueta:
+"⭐ Popular"
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   WINDOWS
+========================================================= */
+
+
+windows:{
+
+
+categoria:"EXTRAS",
+
+
+nombre:"Windows 10 / 11 Pro",
+
+
+imagen:
+"assets/productos/windows.png",
+
+
+badge:
+"SOFTWARE",
+
+
+descripcion:
+
+"Licencia y activación profesional para PC.",
+
+
+
+planes:[
+
+
+
+{
+
+nombre:"Windows Pro",
+
+tipo:
+"Licencia digital",
+
+duracion:
+"De por vida",
+
+precio:
+80000,
+
+etiqueta:
+"👑 Premium"
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   NUMERO VIRTUAL
+========================================================= */
+
+
+numero:{
+
+
+categoria:"EXTRAS",
+
+
+nombre:"Número Virtual",
+
+
+imagen:
+"assets/productos/numero.png",
+
+
+badge:
+"DIGITAL",
+
+
+descripcion:
+
+"Números virtuales para servicios compatibles.",
+
+
+
+planes:[
+
+
+
+{
+
+nombre:"Número Virtual",
+
+tipo:
+"Servicio digital",
+
+duracion:
+"Según disponibilidad",
+
+precio:
+70000,
+
+etiqueta:
+"⭐ Popular"
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   SEGUIDORES
+========================================================= */
+
+
+seguidores:{
+
+
+categoria:"EXTRAS",
+
+
+nombre:"Seguidores Facebook / Instagram",
+
+
+imagen:
+"assets/productos/seguidores.png",
+
+
+badge:
+"SOCIAL",
+
+
+descripcion:
+
+"Servicios para redes sociales.",
+
+
+
+planes:[
+
+
+
+{
+
+nombre:"1000 Seguidores",
+
+tipo:
+"Red social",
+
+duracion:
+"Entrega según servicio",
+
+precio:
+20000,
+
+etiqueta:
+"🔥 Popular"
+
+}
+
+
+]
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   PORNHUB
+========================================================= */
+
+
+pornhub:{
+
+
+categoria:"EXTRAS",
+
+
+nombre:"Pornhub Premium",
+
+
+imagen:
+"assets/productos/pornhub.png",
+
+
+badge:
+"PREMIUM",
+
+
+descripcion:
+
+"Servicio digital adicional.",
+
+
+
+planes:[
+
+
+
+{
+
+nombre:"Cuenta Premium",
+
+tipo:
+"Cuenta digital",
+
+duracion:
+"1 mes",
+
+precio:
+25000,
+
+etiqueta:
+"Premium"
+
+}
+
+
+]
+
+},
+/* =========================================================
+   OBTENER PRODUCTO POR URL
 ========================================================= */
 
 
@@ -341,8 +2524,10 @@ window.location.search
 );
 
 
+
 const id =
 params.get("id");
+
 
 
 let producto =
@@ -352,10 +2537,13 @@ productos[id];
 
 if(!producto){
 
+
 producto =
 productos.netflix;
 
+
 }
+
 
 
 
@@ -456,9 +2644,8 @@ document.getElementById(
 
 
 
-
 /* =========================================================
-   CARGAR INFORMACIÓN
+   CARGAR INFORMACIÓN PRODUCTO
 ========================================================= */
 
 
@@ -469,6 +2656,7 @@ document.title =
 +
 
 producto.nombre;
+
 
 
 
@@ -484,12 +2672,14 @@ producto.nombre;
 
 
 
+
 if(name){
 
 name.textContent =
 producto.nombre;
 
 }
+
 
 
 
@@ -502,6 +2692,7 @@ producto.categoria;
 
 
 
+
 if(description){
 
 description.textContent =
@@ -511,12 +2702,15 @@ producto.descripcion;
 
 
 
+
 if(badge){
 
 badge.textContent =
 producto.badge;
 
 }
+
+
 
 
 
@@ -538,12 +2732,15 @@ producto.planes[0];
 
 
 
+
+
 /* =========================================================
    CARGAR PLANES
 ========================================================= */
 
 
 function cargarPlanes(){
+
 
 
 if(!plansContainer)
@@ -555,9 +2752,11 @@ plansContainer.innerHTML="";
 
 
 
+
 producto.planes.forEach(
 
 (plan,index)=>{
+
 
 
 const card =
@@ -582,11 +2781,37 @@ card.classList.add(
 
 
 
+
+
 card.innerHTML = `
 
+
+<div>
+
+
 <h4>
+
 ${plan.nombre}
+
 </h4>
+
+
+<p>
+
+${plan.tipo}
+
+</p>
+
+
+<small>
+
+📅 ${plan.duracion}
+
+</small>
+
+
+</div>
+
 
 
 <strong>
@@ -596,7 +2821,10 @@ ${plan.precio.toLocaleString("es-PY")}
 
 </strong>
 
+
 `;
+
+
 
 
 
@@ -610,13 +2838,19 @@ document
 ".plan-card"
 )
 
-.forEach(item=>{
+.forEach(
+
+(item)=>{
 
 item.classList.remove(
 "active"
 );
 
-});
+}
+
+);
+
+
 
 
 
@@ -626,8 +2860,10 @@ card.classList.add(
 
 
 
+
 planActual =
 plan;
+
 
 
 
@@ -635,7 +2871,12 @@ actualizarResumen();
 
 
 
-});
+
+}
+
+);
+
+
 
 
 
@@ -644,10 +2885,16 @@ card
 );
 
 
-});
+
+}
+
+
+);
+
 
 
 }
+
 
 
 
@@ -657,7 +2904,7 @@ card
 
 
 /* =========================================================
-   ACTUALIZAR RESUMEN Y PRECIO
+   ACTUALIZAR PRECIO Y RESUMEN
 ========================================================= */
 
 
@@ -665,21 +2912,28 @@ function actualizarResumen(){
 
 
 
+
+
 if(summaryProduct){
 
 summaryProduct.textContent =
+
 producto.nombre;
 
 }
 
 
 
+
 if(summaryPlan){
 
 summaryPlan.textContent =
+
 planActual.nombre;
 
 }
+
+
 
 
 
@@ -700,9 +2954,9 @@ planActual.precio.toLocaleString(
 
 
 
-/* PRECIO GRANDE */
 
 if(productPrice){
+
 
 
 productPrice.textContent =
@@ -717,9 +2971,13 @@ planActual.precio.toLocaleString(
 
 
 
+
+
 productPrice.classList.add(
 "price-update"
 );
+
+
 
 
 
@@ -731,7 +2989,6 @@ productPrice.classList.remove(
 );
 
 
-
 },400);
 
 
@@ -739,7 +2996,9 @@ productPrice.classList.remove(
 }
 
 
+
 }
+
 
 
 
@@ -763,9 +3022,10 @@ CART_KEY
 )
 
 )
-||
-[];
 
+||
+
+[];
 
 }
 
@@ -773,7 +3033,10 @@ CART_KEY
 
 
 
+
+
 function guardarCarrito(carrito){
+
 
 
 localStorage.setItem(
@@ -795,7 +3058,9 @@ carrito
 
 
 
+
 function agregarCarrito(){
+
 
 
 let carrito =
@@ -804,28 +3069,55 @@ obtenerCarrito();
 
 
 
+
 carrito.push({
 
-nombre:
+
+
+producto:
+
 producto.nombre,
 
 
-detalle:
+
+plan:
+
 planActual.nombre,
 
 
+
+tipo:
+
+planActual.tipo,
+
+
+
+duracion:
+
+planActual.duracion,
+
+
+
 precio:
+
 planActual.precio,
 
 
+
 imagen:
+
 producto.imagen,
 
 
+
 cantidad:
+
 1
 
+
+
 });
+
 
 
 
@@ -836,12 +3128,72 @@ carrito
 
 
 
+
+
 mostrarMensaje(
 
-`${producto.nombre} agregado al carrito 🛒`
+"Producto agregado al carrito 🛒"
 
 );
 
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+
+function comprarWhatsapp(){
+
+
+let mensaje =
+
+`Hola AMERISSTORE 👋
+
+Quiero consultar este producto:
+
+🎯 Producto:
+${producto.nombre}
+
+⭐ Plan:
+${planActual.nombre}
+
+📌 Tipo:
+${planActual.tipo}
+
+📅 Duración:
+${planActual.duracion}
+
+💰 Precio:
+Gs. ${planActual.precio.toLocaleString("es-PY")}
+
+Gracias.`;
+
+
+window.open(
+
+"https://wa.me/595981841136?text="
+
++
+
+encodeURIComponent(
+mensaje
+),
+
+"_blank"
+
+);
 
 
 }
@@ -862,12 +3214,15 @@ mostrarMensaje(
 if(addButton){
 
 
+
 addButton.textContent =
 
 "🛒 Agregar al carrito";
 
 
+
 addButton.onclick =
+
 agregarCarrito;
 
 
@@ -876,7 +3231,11 @@ agregarCarrito;
 
 
 
+
+
+
 if(addButtonBottom){
+
 
 
 addButtonBottom.textContent =
@@ -884,7 +3243,9 @@ addButtonBottom.textContent =
 "🛒 Agregar al carrito";
 
 
+
 addButtonBottom.onclick =
+
 agregarCarrito;
 
 
@@ -899,7 +3260,7 @@ agregarCarrito;
 
 
 /* =========================================================
-   MENSAJE
+   NOTIFICACION
 ========================================================= */
 
 
@@ -908,25 +3269,33 @@ function mostrarMensaje(texto){
 
 
 const div =
+
 document.createElement(
 "div"
 );
 
 
 
+
 div.className =
+
 "store-notification";
 
 
 
+
 div.textContent =
+
 texto;
+
 
 
 
 document.body.appendChild(
 div
 );
+
+
 
 
 
