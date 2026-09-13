@@ -20,10 +20,10 @@ AMERISSTORE | Música
 
 <link rel="stylesheet" href="style.css">
 
+<link rel="stylesheet" href="musica.css">
+
 
 </head>
-
-
 
 
 
@@ -31,100 +31,103 @@ AMERISSTORE | Música
 
 
 
-
-
-<!-- =================================
-TOP BAR
-================================= -->
-
-
-<div class="top-bar">
-
-
-<span>
-⚡ ACTIVACIÓN RÁPIDA
-</span>
-
-
-<span>
-🛡 COMPRA SEGURA
-</span>
-
-
-<span>
-💬 SOPORTE WHATSAPP
-</span>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- =================================
+<!-- =========================
 HEADER
-================================= -->
+========================= -->
 
 
 <header class="header">
 
 
-<div class="logo">
+<div class="header-container">
 
+
+<a href="index.html" class="logo">
 
 AMERIS<span>STORE</span>
 
-
-</div>
-
-
-
-
-
-<div class="search">
-
-
-<input
-
-type="text"
-
-placeholder="🔍 Buscar productos..."
-
->
-
-
-</div>
-
-
-
-
-
-
-
-<div class="user-area">
-
-
-<a href="#">
-Iniciar sesión
 </a>
 
 
-<span>
-Gs. 0
-</span>
+
+
+<nav class="menu">
+
+
+<a href="index.html">
+
+INICIO
+
+</a>
+
+
+<a href="streaming.html">
+
+STREAMING
+
+</a>
+
+
+<a href="musica.html" class="active">
+
+MÚSICA
+
+</a>
+
+
+<a href="gaming.html">
+
+GAMING
+
+</a>
+
+
+<a href="ia.html">
+
+IA TOOLS
+
+</a>
+
+
+<a href="diseno.html">
+
+DISEÑO
+
+</a>
+
+
+
+</nav>
+
+
+
+
+
+
+<a href="#"
+class="cart-button"
+id="cart-button">
 
 
 🛒
 
+<span>
+Carrito
+</span>
+
+
+<strong id="cart-total">
+
+Gs. 0
+
+</strong>
+
+
+</a>
+
+
 
 </div>
-
-
 
 
 </header>
@@ -137,86 +140,91 @@ Gs. 0
 
 
 
-<!-- =================================
-MENU
-================================= -->
+<!-- =========================
+TITULO
+========================= -->
 
 
-<nav class="menu">
-
-
-<a href="index.html">
-INICIO
-</a>
-
-
-<a href="streaming.html">
-STREAMING
-</a>
-
-
-<a href="musica.html">
-MÚSICA
-</a>
-
-
-<a href="gaming.html">
-GAMING
-</a>
-
-
-<a href="ia.html">
-IA TOOLS
-</a>
-
-
-<a href="diseno.html">
-DISEÑO
-</a>
-
-
-<a href="seguridad.html">
-SEGURIDAD
-</a>
-
-
-<a href="revendedores.html">
-REVENDEDORES
-</a>
-
-
-
-</nav>
-
-
-
-
-
-
-
-
-
-<!-- =================================
-BREADCRUMB
-================================= -->
-
-
-<div class="breadcrumb">
-
-
-<a href="index.html">
-INICIO
-</a>
+<section class="category-header">
 
 
 <span>
-/
+
+MÚSICA
+
 </span>
 
 
+
+<h1>
+
+Disfruta tu música favorita
+
+</h1>
+
+
+
+<p>
+
+Escucha sin límites, sin anuncios y con funciones Premium.
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+HORARIO
+========================= -->
+
+
+<div class="attention-card">
+
+
+<div class="attention-icon">
+
+⚡
+
+</div>
+
+
+
+<div>
+
+
+<h3>
+
+Horario de atención rápida
+
+</h3>
+
+
+
+<p>
+
+Activaciones:
+
 <strong>
-MÚSICA
+
+11:00 AM - 22:00 PM
+
 </strong>
+
+</p>
+
+
+
+</div>
+
 
 
 </div>
@@ -229,34 +237,9 @@ MÚSICA
 
 
 
-<!-- =================================
-TITULO CATEGORIA
-================================= -->
-
-
-<section class="category-header">
-
-
-<span>
-MÚSICA
-</span>
-
-
-<h1>
-Disfruta tu música favorita
-</h1>
-
-
-<p>
-Escucha sin límites, sin anuncios y con funciones Premium.
-</p>
-
-
-
-</section>
-<!-- =================================
-PRODUCTOS MÚSICA
-================================= -->
+<!-- =========================
+PRODUCTOS
+========================= -->
 
 
 <section class="products-section">
@@ -269,15 +252,11 @@ PRODUCTOS MÚSICA
 
 
 
-
 <!-- SPOTIFY -->
 
 
-<div class="product-card">
-
-
-<a href="producto.html?id=spotify">
-
+<a href="producto.html?id=spotify"
+class="product-card">
 
 
 <div class="product-image">
@@ -289,20 +268,17 @@ src="assets/productos/spotify.png"
 
 alt="Spotify Premium"
 
-
 >
 
 
+<span class="product-badge">
 
-<div class="badge">
 POPULAR
-</div>
+
+</span>
 
 
 </div>
-
-
-
 
 
 
@@ -310,25 +286,29 @@ POPULAR
 <div class="product-info">
 
 
-<span>
+<span class="product-category">
+
 MÚSICA
+
 </span>
 
 
 
 
-<h3>
+<h2>
+
 Spotify Premium
-</h3>
+
+</h2>
 
 
 
 
 <p>
-Escucha música sin anuncios y sin límites.
+
+Música sin anuncios y sin límites.
+
 </p>
-
-
 
 
 
@@ -337,30 +317,22 @@ Escucha música sin anuncios y sin límites.
 
 
 <strong>
-Desde Gs. 25.000
+
+Gs. 25.000
+
 </strong>
 
 
-
-<del>
-Gs.45.000
-</del>
-
-
 </div>
 
 
 
-
-
 </div>
-
 
 
 </a>
 
 
-</div>
 
 
 
@@ -368,16 +340,11 @@ Gs.45.000
 
 
 
+<!-- YOUTUBE -->
 
 
-<!-- YOUTUBE PREMIUM -->
-
-
-<div class="product-card">
-
-
-<a href="producto.html?id=youtube">
-
+<a href="producto.html?id=youtube"
+class="product-card">
 
 
 <div class="product-image">
@@ -389,20 +356,17 @@ src="assets/productos/youtube.png"
 
 alt="YouTube Premium"
 
-
 >
 
 
+<span class="product-badge">
 
-<div class="badge">
 OFERTA
-</div>
+
+</span>
 
 
 </div>
-
-
-
 
 
 
@@ -410,25 +374,29 @@ OFERTA
 <div class="product-info">
 
 
-<span>
+<span class="product-category">
+
 MÚSICA
+
 </span>
 
 
 
 
-<h3>
+<h2>
+
 YouTube Premium
-</h3>
+
+</h2>
 
 
 
 
 <p>
+
 YouTube sin anuncios y YouTube Music incluido.
+
 </p>
-
-
 
 
 
@@ -437,165 +405,116 @@ YouTube sin anuncios y YouTube Music incluido.
 
 
 <strong>
-Desde Gs. 25.000
+
+Gs. 25.000
+
 </strong>
 
 
-
-<del>
-Gs.40.000
-</del>
-
-
 </div>
 
 
 
-
-
 </div>
-
 
 
 </a>
 
 
+
+
+
+
+
+
+
+<!-- DEEZER -->
+
+
+<a href="producto.html?id=deezer"
+class="product-card">
+
+
+<div class="product-image">
+
+
+<img
+
+src="assets/productos/deezer.png"
+
+alt="Deezer Premium"
+
+>
+
+
+<span class="product-badge">
+
+NUEVO
+
+</span>
+
+
 </div>
 
 
 
 
+<div class="product-info">
+
+
+<span class="product-category">
+
+MÚSICA
+
+</span>
 
 
 
 
-</div>
+<h2>
 
+Deezer Premium
 
-</section>
-<!-- =================================
-BENEFICIOS MÚSICA
-================================= -->
+</h2>
 
-
-<section class="benefits">
-
-
-
-<div class="benefit-card">
-
-
-<div class="benefit-icon">
-
-🎧
-
-</div>
-
-
-
-<div>
-
-
-<h3>
-Música sin límites
-</h3>
 
 
 
 <p>
-Disfruta tus canciones favoritas
-sin anuncios.
+
+Millones de canciones sin anuncios.
+
 </p>
 
 
 
-</div>
+
+<div class="price">
+
+
+<strong>
+
+Gs. 20.000
+
+</strong>
 
 
 </div>
 
 
 
-
-
-
-
-
-
-<div class="benefit-card">
-
-
-<div class="benefit-icon">
-
-⚡
-
 </div>
 
 
-
-<div>
-
-
-<h3>
-Activación rápida
-</h3>
+</a>
 
 
 
-<p>
-Recibe tu cuenta Premium
-rápidamente.
-</p>
+
 
 
 
 </div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="benefit-card">
-
-
-<div class="benefit-icon">
-
-💬
-
-</div>
-
-
-
-<div>
-
-
-<h3>
-Soporte directo
-</h3>
-
-
-
-<p>
-Te ayudamos durante
-todo el proceso.
-</p>
-
-
-
-</div>
-
-
-</div>
-
-
-
 
 
 </section>
@@ -608,15 +527,12 @@ todo el proceso.
 
 
 
-<!-- =================================
-CTA MÚSICA
-================================= -->
+<!-- =========================
+CTA
+========================= -->
 
 
 <section class="final-contact">
-
-
-
 
 
 <h2>
@@ -627,23 +543,19 @@ Lleva tu música al siguiente nivel
 
 
 
-
-
 <p>
 
-Spotify Premium y YouTube Premium
-para disfrutar sin límites.
+Spotify, YouTube Premium y Deezer para disfrutar sin límites.
 
 </p>
 
 
 
-
-
-
-<a 
+<a
 
 href="https://wa.me/595981841136"
+
+target="_blank"
 
 class="btn-primary">
 
@@ -655,14 +567,19 @@ class="btn-primary">
 
 
 
-
-
-
-
 </section>
-<!-- =================================
-WHATSAPP FLOTANTE
-================================= -->
+
+
+
+
+
+
+
+
+
+<!-- =========================
+WHATSAPP
+========================= -->
 
 
 <a
@@ -686,90 +603,34 @@ class="floating-whatsapp">
 
 
 
-
-<!-- =================================
+<!-- =========================
 FOOTER
-================================= -->
+========================= -->
 
 
-<footer>
+<footer class="footer">
 
 
+<div class="footer-simple">
 
 
-<h2>
+<strong>
 
-AMERIS<span>STORE</span>
+AMERISSTORE
 
-</h2>
-
-
-
-
-
-<p>
-
-Gaming • Streaming • Música • IA • Diseño
-
-</p>
+</strong>
 
 
 
+<span>
 
+© 2026 AMERISSTORE
 
-
-
-
-
-<div class="footer-links">
-
-
-
-<a href="#">
-
-Instagram
-
-</a>
-
-
-
-
-<a href="#">
-
-TikTok
-
-</a>
-
-
-
-
-<a href="#">
-
-Facebook
-
-</a>
+</span>
 
 
 
 </div>
-
-
-
-
-
-
-
-
-
-<p>
-
-© 2026 AMERISSTORE.
-Todos los derechos reservados.
-
-</p>
-
-
-
 
 
 </footer>
@@ -780,10 +641,7 @@ Todos los derechos reservados.
 
 
 
-
-
 <script src="script.js"></script>
-
 
 
 </body>
