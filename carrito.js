@@ -228,6 +228,8 @@ card.className =
 card.innerHTML = `
 
 
+<div class="cart-image">
+
 
 <img
 
@@ -238,8 +240,14 @@ alt="${producto.producto}"
 >
 
 
+</div>
+
+
+
+
 
 <div class="cart-info">
+
 
 
 <h3>
@@ -250,7 +258,8 @@ ${producto.producto}
 
 
 
-<p>
+
+<p class="cart-plan">
 
 ${producto.plan}
 
@@ -258,19 +267,21 @@ ${producto.plan}
 
 
 
-<p>
+
+<span>
 
 ${producto.tipo}
 
-</p>
+</span>
 
 
 
-<p>
+
+<small>
 
 ${producto.duracion}
 
-</p>
+</small>
 
 
 
@@ -280,7 +291,10 @@ ${producto.duracion}
 
 
 
-<div class="cart-price">
+
+
+<div class="cart-actions">
+
 
 
 <strong>
@@ -292,13 +306,48 @@ ${producto.precio.toLocaleString("es-PY")}
 
 
 
+
+<div class="quantity-box">
+
+
+<button class="minus">
+
+−
+
+</button>
+
+
+
+<span>
+
+1
+
+</span>
+
+
+
+<button class="plus">
+
++
+
+</button>
+
+
+
+</div>
+
+
+
+
+
 <button
 
 class="remove-product"
 
 data-index="${index}">
 
-🗑 Eliminar
+
+✕
 
 </button>
 
