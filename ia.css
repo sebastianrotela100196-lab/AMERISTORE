@@ -827,3 +827,121 @@ to {
 
 
 }
+/* =========================================================
+   AJUSTE FINAL IA
+========================================================= */
+
+
+.category-header,
+.products-section,
+.final-contact {
+
+    width: min(92%,1200px);
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+
+
+.products-section {
+
+    margin-top:60px;
+
+}
+
+
+
+.products-grid {
+
+
+    width:100%;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(2,380px);
+
+
+    justify-content:center;
+
+
+    gap:35px;
+
+
+}
+
+
+
+.product-card {
+
+
+    width:380px;
+
+
+}
+
+
+
+.product-image {
+
+
+    height:300px;
+
+
+}
+
+
+
+.footer {
+
+
+    margin-top:100px;
+
+
+}
+
+
+
+.footer-simple {
+
+
+    width:min(92%,1200px);
+
+
+    margin:auto;
+
+
+}
+
+
+
+@media(max-width:900px){
+
+
+.products-grid{
+
+
+grid-template-columns:
+
+1fr;
+
+
+}
+
+
+.product-card{
+
+
+width:100%;
+
+
+}
+
+
+}
