@@ -1,7 +1,10 @@
 /* =========================================================
    AMERISSTORE
    PRODUCTO GAMING SYSTEM
-   MOBILE LEGENDS / PUBG / BLOOD STRIKE
+   MOBILE LEGENDS
+   PUBG
+   BLOOD STRIKE
+   CALL OF DUTY
 ========================================================= */
 
 
@@ -17,11 +20,13 @@ document.addEventListener(
 
 
 /* =========================================================
-   CONFIGURACIÓN
+   CONFIG
 ========================================================= */
 
 
-const WHATSAPP = "595981841136";
+const WHATSAPP =
+
+"595981841136";
 
 
 
@@ -31,7 +36,7 @@ const WHATSAPP = "595981841136";
 
 
 /* =========================================================
-   DATOS DE JUEGOS
+   BASE DE DATOS GAMING
 ========================================================= */
 
 
@@ -42,10 +47,9 @@ const juegos = {
 
 
 
-
-/* =========================
+/* =========================================================
    MOBILE LEGENDS
-========================= */
+========================================================= */
 
 
 mobilelegends:{
@@ -56,9 +60,11 @@ nombre:
 "Mobile Legends",
 
 
+
 categoria:
 
 "MOBILE LEGENDS",
+
 
 
 badge:
@@ -73,15 +79,20 @@ imagen:
 
 
 
+
 descripcion:
 
 "Recarga diamantes y pases para mejorar tu experiencia en Mobile Legends.",
 
 
 
+
+
 servidor:
 
 true,
+
+
 
 
 
@@ -107,91 +118,129 @@ Nunca solicitamos la contraseña de tu cuenta.
 
 
 
+
+
 productos:[
 
 
+
+/* DIAMANTES */
+
+
 {
-nombre:"55 Diamantes 💎",
-precio:6000
+nombre:"28 Diamantes 💎",
+precio:5000,
+tipo:"recarga"
+},
+
+
+{
+nombre:"44 Diamantes 💎",
+precio:7000,
+tipo:"recarga"
 },
 
 
 {
 nombre:"86 Diamantes 💎",
-precio:9000
+precio:10000,
+tipo:"recarga",
+tag:"⭐ MÁS VENDIDO"
 },
 
 
 {
-nombre:"172 Diamantes 💎",
-precio:17500
+nombre:"176 Diamantes 💎",
+precio:19500,
+tipo:"recarga"
 },
 
 
 {
 nombre:"257 Diamantes 💎",
-precio:26000
+precio:28500,
+tipo:"recarga"
 },
 
 
 {
-nombre:"344 Diamantes 💎",
-precio:35000
+nombre:"343 Diamantes 💎",
+precio:36500,
+tipo:"recarga",
+tag:"🔥 POPULAR"
 },
 
 
 {
-nombre:"514 Diamantes 💎",
-precio:50000
+nombre:"707 Diamantes 💎",
+precio:71000,
+tipo:"recarga"
 },
 
 
 {
-nombre:"706 Diamantes 💎",
-precio:65000
-},
-
-
-{
-nombre:"1.412 Diamantes 💎",
-precio:130000
+nombre:"1.498 Diamantes 💎",
+precio:152000,
+tipo:"recarga"
 },
 
 
 {
 nombre:"2.195 Diamantes 💎",
-precio:195000
+precio:216000,
+tipo:"recarga"
 },
 
 
 {
 nombre:"3.688 Diamantes 💎",
-precio:330000
+precio:350000,
+tipo:"recarga"
 },
 
 
 {
-nombre:"Weekly Elite Pack 🎟️",
-precio:6500
+nombre:"5.532 Diamantes 💎",
+precio:520000,
+tipo:"recarga",
+tag:"👑 PREMIUM"
+},
+
+
+
+
+
+
+/* PASES */
+
+
+{
+nombre:"Paquete Semanal Elite 🎟️",
+precio:7000,
+tipo:"extra"
 },
 
 
 {
-nombre:"Weekly Pass 🎟️",
-precio:12000
+nombre:"Pase Semanal 🎟️",
+precio:13000,
+tipo:"extra"
 },
 
 
 {
-nombre:"Monthly Elite Pack 🎟️",
-precio:29000
+nombre:"Paquete Mensual Elite 🎟️",
+precio:28000,
+tipo:"extra"
 },
 
 
 {
-nombre:"Twilight Pass 🎟️",
-precio:58000
+nombre:"Pase Crepuscular 🎟️",
+precio:58000,
+tipo:"extra"
 }
+
 
 
 ]
@@ -206,9 +255,9 @@ precio:58000
 
 
 
-/* =========================
+/* =========================================================
    PUBG MOBILE
-========================= */
+========================================================= */
 
 
 pubg:{
@@ -240,7 +289,7 @@ imagen:
 
 descripcion:
 
-"Compra UC para mejorar tu cuenta y desbloquear contenido dentro del juego.",
+"Compra UC para mejorar tu cuenta dentro de PUBG Mobile.",
 
 
 
@@ -262,7 +311,7 @@ Para realizar la recarga necesitamos:
 
 <br><br>
 
-Nunca solicitamos la contraseña de tu cuenta.
+Nunca solicitamos la contraseña.
 
 `,
 
@@ -273,43 +322,60 @@ productos:[
 
 {
 nombre:"60 UC",
-precio:8000
+precio:8000,
+tipo:"recarga"
 },
 
 
 {
 nombre:"325 UC",
-precio:39000
+precio:35000,
+tipo:"recarga",
+tag:"⭐ MÁS VENDIDO"
 },
 
 
 {
 nombre:"660 UC",
-precio:79000
+precio:70000,
+tipo:"recarga",
+tag:"🔥 POPULAR"
+},
+
+
+{
+nombre:"985 UC",
+precio:105000,
+tipo:"recarga"
+},
+
+
+{
+nombre:"1320 UC",
+precio:140000,
+tipo:"recarga"
 },
 
 
 {
 nombre:"1800 UC",
-precio:189000
+precio:170000,
+tipo:"recarga"
 },
 
 
 {
 nombre:"3850 UC",
-precio:379000
+precio:335000,
+tipo:"recarga"
 },
 
 
 {
 nombre:"8100 UC",
-precio:759000
-},
-
-
-{
-nombre:"Prime 1 Mes",
-precio:8000
+precio:660000,
+tipo:"recarga",
+tag:"👑 PREMIUM"
 }
 
 
@@ -325,9 +391,9 @@ precio:8000
 
 
 
-/* =========================
+/* =========================================================
    BLOOD STRIKE
-========================= */
+========================================================= */
 
 
 bloodstrike:{
@@ -369,21 +435,130 @@ false,
 
 
 
-info:
+productos:[
 
-`
 
-Para realizar la recarga necesitamos:
+{
+nombre:"105 Gold 🪙",
+precio:7000,
+tipo:"recarga"
+},
 
-<br><br>
 
-• ID del jugador
+{
+nombre:"320 Gold 🪙",
+precio:18000,
+tipo:"recarga",
+tag:"⭐ MÁS VENDIDO"
+},
 
-<br><br>
 
-Nunca solicitamos la contraseña de tu cuenta.
+{
+nombre:"540 Gold 🪙",
+precio:30000,
+tipo:"recarga"
+},
 
-`,
+
+{
+nombre:"1100 Gold 🪙",
+precio:62000,
+tipo:"recarga",
+tag:"🔥 POPULAR"
+},
+
+
+{
+nombre:"2260 Gold 🪙",
+precio:120000,
+tipo:"recarga"
+},
+
+
+{
+nombre:"5800 Gold 🪙",
+precio:290000,
+tipo:"recarga",
+tag:"👑 PREMIUM"
+},
+
+
+
+{
+nombre:"Ultra Skin Lucky Chest 🎁",
+precio:4000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Level Up Pass 🎟️",
+precio:14000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Pase Elite 🎟️",
+precio:25000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Pase Premium 🎟️",
+precio:58000,
+tipo:"extra"
+}
+
+
+
+]
+
+
+
+},
+
+
+
+
+
+
+
+/* =========================================================
+   CALL OF DUTY MOBILE
+========================================================= */
+
+
+codmobile:{
+
+
+nombre:
+
+"Call of Duty Mobile",
+
+
+categoria:
+
+"CALL OF DUTY",
+
+
+badge:
+
+"CP",
+
+
+imagen:
+
+"assets/productos/codmobile.png",
+
+
+descripcion:
+
+"Compra CP para desbloquear contenido premium.",
+
+
+servidor:false,
 
 
 
@@ -391,67 +566,38 @@ productos:[
 
 
 {
-nombre:"51 Gold 🪙",
-precio:5000
+nombre:"88 CP",
+precio:10000,
+tipo:"recarga"
 },
 
 
 {
-nombre:"105 Gold 🪙",
-precio:8000
+nombre:"460 CP",
+precio:45000,
+tipo:"recarga",
+tag:"⭐ MÁS VENDIDO"
 },
 
 
 {
-nombre:"320 Gold 🪙",
-precio:18000
+nombre:"960 CP",
+precio:98000,
+tipo:"recarga",
+tag:"🔥 POPULAR"
 },
 
 
 {
-nombre:"540 Gold 🪙",
-precio:28000
-},
-
-
-{
-nombre:"1100 Gold 🪙",
-precio:55000
-},
-
-
-{
-nombre:"2260 Gold 🪙",
-precio:110000
-},
-
-
-{
-nombre:"5800 Gold 🪙",
-precio:275000
-},
-
-
-{
-nombre:"Level Up Pass",
-precio:15000
-},
-
-
-{
-nombre:"Strike Pass Elite",
-precio:27000
-},
-
-
-{
-nombre:"Strike Pass Premium",
-precio:58000
+nombre:"11600 CP",
+precio:785000,
+tipo:"recarga",
+tag:"👑 PREMIUM"
 }
 
 
-]
 
+]
 
 
 }
@@ -459,15 +605,6 @@ precio:58000
 
 
 };
-
-
-
-
-
-
-
-
-
 /* =========================================================
    OBTENER JUEGO ACTUAL
 ========================================================= */
@@ -500,11 +637,15 @@ juegos[id];
 
 
 
+
 if(!juego){
 
 return;
 
 }
+
+
+
 
 
 
@@ -556,11 +697,25 @@ document.getElementById(
 
 
 
-const packagesContainer =
+
+
+const mainContainer =
 
 document.getElementById(
-"packagesContainer"
+"mainContainer"
 );
+
+
+
+
+
+const extraContainer =
+
+document.getElementById(
+"extraContainer"
+);
+
+
 
 
 
@@ -572,11 +727,35 @@ document.getElementById(
 
 
 
+
+
 const step3 =
 
 document.getElementById(
 "step3"
 );
+
+
+
+
+
+const serverContainer =
+
+document.getElementById(
+"serverContainer"
+);
+
+
+
+
+
+const summaryServerRow =
+
+document.getElementById(
+"summaryServerRow"
+);
+
+
 
 
 
@@ -588,6 +767,8 @@ document.getElementById(
 
 
 
+
+
 const serverID =
 
 document.getElementById(
@@ -595,12 +776,6 @@ document.getElementById(
 );
 
 
-
-const serverContainer =
-
-document.getElementById(
-"serverContainer"
-);
 
 
 
@@ -614,13 +789,13 @@ document.getElementById(
 
 
 
-
-
 const summaryProduct =
 
 document.getElementById(
 "summaryProduct"
 );
+
+
 
 
 
@@ -632,6 +807,8 @@ document.getElementById(
 
 
 
+
+
 const summaryServer =
 
 document.getElementById(
@@ -639,12 +816,6 @@ document.getElementById(
 );
 
 
-
-const summaryServerRow =
-
-document.getElementById(
-"summaryServerRow"
-);
 
 
 
@@ -656,11 +827,15 @@ document.getElementById(
 
 
 
+
+
 const buyWhatsapp =
 
 document.getElementById(
 "buyWhatsapp"
 );
+
+
 
 
 
@@ -678,11 +853,6 @@ document.getElementById(
 
 
 
-/* =========================================================
-   DATOS INICIALES
-========================================================= */
-
-
 let productoSeleccionado = null;
 
 
@@ -698,7 +868,6 @@ let productoSeleccionado = null;
 ========================================================= */
 
 
-
 document.title =
 
 "AMERISSTORE | "
@@ -706,6 +875,7 @@ document.title =
 +
 
 juego.nombre;
+
 
 
 
@@ -780,9 +950,21 @@ if(gameInfo){
 
 gameInfo.innerHTML =
 
-juego.info;
+juego.info ||
+
+`
+
+Para realizar la recarga necesitamos tu ID.
+
+<br><br>
+
+Nunca solicitamos la contraseña.
+
+`;
 
 }
+
+
 
 
 
@@ -801,6 +983,7 @@ if(juego.servidor){
 if(serverContainer){
 
 serverContainer.style.display =
+
 "block";
 
 }
@@ -810,6 +993,7 @@ serverContainer.style.display =
 if(summaryServerRow){
 
 summaryServerRow.style.display =
+
 "flex";
 
 }
@@ -827,32 +1011,11 @@ summaryServerRow.style.display =
 
 
 /* =========================================================
-   CREAR PAQUETES
+   CREAR TARJETAS
 ========================================================= */
 
 
-
-function cargarPaquetes(){
-
-
-
-if(!packagesContainer)
-
-return;
-
-
-
-
-
-packagesContainer.innerHTML = "";
-
-
-
-
-
-juego.productos.forEach(
-
-(producto,index)=>{
+function crearTarjeta(producto){
 
 
 
@@ -874,7 +1037,41 @@ card.className =
 
 
 
+
+let etiqueta = "";
+
+
+
+
+
+if(producto.tag){
+
+
+etiqueta = `
+
+
+<span class="package-tag">
+
+${producto.tag}
+
+</span>
+
+
+`;
+
+
+
+}
+
+
+
+
+
+
 card.innerHTML = `
+
+
+${etiqueta}
 
 
 <h3>
@@ -894,7 +1091,11 @@ ${producto.precio.toLocaleString("es-PY")}
 </strong>
 
 
+
 `;
+
+
+
 
 
 
@@ -906,8 +1107,6 @@ card.addEventListener(
 "click",
 
 ()=>{
-
-
 
 
 
@@ -936,6 +1135,7 @@ item.classList.remove(
 
 
 
+
 card.classList.add(
 "active"
 );
@@ -944,9 +1144,12 @@ card.classList.add(
 
 
 
+
 productoSeleccionado =
 
 producto;
+
+
 
 
 
@@ -963,19 +1166,14 @@ step2.classList.remove(
 
 
 
-
-
-scrollPaso(
-step2
-);
-
-
+scrollPaso(step2);
 
 
 
 }
 
 
+
 );
 
 
@@ -983,15 +1181,107 @@ step2
 
 
 
-packagesContainer.appendChild(
+
+
+return card;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   CARGAR PRODUCTOS SEPARADOS
+========================================================= */
+
+
+function cargarProductos(){
+
+
+
+if(mainContainer){
+
+mainContainer.innerHTML = "";
+
+}
+
+
+
+if(extraContainer){
+
+extraContainer.innerHTML = "";
+
+}
+
+
+
+
+
+juego.productos.forEach(
+
+(producto)=>{
+
+
+
+
+
+const card =
+
+crearTarjeta(
+producto
+);
+
+
+
+
+
+
+if(producto.tipo === "extra"){
+
+
+
+if(extraContainer){
+
+extraContainer.appendChild(
 card
 );
 
+}
+
+
+
+}
+
+else{
+
+
+
+if(mainContainer){
+
+mainContainer.appendChild(
+card
+);
+
+}
+
+
+
+}
+
 
 
 
 
 }
+
+
 
 );
 
@@ -1008,7 +1298,7 @@ card
 
 
 /* =========================================================
-   SCROLL SUAVE
+   SCROLL
 ========================================================= */
 
 
@@ -1027,14 +1317,12 @@ return;
 setTimeout(()=>{
 
 
-
 elemento.scrollIntoView({
 
 
 behavior:
 
 "smooth",
-
 
 
 block:
@@ -1061,12 +1349,11 @@ block:
 
 
 /* =========================================================
-   INICIAR PAQUETES
+   INICIAR
 ========================================================= */
 
 
-cargarPaquetes();
-
+cargarProductos();
 /* =========================================================
    VALIDAR DATOS
 ========================================================= */
@@ -1075,10 +1362,11 @@ cargarPaquetes();
 function validarDatos(){
 
 
+
 if(!productoSeleccionado){
 
 
-alert(
+mostrarNotificacion(
 "Selecciona un paquete primero."
 );
 
@@ -1091,21 +1379,33 @@ return false;
 
 
 
-if(!playerID.value.trim()){
+
+if(
+!playerID ||
+!playerID.value.trim()
+){
 
 
-alert(
+mostrarNotificacion(
 "Ingresa tu ID de jugador."
 );
 
 
+
+if(playerID){
+
 playerID.focus();
+
+}
+
 
 
 return false;
 
 
 }
+
+
 
 
 
@@ -1113,16 +1413,19 @@ return false;
 
 if(
 juego.servidor &&
+serverID &&
 !serverID.value.trim()
 ){
 
 
-alert(
+mostrarNotificacion(
 "Ingresa tu Server ID."
 );
 
 
+
 serverID.focus();
+
 
 
 return false;
@@ -1132,7 +1435,10 @@ return false;
 
 
 
+
+
 return true;
+
 
 
 }
@@ -1151,6 +1457,7 @@ return true;
 
 
 if(continueButton){
+
 
 
 continueButton.addEventListener(
@@ -1179,7 +1486,10 @@ summaryProduct.textContent =
 productoSeleccionado.nombre;
 
 
+
 }
+
+
 
 
 
@@ -1193,7 +1503,10 @@ summaryID.textContent =
 playerID.value.trim();
 
 
+
 }
+
+
 
 
 
@@ -1210,7 +1523,11 @@ summaryServer.textContent =
 serverID.value.trim();
 
 
+
 }
+
+
+
 
 
 
@@ -1221,6 +1538,7 @@ if(summaryPrice){
 
 summaryPrice.textContent =
 
+
 "Gs. "
 
 +
@@ -1230,7 +1548,9 @@ productoSeleccionado.precio.toLocaleString(
 );
 
 
+
 }
+
 
 
 
@@ -1246,16 +1566,21 @@ step3.classList.remove(
 );
 
 
+
 scrollPaso(step3);
 
 
+
+}
+
+
+
 }
 
 
-
-}
 
 );
+
 
 
 }
@@ -1277,6 +1602,9 @@ function obtenerCarrito(){
 
 
 
+try{
+
+
 return JSON.parse(
 
 localStorage.getItem(
@@ -1285,11 +1613,23 @@ localStorage.getItem(
 
 )
 
-||
+|| [];
 
-[];
+
 
 }
+
+catch(error){
+
+
+return [];
+
+}
+
+
+}
+
+
 
 
 
@@ -1300,15 +1640,20 @@ localStorage.getItem(
 function guardarCarrito(carrito){
 
 
+
 localStorage.setItem(
 
+
 "amerisstore_carrito",
+
 
 JSON.stringify(
 carrito
 )
 
+
 );
+
 
 
 }
@@ -1333,8 +1678,7 @@ obtenerCarrito();
 
 
 
-const producto = {
-
+const item = {
 
 
 producto:
@@ -1342,11 +1686,9 @@ producto:
 `${juego.nombre} - ${productoSeleccionado.nombre}`,
 
 
-
 plan:
 
 productoSeleccionado.nombre,
-
 
 
 precio:
@@ -1354,11 +1696,9 @@ precio:
 productoSeleccionado.precio,
 
 
-
 imagen:
 
 juego.imagen,
-
 
 
 tipo:
@@ -1366,11 +1706,9 @@ tipo:
 "GAMING",
 
 
-
 duracion:
 
 "Recarga"
-
 
 
 };
@@ -1380,9 +1718,9 @@ duracion:
 
 
 
-carrito.push(
-producto
-);
+
+carrito.push(item);
+
 
 
 
@@ -1396,13 +1734,11 @@ carrito
 
 
 
-
 mostrarNotificacion(
 
 `${juego.nombre} agregado al carrito 🛒`
 
 );
-
 
 
 
@@ -1433,11 +1769,15 @@ document.querySelector(
 
 
 
+
+
 if(anterior){
 
 anterior.remove();
 
 }
+
+
 
 
 
@@ -1451,15 +1791,21 @@ document.createElement(
 
 
 
+
+
 div.className =
 
 "store-notification";
 
 
 
+
+
 div.textContent =
 
 texto;
+
+
 
 
 
@@ -1472,12 +1818,14 @@ div
 
 
 
+
 setTimeout(()=>{
 
 
 div.classList.add(
 "show"
 );
+
 
 
 },50);
@@ -1493,7 +1841,10 @@ setTimeout(()=>{
 div.remove();
 
 
+
 },2500);
+
+
 
 
 
@@ -1537,7 +1888,6 @@ return;
 
 
 let mensaje =
-
 
 
 `Hola AMERISSTORE 👋
@@ -1587,6 +1937,7 @@ ${serverID.value.trim()}
 `;
 
 
+
 }
 
 
@@ -1612,6 +1963,10 @@ Quiero completar mi compra.`;
 
 
 
+
+
+
+
 window.open(
 
 
@@ -1632,11 +1987,12 @@ mensaje
 ),
 
 
+
 "_blank"
 
 
-);
 
+);
 
 
 
@@ -1660,7 +2016,7 @@ mensaje
 
 
 /* =========================================================
-   BOTÓN AGREGAR CARRITO
+   BOTÓN AGREGAR AL CARRITO
 ========================================================= */
 
 
@@ -1672,9 +2028,13 @@ document.createElement(
 
 
 
+
+
 addCartButton.className =
 
 "continue-btn";
+
+
 
 
 
@@ -1685,7 +2045,11 @@ addCartButton.textContent =
 
 
 
+
+
+
 if(buyWhatsapp){
+
 
 
 buyWhatsapp.parentNode.insertBefore(
@@ -1694,11 +2058,16 @@ addCartButton,
 
 buyWhatsapp
 
+
 );
 
 
 
 }
+
+
+
+
 
 
 
@@ -1711,16 +2080,21 @@ addCartButton.addEventListener(
 ()=>{
 
 
+
 if(!validarDatos())
 
 return;
 
 
 
+
+
 agregarAlCarrito();
 
 
+
 }
+
 
 
 );
