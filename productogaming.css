@@ -1,0 +1,1799 @@
+/* =========================================================
+   AMERISSTORE
+   PRODUCT GAMING PAGE
+========================================================= */
+
+
+
+:root{
+
+    --game-purple:#7c35ff;
+
+    --game-light:#a76dff;
+
+    --game-bg:#050507;
+
+    --game-card:#110b19;
+
+    --game-gray:#aaa3b8;
+
+    --game-border:
+    rgba(167,109,255,.22);
+
+}
+
+
+
+
+
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+
+.gaming-header,
+.gaming-product,
+.gaming-checkout,
+.info-game{
+
+    width:min(92%,1200px);
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   HEADER GAMING
+========================================================= */
+
+
+.gaming-header{
+
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+
+    background:
+
+    rgba(5,5,7,.90);
+
+
+    backdrop-filter:
+
+    blur(18px);
+
+
+    border-bottom:
+
+    1px solid var(--game-border);
+
+
+}
+
+
+
+
+
+.gaming-header-container{
+
+
+    width:min(92%,1400px);
+
+
+    min-height:80px;
+
+
+    margin:auto;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:space-between;
+
+
+}
+
+
+
+
+
+
+
+.gaming-actions{
+
+
+    display:flex;
+
+
+    gap:12px;
+
+
+    align-items:center;
+
+
+}
+
+
+
+
+
+
+.back-button,
+.gaming-actions .cart-button{
+
+
+    min-height:44px;
+
+
+    padding:
+
+    0 18px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    border:
+
+    1px solid var(--game-border);
+
+
+    border-radius:12px;
+
+
+    color:white;
+
+
+    font-size:12px;
+
+
+    font-weight:900;
+
+
+    background:
+
+    rgba(124,53,255,.10);
+
+
+    transition:.25s ease;
+
+
+}
+
+
+
+
+
+.back-button:hover,
+.gaming-actions .cart-button:hover{
+
+
+    border-color:
+
+    var(--game-light);
+
+
+    background:
+
+    rgba(124,53,255,.22);
+
+
+    transform:
+
+    translateY(-2px);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   PRODUCTO PRINCIPAL
+========================================================= */
+
+
+.gaming-product{
+
+
+    margin-top:70px;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    1fr 1fr;
+
+
+    gap:60px;
+
+
+    align-items:center;
+
+
+}
+
+
+
+
+
+
+
+
+/* =========================================================
+   IMAGEN
+========================================================= */
+
+
+.gaming-image-box{
+
+
+    height:560px;
+
+
+    position:relative;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+
+    padding:40px;
+
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #161020,
+        #09070d
+    );
+
+
+
+    border:
+
+    1px solid var(--game-border);
+
+
+
+    border-radius:30px;
+
+
+
+    overflow:hidden;
+
+
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.35);
+
+
+
+}
+
+
+
+
+
+
+
+.gaming-image-box img{
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    object-fit:contain;
+
+
+    transition:.35s ease;
+
+
+}
+
+
+
+
+
+.gaming-image-box:hover img{
+
+
+    transform:
+
+    scale(1.06);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+
+.gaming-badge{
+
+
+    position:absolute;
+
+
+    top:20px;
+
+
+    left:20px;
+
+
+    padding:
+
+    7px 15px;
+
+
+    border-radius:50px;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--game-purple),
+        var(--game-light)
+    );
+
+
+    color:white;
+
+
+    font-size:10px;
+
+
+    font-weight:1000;
+
+
+    letter-spacing:1px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   INFORMACIÓN
+========================================================= */
+
+
+.gaming-info{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+}
+
+
+
+
+
+
+.gaming-category{
+
+
+    color:
+
+    var(--game-light);
+
+
+    font-size:11px;
+
+
+    font-weight:1000;
+
+
+    letter-spacing:3px;
+
+
+}
+
+
+
+
+
+
+
+.gaming-info h1{
+
+
+    margin-top:15px;
+
+
+    color:white;
+
+
+    font-size:
+
+    clamp(38px,5vw,55px);
+
+
+    font-weight:1000;
+
+
+    line-height:1;
+
+
+}
+
+
+
+
+
+
+.gaming-info p{
+
+
+    margin-top:20px;
+
+
+    color:
+
+    var(--game-gray);
+
+
+    font-size:16px;
+
+
+    line-height:1.7;
+
+
+}
+/* =========================================================
+   CHECKOUT BOX
+========================================================= */
+
+
+.gaming-checkout{
+
+
+    margin-top:30px;
+
+
+}
+
+
+
+.checkout-box{
+
+
+    width:min(92%,1150px);
+
+
+    margin:
+
+    0 auto 30px;
+
+
+    padding:30px;
+
+
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #110b19,
+        #09070d
+    );
+
+
+
+    border:
+
+    1px solid var(--game-border);
+
+
+
+    border-radius:24px;
+
+
+
+    box-shadow:
+
+    0 18px 45px rgba(0,0,0,.30);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   HEADER PASOS
+========================================================= */
+
+
+.checkout-header{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:15px;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.step-number{
+
+
+    width:42px;
+
+
+    height:42px;
+
+
+    display:grid;
+
+
+    place-items:center;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--game-purple),
+        var(--game-light)
+    );
+
+
+
+    border-radius:12px;
+
+
+    color:white;
+
+
+    font-size:15px;
+
+
+    font-weight:1000;
+
+
+    box-shadow:
+
+    0 0 18px rgba(124,53,255,.35);
+
+
+
+}
+
+
+
+
+
+.checkout-header h2{
+
+
+    margin:0;
+
+
+    color:white;
+
+
+    font-size:22px;
+
+
+    font-weight:1000;
+
+
+}
+
+
+
+
+.checkout-header p{
+
+
+    margin-top:5px;
+
+
+    color:#8f889b;
+
+
+    font-size:12px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   GRID PAQUETES
+========================================================= */
+
+
+.diamond-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+
+    gap:15px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   TARJETAS PAQUETES
+========================================================= */
+
+
+.diamond-card{
+
+
+    min-height:150px;
+
+
+    padding:20px 14px;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    text-align:center;
+
+
+    cursor:pointer;
+
+
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #0e0a14,
+        #09070d
+    );
+
+
+
+    border:
+
+    1px solid rgba(167,109,255,.16);
+
+
+
+    border-radius:18px;
+
+
+
+    transition:.25s ease;
+
+
+
+}
+
+
+
+
+
+.diamond-card:hover{
+
+
+    transform:
+
+    translateY(-5px);
+
+
+
+    border-color:
+
+    var(--game-light);
+
+
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.35),
+    0 0 20px rgba(124,53,255,.15);
+
+
+
+}
+
+
+
+
+
+.diamond-card.active{
+
+
+    border-color:
+
+    var(--game-light);
+
+
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(124,53,255,.18),
+        transparent 60%
+    ),
+
+    #0d0913;
+
+
+
+    box-shadow:
+
+    0 0 30px rgba(124,53,255,.25);
+
+
+
+}
+
+
+
+
+
+
+
+.diamond-card h3{
+
+
+    color:white;
+
+
+    font-size:16px;
+
+
+    font-weight:900;
+
+
+}
+
+
+
+
+
+.diamond-card strong{
+
+
+    margin-top:10px;
+
+
+    color:
+
+    var(--game-light);
+
+
+    font-size:18px;
+
+
+    font-weight:1000;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   AYUDA SELECCION
+========================================================= */
+
+
+.selection-help{
+
+
+    margin-top:20px;
+
+
+    text-align:center;
+
+
+    color:#716b7c;
+
+
+    font-size:12px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   INPUT JUGADOR
+========================================================= */
+
+
+.player-id-area{
+
+
+    width:100%;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.input-title{
+
+
+    display:block;
+
+
+    margin-bottom:10px;
+
+
+    color:
+
+    var(--game-light);
+
+
+    font-size:11px;
+
+
+    font-weight:1000;
+
+
+    letter-spacing:1.2px;
+
+
+
+}
+
+
+
+
+.player-id-area input{
+
+
+    width:100%;
+
+
+    height:55px;
+
+
+    padding:0 18px;
+
+
+
+    background:#08060c;
+
+
+
+    border:
+
+    1px solid rgba(167,109,255,.22);
+
+
+
+    border-radius:12px;
+
+
+
+    color:white;
+
+
+
+    outline:none;
+
+
+
+    font-size:16px;
+
+
+
+    transition:.25s;
+
+
+
+}
+
+
+
+
+
+.player-id-area input:focus{
+
+
+    border-color:
+
+    var(--game-light);
+
+
+
+    box-shadow:
+
+    0 0 18px rgba(124,53,255,.18);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   CONTINUAR
+========================================================= */
+
+
+.continue-btn{
+
+
+    width:100%;
+
+
+    min-height:52px;
+
+
+    margin-top:20px;
+
+
+
+    border:0;
+
+
+    border-radius:13px;
+
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--game-purple),
+        var(--game-light)
+    );
+
+
+
+    color:white;
+
+
+
+    font-size:12px;
+
+
+    font-weight:1000;
+
+
+
+    cursor:pointer;
+
+
+
+    transition:.25s;
+
+
+
+}
+
+
+
+
+
+.continue-btn:hover{
+
+
+    transform:
+
+    translateY(-3px);
+
+
+
+    box-shadow:
+
+    0 15px 35px rgba(124,53,255,.35);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.hidden{
+
+
+    display:none !important;
+
+
+}
+/* =========================================================
+   RESUMEN DE COMPRA
+========================================================= */
+
+
+.summary{
+
+
+    width:100%;
+
+
+    padding:22px;
+
+
+    background:#09070d;
+
+
+
+    border:
+
+    1px solid rgba(167,109,255,.16);
+
+
+
+    border-radius:16px;
+
+
+}
+
+
+
+
+
+
+
+.summary-row{
+
+
+    padding:14px 0;
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    gap:20px;
+
+
+
+    border-bottom:
+
+    1px solid rgba(167,109,255,.10);
+
+
+}
+
+
+
+
+
+.summary-row:last-child{
+
+
+    border-bottom:0;
+
+
+}
+
+
+
+
+
+.summary-row span{
+
+
+    color:#8f889b;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+
+
+.summary-row strong{
+
+
+    color:white;
+
+
+    font-size:15px;
+
+
+    font-weight:1000;
+
+
+    text-align:right;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   BOTÓN FINAL WHATSAPP
+========================================================= */
+
+
+.buy-final{
+
+
+    width:100%;
+
+
+    min-height:55px;
+
+
+    margin-top:25px;
+
+
+    border:0;
+
+
+    border-radius:14px;
+
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #25d366,
+        #15b952
+    );
+
+
+
+    color:white;
+
+
+
+    font-size:13px;
+
+
+    font-weight:1000;
+
+
+
+    cursor:pointer;
+
+
+
+    transition:.25s ease;
+
+
+}
+
+
+
+
+
+.buy-final:hover{
+
+
+    transform:
+
+    translateY(-3px);
+
+
+
+    box-shadow:
+
+    0 15px 35px rgba(37,211,102,.30);
+
+
+
+}
+
+
+
+
+
+
+
+
+.whatsapp-note{
+
+
+    margin-top:15px;
+
+
+    color:#716b7c;
+
+
+    text-align:center;
+
+
+    font-size:12px;
+
+
+    line-height:1.6;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   INFORMACIÓN IMPORTANTE
+========================================================= */
+
+
+.info-game{
+
+
+    margin-top:30px;
+
+
+    margin-bottom:70px;
+
+
+}
+
+
+
+
+
+.info-game p{
+
+
+    color:#aaa3b8;
+
+
+    font-size:14px;
+
+
+    line-height:1.8;
+
+
+    padding:20px;
+
+
+
+    background:#09070d;
+
+
+
+    border:
+
+    1px solid rgba(167,109,255,.15);
+
+
+
+    border-radius:15px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   WHATSAPP FLOTANTE
+========================================================= */
+
+
+.floating-whatsapp{
+
+
+    position:fixed;
+
+
+    right:25px;
+
+
+    bottom:25px;
+
+
+    width:60px;
+
+
+    height:60px;
+
+
+
+    display:grid;
+
+
+    place-items:center;
+
+
+
+    border-radius:50%;
+
+
+
+    background:#25d366;
+
+
+
+    color:white;
+
+
+
+    font-size:28px;
+
+
+
+    z-index:999;
+
+
+
+    box-shadow:
+
+    0 0 30px rgba(37,211,102,.35);
+
+
+
+    transition:.25s;
+
+
+}
+
+
+
+
+
+.floating-whatsapp:hover{
+
+
+    transform:
+
+    scale(1.1);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+
+body > footer{
+
+
+    width:100%;
+
+
+    padding:35px 20px;
+
+
+
+    text-align:center;
+
+
+
+    background:#070509;
+
+
+
+    border-top:
+
+    1px solid rgba(167,109,255,.18);
+
+
+}
+
+
+
+
+
+body > footer h3{
+
+
+    color:white;
+
+
+    font-size:24px;
+
+
+    font-weight:1000;
+
+
+}
+
+
+
+
+
+body > footer h3 span{
+
+
+    color:var(--game-light);
+
+
+}
+
+
+
+
+
+body > footer p{
+
+
+    margin-top:10px;
+
+
+    color:#716b7c;
+
+
+    font-size:12px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+
+@media(max-width:900px){
+
+
+
+.gaming-product{
+
+
+    grid-template-columns:1fr;
+
+
+    gap:40px;
+
+
+}
+
+
+
+
+.gaming-image-box{
+
+
+    height:450px;
+
+
+}
+
+
+
+.diamond-grid{
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+
+@media(max-width:600px){
+
+
+
+.gaming-header-container{
+
+
+    min-height:65px;
+
+
+}
+
+
+
+.gaming-actions{
+
+
+    gap:8px;
+
+
+}
+
+
+
+.back-button,
+.gaming-actions .cart-button{
+
+
+    padding:0 12px;
+
+
+    font-size:11px;
+
+
+}
+
+
+
+
+
+.gaming-product{
+
+
+    width:92%;
+
+
+    margin-top:35px;
+
+
+}
+
+
+
+.gaming-image-box{
+
+
+    height:330px;
+
+
+    padding:25px;
+
+
+}
+
+
+
+
+.gaming-info h1{
+
+
+    font-size:34px;
+
+
+}
+
+
+
+
+
+.checkout-box{
+
+
+    padding:20px;
+
+
+}
+
+
+
+.diamond-grid{
+
+
+    grid-template-columns:
+
+    1fr;
+
+
+}
+
+
+
+
+.checkout-header h2{
+
+
+    font-size:19px;
+
+
+}
+
+
+
+
+
+.summary-row{
+
+
+    flex-direction:column;
+
+
+    align-items:flex-start;
+
+
+    gap:6px;
+
+
+}
+
+
+
+.summary-row strong{
+
+
+    text-align:left;
+
+
+}
+
+
+
+.info-game{
+
+
+    margin-bottom:40px;
+
+
+}
+
+
+}
