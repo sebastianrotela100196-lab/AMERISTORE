@@ -2216,15 +2216,6 @@ document.getElementById(
 );
 
 
-
-const step3 =
-
-document.getElementById(
-"step3"
-);
-
-
-
 const summaryProduct =
 
 document.getElementById(
