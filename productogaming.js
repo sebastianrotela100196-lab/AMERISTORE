@@ -294,7 +294,7 @@ imagen:
 
 descripcion:
 
-"Compra UC para mejorar tu cuenta dentro de PUBG Mobile.",
+"Compra UC, pases y beneficios premium para mejorar tu cuenta dentro de PUBG Mobile.",
 
 
 
@@ -325,7 +325,7 @@ Para realizar la recarga necesitamos:
 
 <br><br>
 
-Nunca solicitamos contraseña.
+Nunca solicitamos contraseña de tu cuenta.
 
 `,
 
@@ -337,68 +337,244 @@ productos:[
 
 
 
+/* =========================
+   MONEDAS WOW / UC
+========================= */
+
+
+
 {
-nombre:"60 UC",
+nombre:"60 Monedas WOW 🪙",
 precio:8000,
 tipo:"recarga"
 },
 
 
+
 {
-nombre:"325 UC",
+nombre:"325 Monedas WOW 🪙",
 precio:35000,
 tipo:"recarga",
 tag:"⭐ MÁS VENDIDO"
 },
 
 
+
 {
-nombre:"660 UC",
+nombre:"660 Monedas WOW 🪙",
 precio:70000,
 tipo:"recarga",
 tag:"🔥 POPULAR"
 },
 
 
-{
-nombre:"985 UC",
-precio:105000,
-tipo:"recarga"
-},
-
 
 {
-nombre:"1320 UC",
-precio:140000,
-tipo:"recarga"
-},
-
-
-{
-nombre:"1800 UC",
+nombre:"1.800 Monedas WOW 🪙",
 precio:170000,
 tipo:"recarga"
 },
 
 
+
 {
-nombre:"3850 UC",
-precio:335000,
+nombre:"3.850 Monedas WOW 🪙",
+precio:330000,
 tipo:"recarga"
 },
 
 
+
 {
-nombre:"8100 UC",
-precio:660000,
+nombre:"8.100 Monedas WOW 🪙",
+precio:650000,
 tipo:"recarga",
 tag:"👑 PREMIUM"
+},
+
+
+
+
+
+
+
+/* =========================
+   PASES PUBG
+========================= */
+
+
+
+{
+nombre:"Pase Élite Nivel 1-50 🎟️",
+precio:40000,
+tipo:"extra"
+},
+
+
+
+{
+nombre:"Pase Élite Nivel 1-100 🎟️",
+precio:75000,
+tipo:"extra",
+tag:"⭐ MÁS VENDIDO"
+},
+
+
+
+{
+nombre:"Pase Élite Plus Nivel 1-100 👑",
+precio:180000,
+tipo:"extra",
+tag:"👑 PREMIUM"
+},
+
+
+
+
+
+
+
+/* =========================
+   PRIME
+========================= */
+
+
+
+{
+nombre:"PUBG Mobile PRIME 1 Mes ⭐",
+precio:8000,
+tipo:"extra"
+},
+
+
+
+{
+nombre:"PUBG Mobile PRIME 3 Meses ⭐",
+precio:22000,
+tipo:"extra"
+},
+
+
+
+{
+nombre:"PUBG Mobile PRIME 6 Meses ⭐",
+precio:45000,
+tipo:"extra"
+},
+
+
+
+{
+nombre:"PUBG Mobile PRIME 12 Meses ⭐",
+precio:85000,
+tipo:"extra",
+tag:"🔥 POPULAR"
+},
+
+
+
+
+
+
+
+/* =========================
+   PRIME PLUS
+========================= */
+
+
+
+{
+nombre:"PUBG Mobile PRIME PLUS 1 Mes 👑",
+precio:65000,
+tipo:"extra"
+},
+
+
+
+{
+nombre:"PUBG Mobile PRIME PLUS 3 Meses 👑",
+precio:180000,
+tipo:"extra"
+},
+
+
+
+{
+nombre:"PUBG Mobile PRIME PLUS 6 Meses 👑",
+precio:350000,
+tipo:"extra"
+},
+
+
+
+{
+nombre:"PUBG Mobile PRIME PLUS 12 Meses 👑",
+precio:700000,
+tipo:"extra",
+tag:"👑 PREMIUM"
+},
+
+
+
+
+
+
+
+/* =========================
+   PAQUETES ESPECIALES
+========================= */
+
+
+
+{
+nombre:"Paquete de Primera Compra 🎁",
+precio:8000,
+tipo:"extra"
+},
+
+
+
+{
+nombre:"Paquete de Emblema Mítico 🏅",
+precio:35000,
+tipo:"extra"
+},
+
+
+
+{
+nombre:"Materiales para Armas Evolutivas 🔫",
+precio:22000,
+tipo:"extra"
+},
+
+
+
+{
+nombre:"Paquete Semanal 1 🎁",
+precio:8000,
+tipo:"extra"
+},
+
+
+
+{
+nombre:"Paquete Semanal 2 🎁",
+precio:22000,
+tipo:"extra"
+},
+
+
+
+{
+nombre:"Paquete Semanal de Valor - Emblema Mítico 🏅",
+precio:22000,
+tipo:"extra"
 }
 
 
 
 ]
-
 
 
 },
