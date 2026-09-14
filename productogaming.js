@@ -67,7 +67,7 @@ params.get("id")
 const juego =
 
 juegos[id];
-
+console.log("Juego cargado:", id, juego);
 
 
 
