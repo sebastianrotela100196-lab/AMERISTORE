@@ -1855,3 +1855,669 @@ block:
 
 
 cargarProductos();
+/* =========================================================
+   GUIA DE ID
+========================================================= */
+
+
+if(guideButton){
+
+
+
+guideButton.addEventListener(
+
+"click",
+
+()=>{
+
+
+
+if(guideContent){
+
+
+guideContent.classList.toggle(
+"show"
+);
+
+
+
+}
+
+
+
+}
+
+
+
+);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   TEXTO GUIA DINÁMICO
+========================================================= */
+
+
+if(guideText){
+
+
+
+
+
+if(id === "mobilelegends"){
+
+
+
+guideText.innerHTML = `
+
+
+1. Abrí Mobile Legends.
+
+
+<br><br>
+
+
+2. Tocá tu foto de perfil.
+
+
+<br><br>
+
+
+3. Copiá tu ID y Server ID.
+
+
+<br><br>
+
+
+4. Envíanos los datos junto al paquete elegido.
+
+
+
+`;
+
+
+
+}
+
+
+
+
+
+
+
+if(id === "pubg"){
+
+
+
+guideText.innerHTML = `
+
+
+1. Abrí PUBG Mobile.
+
+
+<br><br>
+
+
+2. Entrá a tu perfil.
+
+
+<br><br>
+
+
+3. Copiá tu ID de jugador.
+
+
+<br><br>
+
+
+4. Envíanos el ID para realizar la recarga.
+
+
+
+`;
+
+
+
+}
+
+
+
+
+
+
+
+if(id === "bloodstrike"){
+
+
+
+guideText.innerHTML = `
+
+
+1. Abrí Blood Strike.
+
+
+<br><br>
+
+
+2. Entrá a tu perfil.
+
+
+<br><br>
+
+
+3. Copiá tu ID.
+
+
+<br><br>
+
+
+4. Envíanos tu ID junto al paquete.
+
+
+
+`;
+
+
+
+}
+
+
+
+
+
+
+
+if(id === "codmobile"){
+
+
+
+guideText.innerHTML = `
+
+
+1. Abrí Call of Duty Mobile.
+
+
+<br><br>
+
+
+2. Entrá a tu perfil.
+
+
+<br><br>
+
+
+3. Copiá tu UID.
+
+
+<br><br>
+
+
+4. Envíanos el dato para realizar la recarga.
+
+
+
+`;
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   ACTUALIZAR TOTAL
+========================================================= */
+
+
+function actualizarTotal(){
+
+
+
+if(!productoSeleccionado)
+
+return;
+
+
+
+
+
+
+let cantidadActual =
+
+parseInt(quantity.value)
+
+|| 1;
+
+
+
+
+
+
+
+let total =
+
+
+productoSeleccionado.precio *
+
+cantidadActual;
+
+
+
+
+
+
+
+
+if(totalPrice){
+
+
+
+totalPrice.textContent =
+
+
+"Gs. "
+
++
+
+total.toLocaleString(
+"es-PY"
+);
+
+
+
+}
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   AUMENTAR CANTIDAD
+========================================================= */
+
+
+if(plusButton){
+
+
+
+plusButton.addEventListener(
+
+"click",
+
+()=>{
+
+
+
+cantidad++;
+
+
+
+
+quantity.value =
+
+cantidad;
+
+
+
+
+actualizarTotal();
+
+
+
+}
+
+
+
+);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   REDUCIR CANTIDAD
+========================================================= */
+
+
+if(minusButton){
+
+
+
+minusButton.addEventListener(
+
+"click",
+
+()=>{
+
+
+
+
+
+if(cantidad > 1){
+
+
+cantidad--;
+
+
+}
+
+
+
+
+
+
+quantity.value =
+
+cantidad;
+
+
+
+
+
+actualizarTotal();
+
+
+
+}
+
+
+
+);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   VALIDAR DATOS
+========================================================= */
+
+
+function validarDatos(){
+
+
+
+if(!productoSeleccionado){
+
+
+
+mostrarNotificacion(
+
+"Selecciona un paquete primero."
+
+);
+
+
+
+return false;
+
+
+
+}
+
+
+
+
+
+
+
+if(
+!playerID ||
+!playerID.value.trim()
+){
+
+
+
+mostrarNotificacion(
+
+"Ingresa tu ID de jugador."
+
+);
+
+
+
+if(playerID){
+
+playerID.focus();
+
+}
+
+
+
+return false;
+
+
+
+}
+
+
+
+
+
+
+
+if(
+juego.servidor &&
+!serverID.value.trim()
+){
+
+
+
+mostrarNotificacion(
+
+"Ingresa tu Server ID."
+
+);
+
+
+
+serverID.focus();
+
+
+
+return false;
+
+
+
+}
+
+
+
+
+
+
+
+return true;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   CONTINUAR AL RESUMEN
+========================================================= */
+
+
+if(continueButton){
+
+
+
+continueButton.addEventListener(
+
+"click",
+
+()=>{
+
+
+
+
+
+if(!validarDatos())
+
+return;
+
+
+
+
+
+
+
+
+if(summaryProduct){
+
+
+
+summaryProduct.textContent =
+
+productoSeleccionado.nombre;
+
+
+
+}
+
+
+
+
+
+
+
+if(summaryID){
+
+
+
+summaryID.textContent =
+
+playerID.value.trim();
+
+
+
+}
+
+
+
+
+
+
+
+
+if(
+juego.servidor &&
+summaryServer
+){
+
+
+
+summaryServer.textContent =
+
+serverID.value.trim();
+
+
+
+}
+
+
+
+
+
+
+
+
+step3.classList.remove(
+
+"hidden"
+
+);
+
+
+
+
+
+
+
+cantidad = 1;
+
+
+quantity.value = 1;
+
+
+
+
+
+actualizarTotal();
+
+
+
+
+
+
+scrollPaso(step3);
+
+
+
+
+
+}
+
+
+
+);
+
+
+
+}
