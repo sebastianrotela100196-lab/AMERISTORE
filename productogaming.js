@@ -15,6 +15,7 @@ document.addEventListener(
 
 
 
+
 /* =========================================================
    CONFIG
 ========================================================= */
@@ -50,6 +51,8 @@ const juegos = {
 
 
 
+
+
 /* =========================================================
    MOBILE LEGENDS
 ========================================================= */
@@ -63,17 +66,14 @@ nombre:
 "Mobile Legends",
 
 
-
 categoria:
 
 "MOBILE LEGENDS",
 
 
-
 badge:
 
 "DIAMANTES",
-
 
 
 imagen:
@@ -82,11 +82,9 @@ imagen:
 
 
 
-
 descripcion:
 
 "Recarga diamantes y pases para mejorar tu experiencia en Mobile Legends.",
-
 
 
 
@@ -99,8 +97,6 @@ color:
 servidor:
 
 true,
-
-
 
 
 
@@ -120,10 +116,9 @@ Para realizar la recarga necesitamos:
 
 <br><br>
 
-Nunca solicitamos la contraseña.
+Nunca solicitamos contraseña.
 
 `,
-
 
 
 
@@ -213,8 +208,6 @@ tag:"👑 PREMIUM"
 
 
 
-
-
 /* EXTRAS */
 
 
@@ -259,6 +252,7 @@ tipo:"extra"
 
 
 
+
 /* =========================================================
    PUBG MOBILE
 ========================================================= */
@@ -272,17 +266,14 @@ nombre:
 "PUBG Mobile",
 
 
-
 categoria:
 
 "PUBG MOBILE",
 
 
-
 badge:
 
 "UC",
-
 
 
 imagen:
@@ -291,11 +282,9 @@ imagen:
 
 
 
-
 descripcion:
 
 "Compra UC, pases y beneficios premium para mejorar tu cuenta dentro de PUBG Mobile.",
-
 
 
 
@@ -311,6 +300,185 @@ false,
 
 
 
+info:
+
+`
+
+Para realizar la recarga necesitamos:
+
+<br><br>
+
+• ID del jugador
+
+<br><br>
+
+Nunca solicitamos contraseña.
+
+`,
+
+
+
+
+productos:[
+
+
+
+{
+nombre:"60 Monedas WOW 🪙",
+precio:8000,
+tipo:"recarga"
+},
+
+
+{
+nombre:"325 Monedas WOW 🪙",
+precio:35000,
+tipo:"recarga",
+tag:"⭐ MÁS VENDIDO"
+},
+
+
+{
+nombre:"660 Monedas WOW 🪙",
+precio:70000,
+tipo:"recarga",
+tag:"🔥 POPULAR"
+},
+
+
+{
+nombre:"1.800 Monedas WOW 🪙",
+precio:170000,
+tipo:"recarga"
+},
+
+
+{
+nombre:"3.850 Monedas WOW 🪙",
+precio:330000,
+tipo:"recarga"
+},
+
+
+{
+nombre:"8.100 Monedas WOW 🪙",
+precio:650000,
+tipo:"recarga",
+tag:"👑 PREMIUM"
+},
+
+
+
+/* PASES */
+
+
+{
+nombre:"Pase Élite Nivel 1-50 🎟️",
+precio:40000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Pase Élite Nivel 1-100 🎟️",
+precio:75000,
+tipo:"extra",
+tag:"⭐ MÁS VENDIDO"
+},
+
+
+{
+nombre:"Pase Élite Plus Nivel 1-100 👑",
+precio:180000,
+tipo:"extra",
+tag:"👑 PREMIUM"
+},
+
+
+
+/* PRIME */
+
+
+{
+nombre:"PUBG Mobile PRIME 1 Mes ⭐",
+precio:8000,
+tipo:"extra"
+},
+
+
+{
+nombre:"PUBG Mobile PRIME 3 Meses ⭐",
+precio:22000,
+tipo:"extra"
+},
+
+
+{
+nombre:"PUBG Mobile PRIME 6 Meses ⭐",
+precio:45000,
+tipo:"extra"
+},
+
+
+{
+nombre:"PUBG Mobile PRIME 12 Meses ⭐",
+precio:85000,
+tipo:"extra",
+tag:"🔥 POPULAR"
+}
+
+
+
+]
+
+
+
+},
+/* =========================================================
+   BLOOD STRIKE
+========================================================= */
+
+
+bloodstrike:{
+
+
+nombre:
+
+"Blood Strike",
+
+
+categoria:
+
+"BLOOD STRIKE",
+
+
+badge:
+
+"GOLD",
+
+
+imagen:
+
+"assets/productos/bloodstrike.png",
+
+
+
+descripcion:
+
+"Compra Oro, pases, cajas y eventos especiales de Blood Strike.",
+
+
+
+color:
+
+"bloodstrike",
+
+
+
+servidor:
+
+false,
+
 
 
 info:
@@ -325,271 +493,28 @@ Para realizar la recarga necesitamos:
 
 <br><br>
 
-Nunca solicitamos contraseña de tu cuenta.
+Nunca solicitamos contraseña.
 
 `,
 
 
 
 
-
 productos:[
 
-
-
-/* =========================
-   MONEDAS WOW / UC
-========================= */
-
-
-
-{
-nombre:"60 Monedas WOW 🪙",
-precio:8000,
-tipo:"recarga"
-},
-
-
-
-{
-nombre:"325 Monedas WOW 🪙",
-precio:35000,
-tipo:"recarga",
-tag:"⭐ MÁS VENDIDO"
-},
-
-
-
-{
-nombre:"660 Monedas WOW 🪙",
-precio:70000,
-tipo:"recarga",
-tag:"🔥 POPULAR"
-},
-
-
-
-{
-nombre:"1.800 Monedas WOW 🪙",
-precio:170000,
-tipo:"recarga"
-},
-
-
-
-{
-nombre:"3.850 Monedas WOW 🪙",
-precio:330000,
-tipo:"recarga"
-},
-
-
-
-{
-nombre:"8.100 Monedas WOW 🪙",
-precio:650000,
-tipo:"recarga",
-tag:"👑 PREMIUM"
-},
-
-
-
-
-
-
-
-/* =========================
-   PASES PUBG
-========================= */
-
-
-
-{
-nombre:"Pase Élite Nivel 1-50 🎟️",
-precio:40000,
-tipo:"extra"
-},
-
-
-
-{
-nombre:"Pase Élite Nivel 1-100 🎟️",
-precio:75000,
-tipo:"extra",
-tag:"⭐ MÁS VENDIDO"
-},
-
-
-
-{
-nombre:"Pase Élite Plus Nivel 1-100 👑",
-precio:180000,
-tipo:"extra",
-tag:"👑 PREMIUM"
-},
-
-
-
-
-
-
-
-/* =========================
-   PRIME
-========================= */
-
-
-
-{
-nombre:"PUBG Mobile PRIME 1 Mes ⭐",
-precio:8000,
-tipo:"extra"
-},
-
-
-
-{
-nombre:"PUBG Mobile PRIME 3 Meses ⭐",
-precio:22000,
-tipo:"extra"
-},
-
-
-
-{
-nombre:"PUBG Mobile PRIME 6 Meses ⭐",
-precio:45000,
-tipo:"extra"
-},
-
-
-
-{
-nombre:"PUBG Mobile PRIME 12 Meses ⭐",
-precio:85000,
-tipo:"extra",
-tag:"🔥 POPULAR"
-},
-
-
-
-
-
-
-
-/* =========================
-   PRIME PLUS
-========================= */
-
-
-
-{
-nombre:"PUBG Mobile PRIME PLUS 1 Mes 👑",
-precio:65000,
-tipo:"extra"
-},
-
-
-
-{
-nombre:"PUBG Mobile PRIME PLUS 3 Meses 👑",
-precio:180000,
-tipo:"extra"
-},
-
-
-
-{
-nombre:"PUBG Mobile PRIME PLUS 6 Meses 👑",
-precio:350000,
-tipo:"extra"
-},
-
-
-
-{
-nombre:"PUBG Mobile PRIME PLUS 12 Meses 👑",
-precio:700000,
-tipo:"extra",
-tag:"👑 PREMIUM"
-},
-
-
-
-
-
-
-
-/* =========================
-   PAQUETES ESPECIALES
-========================= */
-
-
-
-{
-nombre:"Paquete de Primera Compra 🎁",
-precio:8000,
-tipo:"extra"
-},
-
-
-
-{
-nombre:"Paquete de Emblema Mítico 🏅",
-precio:35000,
-tipo:"extra"
-},
-
-
-
-{
-nombre:"Materiales para Armas Evolutivas 🔫",
-precio:22000,
-tipo:"extra"
-},
-
-
-
-{
-nombre:"Paquete Semanal 1 🎁",
-precio:8000,
-tipo:"extra"
-},
-
-
-
-{
-nombre:"Paquete Semanal 2 🎁",
-precio:22000,
-tipo:"extra"
-},
-
-
-
-{
-nombre:"Paquete Semanal de Valor - Emblema Mítico 🏅",
-precio:22000,
-tipo:"extra"
-}
-
-
-
-]
-
-
-},
-productos:[
 
 
 /* =====================
    ORO
 ===================== */
 
+
 {
 nombre:"51 Oro 🪙",
 precio:5000,
 tipo:"recarga"
 },
+
 
 {
 nombre:"105 Oro 🪙",
@@ -598,6 +523,7 @@ tipo:"recarga",
 tag:"⭐ MÁS VENDIDO"
 },
 
+
 {
 nombre:"320 Oro 🪙",
 precio:18000,
@@ -605,11 +531,13 @@ tipo:"recarga",
 tag:"🔥 POPULAR"
 },
 
+
 {
 nombre:"540 Oro 🪙",
 precio:28000,
 tipo:"recarga"
 },
+
 
 {
 nombre:"1.100 Oro 🪙",
@@ -617,11 +545,13 @@ precio:55000,
 tipo:"recarga"
 },
 
+
 {
 nombre:"2.260 Oro 🪙",
 precio:110000,
 tipo:"recarga"
 },
+
 
 {
 nombre:"5.800 Oro 🪙",
@@ -632,9 +562,14 @@ tag:"👑 PREMIUM"
 
 
 
+
+
+
+
 /* =====================
    PASES
 ===================== */
+
 
 {
 nombre:"Pase de Temporada 🎟️",
@@ -642,11 +577,13 @@ precio:8000,
 tipo:"extra"
 },
 
+
 {
 nombre:"Pase Subida de Nivel 🎟️",
 precio:15000,
 tipo:"extra"
 },
+
 
 {
 nombre:"Pase Strike Élite 🎟️",
@@ -654,6 +591,7 @@ precio:27000,
 tipo:"extra",
 tag:"⭐ MÁS VENDIDO"
 },
+
 
 {
 nombre:"Pase Strike Premium 👑",
@@ -664,9 +602,14 @@ tag:"👑 PREMIUM"
 
 
 
+
+
+
+
 /* =====================
-   CAJAS
+   CAJAS Y OFERTAS
 ===================== */
+
 
 {
 nombre:"Caja Ultra Skin Lucky 🎁",
@@ -674,11 +617,13 @@ precio:4000,
 tipo:"extra"
 },
 
+
 {
 nombre:"Oferta 049 🎁",
 precio:4000,
 tipo:"extra"
 },
+
 
 {
 nombre:"Oferta 099 🎁",
@@ -686,11 +631,13 @@ precio:8000,
 tipo:"extra"
 },
 
+
 {
 nombre:"Oferta 199 🎁",
 precio:18000,
 tipo:"extra"
 },
+
 
 {
 nombre:"Oferta 299 🎁",
@@ -698,11 +645,13 @@ precio:28000,
 tipo:"extra"
 },
 
+
 {
 nombre:"Oferta 399 🎁",
 precio:38000,
 tipo:"extra"
 },
+
 
 {
 nombre:"Oferta 499 🎁",
@@ -710,11 +659,13 @@ precio:48000,
 tipo:"extra"
 },
 
+
 {
 nombre:"Oferta 599 🎁",
 precio:58000,
 tipo:"extra"
 },
+
 
 {
 nombre:"Oferta 699 🎁",
@@ -722,17 +673,20 @@ precio:68000,
 tipo:"extra"
 },
 
+
 {
 nombre:"Oferta 799 🎁",
 precio:78000,
 tipo:"extra"
 },
 
+
 {
 nombre:"Oferta 899 🎁",
 precio:88000,
 tipo:"extra"
 },
+
 
 {
 nombre:"Oferta 999 🎁",
@@ -742,9 +696,14 @@ tipo:"extra"
 
 
 
+
+
+
+
 /* =====================
-   EVENTOS
+   EVENTOS ESPECIALES
 ===================== */
+
 
 {
 nombre:"One Punch Man - Bolsa de Suerte Exclusiva 🥊",
@@ -752,11 +711,13 @@ precio:5000,
 tipo:"extra"
 },
 
+
 {
 nombre:"One Punch Man - Cupón de Valor Especial 🥊",
 precio:5000,
 tipo:"extra"
 },
+
 
 {
 nombre:"One Punch Man - Cofre de Puntos de Mejora 🥊",
@@ -764,11 +725,13 @@ precio:10000,
 tipo:"extra"
 },
 
+
 {
 nombre:"Dark Matter - Bolsa de Suerte Preventa 🌑",
 precio:10000,
 tipo:"extra"
 },
+
 
 {
 nombre:"Cupón Caja Lucha Strike ⚔️",
@@ -776,11 +739,13 @@ precio:5000,
 tipo:"extra"
 },
 
+
 {
 nombre:"Cofre Puntos de Mejora Lucha Strike ⚔️",
 precio:10000,
 tipo:"extra"
 },
+
 
 {
 nombre:"Ataque de los Titanes - Cupón Titán I ⚔️",
@@ -788,11 +753,13 @@ precio:10000,
 tipo:"extra"
 },
 
+
 {
 nombre:"Ataque de los Titanes - Cupón Titán II ⚔️",
 precio:5000,
 tipo:"extra"
 },
+
 
 {
 nombre:"Ataque de los Titanes - Cofre Puntos de Mejora ⚔️",
@@ -800,11 +767,13 @@ precio:10000,
 tipo:"extra"
 },
 
+
 {
 nombre:"Bolsa de Suerte Carnaval 🎭",
 precio:5000,
 tipo:"extra"
 },
+
 
 {
 nombre:"Bolsa de Suerte Groove 🎵",
@@ -812,11 +781,13 @@ precio:5000,
 tipo:"extra"
 },
 
+
 {
 nombre:"Preventa Eternal Valor Unplugged ⭐",
 precio:10000,
 tipo:"extra"
 },
+
 
 {
 nombre:"Preventa Golden Elegy Eternal Valor ⭐",
@@ -824,11 +795,13 @@ precio:10000,
 tipo:"extra"
 },
 
+
 {
 nombre:"Bolsa de Suerte Green Field 🍀",
 precio:5000,
 tipo:"extra"
 },
+
 
 {
 nombre:"Activar Cornucopia 🎁",
@@ -836,11 +809,13 @@ precio:10000,
 tipo:"extra"
 },
 
+
 {
 nombre:"Enzo: The Next One - Cofre Puntos de Mejora",
 precio:10000,
 tipo:"extra"
 },
+
 
 {
 nombre:"Bolsa de Suerte 🎁",
@@ -848,11 +823,13 @@ precio:5000,
 tipo:"extra"
 },
 
+
 {
 nombre:"Cupón Maestro Especial ⭐",
 precio:10000,
 tipo:"extra"
 },
+
 
 {
 nombre:"Cofre Puntos de Mejora Seven Deadly Sins",
@@ -860,11 +837,13 @@ precio:10000,
 tipo:"extra"
 },
 
+
 {
 nombre:"Cupón Valor Seven Deadly Sins",
 precio:5000,
 tipo:"extra"
 },
+
 
 {
 nombre:"Tokyo Revengers - Cupón Valor I",
@@ -872,11 +851,13 @@ precio:5000,
 tipo:"extra"
 },
 
+
 {
 nombre:"Tokyo Revengers - Cupón Valor II",
 precio:5000,
 tipo:"extra"
 },
+
 
 {
 nombre:"Tokyo Revengers - Cofre Puntos de Mejora",
@@ -885,110 +866,56 @@ tipo:"extra",
 tag:"👑 PREMIUM"
 }
 
-] 5.800 Oro	275.000 Gs
-🎟️ Pases Blood Strike
-Producto	Precio venta
-Blood Strike - Pase de Temporada	8.000 Gs
-Blood Strike - Pase Subida de Nivel	15.000 Gs
-Blood Strike - Pase Strike Élite	27.000 Gs
-Blood Strike - Pase Strike Premium	58.000 Gs
-🎁 Cajas y Extras
-Producto	Precio venta
-Caja Ultra Skin Lucky	4.000 Gs
-Oferta 049	4.000 Gs
-Oferta 099	8.000 Gs
-Oferta 199	18.000 Gs
-Oferta 299	28.000 Gs
-Oferta 399	38.000 Gs
-Oferta 499	48.000 Gs
-Oferta 599	58.000 Gs
-Oferta 699	68.000 Gs
-Oferta 799	78.000 Gs
-Oferta 899	88.000 Gs
-Oferta 999	98.000 Gs
-🌟 Eventos especiales / Colaboraciones
-Producto	Precio venta
-One Punch Man - Bolsa de Suerte Exclusiva	5.000 Gs
-One Punch Man - Cupón de Valor Especial	5.000 Gs
-One Punch Man - Cofre de Puntos de Mejora	10.000 Gs
-Dark Matter - Bolsa de Suerte Preventa	10.000 Gs
-Cupón Caja Lucha Strike	5.000 Gs
-Cofre Puntos de Mejora Lucha Strike	10.000 Gs
-Ataque de los Titanes - Cupón Titán I	10.000 Gs
-Ataque de los Titanes - Cupón Titán II	5.000 Gs
-Ataque de los Titanes - Cofre Puntos de Mejora	10.000 Gs
-Bolsa de Suerte Carnaval	5.000 Gs
-Bolsa de Suerte Groove	5.000 Gs
-Preventa Eternal Valor Unplugged	10.000 Gs
-Preventa Golden Elegy Eternal Valor	10.000 Gs
-Bolsa de Suerte Green Field	5.000 Gs
-Activar Cornucopia	10.000 Gs
-Enzo: The Next One - Cofre Puntos de Mejora	10.000 Gs
-Bolsa de Suerte	5.000 Gs
-Cupón Maestro Especial	10.000 Gs
-Cofre Puntos de Mejora Seven Deadly Sins	10.000 Gs
-Cupón Valor Seven Deadly Sins	5.000 Gs
-Tokyo Revengers - Cupón Valor I	5.000 Gs
-Tokyo Revengers - Cupón Valor II	5.000 Gs
-Tokyo Revengers - Cofre Puntos de Mejora	10.000 Gs
 
 
+]
 
 
-
-
-
+},
 /* =========================================================
-   CALL OF DUTY MOBILE
+   BLOOD STRIKE
 ========================================================= */
 
 
-codmobile:{
+bloodstrike:{
 
 
 nombre:
 
-"Call of Duty Mobile",
-
+"Blood Strike",
 
 
 categoria:
 
-"CALL OF DUTY",
-
+"BLOOD STRIKE",
 
 
 badge:
 
-"CP",
-
+"GOLD",
 
 
 imagen:
 
-"assets/productos/codmobile.png",
-
+"assets/productos/bloodstrike.png",
 
 
 
 descripcion:
 
-"Compra CP para desbloquear contenido premium dentro del juego.",
-
+"Compra Oro, pases, cajas y eventos especiales de Blood Strike.",
 
 
 
 color:
 
-"codmobile",
+"bloodstrike",
 
 
 
 servidor:
 
 false,
-
-
 
 
 
@@ -1000,7 +927,7 @@ Para realizar la recarga necesitamos:
 
 <br><br>
 
-• UID del jugador
+• ID del jugador
 
 <br><br>
 
@@ -1011,38 +938,369 @@ Nunca solicitamos contraseña.
 
 
 
-
 productos:[
 
 
 
+/* =====================
+   ORO
+===================== */
+
+
 {
-nombre:"88 CP",
-precio:10000,
+nombre:"51 Oro 🪙",
+precio:5000,
 tipo:"recarga"
 },
 
 
 {
-nombre:"460 CP",
-precio:45000,
+nombre:"105 Oro 🪙",
+precio:8000,
 tipo:"recarga",
 tag:"⭐ MÁS VENDIDO"
 },
 
 
 {
-nombre:"960 CP",
-precio:98000,
+nombre:"320 Oro 🪙",
+precio:18000,
 tipo:"recarga",
 tag:"🔥 POPULAR"
 },
 
 
 {
-nombre:"11600 CP",
-precio:785000,
+nombre:"540 Oro 🪙",
+precio:28000,
+tipo:"recarga"
+},
+
+
+{
+nombre:"1.100 Oro 🪙",
+precio:55000,
+tipo:"recarga"
+},
+
+
+{
+nombre:"2.260 Oro 🪙",
+precio:110000,
+tipo:"recarga"
+},
+
+
+{
+nombre:"5.800 Oro 🪙",
+precio:275000,
 tipo:"recarga",
+tag:"👑 PREMIUM"
+},
+
+
+
+
+
+
+
+/* =====================
+   PASES
+===================== */
+
+
+{
+nombre:"Pase de Temporada 🎟️",
+precio:8000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Pase Subida de Nivel 🎟️",
+precio:15000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Pase Strike Élite 🎟️",
+precio:27000,
+tipo:"extra",
+tag:"⭐ MÁS VENDIDO"
+},
+
+
+{
+nombre:"Pase Strike Premium 👑",
+precio:58000,
+tipo:"extra",
+tag:"👑 PREMIUM"
+},
+
+
+
+
+
+
+
+/* =====================
+   CAJAS Y OFERTAS
+===================== */
+
+
+{
+nombre:"Caja Ultra Skin Lucky 🎁",
+precio:4000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Oferta 049 🎁",
+precio:4000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Oferta 099 🎁",
+precio:8000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Oferta 199 🎁",
+precio:18000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Oferta 299 🎁",
+precio:28000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Oferta 399 🎁",
+precio:38000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Oferta 499 🎁",
+precio:48000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Oferta 599 🎁",
+precio:58000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Oferta 699 🎁",
+precio:68000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Oferta 799 🎁",
+precio:78000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Oferta 899 🎁",
+precio:88000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Oferta 999 🎁",
+precio:98000,
+tipo:"extra"
+},
+
+
+
+
+
+
+
+/* =====================
+   EVENTOS ESPECIALES
+===================== */
+
+
+{
+nombre:"One Punch Man - Bolsa de Suerte Exclusiva 🥊",
+precio:5000,
+tipo:"extra"
+},
+
+
+{
+nombre:"One Punch Man - Cupón de Valor Especial 🥊",
+precio:5000,
+tipo:"extra"
+},
+
+
+{
+nombre:"One Punch Man - Cofre de Puntos de Mejora 🥊",
+precio:10000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Dark Matter - Bolsa de Suerte Preventa 🌑",
+precio:10000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Cupón Caja Lucha Strike ⚔️",
+precio:5000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Cofre Puntos de Mejora Lucha Strike ⚔️",
+precio:10000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Ataque de los Titanes - Cupón Titán I ⚔️",
+precio:10000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Ataque de los Titanes - Cupón Titán II ⚔️",
+precio:5000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Ataque de los Titanes - Cofre Puntos de Mejora ⚔️",
+precio:10000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Bolsa de Suerte Carnaval 🎭",
+precio:5000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Bolsa de Suerte Groove 🎵",
+precio:5000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Preventa Eternal Valor Unplugged ⭐",
+precio:10000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Preventa Golden Elegy Eternal Valor ⭐",
+precio:10000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Bolsa de Suerte Green Field 🍀",
+precio:5000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Activar Cornucopia 🎁",
+precio:10000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Enzo: The Next One - Cofre Puntos de Mejora",
+precio:10000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Bolsa de Suerte 🎁",
+precio:5000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Cupón Maestro Especial ⭐",
+precio:10000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Cofre Puntos de Mejora Seven Deadly Sins",
+precio:10000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Cupón Valor Seven Deadly Sins",
+precio:5000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Tokyo Revengers - Cupón Valor I",
+precio:5000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Tokyo Revengers - Cupón Valor II",
+precio:5000,
+tipo:"extra"
+},
+
+
+{
+nombre:"Tokyo Revengers - Cofre Puntos de Mejora",
+precio:10000,
+tipo:"extra",
 tag:"👑 PREMIUM"
 }
 
@@ -1051,152 +1309,7 @@ tag:"👑 PREMIUM"
 ]
 
 
-
-}
-
-
-
-};
-/* =========================================================
-   OBTENER JUEGO ACTUAL
-========================================================= */
-
-
-const params =
-
-new URLSearchParams(
-window.location.search
-);
-
-
-
-
-
-
-const id =
-
-params.get("id")
-
-||
-
-"mobilelegends";
-
-
-
-
-
-
-
-const juego =
-
-juegos[id];
-
-
-
-
-
-
-
-console.log(
-"Juego cargado:",
-id,
-juego
-);
-
-
-
-
-
-
-if(!juego){
-
-console.error(
-"Juego no encontrado:",
-id
-);
-
-return;
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   COLOR DINÁMICO
-========================================================= */
-
-
-document.body.classList.add(
-
-juego.color
-
-);
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   ELEMENTOS PRINCIPALES
-========================================================= */
-
-
-const gameTitle =
-
-document.getElementById(
-"gameTitle"
-);
-
-
-
-const gameCategory =
-
-document.getElementById(
-"gameCategory"
-);
-
-
-
-const gameDescription =
-
-document.getElementById(
-"gameDescription"
-);
-
-
-
-const gameImage =
-
-document.getElementById(
-"gameImage"
-);
-
-
-
-const gameBadge =
-
-document.getElementById(
-"gameBadge"
-);
-
-
-
-
-
-
-
-
-
+},
 /* =========================================================
    CONTENEDORES
 ========================================================= */
@@ -1220,245 +1333,10 @@ document.getElementById(
 
 
 
-
-
-
-
-/* =========================================================
-   PASOS
-========================================================= */
-
-
 const step2 =
 
 document.getElementById(
 "step2"
-);
-
-
-
-const step3 =
-
-document.getElementById(
-"step3"
-);
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   DATOS JUGADOR
-========================================================= */
-
-
-const playerID =
-
-document.getElementById(
-"playerID"
-);
-
-
-
-const serverID =
-
-document.getElementById(
-"serverID"
-);
-
-
-
-const serverContainer =
-
-document.getElementById(
-"serverContainer"
-);
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   RESUMEN
-========================================================= */
-
-
-const summaryProduct =
-
-document.getElementById(
-"summaryProduct"
-);
-
-
-
-const summaryPrice =
-
-document.getElementById(
-"summaryPrice"
-);
-
-
-
-const summaryID =
-
-document.getElementById(
-"summaryID"
-);
-
-
-
-const summaryServer =
-
-document.getElementById(
-"summaryServer"
-);
-
-
-
-const summaryServerRow =
-
-document.getElementById(
-"summaryServerRow"
-);
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   BOTONES
-========================================================= */
-
-
-const continueButton =
-
-document.getElementById(
-"continueButton"
-);
-
-
-
-const buyWhatsapp =
-
-document.getElementById(
-"buyWhatsapp"
-);
-
-
-
-const addCartButton =
-
-document.getElementById(
-"addCartButton"
-);
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   CANTIDAD
-========================================================= */
-
-
-const quantity =
-
-document.getElementById(
-"quantity"
-);
-
-
-
-const plusButton =
-
-document.getElementById(
-"plusButton"
-);
-
-
-
-const minusButton =
-
-document.getElementById(
-"minusButton"
-);
-
-
-
-const totalPrice =
-
-document.getElementById(
-"totalPrice"
-);
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   GUIA ID
-========================================================= */
-
-
-const guideButton =
-
-document.getElementById(
-"guideButton"
-);
-
-
-
-const guideContent =
-
-document.getElementById(
-"guideContent"
-);
-
-
-
-const guideText =
-
-document.getElementById(
-"guideText"
-);
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   INFO
-========================================================= */
-
-
-const gameInfo =
-
-document.getElementById(
-"gameInfo"
 );
 
 
@@ -1470,7 +1348,6 @@ document.getElementById(
 let productoSeleccionado = null;
 
 
-let cantidad = 1;
 
 
 
@@ -1478,149 +1355,6 @@ let cantidad = 1;
 
 
 
-
-
-/* =========================================================
-   CARGAR INFORMACIÓN DEL JUEGO
-========================================================= */
-
-
-document.title =
-
-"AMERISSTORE | "
-
-+
-
-juego.nombre;
-
-
-
-
-
-
-
-if(gameTitle){
-
-gameTitle.textContent =
-
-juego.nombre;
-
-}
-
-
-
-
-
-
-
-if(gameCategory){
-
-gameCategory.textContent =
-
-juego.categoria;
-
-}
-
-
-
-
-
-
-
-if(gameDescription){
-
-gameDescription.textContent =
-
-juego.descripcion;
-
-}
-
-
-
-
-
-
-
-if(gameImage){
-
-gameImage.src =
-
-juego.imagen;
-
-
-gameImage.alt =
-
-juego.nombre;
-
-}
-
-
-
-
-
-
-
-if(gameBadge){
-
-gameBadge.textContent =
-
-juego.badge;
-
-}
-
-
-
-
-
-
-
-if(gameInfo){
-
-gameInfo.innerHTML =
-
-juego.info;
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   SERVER ID
-========================================================= */
-
-
-if(juego.servidor){
-
-
-
-if(serverContainer){
-
-serverContainer.style.display =
-
-"block";
-
-}
-
-
-
-
-if(summaryServerRow){
-
-summaryServerRow.style.display =
-
-"flex";
-
-}
-
-
-
-}
 /* =========================================================
    CREAR TARJETAS
 ========================================================= */
@@ -1661,8 +1395,6 @@ card.className =
 
 
 
-
-
 let etiqueta = "";
 
 
@@ -1682,7 +1414,9 @@ let claseTag = "";
 if(producto.tag.includes("MÁS VENDIDO")){
 
 
-claseTag = "tag-best";
+claseTag =
+
+"tag-best";
 
 
 }
@@ -1695,7 +1429,9 @@ claseTag = "tag-best";
 if(producto.tag.includes("POPULAR")){
 
 
-claseTag = "tag-popular";
+claseTag =
+
+"tag-popular";
 
 
 }
@@ -1708,12 +1444,12 @@ claseTag = "tag-popular";
 if(producto.tag.includes("PREMIUM")){
 
 
-claseTag = "tag-premium";
+claseTag =
+
+"tag-premium";
 
 
 }
-
-
 
 
 
@@ -1743,12 +1479,10 @@ ${producto.tag}
 
 
 
-
 card.innerHTML = `
 
 
 ${etiqueta}
-
 
 
 <h3>
@@ -1756,7 +1490,6 @@ ${etiqueta}
 ${producto.nombre}
 
 </h3>
-
 
 
 
@@ -1772,8 +1505,6 @@ ${producto.precio.toLocaleString("es-PY")}
 
 
 `;
-
-
 
 
 
@@ -1811,13 +1542,11 @@ card.className =
 card.innerHTML = `
 
 
-
 <div class="ff-extra-icon">
 
 🎟️
 
 </div>
-
 
 
 
@@ -1844,8 +1573,6 @@ ${producto.nombre}
 
 
 
-
-
 <p>
 
 Obtén beneficios adicionales dentro del juego.
@@ -1857,11 +1584,7 @@ Obtén beneficios adicionales dentro del juego.
 
 
 
-
 <div class="ff-extra-bottom">
-
-
-
 
 
 <strong>
@@ -1874,22 +1597,11 @@ ${producto.precio.toLocaleString("es-PY")}
 
 
 
-
-
-
-<button
-
-class="buy-button">
-
+<button class="buy-button">
 
 COMPRAR
 
-
 </button>
-
-
-
-
 
 
 
@@ -1902,9 +1614,6 @@ COMPRAR
 
 
 }
-
-
-
 
 
 
@@ -1929,12 +1638,9 @@ card.addEventListener(
 
 
 
-
-/* SOLO LAS RECARGAS ABREN CHECKOUT */
-
+/* SOLO RECARGAS */
 
 if(producto.tipo === "recarga"){
-
 
 
 
@@ -1943,9 +1649,7 @@ if(producto.tipo === "recarga"){
 document
 
 .querySelectorAll(
-
 ".diamond-card"
-
 )
 
 .forEach(
@@ -1968,13 +1672,9 @@ item.classList.remove(
 
 
 
-
-
 card.classList.add(
 "active"
 );
-
-
 
 
 
@@ -1991,17 +1691,12 @@ producto;
 
 
 
-
-
 if(step2){
-
 
 
 step2.classList.remove(
 "hidden"
 );
-
-
 
 
 
@@ -2013,12 +1708,7 @@ scrollPaso(step2);
 
 
 
-
-
-
 }
-
-
 
 
 
@@ -2055,8 +1745,6 @@ function cargarProductos(){
 
 
 
-
-
 if(mainContainer){
 
 
@@ -2066,13 +1754,14 @@ mainContainer.innerHTML = "";
 
 
 
+
+
 if(extraContainer){
 
 
 extraContainer.innerHTML = "";
 
 }
-
 
 
 
@@ -2160,7 +1849,7 @@ tarjeta
 
 
 /* =========================================================
-   SCROLL SUAVE
+   SCROLL
 ========================================================= */
 
 
@@ -2180,15 +1869,12 @@ return;
 setTimeout(()=>{
 
 
-
 elemento.scrollIntoView({
-
 
 
 behavior:
 
 "smooth",
-
 
 
 block:
@@ -2216,7 +1902,7 @@ block:
 
 
 /* =========================================================
-   INICIAR CARGA
+   INICIAR
 ========================================================= */
 
 
@@ -2224,6 +1910,34 @@ cargarProductos();
 /* =========================================================
    GUIA DE ID
 ========================================================= */
+
+
+const guideButton =
+
+document.getElementById(
+"guideButton"
+);
+
+
+
+const guideContent =
+
+document.getElementById(
+"guideContent"
+);
+
+
+
+const guideText =
+
+document.getElementById(
+"guideText"
+);
+
+
+
+
+
 
 
 if(guideButton){
@@ -2278,10 +1992,7 @@ if(guideText){
 
 
 
-
-
 if(id === "mobilelegends"){
-
 
 
 guideText.innerHTML = `
@@ -2319,10 +2030,7 @@ guideText.innerHTML = `
 
 
 
-
-
 if(id === "pubg"){
-
 
 
 guideText.innerHTML = `
@@ -2365,7 +2073,6 @@ guideText.innerHTML = `
 if(id === "bloodstrike"){
 
 
-
 guideText.innerHTML = `
 
 
@@ -2387,7 +2094,7 @@ guideText.innerHTML = `
 <br><br>
 
 
-4. Envíanos tu ID junto al paquete.
+4. Envíanos el ID junto al paquete elegido.
 
 
 
@@ -2404,7 +2111,6 @@ guideText.innerHTML = `
 
 
 if(id === "codmobile"){
-
 
 
 guideText.innerHTML = `
@@ -2428,7 +2134,7 @@ guideText.innerHTML = `
 <br><br>
 
 
-4. Envíanos el dato para realizar la recarga.
+4. Envíanos el dato para la recarga.
 
 
 
@@ -2451,8 +2157,50 @@ guideText.innerHTML = `
 
 
 /* =========================================================
-   ACTUALIZAR TOTAL
+   CANTIDAD Y TOTAL
 ========================================================= */
+
+
+const quantity =
+
+document.getElementById(
+"quantity"
+);
+
+
+
+const plusButton =
+
+document.getElementById(
+"plusButton"
+);
+
+
+
+const minusButton =
+
+document.getElementById(
+"minusButton"
+);
+
+
+
+const totalPrice =
+
+document.getElementById(
+"totalPrice"
+);
+
+
+
+let cantidad = 1;
+
+
+
+
+
+
+
 
 
 function actualizarTotal(){
@@ -2468,24 +2216,12 @@ return;
 
 
 
-let cantidadActual =
-
-parseInt(quantity.value)
-
-|| 1;
-
-
-
-
-
-
-
-let total =
+const total =
 
 
 productoSeleccionado.precio *
 
-cantidadActual;
+cantidad;
 
 
 
@@ -2497,9 +2233,7 @@ cantidadActual;
 if(totalPrice){
 
 
-
 totalPrice.textContent =
-
 
 "Gs. "
 
@@ -2515,10 +2249,6 @@ total.toLocaleString(
 
 
 
-
-
-
-
 }
 
 
@@ -2530,7 +2260,7 @@ total.toLocaleString(
 
 
 /* =========================================================
-   AUMENTAR CANTIDAD
+   SUMAR CANTIDAD
 ========================================================= */
 
 
@@ -2550,11 +2280,13 @@ cantidad++;
 
 
 
+if(quantity){
 
-quantity.value =
 
-cantidad;
+quantity.value = cantidad;
 
+
+}
 
 
 
@@ -2581,7 +2313,7 @@ actualizarTotal();
 
 
 /* =========================================================
-   REDUCIR CANTIDAD
+   RESTAR CANTIDAD
 ========================================================= */
 
 
@@ -2594,8 +2326,6 @@ minusButton.addEventListener(
 "click",
 
 ()=>{
-
-
 
 
 
@@ -2612,11 +2342,13 @@ cantidad--;
 
 
 
-quantity.value =
-
-cantidad;
+if(quantity){
 
 
+quantity.value = cantidad;
+
+
+}
 
 
 
@@ -2675,6 +2407,17 @@ return false;
 
 
 
+const playerID =
+
+document.getElementById(
+"playerID"
+);
+
+
+
+
+
+
 if(
 !playerID ||
 !playerID.value.trim()
@@ -2711,7 +2454,22 @@ return false;
 
 
 if(
-juego.servidor &&
+juego.servidor
+){
+
+
+
+const serverID =
+
+document.getElementById(
+"serverID"
+);
+
+
+
+
+
+if(
 !serverID.value.trim()
 ){
 
@@ -2730,6 +2488,10 @@ serverID.focus();
 
 
 return false;
+
+
+
+}
 
 
 
@@ -2760,6 +2522,60 @@ return true;
 ========================================================= */
 
 
+const continueButton =
+
+document.getElementById(
+"continueButton"
+);
+
+
+
+const step3 =
+
+document.getElementById(
+"step3"
+);
+
+
+
+const step2 =
+
+document.getElementById(
+"step2"
+);
+
+
+
+const summaryProduct =
+
+document.getElementById(
+"summaryProduct"
+);
+
+
+
+const summaryID =
+
+document.getElementById(
+"summaryID"
+);
+
+
+
+const summaryServer =
+
+document.getElementById(
+"summaryServer"
+);
+
+
+
+
+
+
+
+
+
 if(continueButton){
 
 
@@ -2772,8 +2588,6 @@ continueButton.addEventListener(
 
 
 
-
-
 if(!validarDatos())
 
 return;
@@ -2783,16 +2597,33 @@ return;
 
 
 
+const playerID =
+
+document.getElementById(
+"playerID"
+);
+
+
+
+
+
+const serverID =
+
+document.getElementById(
+"serverID"
+);
+
+
+
+
 
 
 if(summaryProduct){
 
 
-
 summaryProduct.textContent =
 
 productoSeleccionado.nombre;
-
 
 
 }
@@ -2806,15 +2637,12 @@ productoSeleccionado.nombre;
 if(summaryID){
 
 
-
 summaryID.textContent =
 
-playerID.value.trim();
-
+playerID.value;
 
 
 }
-
 
 
 
@@ -2828,11 +2656,9 @@ summaryServer
 ){
 
 
-
 summaryServer.textContent =
 
-serverID.value.trim();
-
+serverID.value;
 
 
 }
@@ -2843,38 +2669,20 @@ serverID.value.trim();
 
 
 
+if(step3){
+
 
 step3.classList.remove(
-
 "hidden"
-
 );
-
-
-
-
-
-
-
-cantidad = 1;
-
-
-quantity.value = 1;
-
-
-
-
-
-actualizarTotal();
-
-
-
 
 
 
 scrollPaso(step3);
 
 
+
+}
 
 
 
@@ -2892,7 +2700,19 @@ scrollPaso(step3);
 ========================================================= */
 
 
+const addCartButton =
+
+document.getElementById(
+"addCartButton"
+);
+
+
+
+
+
+
 function obtenerCarrito(){
+
 
 
 try{
@@ -2920,6 +2740,7 @@ return [];
 }
 
 
+
 }
 
 
@@ -2931,6 +2752,7 @@ return [];
 
 
 function guardarCarrito(carrito){
+
 
 
 localStorage.setItem(
@@ -2968,12 +2790,19 @@ obtenerCarrito();
 
 
 
+const playerID =
 
-const cantidadActual =
+document.getElementById(
+"playerID"
+);
 
-parseInt(quantity.value)
 
-|| 1;
+
+const serverID =
+
+document.getElementById(
+"serverID"
+);
 
 
 
@@ -2984,12 +2813,9 @@ parseInt(quantity.value)
 const producto = {
 
 
-
 producto:
 
 `${juego.nombre} - ${productoSeleccionado.nombre}`,
-
-
 
 
 plan:
@@ -2997,13 +2823,9 @@ plan:
 productoSeleccionado.nombre,
 
 
-
-
 precio:
 
-productoSeleccionado.precio * cantidadActual,
-
-
+productoSeleccionado.precio * cantidad,
 
 
 imagen:
@@ -3011,34 +2833,19 @@ imagen:
 juego.imagen,
 
 
-
-
 tipo:
 
 "GAMING",
 
 
-
-
-duracion:
-
-"Recarga",
-
-
-
-
 cantidad:
 
-cantidadActual,
-
-
+cantidad,
 
 
 idJugador:
 
 playerID.value.trim(),
-
-
 
 
 servidor:
@@ -3070,9 +2877,11 @@ carrito.push(producto);
 
 
 
+
 guardarCarrito(
 carrito
 );
+
 
 
 
@@ -3098,7 +2907,7 @@ mostrarNotificacion(
 
 
 /* =========================================================
-   BOTÓN CARRITO
+   BOTÓN AGREGAR CARRITO
 ========================================================= */
 
 
@@ -3114,8 +2923,6 @@ addCartButton.addEventListener(
 
 
 
-
-
 if(!validarDatos())
 
 return;
@@ -3125,10 +2932,7 @@ return;
 
 
 
-
 agregarAlCarrito();
-
-
 
 
 
@@ -3170,6 +2974,7 @@ document.querySelector(
 
 
 
+
 if(anterior){
 
 anterior.remove();
@@ -3203,6 +3008,7 @@ aviso.className =
 aviso.textContent =
 
 texto;
+
 
 
 
@@ -3262,6 +3068,18 @@ aviso.remove();
 ========================================================= */
 
 
+const buyWhatsapp =
+
+document.getElementById(
+"buyWhatsapp"
+);
+
+
+
+
+
+
+
 if(buyWhatsapp){
 
 
@@ -3286,12 +3104,19 @@ return;
 
 
 
+const playerID =
 
-const cantidadActual =
+document.getElementById(
+"playerID"
+);
 
-parseInt(quantity.value)
 
-|| 1;
+
+const serverID =
+
+document.getElementById(
+"serverID"
+);
 
 
 
@@ -3301,7 +3126,6 @@ parseInt(quantity.value)
 
 
 let mensaje =
-
 
 
 `Hola AMERISSTORE 👋
@@ -3324,16 +3148,15 @@ ${productoSeleccionado.nombre}
 
 🔢 Cantidad:
 
-${cantidadActual}
+${cantidad}
 
 
 
 🆔 ID Jugador:
 
-${playerID.value.trim()}
+${playerID.value}
 
 `;
-
 
 
 
@@ -3352,14 +3175,13 @@ mensaje +=
 
 🌐 Server ID:
 
-${serverID.value.trim()}
+${serverID.value}
 
 `;
 
 
 
 }
-
 
 
 
@@ -3374,11 +3196,12 @@ mensaje +=
 
 💰 Total:
 
-Gs. ${(productoSeleccionado.precio * cantidadActual).toLocaleString("es-PY")}
+Gs. ${(productoSeleccionado.precio * cantidad).toLocaleString("es-PY")}
 
 
 
 Quiero completar mi compra.`;
+
 
 
 
@@ -3432,7 +3255,245 @@ mensaje
 
 
 /* =========================================================
-   FINALIZAR
+   FAQ DINÁMICO
+========================================================= */
+
+
+const faqContainer =
+
+document.querySelector(
+".ff-faq-grid"
+);
+
+
+
+
+
+
+
+if(faqContainer){
+
+
+
+let preguntas = [];
+
+
+
+
+
+if(id === "mobilelegends"){
+
+
+preguntas = [
+
+[
+"¿Necesito Server ID?",
+"Sí, Mobile Legends necesita ID y Server ID."
+],
+
+
+[
+"¿Necesito contraseña?",
+"No. Nunca solicitamos contraseña."
+],
+
+
+[
+"¿Cuánto tarda la recarga?",
+"Normalmente se realiza después de confirmar el pago."
+]
+
+];
+
+
+}
+
+
+
+
+
+
+
+if(id === "pubg"){
+
+
+preguntas = [
+
+[
+"¿Qué necesito para PUBG?",
+"Solo tu ID de jugador."
+],
+
+
+[
+"¿Necesito contraseña?",
+"No. Solo usamos los datos necesarios."
+],
+
+
+[
+"¿Puedo comprar varios paquetes?",
+"Sí, puedes agregarlos al carrito."
+]
+
+];
+
+
+}
+
+
+
+
+
+
+
+if(id === "bloodstrike"){
+
+
+preguntas = [
+
+[
+"¿Qué necesito para Blood Strike?",
+"Solo tu ID de jugador."
+],
+
+
+[
+"¿Puedo comprar eventos?",
+"Sí, están disponibles en extras."
+],
+
+
+[
+"¿Necesito contraseña?",
+"No solicitamos contraseña."
+]
+
+];
+
+
+}
+
+
+
+
+
+
+
+if(id === "codmobile"){
+
+
+preguntas = [
+
+[
+"¿Qué necesito para COD Mobile?",
+"Necesitamos tu UID."
+],
+
+
+[
+"¿Cómo recibo mi CP?",
+"Después de confirmar la compra."
+],
+
+
+[
+"¿Necesito contraseña?",
+"No solicitamos contraseña."
+]
+
+];
+
+
+}
+
+
+
+
+
+
+
+
+faqContainer.innerHTML = "";
+
+
+
+
+
+
+preguntas.forEach(
+
+(item,index)=>{
+
+
+
+
+
+faqContainer.innerHTML += `
+
+
+
+<div class="ff-faq-card">
+
+
+<div class="ff-faq-icon">
+
+0${index+1}
+
+</div>
+
+
+
+
+<div>
+
+
+<h3>
+
+${item[0]}
+
+</h3>
+
+
+<p>
+
+${item[1]}
+
+</p>
+
+
+
+</div>
+
+
+
+</div>
+
+
+`;
+
+
+
+}
+
+
+
+);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   FINAL JS
 ========================================================= */
 
 
