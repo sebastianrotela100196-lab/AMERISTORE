@@ -1876,3 +1876,789 @@ body.codmobile{
 
 
 }
+/* =========================================================
+   RESUMEN DE COMPRA
+========================================================= */
+
+
+.summary{
+
+
+    width:100%;
+
+
+    padding:25px;
+
+
+
+    background:#09070d;
+
+
+
+    border:
+
+    1px solid var(--game-border);
+
+
+
+    border-radius:18px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.summary-row{
+
+
+    padding:15px 0;
+
+
+
+    display:flex;
+
+
+
+    justify-content:space-between;
+
+
+
+    align-items:center;
+
+
+
+    gap:20px;
+
+
+
+    border-bottom:
+
+    1px solid rgba(255,255,255,.06);
+
+
+
+}
+
+
+
+
+
+.summary-row:last-child{
+
+
+    border-bottom:0;
+
+
+
+}
+
+
+
+
+
+
+
+.summary-row span{
+
+
+    color:
+
+    var(--game-gray);
+
+
+
+    font-size:13px;
+
+
+
+}
+
+
+
+
+
+
+
+.summary-row strong{
+
+
+    color:white;
+
+
+
+    font-size:16px;
+
+
+
+    font-weight:1000;
+
+
+
+    text-align:right;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   BOTÓN WHATSAPP FINAL
+========================================================= */
+
+
+.buy-final{
+
+
+    width:100%;
+
+
+
+    min-height:55px;
+
+
+
+    margin-top:25px;
+
+
+
+    border:0;
+
+
+
+    border-radius:14px;
+
+
+
+    background:
+
+
+    linear-gradient(
+        135deg,
+        #25d366,
+        #15b952
+    );
+
+
+
+    color:white;
+
+
+
+    font-size:13px;
+
+
+
+    font-weight:1000;
+
+
+
+    cursor:pointer;
+
+
+
+    transition:.25s;
+
+
+
+}
+
+
+
+
+
+
+
+.buy-final:hover{
+
+
+    transform:
+
+    translateY(-3px);
+
+
+
+    box-shadow:
+
+    0 15px 35px rgba(37,211,102,.35);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.whatsapp-note{
+
+
+    margin-top:15px;
+
+
+
+    color:#716b7c;
+
+
+
+    font-size:12px;
+
+
+
+    text-align:center;
+
+
+
+    line-height:1.6;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   INFORMACIÓN IMPORTANTE
+========================================================= */
+
+
+.info-game{
+
+
+    margin-top:30px;
+
+
+
+    margin-bottom:70px;
+
+
+
+}
+
+
+
+
+
+.info-game p{
+
+
+    padding:22px;
+
+
+
+    background:#09070d;
+
+
+
+    border:
+
+    1px solid var(--game-border);
+
+
+
+    border-radius:16px;
+
+
+
+    color:
+
+    var(--game-gray);
+
+
+
+    font-size:14px;
+
+
+
+    line-height:1.8;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   WHATSAPP FLOTANTE
+========================================================= */
+
+
+.floating-whatsapp{
+
+
+    position:fixed;
+
+
+
+    right:25px;
+
+
+
+    bottom:25px;
+
+
+
+    width:60px;
+
+
+
+    height:60px;
+
+
+
+    display:grid;
+
+
+
+    place-items:center;
+
+
+
+    border-radius:50%;
+
+
+
+    background:#25d366;
+
+
+
+    color:white;
+
+
+
+    font-size:28px;
+
+
+
+    z-index:999;
+
+
+
+    box-shadow:
+
+    0 0 30px rgba(37,211,102,.40);
+
+
+
+    transition:.25s;
+
+
+
+}
+
+
+
+
+
+
+
+.floating-whatsapp:hover{
+
+
+    transform:
+
+    scale(1.1);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+
+body > footer{
+
+
+    width:100%;
+
+
+
+    padding:35px 20px;
+
+
+
+    text-align:center;
+
+
+
+    background:#070509;
+
+
+
+    border-top:
+
+    1px solid var(--game-border);
+
+
+
+}
+
+
+
+
+
+
+
+body > footer h3{
+
+
+    color:white;
+
+
+
+    font-size:24px;
+
+
+
+    font-weight:1000;
+
+
+
+}
+
+
+
+
+
+
+
+body > footer h3 span{
+
+
+    color:
+
+    var(--game-primary);
+
+
+
+}
+
+
+
+
+
+
+
+body > footer p{
+
+
+    margin-top:10px;
+
+
+
+    color:#716b7c;
+
+
+
+    font-size:12px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+
+@media(max-width:900px){
+
+
+
+.gaming-product{
+
+
+    grid-template-columns:
+
+    1fr;
+
+
+
+    gap:40px;
+
+
+
+}
+
+
+
+
+
+.gaming-image-box{
+
+
+    height:450px;
+
+
+
+}
+
+
+
+
+
+.diamond-grid,
+.extras-grid{
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+
+@media(max-width:600px){
+
+
+
+.gaming-header-container{
+
+
+    min-height:65px;
+
+
+
+}
+
+
+
+.gaming-actions{
+
+
+    gap:8px;
+
+
+
+}
+
+
+
+
+
+
+.back-button,
+.cart-button{
+
+
+    padding:
+
+    0 12px;
+
+
+
+    font-size:11px;
+
+
+
+}
+
+
+
+
+
+
+.gaming-product{
+
+
+    width:92%;
+
+
+
+    margin-top:35px;
+
+
+
+}
+
+
+
+
+
+
+
+.gaming-image-box{
+
+
+    height:330px;
+
+
+
+    padding:25px;
+
+
+
+}
+
+
+
+
+
+
+
+.gaming-info h1{
+
+
+    font-size:34px;
+
+
+
+}
+
+
+
+
+
+
+
+.checkout-box{
+
+
+    padding:20px;
+
+
+
+}
+
+
+
+
+
+
+
+.diamond-grid,
+.extras-grid{
+
+
+    grid-template-columns:
+
+    1fr;
+
+
+
+}
+
+
+
+
+
+
+
+.checkout-header h2{
+
+
+    font-size:19px;
+
+
+
+}
+
+
+
+
+
+
+
+.summary-row{
+
+
+    flex-direction:column;
+
+
+
+    align-items:flex-start;
+
+
+
+    gap:8px;
+
+
+
+}
+
+
+
+
+
+
+
+.summary-row strong{
+
+
+    text-align:left;
+
+
+
+}
+
+
+
+
+
+
+}
