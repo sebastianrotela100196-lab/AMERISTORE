@@ -578,14 +578,314 @@ tipo:"extra"
 
 
 },
-Producto	Precio venta
-Blood Strike - 51 Oro	5.000 Gs
-Blood Strike - 105 Oro	8.000 Gs
-Blood Strike - 320 Oro	18.000 Gs
-Blood Strike - 540 Oro	28.000 Gs
-Blood Strike - 1.100 Oro	55.000 Gs
-Blood Strike - 2.260 Oro	110.000 Gs
-Blood Strike - 5.800 Oro	275.000 Gs
+productos:[
+
+
+/* =====================
+   ORO
+===================== */
+
+{
+nombre:"51 Oro 🪙",
+precio:5000,
+tipo:"recarga"
+},
+
+{
+nombre:"105 Oro 🪙",
+precio:8000,
+tipo:"recarga",
+tag:"⭐ MÁS VENDIDO"
+},
+
+{
+nombre:"320 Oro 🪙",
+precio:18000,
+tipo:"recarga",
+tag:"🔥 POPULAR"
+},
+
+{
+nombre:"540 Oro 🪙",
+precio:28000,
+tipo:"recarga"
+},
+
+{
+nombre:"1.100 Oro 🪙",
+precio:55000,
+tipo:"recarga"
+},
+
+{
+nombre:"2.260 Oro 🪙",
+precio:110000,
+tipo:"recarga"
+},
+
+{
+nombre:"5.800 Oro 🪙",
+precio:275000,
+tipo:"recarga",
+tag:"👑 PREMIUM"
+},
+
+
+
+/* =====================
+   PASES
+===================== */
+
+{
+nombre:"Pase de Temporada 🎟️",
+precio:8000,
+tipo:"extra"
+},
+
+{
+nombre:"Pase Subida de Nivel 🎟️",
+precio:15000,
+tipo:"extra"
+},
+
+{
+nombre:"Pase Strike Élite 🎟️",
+precio:27000,
+tipo:"extra",
+tag:"⭐ MÁS VENDIDO"
+},
+
+{
+nombre:"Pase Strike Premium 👑",
+precio:58000,
+tipo:"extra",
+tag:"👑 PREMIUM"
+},
+
+
+
+/* =====================
+   CAJAS
+===================== */
+
+{
+nombre:"Caja Ultra Skin Lucky 🎁",
+precio:4000,
+tipo:"extra"
+},
+
+{
+nombre:"Oferta 049 🎁",
+precio:4000,
+tipo:"extra"
+},
+
+{
+nombre:"Oferta 099 🎁",
+precio:8000,
+tipo:"extra"
+},
+
+{
+nombre:"Oferta 199 🎁",
+precio:18000,
+tipo:"extra"
+},
+
+{
+nombre:"Oferta 299 🎁",
+precio:28000,
+tipo:"extra"
+},
+
+{
+nombre:"Oferta 399 🎁",
+precio:38000,
+tipo:"extra"
+},
+
+{
+nombre:"Oferta 499 🎁",
+precio:48000,
+tipo:"extra"
+},
+
+{
+nombre:"Oferta 599 🎁",
+precio:58000,
+tipo:"extra"
+},
+
+{
+nombre:"Oferta 699 🎁",
+precio:68000,
+tipo:"extra"
+},
+
+{
+nombre:"Oferta 799 🎁",
+precio:78000,
+tipo:"extra"
+},
+
+{
+nombre:"Oferta 899 🎁",
+precio:88000,
+tipo:"extra"
+},
+
+{
+nombre:"Oferta 999 🎁",
+precio:98000,
+tipo:"extra"
+},
+
+
+
+/* =====================
+   EVENTOS
+===================== */
+
+{
+nombre:"One Punch Man - Bolsa de Suerte Exclusiva 🥊",
+precio:5000,
+tipo:"extra"
+},
+
+{
+nombre:"One Punch Man - Cupón de Valor Especial 🥊",
+precio:5000,
+tipo:"extra"
+},
+
+{
+nombre:"One Punch Man - Cofre de Puntos de Mejora 🥊",
+precio:10000,
+tipo:"extra"
+},
+
+{
+nombre:"Dark Matter - Bolsa de Suerte Preventa 🌑",
+precio:10000,
+tipo:"extra"
+},
+
+{
+nombre:"Cupón Caja Lucha Strike ⚔️",
+precio:5000,
+tipo:"extra"
+},
+
+{
+nombre:"Cofre Puntos de Mejora Lucha Strike ⚔️",
+precio:10000,
+tipo:"extra"
+},
+
+{
+nombre:"Ataque de los Titanes - Cupón Titán I ⚔️",
+precio:10000,
+tipo:"extra"
+},
+
+{
+nombre:"Ataque de los Titanes - Cupón Titán II ⚔️",
+precio:5000,
+tipo:"extra"
+},
+
+{
+nombre:"Ataque de los Titanes - Cofre Puntos de Mejora ⚔️",
+precio:10000,
+tipo:"extra"
+},
+
+{
+nombre:"Bolsa de Suerte Carnaval 🎭",
+precio:5000,
+tipo:"extra"
+},
+
+{
+nombre:"Bolsa de Suerte Groove 🎵",
+precio:5000,
+tipo:"extra"
+},
+
+{
+nombre:"Preventa Eternal Valor Unplugged ⭐",
+precio:10000,
+tipo:"extra"
+},
+
+{
+nombre:"Preventa Golden Elegy Eternal Valor ⭐",
+precio:10000,
+tipo:"extra"
+},
+
+{
+nombre:"Bolsa de Suerte Green Field 🍀",
+precio:5000,
+tipo:"extra"
+},
+
+{
+nombre:"Activar Cornucopia 🎁",
+precio:10000,
+tipo:"extra"
+},
+
+{
+nombre:"Enzo: The Next One - Cofre Puntos de Mejora",
+precio:10000,
+tipo:"extra"
+},
+
+{
+nombre:"Bolsa de Suerte 🎁",
+precio:5000,
+tipo:"extra"
+},
+
+{
+nombre:"Cupón Maestro Especial ⭐",
+precio:10000,
+tipo:"extra"
+},
+
+{
+nombre:"Cofre Puntos de Mejora Seven Deadly Sins",
+precio:10000,
+tipo:"extra"
+},
+
+{
+nombre:"Cupón Valor Seven Deadly Sins",
+precio:5000,
+tipo:"extra"
+},
+
+{
+nombre:"Tokyo Revengers - Cupón Valor I",
+precio:5000,
+tipo:"extra"
+},
+
+{
+nombre:"Tokyo Revengers - Cupón Valor II",
+precio:5000,
+tipo:"extra"
+},
+
+{
+nombre:"Tokyo Revengers - Cofre Puntos de Mejora",
+precio:10000,
+tipo:"extra",
+tag:"👑 PREMIUM"
+}
+
+] 5.800 Oro	275.000 Gs
 🎟️ Pases Blood Strike
 Producto	Precio venta
 Blood Strike - Pase de Temporada	8.000 Gs
