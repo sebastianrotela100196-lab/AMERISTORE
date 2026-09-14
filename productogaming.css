@@ -1,30 +1,27 @@
 /* =========================================================
    AMERISSTORE
-   PRODUCT GAMING PREMIUM
+   PRODUCT GAMING CLEAN
 ========================================================= */
-
 
 
 :root{
 
 
-    --game-primary:#7c35ff;
+--game-primary:#7c35ff;
 
-    --game-secondary:#a76dff;
+--game-secondary:#a76dff;
 
-    --game-card:#110b19;
+--game-border:
+rgba(167,109,255,.25);
 
-    --game-bg:#050507;
+--game-gray:#aaa3b8;
 
-    --game-text:#ffffff;
-
-    --game-gray:#aaa3b8;
-
-    --game-border:
-    rgba(167,109,255,.25);
+--game-card:#110b19;
 
 
 }
+
+
 
 
 
@@ -33,66 +30,52 @@
 
 
 /* =========================================================
-   COLORES DINÁMICOS POR JUEGO
+   COLORES DINÁMICOS
 ========================================================= */
 
-
-/* MOBILE LEGENDS */
 
 body.mobilelegends{
 
 
-    --game-primary:#ffd000;
+--game-primary:#ffd000;
 
-    --game-secondary:#4da6ff;
+--game-secondary:#4da6ff;
 
 
 }
 
 
-
-
-
-/* PUBG */
 
 body.pubg{
 
 
-    --game-primary:#f5c400;
+--game-primary:#f5c400;
 
-    --game-secondary:#ffdf66;
+--game-secondary:#ffdf66;
 
 
 }
 
 
-
-
-
-/* BLOOD STRIKE */
 
 body.bloodstrike{
 
 
-    --game-primary:#ff3030;
+--game-primary:#ff3030;
 
-    --game-secondary:#ff6b6b;
+--game-secondary:#ff6b6b;
 
 
 }
 
 
 
-
-
-/* CALL OF DUTY */
-
 body.codmobile{
 
 
-    --game-primary:#00bfff;
+--game-primary:#00bfff;
 
-    --game-secondary:#0066ff;
+--game-secondary:#0066ff;
 
 
 }
@@ -113,73 +96,59 @@ body.codmobile{
 .gaming-header{
 
 
-    position:sticky;
+position:sticky;
 
 
-    top:0;
+top:0;
 
 
-    z-index:1000;
+z-index:1000;
 
 
+background:
 
-    background:
-
-    rgba(5,5,7,.92);
-
-
-
-    backdrop-filter:
-
-    blur(18px);
+rgba(5,5,7,.92);
 
 
 
-    border-bottom:
+backdrop-filter:
 
-    1px solid var(--game-border);
+blur(18px);
+
+
+
+border-bottom:
+
+1px solid var(--game-border);
 
 
 
 }
-
-
 
 
 
 .gaming-header-container{
 
 
-    width:
-
-    min(92%,1400px);
+width:min(92%,1400px);
 
 
-
-    min-height:80px;
-
+min-height:80px;
 
 
-    margin:auto;
+margin:auto;
 
 
-
-    display:flex;
-
+display:flex;
 
 
-    align-items:center;
+align-items:center;
 
 
-
-    justify-content:space-between;
-
+justify-content:space-between;
 
 
 }
-
-
-
 
 
 
@@ -189,18 +158,13 @@ body.codmobile{
 .gaming-actions{
 
 
-    display:flex;
+display:flex;
 
 
-    gap:12px;
-
+gap:12px;
 
 
 }
-
-
-
-
 
 
 
@@ -208,65 +172,37 @@ body.codmobile{
 .cart-button{
 
 
-    min-height:44px;
+padding:
+
+12px 18px;
 
 
+border:
 
-    padding:
-
-    0 18px;
-
+1px solid var(--game-border);
 
 
-    display:flex;
+border-radius:12px;
 
 
+background:
 
-    align-items:center;
-
-
-
-    justify-content:center;
+rgba(124,53,255,.10);
 
 
-
-    border:
-
-    1px solid var(--game-border);
+color:white;
 
 
-
-    border-radius:12px;
-
+font-size:12px;
 
 
-    color:white;
+font-weight:1000;
 
 
-
-    font-size:12px;
-
-
-
-    font-weight:1000;
-
-
-
-    background:
-
-    rgba(124,53,255,.10);
-
-
-
-    transition:.25s;
-
+transition:.25s;
 
 
 }
-
-
-
-
 
 
 
@@ -274,22 +210,15 @@ body.codmobile{
 .cart-button:hover{
 
 
-    border-color:
+border-color:
 
-    var(--game-primary);
-
-
-
-    background:
-
-    rgba(124,53,255,.20);
+var(--game-primary);
 
 
 
-    transform:
+transform:
 
-    translateY(-3px);
-
+translateY(-3px);
 
 
 }
@@ -310,36 +239,24 @@ body.codmobile{
 .gaming-product{
 
 
-    width:
-
-    min(92%,1200px);
+width:min(92%,1200px);
 
 
-
-    margin:
-
-    70px auto;
+margin:70px auto;
 
 
-
-    display:grid;
-
+display:grid;
 
 
-    grid-template-columns:
+grid-template-columns:
 
-    1fr 1fr;
-
-
-
-    gap:
-
-    60px;
+1fr 1fr;
 
 
+gap:60px;
 
-    align-items:center;
 
+align-items:center;
 
 
 }
@@ -352,117 +269,83 @@ body.codmobile{
 
 
 
-/* =========================================================
-   IMAGEN
-========================================================= */
+/* IMAGEN */
 
 
 .gaming-image-box{
 
 
-    height:
-
-    560px;
+height:560px;
 
 
-
-    position:
-
-    relative;
+position:relative;
 
 
-
-    display:flex;
-
+display:flex;
 
 
-    justify-content:center;
+align-items:center;
 
 
-
-    align-items:center;
-
+justify-content:center;
 
 
-    padding:
+padding:40px;
 
-    40px;
+
+background:
+
+linear-gradient(
+145deg,
+#161020,
+#09070d
+);
 
 
 
-    background:
+border:
 
-
-    linear-gradient(
-        145deg,
-        #161020,
-        #09070d
-    );
+1px solid var(--game-border);
 
 
 
-    border:
-
-    1px solid var(--game-border);
+border-radius:30px;
 
 
 
-    border-radius:30px;
-
-
-
-    overflow:hidden;
-
-
-
-    box-shadow:
-
-    0 25px 60px rgba(0,0,0,.35);
+overflow:hidden;
 
 
 
 }
-
-
-
-
 
 
 
 .gaming-image-box img{
 
 
-    width:100%;
+width:100%;
 
 
-
-    height:100%;
-
+height:100%;
 
 
-    object-fit:contain;
+object-fit:contain;
 
 
-
-    transition:.35s;
-
+transition:.35s;
 
 
 }
-
-
-
-
 
 
 
 .gaming-image-box:hover img{
 
 
-    transform:
+transform:
 
-    scale(1.06);
-
+scale(1.06);
 
 
 }
@@ -475,56 +358,46 @@ body.codmobile{
 
 
 
-/* =========================================================
-   BADGE
-========================================================= */
+/* BADGE */
 
 
 .gaming-badge{
 
 
-    position:absolute;
+position:absolute;
+
+
+top:20px;
+
+
+left:20px;
+
+
+padding:
+
+7px 15px;
+
+
+border-radius:50px;
+
+
+background:
+
+linear-gradient(
+135deg,
+var(--game-primary),
+var(--game-secondary)
+);
 
 
 
-    top:20px;
+color:#050505;
 
 
-
-    left:20px;
-
+font-size:10px;
 
 
-    padding:
-
-    7px 15px;
-
-
-
-    border-radius:50px;
-
-
-
-    background:
-
-    linear-gradient(
-        135deg,
-        var(--game-primary),
-        var(--game-secondary)
-    );
-
-
-
-    color:#050505;
-
-
-
-    font-size:10px;
-
-
-
-    font-weight:1000;
-
+font-weight:1000;
 
 
 }
@@ -537,122 +410,93 @@ body.codmobile{
 
 
 
-/* =========================================================
-   INFORMACIÓN
-========================================================= */
+/* INFORMACION */
 
 
 .gaming-info{
 
 
-    display:flex;
+display:flex;
 
 
-    flex-direction:column;
-
+flex-direction:column;
 
 
 }
-
-
 
 
 
 .gaming-category{
 
 
-    color:
+color:
 
-    var(--game-primary);
-
-
-
-    font-size:11px;
+var(--game-primary);
 
 
 
-    font-weight:1000;
+font-size:11px;
 
 
+font-weight:1000;
 
-    letter-spacing:3px;
 
+letter-spacing:3px;
 
 
 }
-
-
-
 
 
 
 .gaming-info h1{
 
 
-    margin-top:15px;
+margin-top:15px;
 
 
+font-size:
 
-    color:white;
-
-
-
-    font-size:
-
-    clamp(38px,5vw,55px);
+clamp(38px,5vw,55px);
 
 
-
-    font-weight:1000;
-
+color:white;
 
 
-    line-height:1;
+font-weight:1000;
 
+
+line-height:1;
 
 
 }
-
-
-
-
 
 
 
 .gaming-info p{
 
 
-    margin-top:20px;
+margin-top:20px;
 
 
-
-    color:
-
-    var(--game-gray);
+color:var(--game-gray);
 
 
-
-    font-size:16px;
-
+font-size:16px;
 
 
-    line-height:1.7;
-
+line-height:1.7;
 
 
 }
 /* =========================================================
-   CHECKOUT
+   CHECKOUT PRINCIPAL
 ========================================================= */
 
 
 .gaming-checkout{
 
 
-    width:
-
-    min(92%,1200px);
-
+    width:min(92%,1200px);
 
 
     margin:
@@ -660,10 +504,7 @@ body.codmobile{
     0 auto 30px;
 
 
-
 }
-
-
 
 
 
@@ -682,9 +523,8 @@ body.codmobile{
 
     background:
 
-
     linear-gradient(
-        145deg,
+        180deg,
         #110b19,
         #09070d
     );
@@ -699,13 +539,13 @@ body.codmobile{
 
     border-radius:
 
-    25px;
+    22px;
 
 
 
     box-shadow:
 
-    0 20px 50px rgba(0,0,0,.35);
+    0 18px 45px rgba(0,0,0,.30);
 
 
 
@@ -720,7 +560,7 @@ body.codmobile{
 
 
 /* =========================================================
-   HEADER PASOS
+   CABECERA DE PASOS
 ========================================================= */
 
 
@@ -730,17 +570,13 @@ body.codmobile{
     display:flex;
 
 
-
     align-items:center;
-
 
 
     gap:15px;
 
 
-
     margin-bottom:30px;
-
 
 
 }
@@ -749,23 +585,21 @@ body.codmobile{
 
 
 
+
+
 .step-number{
 
 
-    width:45px;
+    width:42px;
 
 
-
-    height:45px;
-
+    height:42px;
 
 
     display:grid;
 
 
-
     place-items:center;
-
 
 
     background:
@@ -779,19 +613,21 @@ body.codmobile{
 
 
 
+    border-radius:12px;
+
+
     color:#050505;
-
-
-
-    border-radius:14px;
-
 
 
     font-weight:1000;
 
 
+    font-size:15px;
+
+
 
 }
+
 
 
 
@@ -804,17 +640,13 @@ body.codmobile{
     margin:0;
 
 
-
     color:white;
-
 
 
     font-size:22px;
 
 
-
     font-weight:1000;
-
 
 
 }
@@ -829,13 +661,10 @@ body.codmobile{
     margin-top:5px;
 
 
-
     color:var(--game-gray);
 
 
-
-    font-size:13px;
-
+    font-size:12px;
 
 
 }
@@ -849,7 +678,7 @@ body.codmobile{
 
 
 /* =========================================================
-   TITULOS DE SECCIONES
+   TITULOS INTERNOS
 ========================================================= */
 
 
@@ -861,28 +690,13 @@ body.codmobile{
     35px 0 20px;
 
 
-
     color:white;
-
 
 
     font-size:25px;
 
 
-
     font-weight:1000;
-
-
-
-}
-
-
-
-.extra-title{
-
-
-    margin-top:55px;
-
 
 
 }
@@ -906,14 +720,14 @@ body.codmobile{
     display:grid;
 
 
-
     grid-template-columns:
+
 
     repeat(3,1fr);
 
 
 
-    gap:18px;
+    gap:15px;
 
 
 
@@ -938,27 +752,22 @@ body.codmobile{
     position:relative;
 
 
-
-    min-height:150px;
-
+    min-height:160px;
 
 
     padding:
 
-    25px 15px;
+    20px 15px;
 
 
 
     display:flex;
 
 
-
     flex-direction:column;
 
 
-
     justify-content:center;
-
 
 
     align-items:center;
@@ -968,12 +777,7 @@ body.codmobile{
     text-align:center;
 
 
-
     cursor:pointer;
-
-
-
-    overflow:hidden;
 
 
 
@@ -994,11 +798,14 @@ body.codmobile{
 
 
 
-    border-radius:20px;
+    border-radius:18px;
 
 
 
-    transition:.3s ease;
+    overflow:hidden;
+
+
+    transition:.3s;
 
 
 
@@ -1015,7 +822,7 @@ body.codmobile{
 
     transform:
 
-    translateY(-7px);
+    translateY(-6px);
 
 
 
@@ -1027,7 +834,7 @@ body.codmobile{
 
     box-shadow:
 
-    0 20px 40px rgba(0,0,0,.35);
+    0 15px 35px rgba(0,0,0,.35);
 
 
 
@@ -1052,6 +859,7 @@ body.codmobile{
 
     box-shadow:
 
+
     0 0 30px rgba(255,208,0,.25);
 
 
@@ -1072,16 +880,14 @@ body.codmobile{
     color:white;
 
 
-
-    font-size:17px;
-
+    font-size:16px;
 
 
     font-weight:1000;
 
 
-
 }
+
 
 
 
@@ -1094,7 +900,6 @@ body.codmobile{
     margin-top:12px;
 
 
-
     color:
 
     var(--game-primary);
@@ -1104,9 +909,7 @@ body.codmobile{
     font-size:20px;
 
 
-
     font-weight:1000;
-
 
 
 }
@@ -1130,13 +933,10 @@ body.codmobile{
     position:absolute;
 
 
-
     top:10px;
 
 
-
     left:10px;
-
 
 
     padding:
@@ -1144,28 +944,24 @@ body.codmobile{
     5px 12px;
 
 
-
     border-radius:50px;
-
 
 
     font-size:9px;
 
 
-
     font-weight:1000;
-
-
-
-    color:white;
-
 
 
     z-index:5;
 
 
+    color:white;
+
 
 }
+
+
 
 
 
@@ -1187,7 +983,6 @@ body.codmobile{
         #ffb300,
         #ff7a00
     );
-
 
 
 }
@@ -1216,7 +1011,6 @@ body.codmobile{
     );
 
 
-
 }
 
 
@@ -1243,9 +1037,7 @@ body.codmobile{
     );
 
 
-
     color:#111;
-
 
 
 }
@@ -1259,51 +1051,25 @@ body.codmobile{
 
 
 /* =========================================================
-   SELECCION AYUDA
+   AYUDA SELECCION
 ========================================================= */
 
 
 .selection-help{
 
 
-    margin-top:25px;
-
+    margin-top:20px;
 
 
     text-align:center;
 
 
-
     color:#716b7c;
-
 
 
     font-size:12px;
 
 
-
-}
-/* =========================================================
-   EXTRAS / PASES ESTILO FREE FIRE
-========================================================= */
-
-
-.extras-grid{
-
-
-    display:grid;
-
-
-    grid-template-columns:
-
-    repeat(3,1fr);
-
-
-
-    gap:20px;
-
-
-
 }
 
 
@@ -1314,329 +1080,13 @@ body.codmobile{
 
 
 
-.extra-card{
+.hidden{
 
 
-    position:relative;
-
-
-
-    min-height:300px;
-
-
-
-    padding:25px;
-
-
-
-    display:flex;
-
-
-
-    flex-direction:column;
-
-
-
-    justify-content:space-between;
-
-
-
-    background:
-
-
-    linear-gradient(
-        145deg,
-        #161020,
-        #09070d
-    );
-
-
-
-    border:
-
-    1px solid var(--game-border);
-
-
-
-    border-radius:22px;
-
-
-
-    transition:.3s ease;
-
+    display:none !important;
 
 
 }
-
-
-
-
-
-.extra-card:hover{
-
-
-    transform:
-
-    translateY(-8px);
-
-
-
-    border-color:
-
-    var(--game-primary);
-
-
-
-    box-shadow:
-
-    0 20px 45px rgba(0,0,0,.35);
-
-
-
-}
-
-
-
-
-
-
-
-
-
-.extra-icon{
-
-
-    width:55px;
-
-
-
-    height:55px;
-
-
-
-    display:grid;
-
-
-
-    place-items:center;
-
-
-
-    border-radius:15px;
-
-
-
-    background:
-
-    rgba(124,53,255,.15);
-
-
-
-    font-size:28px;
-
-
-
-}
-
-
-
-
-
-
-
-.extra-label{
-
-
-    margin-top:15px;
-
-
-
-    color:
-
-    var(--game-primary);
-
-
-
-    font-size:11px;
-
-
-
-    font-weight:1000;
-
-
-
-    letter-spacing:2px;
-
-
-
-}
-
-
-
-
-
-
-
-.extra-card h3{
-
-
-    margin-top:10px;
-
-
-
-    color:white;
-
-
-
-    font-size:24px;
-
-
-
-    font-weight:1000;
-
-
-
-}
-
-
-
-
-
-
-
-
-.extra-card p{
-
-
-    margin-top:10px;
-
-
-
-    color:var(--game-gray);
-
-
-
-    font-size:14px;
-
-
-
-    line-height:1.6;
-
-
-
-}
-
-
-
-
-
-
-
-
-.extra-bottom{
-
-
-    margin-top:25px;
-
-
-
-    display:flex;
-
-
-
-    align-items:center;
-
-
-
-    justify-content:space-between;
-
-
-
-    gap:10px;
-
-
-
-}
-
-
-
-
-
-
-
-.extra-bottom strong{
-
-
-    color:white;
-
-
-
-    font-size:22px;
-
-
-
-}
-
-
-
-
-
-
-
-.extra-buy{
-
-
-    padding:
-
-    12px 18px;
-
-
-
-    border-radius:12px;
-
-
-
-    background:
-
-
-    linear-gradient(
-        135deg,
-        var(--game-primary),
-        var(--game-secondary)
-    );
-
-
-
-    color:#050505;
-
-
-
-    border:0;
-
-
-
-    cursor:pointer;
-
-
-
-    font-size:11px;
-
-
-
-    font-weight:1000;
-
-
-
-}
-
-
-
-
-
-
-
-
-
 /* =========================================================
    PASO 2 - DATOS DEL JUGADOR
 ========================================================= */
@@ -1648,12 +1098,12 @@ body.codmobile{
     width:100%;
 
 
-
     margin-bottom:20px;
 
 
-
 }
+
+
 
 
 
@@ -1667,9 +1117,7 @@ body.codmobile{
     display:block;
 
 
-
     margin-bottom:10px;
-
 
 
     color:
@@ -1698,15 +1146,15 @@ body.codmobile{
 
 
 
+
+
 .player-id-area input{
 
 
     width:100%;
 
 
-
     height:55px;
-
 
 
     padding:0 18px;
@@ -1762,7 +1210,33 @@ body.codmobile{
 
     box-shadow:
 
-    0 0 20px rgba(124,53,255,.20);
+    0 0 18px rgba(124,53,255,.20);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.player-id-area small{
+
+
+    display:block;
+
+
+    margin-top:8px;
+
+
+    color:#716b7c;
+
+
+    font-size:11px;
 
 
 
@@ -1777,22 +1251,77 @@ body.codmobile{
 
 
 /* =========================================================
-   BOTON CONTINUAR
+   GUIA ID DESPLEGABLE
 ========================================================= */
 
 
-.continue-btn{
+.id-guide{
+
+
+    margin-top:25px;
+
+
+
+    overflow:hidden;
+
+
+
+    background:#09070d;
+
+
+
+    border:
+
+    1px solid var(--game-border);
+
+
+
+    border-radius:16px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.guide-button{
 
 
     width:100%;
 
 
 
-    min-height:52px;
+    min-height:55px;
 
 
 
-    margin-top:20px;
+    padding:
+
+    0 20px;
+
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:space-between;
+
+
+
+    background:
+
+    rgba(124,53,255,.10);
 
 
 
@@ -1800,30 +1329,7 @@ body.codmobile{
 
 
 
-    border-radius:14px;
-
-
-
-    background:
-
-
-    linear-gradient(
-        135deg,
-        var(--game-primary),
-        var(--game-secondary)
-    );
-
-
-
-    color:#050505;
-
-
-
-    font-size:13px;
-
-
-
-    font-weight:1000;
+    color:white;
 
 
 
@@ -1831,30 +1337,11 @@ body.codmobile{
 
 
 
-    transition:.25s;
+    font-size:13px;
 
 
 
-}
-
-
-
-
-
-
-
-.continue-btn:hover{
-
-
-    transform:
-
-    translateY(-3px);
-
-
-
-    box-shadow:
-
-    0 15px 35px rgba(0,0,0,.35);
+    font-weight:900;
 
 
 
@@ -1868,16 +1355,83 @@ body.codmobile{
 
 
 
-.hidden{
+.guide-content{
 
 
-    display:none !important;
+    display:none;
+
+
+
+    padding:22px;
+
+
+
+    color:var(--game-gray);
+
+
+
+    line-height:1.8;
+
+
+
+    font-size:14px;
 
 
 
 }
+
+
+
+
+
+
+
+
+
+.guide-content.show{
+
+
+    display:block;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.guide-content h3{
+
+
+    margin-bottom:15px;
+
+
+
+    color:white;
+
+
+
+    font-size:18px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
 /* =========================================================
-   RESUMEN DE COMPRA
+   PASO 3 RESUMEN
 ========================================================= */
 
 
@@ -1885,6 +1439,7 @@ body.codmobile{
 
 
     width:100%;
+
 
 
     padding:25px;
@@ -1950,6 +1505,10 @@ body.codmobile{
 
 
 
+
+
+
+
 .summary-row:last-child{
 
 
@@ -1958,6 +1517,8 @@ body.codmobile{
 
 
 }
+
+
 
 
 
@@ -1986,6 +1547,8 @@ body.codmobile{
 
 
 
+
+
 .summary-row strong{
 
 
@@ -2001,7 +1564,188 @@ body.codmobile{
 
 
 
-    text-align:right;
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   CANTIDAD
+========================================================= */
+
+
+.quantity-box{
+
+
+    margin-top:25px;
+
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:space-between;
+
+
+
+    gap:20px;
+
+
+
+}
+
+
+
+
+
+
+
+.quantity-box > span{
+
+
+    color:var(--game-gray);
+
+
+
+    font-size:13px;
+
+
+
+    font-weight:800;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.quantity-control{
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    gap:10px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.quantity-control button{
+
+
+    width:40px;
+
+
+    height:40px;
+
+
+
+    border-radius:10px;
+
+
+
+    background:
+
+    rgba(124,53,255,.12);
+
+
+
+    border:
+
+    1px solid var(--game-border);
+
+
+
+    color:white;
+
+
+
+    cursor:pointer;
+
+
+
+    font-size:20px;
+
+
+
+    font-weight:900;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.quantity-control input{
+
+
+    width:60px;
+
+
+
+    height:40px;
+
+
+
+    text-align:center;
+
+
+
+    background:#08060c;
+
+
+
+    border:
+
+    1px solid var(--game-border);
+
+
+
+    border-radius:10px;
+
+
+
+    color:white;
+
+
+
+    font-weight:1000;
 
 
 
@@ -2016,8 +1760,228 @@ body.codmobile{
 
 
 /* =========================================================
-   BOTÓN WHATSAPP FINAL
+   TOTAL
 ========================================================= */
+
+
+.total-box{
+
+
+    margin-top:25px;
+
+
+
+    padding:20px;
+
+
+
+    display:flex;
+
+
+
+    justify-content:space-between;
+
+
+
+    align-items:center;
+
+
+
+    background:
+
+
+    linear-gradient(
+        135deg,
+        rgba(124,53,255,.18),
+        rgba(167,109,255,.05)
+    );
+
+
+
+    border:
+
+    1px solid var(--game-border);
+
+
+
+    border-radius:15px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.total-box p{
+
+
+    color:var(--game-gray);
+
+
+
+    font-size:11px;
+
+
+
+    font-weight:1000;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.total-box small{
+
+
+    color:#716b7c;
+
+
+
+    font-size:11px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.total-box h2{
+
+
+    margin:0;
+
+
+
+    color:
+
+    var(--game-primary);
+
+
+
+    font-size:28px;
+
+
+
+    font-weight:1000;
+
+
+
+}
+/* =========================================================
+   BOTONES FINALES
+========================================================= */
+
+
+.continue-btn{
+
+
+    width:100%;
+
+
+    min-height:52px;
+
+
+    margin-top:22px;
+
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--game-primary),
+        var(--game-secondary)
+    );
+
+
+
+    border:0;
+
+
+    border-radius:12px;
+
+
+
+    color:#050505;
+
+
+
+    cursor:pointer;
+
+
+
+    font-size:12px;
+
+
+
+    font-weight:1000;
+
+
+
+    transition:.25s;
+
+
+
+}
+
+
+
+
+
+
+
+.continue-btn:hover{
+
+
+    transform:
+
+    translateY(-3px);
+
+
+
+    box-shadow:
+
+    0 12px 30px rgba(0,0,0,.30);
+
+
+
+}
+
+
+
+
+
+
+
 
 
 .buy-final{
@@ -2026,20 +1990,22 @@ body.codmobile{
     width:100%;
 
 
-
     min-height:55px;
 
 
-
-    margin-top:25px;
-
-
-
-    border:0;
+    margin-top:18px;
 
 
 
-    border-radius:14px;
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:center;
 
 
 
@@ -2054,7 +2020,19 @@ body.codmobile{
 
 
 
+    border:0;
+
+
+
+    border-radius:12px;
+
+
+
     color:white;
+
+
+
+    cursor:pointer;
 
 
 
@@ -2063,10 +2041,6 @@ body.codmobile{
 
 
     font-weight:1000;
-
-
-
-    cursor:pointer;
 
 
 
@@ -2093,7 +2067,7 @@ body.codmobile{
 
     box-shadow:
 
-    0 15px 35px rgba(37,211,102,.35);
+    0 15px 35px rgba(37,211,102,.30);
 
 
 
@@ -2110,7 +2084,11 @@ body.codmobile{
 .whatsapp-note{
 
 
-    margin-top:15px;
+    margin-top:12px;
+
+
+
+    text-align:center;
 
 
 
@@ -2118,11 +2096,287 @@ body.codmobile{
 
 
 
-    font-size:12px;
+    font-size:11px;
 
 
 
-    text-align:center;
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   EXTRAS ESTILO FREE FIRE
+========================================================= */
+
+
+.ff-extra-section{
+
+
+    width:min(92%,1150px);
+
+
+
+    margin:
+
+    80px auto 0;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.ff-extra-grid{
+
+
+    display:grid;
+
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+
+    gap:18px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.ff-extra-card{
+
+
+    position:relative;
+
+
+
+    padding:25px;
+
+
+
+    min-height:300px;
+
+
+
+    display:flex;
+
+
+
+    flex-direction:column;
+
+
+
+    justify-content:space-between;
+
+
+
+    background:
+
+
+    linear-gradient(
+        145deg,
+        #161020,
+        #09070d
+    );
+
+
+
+    border:
+
+    1px solid var(--game-border);
+
+
+
+    border-radius:20px;
+
+
+
+    transition:.3s;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.ff-extra-card:hover{
+
+
+    transform:
+
+    translateY(-7px);
+
+
+
+    border-color:
+
+    var(--game-primary);
+
+
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.35);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.ff-extra-icon{
+
+
+    width:55px;
+
+
+
+    height:55px;
+
+
+
+    display:grid;
+
+
+
+    place-items:center;
+
+
+
+    border-radius:15px;
+
+
+
+    background:
+
+    rgba(124,53,255,.15);
+
+
+
+    font-size:28px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.ff-extra-label{
+
+
+    margin-top:15px;
+
+
+
+    color:
+
+    var(--game-primary);
+
+
+
+    font-size:10px;
+
+
+
+    font-weight:1000;
+
+
+
+    letter-spacing:2px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.ff-extra-card h3{
+
+
+    margin-top:10px;
+
+
+
+    color:white;
+
+
+
+    font-size:22px;
+
+
+
+    font-weight:1000;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.ff-extra-card p{
+
+
+    margin-top:10px;
+
+
+
+    color:var(--game-gray);
+
+
+
+    font-size:13px;
 
 
 
@@ -2140,19 +2394,32 @@ body.codmobile{
 
 
 
-/* =========================================================
-   INFORMACIÓN IMPORTANTE
-========================================================= */
+.ff-extra-bottom{
 
 
-.info-game{
-
-
-    margin-top:30px;
+    margin-top:25px;
 
 
 
-    margin-bottom:70px;
+    padding-top:18px;
+
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:space-between;
+
+
+
+    border-top:
+
+    1px solid rgba(255,255,255,.08);
 
 
 
@@ -2162,14 +2429,159 @@ body.codmobile{
 
 
 
-.info-game p{
+
+
+
+
+.ff-extra-bottom strong{
+
+
+    color:white;
+
+
+
+    font-size:20px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.ff-extra-bottom .buy-button{
+
+
+    padding:
+
+    12px 18px;
+
+
+
+    border-radius:10px;
+
+
+
+    background:
+
+
+    linear-gradient(
+        135deg,
+        var(--game-primary),
+        var(--game-secondary)
+    );
+
+
+
+    color:#050505;
+
+
+
+    border:0;
+
+
+
+    font-size:11px;
+
+
+
+    font-weight:1000;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+
+.ff-faq-section{
+
+
+    width:min(92%,1000px);
+
+
+
+    margin:
+
+    80px auto;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.ff-faq-grid{
+
+
+    display:grid;
+
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+
+    gap:18px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.ff-faq-card{
 
 
     padding:22px;
 
 
 
-    background:#09070d;
+    display:flex;
+
+
+
+    gap:15px;
+
+
+
+    background:
+
+
+    linear-gradient(
+        180deg,
+        #110b19,
+        #09070d
+    );
 
 
 
@@ -2179,21 +2591,114 @@ body.codmobile{
 
 
 
-    border-radius:16px;
+    border-radius:18px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.ff-faq-icon{
+
+
+    width:40px;
+
+
+
+    height:40px;
+
+
+
+    flex-shrink:0;
+
+
+
+    display:grid;
+
+
+
+    place-items:center;
+
+
+
+    border-radius:12px;
+
+
+
+    background:
+
+    rgba(124,53,255,.15);
 
 
 
     color:
 
-    var(--game-gray);
+    var(--game-primary);
 
 
 
-    font-size:14px;
+    font-weight:1000;
 
 
 
-    line-height:1.8;
+}
+
+
+
+
+
+
+
+
+
+.ff-faq-card h3{
+
+
+    margin:0;
+
+
+
+    color:white;
+
+
+
+    font-size:16px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.ff-faq-card p{
+
+
+    margin-top:8px;
+
+
+
+    color:var(--game-gray);
+
+
+
+    font-size:13px;
+
+
+
+    line-height:1.6;
 
 
 
@@ -2265,28 +2770,7 @@ body.codmobile{
 
     box-shadow:
 
-    0 0 30px rgba(37,211,102,.40);
-
-
-
-    transition:.25s;
-
-
-
-}
-
-
-
-
-
-
-
-.floating-whatsapp:hover{
-
-
-    transform:
-
-    scale(1.1);
+    0 0 30px rgba(37,211,102,.35);
 
 
 
@@ -2308,7 +2792,7 @@ body.codmobile{
 body > footer{
 
 
-    width:100%;
+    margin-top:80px;
 
 
 
@@ -2331,6 +2815,8 @@ body > footer{
 
 
 }
+
+
 
 
 
@@ -2361,6 +2847,8 @@ body > footer h3{
 
 
 
+
+
 body > footer h3 span{
 
 
@@ -2371,6 +2859,8 @@ body > footer h3 span{
 
 
 }
+
+
 
 
 
@@ -2404,7 +2894,7 @@ body > footer p{
 
 
 /* =========================================================
-   TABLET
+   RESPONSIVE
 ========================================================= */
 
 
@@ -2421,31 +2911,12 @@ body > footer p{
 
 
 
-    gap:40px;
-
-
-
 }
-
-
-
-
-
-.gaming-image-box{
-
-
-    height:450px;
-
-
-
-}
-
-
 
 
 
 .diamond-grid,
-.extras-grid{
+.ff-extra-grid{
 
 
     grid-template-columns:
@@ -2458,6 +2929,19 @@ body > footer p{
 
 
 
+.ff-faq-grid{
+
+
+    grid-template-columns:
+
+    1fr;
+
+
+
+}
+
+
+
 }
 
 
@@ -2466,79 +2950,9 @@ body > footer p{
 
 
 
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
 
 
 @media(max-width:600px){
-
-
-
-.gaming-header-container{
-
-
-    min-height:65px;
-
-
-
-}
-
-
-
-.gaming-actions{
-
-
-    gap:8px;
-
-
-
-}
-
-
-
-
-
-
-.back-button,
-.cart-button{
-
-
-    padding:
-
-    0 12px;
-
-
-
-    font-size:11px;
-
-
-
-}
-
-
-
-
-
-
-.gaming-product{
-
-
-    width:92%;
-
-
-
-    margin-top:35px;
-
-
-
-}
-
-
-
-
 
 
 
@@ -2557,10 +2971,6 @@ body > footer p{
 
 
 
-
-
-
-
 .gaming-info h1{
 
 
@@ -2569,10 +2979,6 @@ body > footer p{
 
 
 }
-
-
-
-
 
 
 
@@ -2587,12 +2993,8 @@ body > footer p{
 
 
 
-
-
-
-
 .diamond-grid,
-.extras-grid{
+.ff-extra-grid{
 
 
     grid-template-columns:
@@ -2605,29 +3007,12 @@ body > footer p{
 
 
 
-
-
-
-
-.checkout-header h2{
-
-
-    font-size:19px;
-
-
-
-}
-
-
-
-
-
-
-
 .summary-row{
 
 
-    flex-direction:column;
+    flex-direction:
+
+    column;
 
 
 
@@ -2635,7 +3020,24 @@ body > footer p{
 
 
 
-    gap:8px;
+}
+
+
+
+.ff-extra-bottom{
+
+
+    flex-direction:
+
+    column;
+
+
+
+    align-items:flex-start;
+
+
+
+    gap:15px;
 
 
 
@@ -2643,22 +3045,14 @@ body > footer p{
 
 
 
+.ff-extra-bottom .buy-button{
 
 
-
-
-.summary-row strong{
-
-
-    text-align:left;
+    width:100%;
 
 
 
 }
-
-
-
-
 
 
 }
