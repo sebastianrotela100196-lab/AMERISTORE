@@ -578,169 +578,59 @@ tipo:"extra"
 
 
 },
-/* =========================================================
-   BLOOD STRIKE
-========================================================= */
-
-
-bloodstrike:{
-
-
-nombre:
-
-"Blood Strike",
-
-
-
-categoria:
-
-"BLOOD STRIKE",
-
-
-
-badge:
-
-"GOLD",
-
-
-
-imagen:
-
-"assets/productos/bloodstrike.png",
-
-
-
-
-descripcion:
-
-"Compra Gold y pases premium para mejorar tu cuenta.",
-
-
-
-
-color:
-
-"bloodstrike",
-
-
-
-servidor:
-
-false,
-
-
-
-
-
-info:
-
-`
-
-Para realizar la recarga necesitamos:
-
-<br><br>
-
-• ID del jugador
-
-<br><br>
-
-Nunca solicitamos contraseña.
-
-`,
-
-
-
-
-
-productos:[
-
-
-
-{
-nombre:"105 Gold 🪙",
-precio:7000,
-tipo:"recarga"
-},
-
-
-{
-nombre:"320 Gold 🪙",
-precio:18000,
-tipo:"recarga",
-tag:"⭐ MÁS VENDIDO"
-},
-
-
-{
-nombre:"540 Gold 🪙",
-precio:30000,
-tipo:"recarga"
-},
-
-
-{
-nombre:"1100 Gold 🪙",
-precio:62000,
-tipo:"recarga",
-tag:"🔥 POPULAR"
-},
-
-
-{
-nombre:"2260 Gold 🪙",
-precio:120000,
-tipo:"recarga"
-},
-
-
-{
-nombre:"5800 Gold 🪙",
-precio:290000,
-tipo:"recarga",
-tag:"👑 PREMIUM"
-},
-
-
-
-
-
-/* EXTRAS */
-
-
-{
-nombre:"Ultra Skin Lucky Chest 🎁",
-precio:4000,
-tipo:"extra"
-},
-
-
-{
-nombre:"Level Up Pass 🎟️",
-precio:14000,
-tipo:"extra"
-},
-
-
-{
-nombre:"Pase Elite 🎟️",
-precio:25000,
-tipo:"extra"
-},
-
-
-{
-nombre:"Pase Premium 🎟️",
-precio:58000,
-tipo:"extra"
-}
-
-
-
-]
-
-
-
-},
+Producto	Precio venta
+Blood Strike - 51 Oro	5.000 Gs
+Blood Strike - 105 Oro	8.000 Gs
+Blood Strike - 320 Oro	18.000 Gs
+Blood Strike - 540 Oro	28.000 Gs
+Blood Strike - 1.100 Oro	55.000 Gs
+Blood Strike - 2.260 Oro	110.000 Gs
+Blood Strike - 5.800 Oro	275.000 Gs
+🎟️ Pases Blood Strike
+Producto	Precio venta
+Blood Strike - Pase de Temporada	8.000 Gs
+Blood Strike - Pase Subida de Nivel	15.000 Gs
+Blood Strike - Pase Strike Élite	27.000 Gs
+Blood Strike - Pase Strike Premium	58.000 Gs
+🎁 Cajas y Extras
+Producto	Precio venta
+Caja Ultra Skin Lucky	4.000 Gs
+Oferta 049	4.000 Gs
+Oferta 099	8.000 Gs
+Oferta 199	18.000 Gs
+Oferta 299	28.000 Gs
+Oferta 399	38.000 Gs
+Oferta 499	48.000 Gs
+Oferta 599	58.000 Gs
+Oferta 699	68.000 Gs
+Oferta 799	78.000 Gs
+Oferta 899	88.000 Gs
+Oferta 999	98.000 Gs
+🌟 Eventos especiales / Colaboraciones
+Producto	Precio venta
+One Punch Man - Bolsa de Suerte Exclusiva	5.000 Gs
+One Punch Man - Cupón de Valor Especial	5.000 Gs
+One Punch Man - Cofre de Puntos de Mejora	10.000 Gs
+Dark Matter - Bolsa de Suerte Preventa	10.000 Gs
+Cupón Caja Lucha Strike	5.000 Gs
+Cofre Puntos de Mejora Lucha Strike	10.000 Gs
+Ataque de los Titanes - Cupón Titán I	10.000 Gs
+Ataque de los Titanes - Cupón Titán II	5.000 Gs
+Ataque de los Titanes - Cofre Puntos de Mejora	10.000 Gs
+Bolsa de Suerte Carnaval	5.000 Gs
+Bolsa de Suerte Groove	5.000 Gs
+Preventa Eternal Valor Unplugged	10.000 Gs
+Preventa Golden Elegy Eternal Valor	10.000 Gs
+Bolsa de Suerte Green Field	5.000 Gs
+Activar Cornucopia	10.000 Gs
+Enzo: The Next One - Cofre Puntos de Mejora	10.000 Gs
+Bolsa de Suerte	5.000 Gs
+Cupón Maestro Especial	10.000 Gs
+Cofre Puntos de Mejora Seven Deadly Sins	10.000 Gs
+Cupón Valor Seven Deadly Sins	5.000 Gs
+Tokyo Revengers - Cupón Valor I	5.000 Gs
+Tokyo Revengers - Cupón Valor II	5.000 Gs
+Tokyo Revengers - Cofre Puntos de Mejora	10.000 Gs
 
 
 
