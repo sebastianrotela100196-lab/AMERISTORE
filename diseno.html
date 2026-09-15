@@ -5,12 +5,17 @@
 
 <head>
 
-
 <meta charset="UTF-8">
 
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta
+name="description"
+content="AMERISSTORE Diseño - Canva Pro, CapCut Pro, Autodesk y herramientas premium para creadores."
+>
 
 <title>
 AMERISSTORE | Diseño
@@ -18,23 +23,41 @@ AMERISSTORE | Diseño
 
 
 <link rel="stylesheet" href="style.css">
+
 <link rel="stylesheet" href="animaciones.css">
+
 <link rel="stylesheet" href="diseno.css">
 
 
 </head>
 
 
-
 <body>
 
 
 
+<!-- =====================================================
+TOP BAR
+===================================================== -->
 
 
-<!-- =========================
+<div class="top-bar">
+
+<span>
+
+👻 AMERISSTORE • DIGITAL & GAMING STORE
+
+</span>
+
+</div>
+
+
+
+
+
+<!-- =====================================================
 HEADER
-========================= -->
+===================================================== -->
 
 
 <header class="header">
@@ -43,7 +66,14 @@ HEADER
 <div class="header-container">
 
 
-<a href="index.html" class="logo">
+
+<!-- LOGO -->
+
+
+<a
+href="index.html"
+class="logo"
+>
 
 AMERIS<span>STORE</span>
 
@@ -53,7 +83,97 @@ AMERIS<span>STORE</span>
 
 
 
-<nav class="menu">
+<!-- CARRITO -->
+
+
+<a
+href="carrito.html"
+class="cart-button"
+id="cart-button"
+aria-label="Ver carrito"
+>
+
+
+<span class="cart-icon">
+
+🛒
+
+</span>
+
+
+
+<div class="cart-info">
+
+
+<span>
+
+Carrito
+
+</span>
+
+
+<strong id="cart-total">
+
+Gs. 0
+
+</strong>
+
+
+</div>
+
+
+
+<span
+class="cart-count"
+id="cart-count"
+>
+
+0
+
+</span>
+
+
+</a>
+
+
+
+
+
+<!-- MENU MOVIL -->
+
+
+<button
+class="menu-toggle"
+id="menu-toggle"
+type="button"
+aria-label="Abrir menú"
+aria-controls="main-menu"
+aria-expanded="false"
+>
+
+☰
+
+</button>
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+<!-- =====================================================
+MENU PRINCIPAL
+===================================================== -->
+
+
+<nav
+class="menu"
+id="main-menu"
+>
 
 
 <a href="index.html">
@@ -91,7 +211,10 @@ IA TOOLS
 </a>
 
 
-<a href="diseno.html" class="active">
+<a
+href="diseno.html"
+class="active"
+>
 
 DISEÑO
 
@@ -105,62 +228,24 @@ EXTRAS
 </a>
 
 
-
 </nav>
 
 
 
 
 
+<!-- =====================================================
+CONTENIDO
+===================================================== -->
+
+
+<main>
 
 
 
-<a href="#"
-class="cart-button"
-id="cart-button">
-
-
-🛒
-
-
-<span>
-
-Carrito
-
-</span>
-
-
-
-<strong id="cart-total">
-
-Gs. 0
-
-</strong>
-
-
-
-</a>
-
-
-
-
-
-</div>
-
-
-</header>
-
-
-
-
-
-
-
-
-
-<!-- =========================
-TITULO
-========================= -->
+<!-- =====================================================
+TITULO DISEÑO
+===================================================== -->
 
 
 <section class="category-header">
@@ -173,17 +258,11 @@ DISEÑO DIGITAL
 </span>
 
 
-
-
-
 <h1>
 
 Crea contenido profesional
 
 </h1>
-
-
-
 
 
 <p>
@@ -193,21 +272,15 @@ Herramientas premium para diseñadores, creadores y emprendedores.
 </p>
 
 
-
-
 </section>
 
 
 
 
 
-
-
-
-
-<!-- =========================
+<!-- =====================================================
 HORARIO
-========================= -->
+===================================================== -->
 
 
 <div class="attention-card">
@@ -221,8 +294,6 @@ HORARIO
 
 
 
-
-
 <div>
 
 
@@ -231,7 +302,6 @@ HORARIO
 Horario de atención rápida
 
 </h3>
-
 
 
 <p>
@@ -244,28 +314,21 @@ Activaciones disponibles:
 
 </strong>
 
-
 </p>
 
 
+</div>
+
 
 </div>
 
 
 
-</div>
 
 
-
-
-
-
-
-
-
-<!-- =========================
+<!-- =====================================================
 PRODUCTOS
-========================= -->
+===================================================== -->
 
 
 <section class="products-section">
@@ -274,22 +337,21 @@ PRODUCTOS
 <div class="products-grid">
 
 
+<!-- =====================================================
+CANVA PRO
+===================================================== -->
 
 
+<a
+
+href="producto.html?id=canva"
+
+class="product-card fade-up hover-lift"
+
+>
 
 
-
-
-
-<!-- CANVA PRO -->
-
-
-<a href="producto.html?id=canva"
-class="product-card">
-
-
-
-<div class="product-image">
+<div class="product-image image-zoom">
 
 
 <img
@@ -298,10 +360,12 @@ src="assets/productos/canva.png"
 
 alt="Canva Pro"
 
+loading="lazy"
+
 >
 
 
-<span class="product-badge">
+<span class="product-badge popular">
 
 POPULAR
 
@@ -309,7 +373,6 @@ POPULAR
 
 
 </div>
-
 
 
 
@@ -327,13 +390,11 @@ DISEÑO
 
 
 
-
 <h2>
 
 Canva Pro
 
 </h2>
-
 
 
 
@@ -348,12 +409,22 @@ Diseños profesionales con herramientas Premium.
 
 
 
+<div class="product-bottom">
+
+
 <div class="price">
+
+
+<small>
+
+Desde
+
+</small>
 
 
 <strong>
 
-Desde Gs. 5.000
+Gs. 5.000
 
 </strong>
 
@@ -361,6 +432,17 @@ Desde Gs. 5.000
 </div>
 
 
+
+
+<span class="product-arrow">
+
+→
+
+</span>
+
+
+
+</div>
 
 
 
@@ -378,15 +460,21 @@ Desde Gs. 5.000
 
 
 
-<!-- CAPCUT PRO -->
+<!-- =====================================================
+CAPCUT PRO
+===================================================== -->
 
 
-<a href="producto.html?id=capcut"
-class="product-card">
+<a
+
+href="producto.html?id=capcut"
+
+class="product-card fade-up hover-lift"
+
+>
 
 
-
-<div class="product-image">
+<div class="product-image image-zoom">
 
 
 <img
@@ -394,6 +482,8 @@ class="product-card">
 src="assets/productos/capcut.png"
 
 alt="CapCut Pro"
+
+loading="lazy"
 
 >
 
@@ -411,7 +501,6 @@ OFERTA
 
 
 
-
 <div class="product-info">
 
 
@@ -424,13 +513,11 @@ DISEÑO
 
 
 
-
 <h2>
 
 CapCut Pro
 
 </h2>
-
 
 
 
@@ -445,7 +532,17 @@ Edición profesional de videos con herramientas Premium.
 
 
 
+<div class="product-bottom">
+
+
 <div class="price">
+
+
+<small>
+
+Desde
+
+</small>
 
 
 <strong>
@@ -458,6 +555,17 @@ Gs. 30.000
 </div>
 
 
+
+
+<span class="product-arrow">
+
+→
+
+</span>
+
+
+
+</div>
 
 
 
@@ -475,15 +583,21 @@ Gs. 30.000
 
 
 
-<!-- AUTODESK -->
+<!-- =====================================================
+AUTODESK
+===================================================== -->
 
 
-<a href="producto.html?id=autodesk"
-class="product-card">
+<a
+
+href="producto.html?id=autodesk"
+
+class="product-card fade-up hover-lift"
+
+>
 
 
-
-<div class="product-image">
+<div class="product-image image-zoom">
 
 
 <img
@@ -491,6 +605,8 @@ class="product-card">
 src="assets/productos/autodesk.png"
 
 alt="Autodesk"
+
+loading="lazy"
 
 >
 
@@ -508,7 +624,6 @@ PRO
 
 
 
-
 <div class="product-info">
 
 
@@ -517,7 +632,6 @@ PRO
 DISEÑO
 
 </span>
-
 
 
 
@@ -531,10 +645,9 @@ Autodesk
 
 
 
-
 <p>
 
-Herramientas profesionales para arquitectura y diseño.
+Herramientas profesionales para arquitectura, ingeniería y diseño.
 
 </p>
 
@@ -542,12 +655,22 @@ Herramientas profesionales para arquitectura y diseño.
 
 
 
+<div class="product-bottom">
+
+
 <div class="price">
+
+
+<small>
+
+Desde
+
+</small>
 
 
 <strong>
 
-Consultar
+Gs. 50.000
 
 </strong>
 
@@ -556,6 +679,163 @@ Consultar
 
 
 
+
+<span class="product-arrow">
+
+→
+
+</span>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</a>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+EXPLORAR CATEGORÍAS
+===================================================== -->
+
+
+<section class="mobile-more-products fade-up">
+
+
+<div class="more-products-head">
+
+
+<span class="more-eyebrow">
+
+EXPLORAR
+
+</span>
+
+
+
+
+<h2>
+
+Explorar categorías
+
+</h2>
+
+
+
+
+<p>
+
+Encontrá más productos y servicios disponibles en AMERISSTORE.
+
+</p>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<button
+
+class="more-products-toggle"
+
+id="moreProductsToggle"
+
+type="button"
+
+aria-expanded="false"
+
+aria-controls="moreProductsMenu"
+
+>
+
+
+<span>
+
+Ver categorías
+
+</span>
+
+
+
+
+<strong id="moreProductsIcon">
+
++
+
+</strong>
+
+
+
+</button>
+
+
+
+
+
+
+
+
+
+<div
+
+class="more-products-menu"
+
+id="moreProductsMenu"
+
+>
+
+
+
+
+
+<a href="streaming.html">
+
+
+<span class="category-menu-icon">
+
+📺
+
+</span>
+
+
+
+<div>
+
+<strong>
+
+Streaming
+
+</strong>
+
+
+<small>
+
+Series, películas y TV
+
+</small>
 
 
 </div>
@@ -567,6 +847,197 @@ Consultar
 
 
 
+
+
+
+<a href="musica.html">
+
+
+<span class="category-menu-icon">
+
+🎵
+
+</span>
+
+
+
+<div>
+
+<strong>
+
+Música
+
+</strong>
+
+
+<small>
+
+Premium y sin anuncios
+
+</small>
+
+
+</div>
+
+
+
+</a>
+
+
+
+
+
+
+
+<a href="gaming.html">
+
+
+<span class="category-menu-icon">
+
+🎮
+
+</span>
+
+
+
+<div>
+
+<strong>
+
+Gaming
+
+</strong>
+
+
+<small>
+
+Recargas y beneficios
+
+</small>
+
+
+</div>
+
+
+
+</a>
+
+
+
+
+
+
+
+<a href="ia.html">
+
+
+<span class="category-menu-icon">
+
+🤖
+
+</span>
+
+
+
+<div>
+
+<strong>
+
+IA Tools
+
+</strong>
+
+
+<small>
+
+Herramientas digitales
+
+</small>
+
+
+</div>
+
+
+
+</a>
+
+
+
+
+
+
+
+<a href="diseno.html">
+
+
+<span class="category-menu-icon">
+
+🎨
+
+</span>
+
+
+
+<div>
+
+<strong>
+
+Diseño
+
+</strong>
+
+
+<small>
+
+Herramientas creativas
+
+</small>
+
+
+</div>
+
+
+
+</a>
+
+
+
+
+
+
+
+<a href="extras.html">
+
+
+<span class="category-menu-icon">
+
+✨
+
+</span>
+
+
+
+<div>
+
+<strong>
+
+Extras
+
+</strong>
+
+
+<small>
+
+Más servicios digitales
+
+</small>
+
+
+</div>
+
+
+
+</a>
 
 
 
@@ -585,9 +1056,9 @@ Consultar
 
 
 
-<!-- =========================
-CTA
-========================= -->
+<!-- =====================================================
+CTA FINAL
+===================================================== -->
 
 
 <section class="final-contact">
@@ -598,7 +1069,6 @@ CTA
 Crea sin límites
 
 </h2>
-
 
 
 
@@ -619,14 +1089,15 @@ href="https://wa.me/595981841136"
 
 target="_blank"
 
-class="btn-primary">
+rel="noopener noreferrer"
 
+class="btn-primary"
+
+>
 
 🎨 Solicitar servicio
 
-
 </a>
-
 
 
 
@@ -641,9 +1112,9 @@ class="btn-primary">
 
 
 
-<!-- =========================
+<!-- =====================================================
 WHATSAPP
-========================= -->
+===================================================== -->
 
 
 <a
@@ -652,11 +1123,15 @@ href="https://wa.me/595981841136"
 
 target="_blank"
 
-class="floating-whatsapp">
+rel="noopener noreferrer"
 
+class="floating-whatsapp"
+
+aria-label="WhatsApp"
+
+>
 
 💬
-
 
 </a>
 
@@ -668,9 +1143,9 @@ class="floating-whatsapp">
 
 
 
-<!-- =========================
+<!-- =====================================================
 FOOTER
-========================= -->
+===================================================== -->
 
 
 <footer class="footer">
@@ -679,29 +1154,24 @@ FOOTER
 <div class="footer-simple">
 
 
-
 <strong>
 
-AMERISSTORE
+AMERIS<span>STORE</span>
 
 </strong>
 
 
 
 
+<p>
 
-<span>
+© 2026 AMERISSTORE. Todos los derechos reservados.
 
-© 2026 AMERISSTORE
-
-</span>
-
-
+</p>
 
 
 
 </div>
-
 
 
 </footer>
@@ -713,8 +1183,8 @@ AMERISSTORE
 
 
 
-
 <script src="script.js"></script>
+
 
 
 </body>
