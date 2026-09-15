@@ -2,13 +2,23 @@
 
 <html lang="es">
 
+
 <head>
 
 
 <meta charset="UTF-8">
 
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+
+<meta
+name="description"
+content="AMERISSTORE Extras - Servicios digitales adicionales."
+>
 
 
 <title>
@@ -17,12 +27,17 @@ AMERISSTORE | Extras
 
 
 
+
 <link rel="stylesheet" href="style.css">
+
 <link rel="stylesheet" href="animaciones.css">
+
 <link rel="stylesheet" href="extras.css">
 
 
 </head>
+
+
 
 
 
@@ -31,9 +46,35 @@ AMERISSTORE | Extras
 
 
 
-<!-- =========================
+
+<!-- =====================================================
+TOP BAR
+===================================================== -->
+
+
+<div class="top-bar">
+
+
+<span>
+
+👻 AMERISSTORE • DIGITAL & GAMING STORE
+
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
 HEADER
-========================= -->
+===================================================== -->
 
 
 <header class="header">
@@ -42,83 +83,135 @@ HEADER
 <div class="header-container">
 
 
-<a href="index.html" class="logo">
+
+
+
+<!-- LOGO -->
+
+
+<a
+
+href="index.html"
+
+class="logo"
+
+>
 
 AMERIS<span>STORE</span>
 
+
 </a>
 
 
 
 
 
-<nav class="menu">
-
-
-<a href="index.html">
-INICIO
-</a>
-
-
-<a href="streaming.html">
-STREAMING
-</a>
-
-
-<a href="musica.html">
-MÚSICA
-</a>
-
-
-<a href="gaming.html">
-GAMING
-</a>
-
-
-<a href="ia.html">
-IA TOOLS
-</a>
-
-
-<a href="diseno.html">
-DISEÑO
-</a>
-
-
-<a href="extras.html" class="active">
-EXTRAS
-</a>
-
-
-
-</nav>
 
 
 
 
+<!-- CARRITO -->
 
 
+<a
 
+href="carrito.html"
 
-<a href="#"
 class="cart-button"
-id="cart-button">
 
+id="cart-button"
+
+aria-label="Ver carrito"
+
+>
+
+
+<span class="cart-icon">
 
 🛒
 
-
-<span>
-Carrito
 </span>
 
 
+
+
+
+<div class="cart-info">
+
+
+<span>
+
+Carrito
+
+</span>
+
+
+
 <strong id="cart-total">
+
 Gs. 0
+
 </strong>
 
 
+
+</div>
+
+
+
+
+
+
+
+<span
+
+class="cart-count"
+
+id="cart-count"
+
+>
+
+0
+
+</span>
+
+
+
 </a>
+
+
+
+
+
+
+
+
+
+<!-- MENU MOVIL -->
+
+
+<button
+
+class="menu-toggle"
+
+id="menu-toggle"
+
+type="button"
+
+aria-label="Abrir menú"
+
+aria-controls="main-menu"
+
+aria-expanded="false"
+
+>
+
+☰
+
+</button>
+
+
+
 
 
 
@@ -135,9 +228,116 @@ Gs. 0
 
 
 
-<!-- =========================
-TITULO
-========================= -->
+<!-- =====================================================
+MENU PRINCIPAL
+===================================================== -->
+
+
+<nav
+
+class="menu"
+
+id="main-menu"
+
+>
+
+
+<a href="index.html">
+
+INICIO
+
+</a>
+
+
+
+
+<a href="streaming.html">
+
+STREAMING
+
+</a>
+
+
+
+
+<a href="musica.html">
+
+MÚSICA
+
+</a>
+
+
+
+
+<a href="gaming.html">
+
+GAMING
+
+</a>
+
+
+
+
+<a href="ia.html">
+
+IA TOOLS
+
+</a>
+
+
+
+
+<a href="diseno.html">
+
+DISEÑO
+
+</a>
+
+
+
+
+<a
+
+href="extras.html"
+
+class="active"
+
+>
+
+EXTRAS
+
+</a>
+
+
+
+</nav>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+CONTENIDO
+===================================================== -->
+
+
+<main>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+TITULO EXTRAS
+===================================================== -->
 
 
 <section class="category-header">
@@ -152,6 +352,7 @@ EXTRAS
 
 
 
+
 <h1>
 
 Más servicios digitales
@@ -161,12 +362,13 @@ Más servicios digitales
 
 
 
+
 <p>
 
-Soluciones adicionales para tus cuentas,
-dispositivos y redes sociales.
+Soluciones adicionales para tus cuentas, dispositivos y redes sociales.
 
 </p>
+
 
 
 
@@ -180,9 +382,9 @@ dispositivos y redes sociales.
 
 
 
-<!-- =========================
+<!-- =====================================================
 HORARIO
-========================= -->
+===================================================== -->
 
 
 <div class="attention-card">
@@ -197,6 +399,8 @@ HORARIO
 
 
 
+
+
 <div>
 
 
@@ -205,6 +409,8 @@ HORARIO
 Horario de atención rápida
 
 </h3>
+
+
 
 
 
@@ -223,23 +429,25 @@ Activaciones disponibles:
 
 
 
-</div>
-
-
 
 </div>
 
 
 
 
+</div>
 
 
 
 
 
-<!-- =========================
+
+
+
+
+<!-- =====================================================
 PRODUCTOS
-========================= -->
+===================================================== -->
 
 
 <section class="products-section">
@@ -249,18 +457,22 @@ PRODUCTOS
 
 
 
+<!-- =====================================================
+GOOGLE ONE FAMILIAR
+===================================================== -->
+
+
+<a
+
+href="producto.html?id=googleone"
+
+class="product-card fade-up hover-lift"
+
+>
 
 
 
-
-<!-- GOOGLE ONE FAMILIAR -->
-
-
-<a href="producto.html?id=googleonefamiliar"
-class="product-card">
-
-
-<div class="product-image">
+<div class="product-image image-zoom">
 
 
 <img
@@ -269,17 +481,23 @@ src="assets/productos/googleone.png"
 
 alt="Google One Familiar"
 
+loading="lazy"
+
 >
+
 
 
 <span class="product-badge">
 
-NUBE
+NUEVO
 
 </span>
 
 
 </div>
+
+
+
 
 
 
@@ -296,6 +514,9 @@ EXTRAS
 
 
 
+
+
+
 <h2>
 
 Google One Familiar
@@ -305,31 +526,70 @@ Google One Familiar
 
 
 
+
+
+
 <p>
 
-Almacenamiento en la nube para compartir.
+Almacenamiento en la nube para compartir con familia.
 
 </p>
 
 
 
 
+
+
+
+<div class="product-bottom">
+
+
+
 <div class="price">
+
+
+<small>
+
+Desde
+
+</small>
+
+
 
 
 <strong>
 
-Consultar
+Gs. 20.000
 
 </strong>
 
 
+
+</div>
+
+
+
+
+
+<span class="product-arrow">
+
+→
+
+</span>
+
+
+
+
+
 </div>
 
 
 
 
+
 </div>
+
+
 
 
 
@@ -343,23 +603,34 @@ Consultar
 
 
 
-<!-- NUMERO VIRTUAL -->
+<!-- =====================================================
+NUMERO VIRTUAL
+===================================================== -->
 
 
-<a href="producto.html?id=numero"
-class="product-card">
+<a
+
+href="producto.html?id=numerovirtual"
+
+class="product-card fade-up hover-lift"
+
+>
 
 
-<div class="product-image">
+
+<div class="product-image image-zoom">
 
 
 <img
 
-src="assets/productos/numero.png"
+src="assets/productos/numerovirtual.png"
 
 alt="Número Virtual"
 
+loading="lazy"
+
 >
+
 
 
 <span class="product-badge">
@@ -374,6 +645,9 @@ DIGITAL
 
 
 
+
+
+
 <div class="product-info">
 
 
@@ -382,6 +656,9 @@ DIGITAL
 EXTRAS
 
 </span>
+
+
+
 
 
 
@@ -395,31 +672,70 @@ Número Virtual
 
 
 
+
+
+
 <p>
 
-Obtén números digitales para servicios compatibles.
+Números digitales para servicios compatibles.
 
 </p>
 
 
 
 
+
+
+
+<div class="product-bottom">
+
+
+
 <div class="price">
+
+
+<small>
+
+Desde
+
+</small>
+
+
 
 
 <strong>
 
-Consultar
+Gs. 10.000
 
 </strong>
 
 
+
+</div>
+
+
+
+
+
+<span class="product-arrow">
+
+→
+
+</span>
+
+
+
+
+
 </div>
 
 
 
 
+
 </div>
+
+
 
 
 
@@ -433,23 +749,34 @@ Consultar
 
 
 
-<!-- WINDOWS -->
+<!-- =====================================================
+WINDOWS 10 / 11 PRO
+===================================================== -->
 
 
-<a href="producto.html?id=windows"
-class="product-card">
+<a
+
+href="producto.html?id=windows"
+
+class="product-card fade-up hover-lift"
+
+>
 
 
-<div class="product-image">
+
+<div class="product-image image-zoom">
 
 
 <img
 
 src="assets/productos/windows.png"
 
-alt="Windows Pro"
+alt="Windows 10 11 Pro"
+
+loading="lazy"
 
 >
+
 
 
 <span class="product-badge">
@@ -464,6 +791,9 @@ SOFTWARE
 
 
 
+
+
+
 <div class="product-info">
 
 
@@ -472,6 +802,9 @@ SOFTWARE
 EXTRAS
 
 </span>
+
+
+
 
 
 
@@ -485,6 +818,9 @@ Windows 10 / 11 Pro
 
 
 
+
+
+
 <p>
 
 Licencias y activación para tu PC.
@@ -494,22 +830,58 @@ Licencias y activación para tu PC.
 
 
 
+
+
+
+<div class="product-bottom">
+
+
+
 <div class="price">
+
+
+<small>
+
+Desde
+
+</small>
+
+
 
 
 <strong>
 
-Consultar
+Gs. 30.000
 
 </strong>
 
 
+
+</div>
+
+
+
+
+
+<span class="product-arrow">
+
+→
+
+</span>
+
+
+
+
+
 </div>
 
 
 
 
+
 </div>
+
+
 
 
 
@@ -523,23 +895,34 @@ Consultar
 
 
 
-<!-- REDES SOCIALES -->
+<!-- =====================================================
+SEGUIDORES REDES SOCIALES
+===================================================== -->
 
 
-<a href="producto.html?id=seguidores"
-class="product-card">
+<a
+
+href="producto.html?id=seguidores"
+
+class="product-card fade-up hover-lift"
+
+>
 
 
-<div class="product-image">
+
+<div class="product-image image-zoom">
 
 
 <img
 
 src="assets/productos/seguidores.png"
 
-alt="Seguidores Redes Sociales"
+alt="Seguidores Facebook Instagram"
+
+loading="lazy"
 
 >
+
 
 
 <span class="product-badge">
@@ -554,6 +937,9 @@ SOCIAL
 
 
 
+
+
+
 <div class="product-info">
 
 
@@ -562,6 +948,9 @@ SOCIAL
 EXTRAS
 
 </span>
+
+
+
 
 
 
@@ -575,81 +964,102 @@ Seguidores Facebook / Instagram
 
 
 
+
+
+
 <p>
 
-Servicios para redes sociales.
+Mejora la presencia de tus redes sociales.
 
 </p>
 
 
 
 
+
+
+
+<div class="product-bottom">
+
+
+
 <div class="price">
+
+
+<small>
+
+Desde
+
+</small>
+
+
 
 
 <strong>
 
-Consultar
+Gs. 5.000
 
 </strong>
 
 
+
+</div>
+
+
+
+
+
+<span class="product-arrow">
+
+→
+
+</span>
+
+
+
+
+
 </div>
 
 
 
 
+
 </div>
+
+
 
 
 
 </a>
 
 
-
-
-
-
-
-
-
-<!-- PORNHUB -->
-
-
-<a href="producto.html?id=pornhub"
-class="product-card">
-
-
-<div class="product-image">
-
-
-<img
-
-src="assets/productos/pornhub.png"
-
-alt="Pornhub Premium"
-
->
-
-
-<span class="product-badge">
-
-PREMIUM
-
-</span>
-
-
 </div>
 
+</section>
 
 
 
-<div class="product-info">
 
 
-<span class="product-category">
 
-EXTRAS
+
+
+
+<!-- =====================================================
+EXPLORAR CATEGORÍAS
+===================================================== -->
+
+
+<section class="mobile-more-products fade-up">
+
+
+<div class="more-products-head">
+
+
+<span class="more-eyebrow">
+
+EXPLORAR
 
 </span>
 
@@ -658,7 +1068,7 @@ EXTRAS
 
 <h2>
 
-Pornhub Premium
+Explorar categorías
 
 </h2>
 
@@ -667,26 +1077,100 @@ Pornhub Premium
 
 <p>
 
-Servicio digital adicional.
+Encontrá más productos y servicios disponibles en AMERISSTORE.
 
 </p>
 
 
 
 
-<div class="price">
+</div>
 
 
-<strong>
 
-Consultar
+
+
+
+
+<button
+
+class="more-products-toggle"
+
+id="moreProductsToggle"
+
+type="button"
+
+aria-expanded="false"
+
+aria-controls="moreProductsMenu"
+
+>
+
+
+<span>
+
+Ver categorías
+
+</span>
+
+
+
+
+<strong id="moreProductsIcon">
+
++
 
 </strong>
 
 
-</div>
+
+</button>
 
 
+
+
+
+
+
+
+
+<div
+
+class="more-products-menu"
+
+id="moreProductsMenu"
+
+>
+
+
+
+
+
+<a href="streaming.html">
+
+
+<span class="category-menu-icon">
+
+📺
+
+</span>
+
+
+
+<div>
+
+<strong>
+
+Streaming
+
+</strong>
+
+
+<small>
+
+Series, películas y TV
+
+</small>
 
 
 </div>
@@ -695,6 +1179,200 @@ Consultar
 
 </a>
 
+
+
+
+
+
+
+<a href="musica.html">
+
+
+<span class="category-menu-icon">
+
+🎵
+
+</span>
+
+
+
+<div>
+
+<strong>
+
+Música
+
+</strong>
+
+
+<small>
+
+Premium y sin anuncios
+
+</small>
+
+
+</div>
+
+
+
+</a>
+
+
+
+
+
+
+
+<a href="gaming.html">
+
+
+<span class="category-menu-icon">
+
+🎮
+
+</span>
+
+
+
+<div>
+
+<strong>
+
+Gaming
+
+</strong>
+
+
+<small>
+
+Recargas y beneficios
+
+</small>
+
+
+</div>
+
+
+
+</a>
+
+
+
+
+
+
+
+<a href="ia.html">
+
+
+<span class="category-menu-icon">
+
+🤖
+
+</span>
+
+
+
+<div>
+
+<strong>
+
+IA Tools
+
+</strong>
+
+
+<small>
+
+Herramientas digitales
+
+</small>
+
+
+</div>
+
+
+
+</a>
+
+
+
+
+
+
+
+<a href="diseno.html">
+
+
+<span class="category-menu-icon">
+
+🎨
+
+</span>
+
+
+
+<div>
+
+<strong>
+
+Diseño
+
+</strong>
+
+
+<small>
+
+Herramientas creativas
+
+</small>
+
+
+</div>
+
+
+
+</a>
+
+
+
+
+
+
+
+<a href="extras.html">
+
+
+<span class="category-menu-icon">
+
+✨
+
+</span>
+
+
+
+<div>
+
+<strong>
+
+Extras
+
+</strong>
+
+
+<small>
+
+Más servicios digitales
+
+</small>
+
+
+</div>
+
+
+
+</a>
 
 
 
@@ -713,9 +1391,9 @@ Consultar
 
 
 
-<!-- =========================
-CTA
-========================= -->
+<!-- =====================================================
+CTA FINAL
+===================================================== -->
 
 
 <section class="final-contact">
@@ -723,7 +1401,7 @@ CTA
 
 <h2>
 
-Encuentra más servicios digitales
+Más soluciones digitales
 
 </h2>
 
@@ -732,9 +1410,10 @@ Encuentra más servicios digitales
 
 <p>
 
-Consulta disponibilidad de productos adicionales.
+Servicios adicionales para mejorar tus cuentas, dispositivos y redes sociales.
 
 </p>
+
 
 
 
@@ -745,13 +1424,16 @@ href="https://wa.me/595981841136"
 
 target="_blank"
 
-class="btn-primary">
+rel="noopener noreferrer"
 
+class="btn-primary"
 
-💬 Consultar servicio
+>
 
+✨ Consultar servicio
 
 </a>
+
 
 
 
@@ -765,9 +1447,9 @@ class="btn-primary">
 
 
 
-<!-- =========================
+<!-- =====================================================
 WHATSAPP
-========================= -->
+===================================================== -->
 
 
 <a
@@ -776,11 +1458,15 @@ href="https://wa.me/595981841136"
 
 target="_blank"
 
-class="floating-whatsapp">
+rel="noopener noreferrer"
 
+class="floating-whatsapp"
+
+aria-label="WhatsApp"
+
+>
 
 💬
-
 
 </a>
 
@@ -792,9 +1478,9 @@ class="floating-whatsapp">
 
 
 
-<!-- =========================
+<!-- =====================================================
 FOOTER
-========================= -->
+===================================================== -->
 
 
 <footer class="footer">
@@ -805,17 +1491,18 @@ FOOTER
 
 <strong>
 
-AMERISSTORE
+AMERIS<span>STORE</span>
 
 </strong>
 
 
 
-<span>
 
-© 2026 AMERISSTORE
+<p>
 
-</span>
+© 2026 AMERISSTORE. Todos los derechos reservados.
+
+</p>
 
 
 
@@ -831,11 +1518,10 @@ AMERISSTORE
 
 
 
-
 <script src="script.js"></script>
 
 
-</body>
 
+</body>
 
 </html>
