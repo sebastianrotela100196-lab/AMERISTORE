@@ -400,7 +400,73 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     );
 
+/* =====================================================
+   SLIDER CATEGORÍAS
+===================================================== */
 
+
+function iniciarCategorySliders(){
+
+
+    const sliders = document.querySelectorAll(
+        ".category-image-slider"
+    );
+
+
+    sliders.forEach((slider)=>{
+
+
+        const imagenes =
+        slider.querySelectorAll("img");
+
+
+        if(imagenes.length === 0){
+            return;
+        }
+
+
+
+        let actual = 0;
+
+
+
+        imagenes[0].classList.add("active");
+
+
+
+        setInterval(()=>{
+
+
+            imagenes[actual]
+            .classList.remove("active");
+
+
+
+            actual++;
+
+
+
+            if(actual >= imagenes.length){
+
+                actual = 0;
+
+            }
+
+
+
+            imagenes[actual]
+            .classList.add("active");
+
+
+
+        },3000);
+
+
+
+    });
+
+
+}
     /* =====================================================
        INICIALIZAR
     ===================================================== */
