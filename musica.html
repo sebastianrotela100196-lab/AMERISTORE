@@ -9,7 +9,16 @@
 <meta charset="UTF-8">
 
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+
+<meta
+name="description"
+content="AMERISSTORE Música - Spotify Premium, YouTube Premium y Deezer."
+>
 
 
 <title>
@@ -17,8 +26,11 @@ AMERISSTORE | Música
 </title>
 
 
+
 <link rel="stylesheet" href="style.css">
+
 <link rel="stylesheet" href="animaciones.css">
+
 <link rel="stylesheet" href="musica.css">
 
 
@@ -30,11 +42,34 @@ AMERISSTORE | Música
 
 
 
+<!-- =====================================================
+TOP BAR
+===================================================== -->
 
 
-<!-- =========================
+<div class="top-bar">
+
+
+<span>
+
+👻 AMERISSTORE • DIGITAL & GAMING STORE
+
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
 HEADER
-========================= -->
+===================================================== -->
 
 
 <header class="header">
@@ -43,84 +78,48 @@ HEADER
 <div class="header-container">
 
 
-<a href="index.html" class="logo">
+
+
+
+<a
+href="index.html"
+class="logo"
+>
 
 AMERIS<span>STORE</span>
 
-</a>
-
-
-
-
-
-<nav class="menu">
-
-
-<a href="index.html">
-
-INICIO
-
-</a>
-
-
-<a href="streaming.html">
-
-STREAMING
-
-</a>
-
-
-<a href="musica.html" class="active">
-
-MÚSICA
-
-</a>
-
-
-<a href="gaming.html">
-
-GAMING
-
-</a>
-
-
-<a href="ia.html">
-
-IA TOOLS
-
-</a>
-
-
-<a href="diseno.html">
-
-DISEÑO
-
-</a>
-
-
-<a href="extras.html">
-
-EXTRAS
 
 </a>
 
 
 
-</nav>
 
 
 
 
 
 
+<!-- CARRITO -->
 
 
-<a href="#"
+<a
+href="carrito.html"
 class="cart-button"
-id="cart-button">
+id="cart-button"
+aria-label="Ver carrito"
+>
 
+
+<span class="cart-icon">
 
 🛒
+
+</span>
+
+
+
+
+<div class="cart-info">
 
 
 <span>
@@ -128,6 +127,7 @@ id="cart-button">
 Carrito
 
 </span>
+
 
 
 
@@ -139,7 +139,59 @@ Gs. 0
 
 
 
+</div>
+
+
+
+
+
+
+<span
+
+class="cart-count"
+
+id="cart-count"
+
+>
+
+0
+
+</span>
+
+
+
 </a>
+
+
+
+
+
+
+
+
+
+<button
+
+class="menu-toggle"
+
+id="menu-toggle"
+
+type="button"
+
+aria-label="Abrir menú"
+
+aria-controls="main-menu"
+
+aria-expanded="false"
+
+>
+
+
+☰
+
+
+</button>
+
 
 
 
@@ -158,9 +210,92 @@ Gs. 0
 
 
 
-<!-- =========================
-TITULO
-========================= -->
+<!-- =====================================================
+MENU
+===================================================== -->
+
+
+<nav
+
+class="menu"
+
+id="main-menu"
+
+>
+
+
+<a href="index.html">
+
+INICIO
+
+</a>
+
+
+<a href="streaming.html">
+
+STREAMING
+
+</a>
+
+
+
+<a href="musica.html" class="active">
+
+MÚSICA
+
+</a>
+
+
+
+<a href="gaming.html">
+
+GAMING
+
+</a>
+
+
+
+<a href="ia.html">
+
+IA TOOLS
+
+</a>
+
+
+
+<a href="diseno.html">
+
+DISEÑO
+
+</a>
+
+
+
+<a href="extras.html">
+
+EXTRAS
+
+</a>
+
+
+</nav>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+CONTENIDO
+===================================================== -->
+
+
+<main>
+
+
 
 
 <section class="category-header">
@@ -182,7 +317,6 @@ Disfruta tu música favorita
 
 
 
-
 <p>
 
 Escucha sin límites, sin anuncios y con funciones Premium.
@@ -201,13 +335,10 @@ Escucha sin límites, sin anuncios y con funciones Premium.
 
 
 
-<!-- =========================
-HORARIO
-========================= -->
+<!-- HORARIO -->
 
 
 <div class="attention-card">
-
 
 
 <div class="attention-icon">
@@ -215,7 +346,6 @@ HORARIO
 ⚡
 
 </div>
-
 
 
 
@@ -241,29 +371,21 @@ Activaciones:
 
 </strong>
 
-
 </p>
 
 
+</div>
+
+
 
 </div>
 
 
 
 
-</div>
 
 
-
-
-
-
-
-
-
-<!-- =========================
-PRODUCTOS
-========================= -->
+<!-- PRODUCTOS -->
 
 
 <section class="products-section">
@@ -273,432 +395,4 @@ PRODUCTOS
 
 
 
-
-
-<!-- SPOTIFY -->
-
-
-<a href="producto.html?id=spotify"
-class="product-card">
-
-
-<div class="product-image">
-
-
-<img
-
-src="assets/productos/spotify.png"
-
-alt="Spotify Premium"
-
->
-
-
-<span class="product-badge">
-
-POPULAR
-
-</span>
-
-
-</div>
-
-
-
-
-
-<div class="product-info">
-
-
-
-<span class="product-category">
-
-MÚSICA
-
-</span>
-
-
-
-
-<h2>
-
-Spotify Premium
-
-</h2>
-
-
-
-
-<p>
-
-Música sin anuncios y sin límites.
-
-</p>
-
-
-
-
-
-<div class="price">
-
-
-<strong>
-
-Desde Gs. 25.000
-
-</strong>
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-
-</a>
-
-
-
-
-
-
-
-
-
-<!-- YOUTUBE PREMIUM -->
-
-
-<a href="producto.html?id=youtube"
-class="product-card">
-
-
-<div class="product-image">
-
-
-<img
-
-src="assets/productos/youtube.png"
-
-alt="YouTube Premium"
-
->
-
-
-<span class="product-badge">
-
-OFERTA
-
-</span>
-
-
-</div>
-
-
-
-
-
-<div class="product-info">
-
-
-
-<span class="product-category">
-
-MÚSICA
-
-</span>
-
-
-
-
-<h2>
-
-YouTube Premium
-
-</h2>
-
-
-
-
-<p>
-
-YouTube sin anuncios y YouTube Music incluido.
-
-</p>
-
-
-
-
-
-<div class="price">
-
-
-<strong>
-
-Desde Gs. 25.000
-
-</strong>
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-
-</a>
-
-
-
-
-
-
-
-
-
-<!-- DEEZER -->
-
-
-<a href="producto.html?id=deezer"
-class="product-card">
-
-
-<div class="product-image">
-
-
-<img
-
-src="assets/productos/deezer.png"
-
-alt="Deezer Premium"
-
->
-
-
-<span class="product-badge">
-
-NUEVO
-
-</span>
-
-
-</div>
-
-
-
-
-
-<div class="product-info">
-
-
-
-<span class="product-category">
-
-MÚSICA
-
-</span>
-
-
-
-
-<h2>
-
-Deezer Premium
-
-</h2>
-
-
-
-
-<p>
-
-Millones de canciones sin anuncios.
-
-</p>
-
-
-
-
-
-<div class="price">
-
-
-<strong>
-
-Gs. 20.000
-
-</strong>
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-
-</a>
-
-
-
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- =========================
-CTA
-========================= -->
-
-
-<section class="final-contact">
-
-
-
-<h2>
-
-Lleva tu música al siguiente nivel
-
-</h2>
-
-
-
-
-<p>
-
-Spotify, YouTube Premium y Deezer para disfrutar sin límites.
-
-</p>
-
-
-
-
-
-<a
-
-href="https://wa.me/595981841136"
-
-target="_blank"
-
-class="btn-primary">
-
-
-💬 Solicitar servicio
-
-
-</a>
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- =========================
-WHATSAPP
-========================= -->
-
-
-<a
-
-href="https://wa.me/595981841136"
-
-target="_blank"
-
-class="floating-whatsapp">
-
-
-💬
-
-
-</a>
-
-
-
-
-
-
-
-
-
-<!-- =========================
-FOOTER
-========================= -->
-
-
-<footer class="footer">
-
-
-<div class="footer-simple">
-
-
-
-<strong>
-
-AMERISSTORE
-
-</strong>
-
-
-
-
-
-<span>
-
-© 2026 AMERISSTORE
-
-</span>
-
-
-
-
-
-</div>
-
-
-
-</footer>
-
-
-
-
-
-
-
-
-
-<script src="script.js"></script>
-
-
-</body>
-
-
-</html>
+<!-- PRODUCTOS CONTINÚA -->
