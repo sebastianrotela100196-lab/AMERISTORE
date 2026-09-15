@@ -1,566 +1,182 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 
 <head>
 
-    <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta charset="UTF-8">
 
-    <meta
-        name="description"
-        content="AMERISSTORE - Streaming, gaming, música, inteligencia artificial y servicios digitales."
-    >
 
-    <title>AMERISSTORE | Digital Store</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animaciones.css">
+
+<meta
+name="description"
+content="AMERISSTORE - Streaming, gaming, música, inteligencia artificial y servicios digitales."
+>
+
+
+<title>
+
+AMERISSTORE | Digital Store
+
+</title>
+
+
+
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="animaciones.css">
+
 
 </head>
+
+
+
 
 
 <body>
 
 
-    <!-- =====================================================
-         TOP BAR
-    ====================================================== -->
 
-    <div class="top-bar">
-
-        <span>
-            👻 AMERISSTORE • DIGITAL & GAMING STORE
-        </span>
-
-    </div>
-
-
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
-
-    <header class="header">
-
-        <div class="header-container">
-
-
-            <!-- LOGO -->
-
-            <a
-                href="index.html"
-                class="logo"
-                aria-label="AMERISSTORE - Inicio"
-            >
-                AMERIS<span>STORE</span>
-            </a>
-
-
-            <!-- CARRITO -->
-
-            <a
-                href="carrito.html"
-                class="cart-button"
-                id="cart-button"
-                aria-label="Ver carrito"
-            >
-
-                <span
-                    class="cart-icon"
-                    aria-hidden="true"
-                >
-                    🛒
-                </span>
-
-                <div class="cart-info">
-
-                    <span>
-                        Carrito
-                    </span>
-
-                    <strong id="cart-total">
-                        Gs. 0
-                    </strong>
-
-                </div>
-
-                <span
-                    class="cart-count"
-                    id="cart-count"
-                >
-                    0
-                </span>
-
-            </a>
-
-
-            <!-- MENU MOVIL -->
-
-            <button
-                class="menu-toggle"
-                id="menu-toggle"
-                type="button"
-                aria-label="Abrir menú"
-                aria-controls="main-menu"
-                aria-expanded="false"
-            >
-                ☰
-            </button>
-
-        </div>
-
-    </header>
-
-
-    <!-- =====================================================
-         MENU PRINCIPAL
-    ====================================================== -->
-
-    <nav
-        class="menu"
-        id="main-menu"
-        aria-label="Navegación principal"
-    >
-
-        <a
-            href="index.html"
-            class="active"
-        >
-            INICIO
-        </a>
-
-        <a href="streaming.html">
-            STREAMING
-        </a>
-
-        <a href="musica.html">
-            MÚSICA
-        </a>
-
-        <a href="gaming.html">
-            GAMING
-        </a>
-
-        <a href="ia.html">
-            IA TOOLS
-        </a>
-
-        <a href="diseno.html">
-            DISEÑO
-        </a>
-
-        <a href="extras.html">
-            EXTRAS
-        </a>
-
-    </nav>
-
-
-    <!-- =====================================================
-         CONTENIDO PRINCIPAL
-    ====================================================== -->
-
-    <main>
-
-
-        <!-- =================================================
-             PRODUCTOS DESTACADOS
-        ================================================== -->
-
-        <section
-            class="featured"
-            id="productos"
-        >
-
-            <div class="section-title fade-up">
-
-                <span class="section-label">
-                    DESTACADOS
-                </span>
-
-                <h1>
-                    Productos destacados
-                </h1>
-
-                <p>
-                    Los servicios digitales más elegidos por nuestros clientes.
-                </p>
-
-            </div>
-
-
-            <div class="products-grid">
-
-
-                <!-- FREE FIRE -->
-
-                <article class="product-card fade-up hover-lift">
-
-                    <a href="freefire.html">
-
-                        <div class="product-image image-zoom">
-
-                            <img
-                                src="assets/productos/freefire.png"
-                                alt="Recargas Free Fire"
-                                loading="lazy"
-                            >
-
-                            <span class="product-badge badge-pulse">
-                                OFERTA
-                            </span>
-
-                        </div>
-
-
-                        <div class="product-info">
-
-                            <span class="product-category">
-                                GAMING
-                            </span>
-
-                            <h2>
-                                Recargas Free Fire
-                            </h2>
-
-                            <p>
-                                Diamantes Free Fire mediante ID de jugador.
-                            </p>
-
-
-                            <div class="product-bottom">
-
-                                <div class="price">
-
-                                    <small>
-                                        Desde
-                                    </small>
-
-                                    <strong>
-                                        Gs. 6.000
-                                    </strong>
-
-                                </div>
-
-                                <span
-                                    class="product-arrow"
-                                    aria-hidden="true"
-                                >
-                                    →
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </a>
-
-                </article>
-
-
-                <!-- CANVA PRO -->
-
-                <article class="product-card fade-up hover-lift">
-
-                    <a href="producto.html?id=canva">
-
-                        <div class="product-image image-zoom">
-
-                            <img
-                                src="assets/productos/canva.png"
-                                alt="Canva Pro"
-                                loading="lazy"
-                            >
-
-                            <span class="product-badge">
-                                PRO
-                            </span>
-
-                        </div>
-
-
-                        <div class="product-info">
-
-                            <span class="product-category">
-                                DISEÑO
-                            </span>
-
-                            <h2>
-                                Canva Pro
-                            </h2>
-
-                            <p>
-                                Diseños profesionales con funciones Premium.
-                            </p>
-
-
-                            <div class="product-bottom">
-
-                                <div class="price">
-
-                                    <small>
-                                        Primer mes
-                                    </small>
-
-                                    <strong>
-                                        Gs. 5.000
-                                    </strong>
-
-                                </div>
-
-                                <span
-                                    class="product-arrow"
-                                    aria-hidden="true"
-                                >
-                                    →
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </a>
-
-                </article>
-
-
-                <!-- SPOTIFY -->
-
-                <article class="product-card fade-up hover-lift">
-
-                    <a href="producto.html?id=spotify">
-
-                        <div class="product-image image-zoom">
-
-                            <img
-                                src="assets/productos/spotify.png"
-                                alt="Spotify Premium"
-                                loading="lazy"
-                            >
-
-                            <span class="product-badge popular">
-                                POPULAR
-                            </span>
-
-                        </div>
-
-
-                        <div class="product-info">
-
-                            <span class="product-category">
-                                MÚSICA
-                            </span>
-
-                            <h2>
-                                Spotify Premium
-                            </h2>
-
-                            <p>
-                                Música sin anuncios y sin límites.
-                            </p>
-
-
-                            <div class="product-bottom">
-
-                                <div class="price">
-
-                                    <small>
-                                        Desde
-                                    </small>
-
-                                    <strong>
-                                        Gs. 25.000
-                                    </strong>
-
-                                </div>
-
-                                <span
-                                    class="product-arrow"
-                                    aria-hidden="true"
-                                >
-                                    →
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </a>
-
-                </article>
-
-
-                <!-- FLUJO TV -->
-
-                <article class="product-card fade-up hover-lift">
-
-                    <a href="producto.html?id=flujotv">
-
-                        <div class="product-image image-zoom">
-
-                            <img
-                                src="assets/productos/flujotv.png"
-                                alt="Flujo TV"
-                                loading="lazy"
-                            >
-
-                            <span class="product-badge">
-                                STREAMING
-                            </span>
-
-                        </div>
-
-
-                        <div class="product-info">
-
-                            <span class="product-category">
-                                STREAMING
-                            </span>
-
-                            <h2>
-                                Flujo TV
-                            </h2>
-
-                            <p>
-                                Canales en vivo, deportes y entretenimiento.
-                            </p>
-
-
-                            <div class="product-bottom">
-
-                                <div class="price">
-
-                                    <small>
-                                        Desde
-                                    </small>
-
-                                    <strong>
-                                        Gs. 40.000
-                                    </strong>
-
-                                </div>
-
-                                <span
-                                    class="product-arrow"
-                                    aria-hidden="true"
-                                >
-                                    →
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </a>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             EXPLORAR CATEGORIAS
-             Visible principalmente en móvil
-        ================================================== -->
-
-        <section class="mobile-more-products fade-up">
-
-            <div class="more-products-head">
-
-                <span class="more-eyebrow">
-                    EXPLORAR
-                </span>
-
-                <h2>
-                    Explorar categorías
-                </h2>
-
-                <p>
-                    Encontrá más productos y servicios disponibles en AMERISSTORE.
-                </p>
-
-            </div>
-
-
-            <button
-                class="more-products-toggle"
-                id="moreProductsToggle"
-                type="button"
-                aria-expanded="false"
-                aria-controls="moreProductsMenu"
-            >
-
-                <span>
-                    Ver categorías
-                </span>
-
-                <strong
-                    id="moreProductsIcon"
-                    aria-hidden="true"
-                >
-                    +
-                </strong>
-
-            </button>
-
-
-            <div
-class="more-products-menu"
-id="moreProductsMenu"
->
 
 
 <!-- =====================================================
-STREAMING
+TOP BAR
 ===================================================== -->
 
 
-<a href="streaming.html" class="category-card-slider">
+<div class="top-bar">
 
 
-<div class="category-image-slider">
+<span>
 
+👻 AMERISSTORE • DIGITAL & GAMING STORE
 
-<img src="assets/productos/netflix.png" alt="Netflix">
-
-<img src="assets/productos/disney.png" alt="Disney+">
-
-<img src="assets/productos/HBOMAX.png" alt="Max">
-
-<img src="assets/productos/prime.png" alt="Prime Video">
-
-<img src="assets/productos/flujotv.png" alt="Flujo TV">
+</span>
 
 
 </div>
 
 
 
-<div class="category-overlay"></div>
 
 
 
-<div class="category-content">
 
 
-<strong>
-Streaming
+
+<!-- =====================================================
+HEADER
+===================================================== -->
+
+
+<header class="header">
+
+
+<div class="header-container">
+
+
+
+
+
+<!-- LOGO -->
+
+
+<a
+
+href="index.html"
+
+class="logo"
+
+aria-label="Inicio AMERISSTORE"
+
+>
+
+
+AMERIS<span>STORE</span>
+
+
+</a>
+
+
+
+
+
+
+
+
+
+<!-- CARRITO -->
+
+
+<a
+
+href="carrito.html"
+
+class="cart-button"
+
+id="cart-button"
+
+aria-label="Ver carrito"
+
+>
+
+
+<span class="cart-icon">
+
+🛒
+
+</span>
+
+
+
+
+
+<div class="cart-info">
+
+
+<span>
+
+Carrito
+
+</span>
+
+
+
+<strong id="cart-total">
+
+Gs. 0
+
 </strong>
 
 
-<small>
-Series, películas y TV
-</small>
-
 
 </div>
+
+
+
+
+
+
+<span
+
+class="cart-count"
+
+id="cart-count"
+
+>
+
+0
+
+</span>
+
 
 
 
@@ -573,25 +189,402 @@ Series, películas y TV
 
 
 
+
+<!-- MENU MOVIL -->
+
+
+<button
+
+class="menu-toggle"
+
+id="menu-toggle"
+
+type="button"
+
+aria-label="Abrir menú"
+
+aria-controls="main-menu"
+
+aria-expanded="false"
+
+>
+
+
+☰
+
+
+</button>
+
+
+
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+
+
+
+
 <!-- =====================================================
-MUSICA
+MENU PRINCIPAL
 ===================================================== -->
 
 
-<a href="musica.html" class="category-card-slider">
+<nav
+
+class="menu"
+
+id="main-menu"
+
+aria-label="Navegación principal"
+
+>
+
+
+<a
+
+href="index.html"
+
+class="active"
+
+>
+
+INICIO
+
+</a>
+
+
+
+
+<a href="streaming.html">
+
+STREAMING
+
+</a>
+
+
+
+
+<a href="musica.html">
+
+MÚSICA
+
+</a>
+
+
+
+
+<a href="gaming.html">
+
+GAMING
+
+</a>
+
+
+
+
+<a href="ia.html">
+
+IA TOOLS
+
+</a>
+
+
+
+
+<a href="diseno.html">
+
+DISEÑO
+
+</a>
+
+
+
+
+<a href="extras.html">
+
+EXTRAS
+
+</a>
+
+
+
+</nav>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+CONTENIDO
+===================================================== -->
+
+
+<main>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+PRODUCTOS DESTACADOS DINÁMICOS
+===================================================== -->
+
+
+<section
+
+class="featured"
+
+id="productos"
+
+>
+
+
+
+<div class="section-title fade-up">
+
+
+<span class="section-label">
+
+DESTACADOS
+
+</span>
+
+
+
+
+<h1>
+
+Productos destacados
+
+</h1>
+
+
+
+
+<p>
+
+Los servicios digitales más elegidos por nuestros clientes.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div
+
+class="products-grid"
+
+id="featuredProducts"
+
+>
+
+
+<!-- JAVASCRIPT CARGARÁ LOS PRODUCTOS AQUÍ -->
+
+
+</div>
+
+
+
+
+
+</section>
+<!-- =====================================================
+EXPLORAR CATEGORÍAS DINÁMICO
+===================================================== -->
+
+
+<section class="mobile-more-products fade-up">
+
+
+
+<div class="more-products-head">
+
+
+<span class="more-eyebrow">
+
+EXPLORAR
+
+</span>
+
+
+
+<h2>
+
+Explorar categorías
+
+</h2>
+
+
+
+<p>
+
+Encontrá más productos y servicios disponibles en AMERISSTORE.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<button
+
+class="more-products-toggle"
+
+id="moreProductsToggle"
+
+type="button"
+
+aria-expanded="false"
+
+aria-controls="moreProductsMenu"
+
+>
+
+
+<span>
+
+Ver categorías
+
+</span>
+
+
+
+
+<strong
+
+id="moreProductsIcon"
+
+>
+
++
+
+</strong>
+
+
+
+</button>
+
+
+
+
+
+
+
+
+
+<div
+
+class="more-products-menu"
+
+id="moreProductsMenu"
+
+>
+
+
+
+
+
+
+
+<!-- =====================================================
+STREAMING
+===================================================== -->
+
+
+<a
+
+href="streaming.html"
+
+class="category-card-slider"
+
+>
+
 
 
 <div class="category-image-slider">
 
 
-<img src="assets/productos/spotify.png" alt="Spotify">
+<img
 
-<img src="assets/productos/youtube.png" alt="YouTube">
+src="assets/productos/netflix.png"
 
-<img src="assets/productos/deezer.png" alt="Deezer">
+alt="Netflix"
+
+class="active"
+
+>
+
+
+<img
+
+src="assets/productos/disney.png"
+
+alt="Disney+"
+
+>
+
+
+<img
+
+src="assets/productos/HBOMAX.png"
+
+alt="Max"
+
+>
+
+
+<img
+
+src="assets/productos/prime.png"
+
+alt="Prime Video"
+
+>
+
+
+<img
+
+src="assets/productos/flujotv.png"
+
+alt="Flujo TV"
+
+>
+
 
 
 </div>
+
+
 
 
 
@@ -599,20 +592,122 @@ MUSICA
 
 
 
+
+
 <div class="category-content">
 
 
 <strong>
-Música
+
+Streaming
+
 </strong>
 
 
+
 <small>
-Premium y sin anuncios
+
+Series, películas y TV
+
 </small>
 
 
+
 </div>
+
+
+
+
+</a>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+MÚSICA
+===================================================== -->
+
+
+<a
+
+href="musica.html"
+
+class="category-card-slider"
+
+>
+
+
+
+<div class="category-image-slider">
+
+
+<img
+
+src="assets/productos/spotify.png"
+
+alt="Spotify"
+
+class="active"
+
+>
+
+
+<img
+
+src="assets/productos/youtube.png"
+
+alt="YouTube"
+
+>
+
+
+<img
+
+src="assets/productos/deezer.png"
+
+alt="Deezer"
+
+>
+
+
+</div>
+
+
+
+
+
+<div class="category-overlay"></div>
+
+
+
+
+
+<div class="category-content">
+
+
+<strong>
+
+Música
+
+</strong>
+
+
+
+<small>
+
+Premium y sin anuncios
+
+</small>
+
+
+
+</div>
+
 
 
 
@@ -631,24 +726,70 @@ GAMING
 ===================================================== -->
 
 
-<a href="gaming.html" class="category-card-slider">
+<a
+
+href="gaming.html"
+
+class="category-card-slider"
+
+>
+
 
 
 <div class="category-image-slider">
 
 
-<img src="assets/productos/freefire.png" alt="Free Fire">
+<img
 
-<img src="assets/productos/mobilelegends.png" alt="Mobile Legends">
+src="assets/productos/freefire.png"
 
-<img src="assets/productos/pubg.png" alt="PUBG">
+alt="Free Fire"
 
-<img src="assets/productos/bloodstrike.png" alt="Blood Strike">
+class="active"
 
-<img src="assets/productos/honorofkings.png" alt="Honor of Kings">
+>
+
+
+<img
+
+src="assets/productos/mobilelegends.png"
+
+alt="Mobile Legends"
+
+>
+
+
+<img
+
+src="assets/productos/pubg.png"
+
+alt="PUBG"
+
+>
+
+
+<img
+
+src="assets/productos/bloodstrike.png"
+
+alt="Blood Strike"
+
+>
+
+
+<img
+
+src="assets/productos/honorofkings.png"
+
+alt="Honor of Kings"
+
+>
+
 
 
 </div>
+
+
 
 
 
@@ -656,20 +797,29 @@ GAMING
 
 
 
+
+
 <div class="category-content">
 
 
 <strong>
+
 Gaming
+
 </strong>
 
 
+
 <small>
+
 Recargas y beneficios
+
 </small>
 
 
+
 </div>
+
 
 
 
@@ -688,18 +838,42 @@ IA TOOLS
 ===================================================== -->
 
 
-<a href="ia.html" class="category-card-slider">
+<a
+
+href="ia.html"
+
+class="category-card-slider"
+
+>
+
 
 
 <div class="category-image-slider">
 
 
-<img src="assets/productos/chatgpt.png" alt="ChatGPT">
+<img
 
-<img src="assets/productos/gemini.png" alt="Gemini">
+src="assets/productos/chatgpt.png"
+
+alt="ChatGPT"
+
+class="active"
+
+>
+
+
+<img
+
+src="assets/productos/gemini.png"
+
+alt="Gemini"
+
+>
 
 
 </div>
+
+
 
 
 
@@ -707,20 +881,29 @@ IA TOOLS
 
 
 
+
+
 <div class="category-content">
 
 
 <strong>
+
 IA Tools
+
 </strong>
 
 
+
 <small>
+
 Herramientas de IA
+
 </small>
 
 
+
 </div>
+
 
 
 
@@ -739,20 +922,52 @@ DISEÑO
 ===================================================== -->
 
 
-<a href="diseno.html" class="category-card-slider">
+<a
+
+href="diseno.html"
+
+class="category-card-slider"
+
+>
+
 
 
 <div class="category-image-slider">
 
 
-<img src="assets/productos/canva.png" alt="Canva">
+<img
 
-<img src="assets/productos/capcut.png" alt="CapCut">
+src="assets/productos/canva.png"
 
-<img src="assets/productos/autodesk.png" alt="Autodesk">
+alt="Canva"
+
+class="active"
+
+>
+
+
+<img
+
+src="assets/productos/capcut.png"
+
+alt="CapCut"
+
+>
+
+
+<img
+
+src="assets/productos/autodesk.png"
+
+alt="Autodesk"
+
+>
+
 
 
 </div>
+
+
 
 
 
@@ -760,20 +975,29 @@ DISEÑO
 
 
 
+
+
 <div class="category-content">
 
 
 <strong>
+
 Diseño
+
 </strong>
 
 
+
 <small>
+
 Herramientas creativas
+
 </small>
 
 
+
 </div>
+
 
 
 
@@ -792,20 +1016,52 @@ EXTRAS
 ===================================================== -->
 
 
-<a href="extras.html" class="category-card-slider">
+<a
+
+href="extras.html"
+
+class="category-card-slider"
+
+>
+
 
 
 <div class="category-image-slider">
 
 
-<img src="assets/productos/googleone.png" alt="Google One">
+<img
 
-<img src="assets/productos/windows.png" alt="Windows">
+src="assets/productos/googleone.png"
 
-<img src="assets/productos/numerovirtual.png" alt="Número Virtual">
+alt="Google One"
+
+class="active"
+
+>
+
+
+<img
+
+src="assets/productos/windows.png"
+
+alt="Windows"
+
+>
+
+
+<img
+
+src="assets/productos/numerovirtual.png"
+
+alt="Número Virtual"
+
+>
+
 
 
 </div>
+
+
 
 
 
@@ -813,20 +1069,29 @@ EXTRAS
 
 
 
+
+
 <div class="category-content">
 
 
 <strong>
+
 Extras
+
 </strong>
 
 
+
 <small>
+
 Más servicios digitales
+
 </small>
 
 
+
 </div>
+
 
 
 
@@ -834,87 +1099,177 @@ Más servicios digitales
 
 
 
+
+
 </div>
 
-        </section>
 
 
-        <!-- =================================================
-             REVENDEDORES
-        ================================================== -->
-
-        <section class="reseller-home fade-up">
-
-            <span class="section-label">
-                REVENDEDORES
-            </span>
-
-            <h2>
-                Conviértete en revendedor de AMERISSTORE
-            </h2>
-
-            <p>
-                Vende productos digitales, accede a precios especiales y genera ganancias con nuestro catálogo.
-            </p>
-
-            <a
-                href="https://wa.me/595981841136?text=Hola%20AMERISSTORE,%20estoy%20interesado%20en%20trabajar%20con%20ustedes%20como%20revendedor."
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-primary button-animation"
-            >
-                💰 Quiero ser revendedor
-            </a>
-
-        </section>
+</section>
+<!-- =====================================================
+REVENDEDORES
+===================================================== -->
 
 
-    </main>
+<section class="reseller-home fade-up">
 
 
-    <!-- =====================================================
-         WHATSAPP FLOTANTE
-    ====================================================== -->
+<span class="section-label">
 
-    <a
-        href="https://wa.me/595981841136?text=Hola%20AMERISSTORE,%20quiero%20consultar%20por%20un%20producto."
-        target="_blank"
-        rel="noopener noreferrer"
-        class="floating-whatsapp"
-        aria-label="Contactar con AMERISSTORE por WhatsApp"
-    >
-        💬
-    </a>
+REVendedores
+
+</span>
 
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
-    <footer class="footer">
-
-        <div class="footer-simple">
-
-            <strong>
-                AMERIS<span>STORE</span>
-            </strong>
-
-            <p>
-                © 2026 AMERISSTORE. Todos los derechos reservados.
-            </p>
-
-        </div>
-
-    </footer>
 
 
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
 
-    <script src="script.js"></script>
+<h2>
+
+Conviértete en revendedor de AMERISSTORE
+
+</h2>
+
+
+
+
+
+
+<p>
+
+Vende productos digitales, accede a precios especiales y genera ganancias con nuestro catálogo.
+
+</p>
+
+
+
+
+
+
+
+<a
+
+href="https://wa.me/595981841136?text=Hola%20AMERISSTORE,%20estoy%20interesado%20en%20trabajar%20como%20revendedor."
+
+target="_blank"
+
+rel="noopener noreferrer"
+
+class="btn-primary button-animation"
+
+>
+
+
+💰 Quiero ser revendedor
+
+
+</a>
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+WHATSAPP FLOTANTE
+===================================================== -->
+
+
+<a
+
+href="https://wa.me/595981841136?text=Hola%20AMERISSTORE,%20quiero%20consultar%20por%20un%20producto."
+
+target="_blank"
+
+rel="noopener noreferrer"
+
+class="floating-whatsapp"
+
+aria-label="WhatsApp"
+
+>
+
+
+💬
+
+
+</a>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+FOOTER
+===================================================== -->
+
+
+<footer class="footer">
+
+
+<div class="footer-simple">
+
+
+
+<strong>
+
+AMERIS<span>STORE</span>
+
+</strong>
+
+
+
+
+
+
+<p>
+
+© 2026 AMERISSTORE. Todos los derechos reservados.
+
+</p>
+
+
+
+
+</div>
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+JAVASCRIPT
+===================================================== -->
+
+
+<script src="script.js"></script>
+
+
+
 
 
 </body>
+
 
 </html>
