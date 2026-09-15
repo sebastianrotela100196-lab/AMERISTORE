@@ -2473,3 +2473,166 @@ body.cart-open {
 
 
 }
+/* =========================================================
+   MAS PRODUCTOS - MOBILE
+========================================================= */
+
+.mobile-more-products{
+    width:min(92%,1100px);
+    margin:45px auto 70px;
+    display:none;
+}
+
+
+.more-products-head{
+    margin-bottom:22px;
+}
+
+
+.more-eyebrow{
+    display:block;
+    margin-bottom:8px;
+
+    color:#a855f7;
+
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:3px;
+}
+
+
+.more-products-head h2{
+    margin:0;
+
+    color:#fff;
+
+    font-size:30px;
+    font-weight:1000;
+}
+
+
+.more-products-head p{
+    margin-top:10px;
+
+    color:#948d9e;
+
+    font-size:14px;
+    line-height:1.5;
+}
+
+
+.more-products-toggle{
+    width:100%;
+    min-height:58px;
+
+    padding:0 20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(124,53,255,.22),
+        rgba(168,85,247,.10)
+    );
+
+    border:1px solid rgba(168,85,247,.35);
+    border-radius:16px;
+
+    color:#fff;
+
+    font-size:15px;
+    font-weight:900;
+
+    cursor:pointer;
+}
+
+
+.more-products-toggle span{
+    width:34px;
+    height:34px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:10px;
+
+    background:#7c3aed;
+
+    font-size:22px;
+
+    transition:.25s;
+}
+
+
+.more-products-menu{
+    max-height:0;
+    overflow:hidden;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+
+    opacity:0;
+
+    transition:
+    max-height .35s ease,
+    opacity .25s ease,
+    margin-top .25s ease;
+}
+
+
+.more-products-menu.show{
+    max-height:500px;
+    opacity:1;
+    margin-top:16px;
+}
+
+
+.more-products-menu a{
+    min-height:88px;
+
+    padding:18px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    gap:8px;
+
+    background:#0d0913;
+
+    border:1px solid rgba(168,85,247,.20);
+    border-radius:16px;
+
+    color:#fff;
+    text-decoration:none;
+
+    font-size:21px;
+
+    transition:.25s;
+}
+
+
+.more-products-menu a span{
+    font-size:13px;
+    font-weight:900;
+}
+
+
+.more-products-menu a:active{
+    transform:scale(.97);
+}
+
+
+/* SOLO CELULAR */
+
+@media(max-width:768px){
+
+    .mobile-more-products{
+        display:block;
+    }
+
+}
