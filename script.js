@@ -482,6 +482,7 @@ function iniciarCategorySliders(){
     marcarPaginaActual();
 
     iniciarExplorarCategorias();
+    iniciarCategorySliders();
 
 
 });
