@@ -2475,59 +2475,232 @@ body.cart-open {
 }
 
 /* =========================================================
-   EXPLORAR CATEGORIAS - IMAGENES DINAMICAS
+   EXPLORAR CATEGORIAS DINAMICAS
 ========================================================= */
+
+
+.mobile-more-products {
+
+    width:min(92%,1400px);
+
+    margin:70px auto;
+
+}
+
+
+
+
+
+.more-products-head {
+
+    margin-bottom:25px;
+
+}
+
+
+
+.more-eyebrow {
+
+    display:block;
+
+    margin-bottom:10px;
+
+    color:var(--purple-light);
+
+    font-size:11px;
+
+    font-weight:1000;
+
+    letter-spacing:3px;
+
+}
+
+
+
+.more-products-head h2 {
+
+    color:white;
+
+    font-size:clamp(30px,4vw,44px);
+
+    font-weight:1000;
+
+}
+
+
+
+.more-products-head p {
+
+    margin-top:12px;
+
+    color:var(--gray);
+
+    font-size:15px;
+
+}
+
+
+
+
+
+
+/* BOTON */
+
+
+.more-products-toggle {
+
+    width:100%;
+
+    min-height:70px;
+
+    padding:0 25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #171020,
+        #09070d
+    );
+
+
+    border:1px solid var(--border);
+
+
+    border-radius:20px;
+
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+
+.more-products-toggle span {
+
+    font-size:20px;
+
+    font-weight:1000;
+
+}
+
+
+
+.more-products-toggle strong {
+
+    width:45px;
+
+    height:45px;
+
+
+    display:grid;
+
+    place-items:center;
+
+
+    background:linear-gradient(
+        135deg,
+        var(--purple),
+        var(--purple-light)
+    );
+
+
+    border-radius:14px;
+
+
+    font-size:25px;
+
+}
+
+
+
+
+
+
+/* GRID CATEGORIAS */
 
 
 .more-products-menu {
 
+
+    margin-top:20px;
+
+
     display:grid;
 
-    grid-template-columns:
-    repeat(2,1fr);
 
-    gap:16px;
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:20px;
+
 
 }
 
 
 
+
+
+
+/* TARJETA */
 
 
 .category-card-slider {
 
+
     position:relative;
 
-    height:180px;
+
+    height:160px;
+
 
     overflow:hidden;
 
+
     border-radius:22px;
+
 
     border:1px solid var(--border);
 
+
     background:#09070d;
+
 
     display:flex;
 
+
     align-items:flex-end;
+
 
     transition:.35s ease;
 
+
 }
-
-
 
 
 
 .category-card-slider:hover {
 
-    transform:translateY(-5px);
+
+    transform:translateY(-6px);
+
 
     border-color:var(--border-hover);
 
-    box-shadow:
-    0 15px 35px rgba(124,53,255,.25);
+
+    box-shadow:var(--purple-shadow);
+
 
 }
 
@@ -2535,53 +2708,68 @@ body.cart-open {
 
 
 
-/* CONTENEDOR IMAGEN */
+
+
+/* IMAGENES */
+
 
 .category-image-slider {
 
+
     position:absolute;
+
 
     inset:0;
 
-    overflow:hidden;
 
 }
-
-
 
 
 
 .category-image-slider img {
 
+
     position:absolute;
+
 
     inset:0;
 
+
     width:100%;
+
 
     height:100%;
 
+
     object-fit:cover;
+
 
     opacity:0;
 
+
     transform:scale(1.08);
 
+
     transition:
+
     opacity .8s ease,
+
     transform 4s ease;
 
-}
 
+}
 
 
 
 
 .category-image-slider img.active {
 
+
     opacity:1;
 
+
     transform:scale(1);
+
 
 }
 
@@ -2589,23 +2777,36 @@ body.cart-open {
 
 
 
-/* OSCURECER IMAGEN */
+
+
+/* OSCURECER */
+
 
 .category-overlay {
 
+
     position:absolute;
+
 
     inset:0;
 
-    background:
-
-    linear-gradient(
-        180deg,
-        transparent 20%,
-        rgba(5,5,7,.92) 90%
-    );
 
     z-index:2;
+
+
+    background:
+
+
+    linear-gradient(
+
+        180deg,
+
+        transparent 20%,
+
+        rgba(5,5,7,.95) 90%
+
+    );
+
 
 }
 
@@ -2617,13 +2818,18 @@ body.cart-open {
 
 /* TEXTO */
 
+
 .category-content {
+
 
     position:relative;
 
+
     z-index:3;
 
-    padding:20px;
+
+    padding:18px;
+
 
 }
 
@@ -2634,9 +2840,12 @@ body.cart-open {
 
     display:block;
 
+
     color:white;
 
-    font-size:20px;
+
+    font-size:18px;
+
 
     font-weight:1000;
 
@@ -2650,9 +2859,12 @@ body.cart-open {
 
     display:block;
 
-    margin-top:6px;
 
-    color:#aaa3b8;
+    margin-top:5px;
+
+
+    color:var(--gray);
+
 
     font-size:12px;
 
@@ -2666,22 +2878,10 @@ body.cart-open {
 
 
 
-/* OCULTAR ICONOS VIEJOS */
-
-.category-menu-icon {
-
-    display:none;
-
-}
+/* TABLET */
 
 
-
-
-
-
-
-
-@media(max-width:600px){
+@media(max-width:1000px){
 
 
 .more-products-menu {
@@ -2696,30 +2896,46 @@ body.cart-open {
 
 
 
+}
+
+
+
+
+
+
+
+/* MOVIL */
+
+
+@media(max-width:600px){
+
+
+.mobile-more-products {
+
+
+    width:92%;
+
+
+}
+
+
+
+.more-products-menu {
+
+
+    grid-template-columns:
+
+    1fr;
+
+
+}
+
+
+
 .category-card-slider {
 
 
     height:150px;
-
-
-}
-
-
-
-.category-content {
-
-
-    padding:15px;
-
-
-}
-
-
-
-.category-content strong {
-
-
-    font-size:16px;
 
 
 }
