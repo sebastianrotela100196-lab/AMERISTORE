@@ -767,3 +767,36 @@ iniciarFiltros();
 
 
 marcarPaginaActual();
+const moreProductsToggle =
+document.getElementById("moreProductsToggle");
+
+const moreProductsMenu =
+document.getElementById("moreProductsMenu");
+
+const moreProductsIcon =
+document.getElementById("moreProductsIcon");
+
+
+if(
+    moreProductsToggle &&
+    moreProductsMenu
+){
+
+    moreProductsToggle.addEventListener(
+        "click",
+        ()=>{
+
+            moreProductsMenu.classList.toggle("show");
+
+            const abierto =
+            moreProductsMenu.classList.contains("show");
+
+            if(moreProductsIcon){
+                moreProductsIcon.textContent =
+                abierto ? "−" : "+";
+            }
+
+        }
+    );
+
+}
